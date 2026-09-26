@@ -53,7 +53,6 @@ None recorded.
 - Exact Apple-Silicon tool versions.
 - Exact primary formal solver.
 - Exact ECP5 target device/package.
-- RTL-to-Pixels workflow audit.
 - Architecture B remains intentionally undefined pending Architecture A measurement.
 - WIRE-001 process adoption details are recorded in `docs/DECISIONS.md`.
 
