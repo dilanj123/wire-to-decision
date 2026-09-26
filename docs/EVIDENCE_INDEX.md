@@ -4,7 +4,7 @@ No functional design evidence exists yet.
 
 | Evidence ID | Phase | Claim / purpose | Status | Source |
 |---|---|---|---|---|
-| EVID-000 | Phase 0 | Repository scaffold created | Pending WIRE-000 completion | tasks/WIRE-000.md |
+| EVID-000 | Phase 0 | Repository scaffold created | Complete — scaffold commit `999e04fbbd36db9c7556187876551f4b40833dd3` | tasks/WIRE-000.md; results/processed/WIRE-000-bootstrap.md |
 
 ## Evidence classification
 

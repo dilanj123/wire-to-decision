@@ -10,7 +10,7 @@ Gate 0 — not passed
 
 ## Known-good commit
 
-To be updated after WIRE-000 is committed.
+999e04fbbd36db9c7556187876551f4b40833dd3 (WIRE-000 scaffold commit)
 
 ## Architecture
 
