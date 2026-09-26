@@ -6,11 +6,11 @@ Phase 0 — Bootstrap
 
 ## Gate
 
-Gate 0 — not passed
+Gate 0 — not passed; WIRE-001 workflow audit complete
 
 ## Known-good commit
 
-999e04fbbd36db9c7556187876551f4b40833dd3 (WIRE-000 scaffold commit)
+9fbd24ec0b9fe6cd32f09312c1ee6905070755aa (WIRE-000 known-good baseline)
 
 ## Architecture
 
@@ -40,9 +40,9 @@ Not run.
 
 ## Latest evidence
 
-WIRE-000 repository scaffold only.
+WIRE-001 workflow/reference audit completed in `8d2a5cc41abb0913c6069d7333989a70a0133d87`. This is process evidence only.
 
-No functional, formal, synthesis, timing or performance evidence exists.
+No functional, protocol, formal, synthesis, timing, latency, throughput, CDC, or integration evidence exists.
 
 ## Open bugs
 
@@ -55,11 +55,12 @@ None recorded.
 - Exact ECP5 target device/package.
 - RTL-to-Pixels workflow audit.
 - Architecture B remains intentionally undefined pending Architecture A measurement.
+- WIRE-001 process adoption details are recorded in `docs/DECISIONS.md`.
 
 ## Current bottleneck
 
-Phase-0 environment and project process have not yet been validated.
+Phase-0 environment/toolchain qualification and external protocol specification remain open.
 
 ## Next task
 
-WIRE-001 — RTL-to-Pixels reference workflow audit.
+WIRE-002 — External protocol specification lock.
