@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# C/C++
+build/
+cmake-build-*/
+
+# Simulation
+sim_build/
+obj_dir/
+*.vcd
+*.fst
+*.wlf
+
+# Formal generated work
+formal/*/engine_*/
+formal/*/model/
+formal/*/src/
+
+# FPGA generated outputs
+*.bit
+*.bin
+*.svf
+
+# Editors
+.vscode/
+.idea/
+
+# Temporary
+*.tmp
+*.swp
+*~
