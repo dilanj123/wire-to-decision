@@ -1,0 +1,6 @@
+1. all legal final keep masks (01,03,07,0F,1F,3F,7F,FF)
+2. multi-beat and back-to-back frames
+3. output backpressure and input pressure
+4. same-cycle retire/refill
+5. reset idle, stalled, and partial serialization
+6. fixed random legal frames; seeds 1, 7, 19

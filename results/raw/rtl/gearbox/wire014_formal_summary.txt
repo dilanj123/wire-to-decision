@@ -1,0 +1,5 @@
+Prove: PASS; SBY v0.69; smtbmc yices; Yices 2.7.0; depth 20; k-induction.
+Cover: PASS; SBY v0.69; smtbmc yices; Yices 2.7.0; depth 20; refill reachability.
+Assumptions: legal contiguous keep; non-final keep FF; stable input while valid&&!ready; synchronous reset scope.
+Assertions: stalled payload stability, legal out_last, first-byte loading, final-frame refill safety.
+The independent byte-order/count/last conservation check is the cocotb scoreboard.

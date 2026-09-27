@@ -16,6 +16,7 @@ This is a gate checklist, not a duplicate of the master plan. Future items remai
 ## Functional baseline gate
 
 - [x] Independent Python model — WIRE-013 end-to-end oracle unit-tested
+- [x] Architecture-A 64-to-8 gearbox primitive — WIRE-014 RTL simulation and local formal checks
 - [ ] Architecture A parser
 - [ ] Bounded order state and decision
 - [ ] Functional regression

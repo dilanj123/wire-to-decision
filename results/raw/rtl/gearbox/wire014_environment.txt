@@ -1,0 +1,9 @@
+WIRE-014 environment
+Python 3.11.6
+Verilator 5.053 devel rev v5.052-119-g014c9820d
+cocotb 2.1.0.dev0+41564633
+SBY v0.69
+Yices 2.7.0
+Yosys 0.69+154
+Suite: OSS CAD Suite 2026-09-27
+Reset: synchronous active-high rst (WIRE-D011)

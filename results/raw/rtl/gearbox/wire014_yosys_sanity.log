@@ -1,0 +1,2 @@
+Command: yosys -p 'read_verilog -sv rtl/arch_a/wire_gearbox_64to8.sv; hierarchy -top wire_gearbox_64to8; proc; opt; stat'
+Result: PASS; component elaboration/optimization sanity only.

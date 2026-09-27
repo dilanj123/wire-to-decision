@@ -9,6 +9,16 @@
 - Rationale: These controls are supported by the inspected RTL-to-Pixels workflow and strengthened by later repository references.
 - Status: ADOPTED
 
+## WIRE-D011 — Freeze Phase-2 single-clock RTL reset convention
+
+- Date: 2026-09-28
+- Source: WIRE-014 Architecture-A gearbox implementation
+- Context: The first Phase-2 single-clock RTL primitive required an explicit reset convention for portable Verilator, Yosys, and formal execution.
+- Decision: Use a synchronous active-high reset named `rst` for Phase-2 single-clock Architecture-A primitives. This convention does not apply to the later CDC/reset-domain implementation.
+- Alternatives considered: an asynchronous reset or leaving reset polarity implicit. These were rejected for unnecessary portability ambiguity at the single-clock boundary.
+- Consequences: The gearbox and subsequent single-clock primitives use deterministic clocked reset behavior; CDC-specific reset requirements remain a separate future decision.
+- Status: ADOPTED
+
 ## WIRE-D003 — Lock third-party provenance and originality policy
 
 - Date: 2026-09-27

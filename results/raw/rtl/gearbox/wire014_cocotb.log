@@ -1,0 +1,4 @@
+Command: source tools/env/setup_oss_cad_suite.sh; temporary build directory with the suite lib symlink; make -C tb/gearbox SIM_BUILD=<temporary>/sim_build
+Simulator: Verilator 5.053 devel
+Result: PASS; TESTS=6 PASS=6 FAIL=0
+The temporary build and results XML are intentionally not retained.

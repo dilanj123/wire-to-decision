@@ -1,6 +1,6 @@
 # Evidence Index
 
-No functional design evidence exists yet.
+Python-unit-tested reference-model evidence exists. No application RTL functional evidence exists yet beyond the separately classified WIRE-014 gearbox primitive evidence.
 
 | Evidence ID | Phase | Claim / purpose | Status | Source |
 |---|---|---|---|---|
@@ -18,6 +18,7 @@ No functional design evidence exists yet.
 | EVID-011 | Phase 1 | Bounded 512-set × 2-way Python order-state model and 48-bit aggregate accounting exercised by unit tests against frozen mutation semantics | Complete — GitHub publication separately verified | tasks/WIRE-011.md; results/processed/WIRE-011-book-model.md; results/raw/reference_model/ |
 | EVID-012 | Phase 1 | Python deterministic imbalance-crossing decision and risk-budget model exercised by unit tests against frozen decision requirements and bounded-order aggregates | Complete — PYTHON-UNIT-TESTED | tasks/WIRE-012.md; results/processed/WIRE-012-decision-model.md; results/raw/reference_model/ |
 | EVID-013 | Phase 1 | Project-owned Python end-to-end reference oracle integrating framing, ITCH decoding, bounded order state, aggregates, deterministic decisions, fail-closed behavior, recovery, and late-suffix no-rollback | Complete — PYTHON-UNIT-TESTED | tasks/WIRE-013.md; results/processed/WIRE-013-end-to-end-oracle.md; results/raw/reference_model/ |
+| EVID-014 | Phase 2 | Architecture-A 64-to-8 gearbox preserves legal beat byte order, valid-lane count, and frame-final marker under ready/valid simulation; named local properties checked under documented assumptions | Complete — RTL-SIMULATED; FORMALLY CHECKED UNDER DOCUMENTED ASSUMPTIONS | tasks/WIRE-014.md; results/processed/WIRE-014-gearbox-rtl.md; results/raw/rtl/gearbox/ |
 
 ## Evidence classification
 

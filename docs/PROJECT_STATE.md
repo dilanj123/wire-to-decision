@@ -2,7 +2,9 @@
 
 ## Phase
 
-Phase 1 — COMPLETE
+Phase 2 — Parser primitives and complete Architecture A parser
+
+Phase 1: COMPLETE — 71-test Python end-to-end oracle baseline
 
 ## Gate
 
@@ -14,7 +16,7 @@ Gate 0 — CLOSED; WIRE-000 through WIRE-007 complete
 
 ## Architecture
 
-Specified only. No RTL implementation exists.
+Architecture A implementation has started with the 64-to-8 gearbox primitive. The common ingress buffer and protocol parser remain unimplemented.
 
 Baseline candidate:
 
@@ -28,7 +30,7 @@ Architecture B is not authorized.
 
 ## Application status
 
-Application RTL: not started
+Application RTL: started; Architecture-A gearbox implemented
 
 Reference-model package: created
 
@@ -74,7 +76,7 @@ Deterministic decision model: unit-tested
 
 Risk-budget model: unit-tested
 
-Full end-to-end Python oracle: not yet complete
+Full end-to-end Python oracle: unit-tested
 
 WIRE-013: complete
 
@@ -84,7 +86,11 @@ Packet-level fail-closed/recovery integration: unit-tested
 
 Python component regression: 71 tests passing
 
-Application RTL functional evidence: none
+64-to-8 gearbox: RTL-simulated
+
+Gearbox local formal: checked under documented assumptions
+
+Application RTL functional evidence: gearbox-only
 
 Formal application evidence: none
 
@@ -92,11 +98,11 @@ Application synthesis/P&R evidence: none
 
 ## Regression status
 
-Python component regression: 61 tests passing
+Python component regression: 71 tests passing
 
 ## Formal status
 
-Not run.
+WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. Application parser formal verification has not started.
 
 ## Synthesis / P&R status
 
@@ -120,7 +126,7 @@ None recorded.
 - WIRE-003 originality and third-party provenance policy are recorded in `docs/DECISIONS.md`.
 - WIRE-004 canonical toolchain decision is recorded in `docs/DECISIONS.md`.
 - WIRE-005 canonical implementation target and experiment invariants are recorded in `docs/DECISIONS.md` and `docs/IMPLEMENTATION_TARGET.md`.
-- WIRE-006 authoritative requirements, microarchitecture, verification, and formal package is recorded in the master/specification documents.
+- WIRE-006 authoritative requirements, microarchitecture, verification, and formal package is recorded in the master/specification documents. WIRE-014 added the single-clock reset convention and gearbox evidence.
 
 ## Current bottleneck
 
@@ -128,4 +134,4 @@ SystemVerilog implementation and cross-layer hardware verification remain.
 
 ## Next task
 
-WIRE-014 — Architecture A 64-to-8 gearbox RTL and verification.
+WIRE-015 — Architecture A common ingress beat buffer RTL and verification.
