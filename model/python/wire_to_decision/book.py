@@ -58,6 +58,13 @@ class OrderBook:
         self.ask_total = 0
         self.status = ModelStatus()
 
+    def invalidate(self, reason: FailureReason = FailureReason.MALFORMED) -> None:
+        """Quarantine the book after an upstream fatal failure."""
+
+        if not isinstance(reason, FailureReason):
+            raise TypeError("reason must be a FailureReason")
+        self.status = ModelStatus.failed(reason)
+
     def lookup(self, order_reference: int) -> Optional[OrderEntry]:
         """Search only the two ways selected by WIRE-D006."""
 

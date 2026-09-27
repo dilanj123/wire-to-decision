@@ -3,6 +3,7 @@
 from .constants import MAX_ORDERS, ORDER_SETS, ORDER_WAYS
 from .book import BookErrorCode, BookResult, OrderBook
 from .decision import DecisionModel, DecisionResult
+from .oracle import OracleErrorCode, OracleFrameResult, OracleMessageResult, ReferenceOracle
 from .framing import FramingErrorCode, FramingResult, frame_packet
 from .errors import CanonicalDataError
 from .hash import order_set_index
@@ -30,6 +31,10 @@ __all__ = [
     "DecisionEvent",
     "DecisionModel",
     "DecisionResult",
+    "OracleErrorCode",
+    "OracleFrameResult",
+    "OracleMessageResult",
+    "ReferenceOracle",
     "DecodeKind",
     "DecodeResult",
     "FailureReason",
