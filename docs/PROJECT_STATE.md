@@ -32,9 +32,11 @@ Application RTL: not started
 
 Reference-model package: created
 
-Canonical Python data model: unit-tested
+WIRE-008: blocked pending resolution of a normalized-event contract conflict
+between the WIRE-008 task text and the frozen WIRE-D008 repository authority.
 
-WIRE-D006 hash: implemented and unit-tested in Python
+Partial Python data primitives and WIRE-D006 hash exist, but are not accepted
+as the canonical model until that conflict is resolved.
 
 Protocol parsing: not started
 
@@ -88,4 +90,4 @@ Protocol parsing and stateful reference-model behaviour have not started.
 
 ## Next task
 
-WIRE-009 — Python Ethernet/IPv4/UDP/MoldUDP64 framing model.
+Resolve the WIRE-008 normalized-event contract conflict, then resume WIRE-008.

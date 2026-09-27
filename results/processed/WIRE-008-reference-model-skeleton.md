@@ -75,9 +75,17 @@ formal properties remain outside WIRE-008.
 
 ## L. Problems found
 
-INFERENCE: The initial test run exposed a duplicated positional/keyword test
-fixture construction. It was corrected before evidence collection. No authority
-or functional-specification conflict was found.
+BLOCKER / SOURCE-DERIVED CONFLICT: The repository's frozen WIRE-D008 contract
+in `docs/MICROARCHITECTURE.md` specifies `EXECUTE_WITH_PRICE` as an event kind,
+requires `field_valid` semantics, and defines `new_order_reference` for A/F and
+U. The WIRE-008 task text instead asks for one EXECUTE kind, omits a required
+field-valid representation, and says ADD must not use `new_order_reference`.
+These are materially different canonical contracts. The implementation created
+so far follows the task text in these areas and must not be treated as the
+authoritative model until the conflict is resolved.
+
+The initial test run also exposed a duplicated positional/keyword test fixture
+construction; that local test defect was corrected before evidence collection.
 
 ## M. What remains unproven
 
@@ -87,7 +95,7 @@ latency, throughput, CDC, or integration correctness.
 
 ## N. WIRE-008 conclusion
 
-PASS: The original project-owned Python package skeleton, canonical data
-representations, validation primitives, and exact WIRE-D006 hash were created
-and exercised by 17 standard-library unit tests. This is Phase-1 primitive
-evidence, not end-to-end reference-model evidence.
+FAIL / BLOCKED: Python primitive files and 17 passing unit tests exist, but the
+task cannot pass because the canonical normalized-event contract is not
+unambiguously specified. No WIRE-008 completion or EVID-008 PASS claim is made.
+User direction is required before revising the model to follow one contract.
