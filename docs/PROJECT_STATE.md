@@ -62,7 +62,9 @@ Bounded order-state model: unit-tested
 
 Bid/ask aggregates: unit-tested
 
-GitHub publication: blocked pending valid CLI authentication; no remote configured
+Canonical GitHub repository: https://github.com/dilanj123/wire-to-decision
+
+GitHub publication: complete; public repository, `main` and `kg-g0-env` pushed
 
 Order-store mutation model: not started
 
@@ -108,7 +110,7 @@ None recorded.
 
 ## Current bottleneck
 
-Bounded order-state and aggregate reference-model behavior have not started.
+Decision-model behavior has not started.
 
 ## Next task
 

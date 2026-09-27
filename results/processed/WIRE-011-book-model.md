@@ -11,8 +11,16 @@ The protected `kg-g0-env` tag remained unchanged and peeled to
 
 SAFETY AUDIT: Tracked files contained no detected secrets, private keys,
 credentials, prohibited PDFs, third-party source snapshots, or large binary
-archives. The configured GitHub CLI token for `dilanj123` was invalid, so the
-target repository was not created or pushed. No remote was invented.
+archives.
+
+INITIAL ATTEMPT: Publication was blocked by an invalid GitHub CLI token. That
+blocked result is retained in the earlier WIRE-011 history.
+
+PUBLICATION CLOSURE: GitHub CLI authentication was repaired for `dilanj123`.
+The public repository `https://github.com/dilanj123/wire-to-decision` was
+created from the existing local history. `main` and the immutable `kg-g0-env`
+tag were pushed successfully. Local and remote `main` resolve to the final
+publication-closure commit recorded in the WIRE-011P evidence.
 
 ## C. Authority used
 
@@ -119,8 +127,9 @@ standard library and existing project-owned types only.
 
 ## R. Problems/conflicts
 
-No functional specification conflict was found. GitHub publication was blocked
-by invalid `gh` authentication, independently of the functional model result.
+No functional specification conflict was found. The initial GitHub
+publication block was resolved separately by re-authenticating the CLI; no
+application functionality changed.
 
 ## S. What remains unproven
 
@@ -131,5 +140,7 @@ throughput, CDC, C++ integration, and physical FPGA operation.
 ## T. WIRE-011 conclusion
 
 PASS FUNCTIONALLY: The bounded 512-set x 2-way order model and checked 48-bit
-aggregate accounting pass 52 unit tests. GitHub publication is BLOCKED pending
-valid GitHub authentication and was not falsely represented as complete.
+aggregate accounting pass 52 unit tests.
+
+PASS PUBLICATION: The canonical public GitHub repository, complete `main`
+history, and immutable `kg-g0-env` tag were published and verified separately.
