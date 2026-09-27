@@ -2,7 +2,7 @@
 
 ## Phase
 
-Phase 0 — Complete
+Phase 1 — Python reference model
 
 ## Gate
 
@@ -30,7 +30,19 @@ Architecture B is not authorized.
 
 Application RTL: not started
 
-Reference model: not started
+Reference-model package: created
+
+Canonical Python data model: unit-tested
+
+WIRE-D006 hash: implemented and unit-tested in Python
+
+Protocol parsing: not started
+
+ITCH byte decoding: not started
+
+Order-store mutation model: not started
+
+Decision model: not started
 
 Functional evidence: none
 
@@ -72,8 +84,8 @@ None recorded.
 
 ## Current bottleneck
 
-Phase 1 application work has not started; the next work is the independent Python reference model.
+Protocol parsing and stateful reference-model behaviour have not started.
 
 ## Next task
 
-WIRE-008 — Python reference-model skeleton and canonical data model.
+WIRE-009 — Python Ethernet/IPv4/UDP/MoldUDP64 framing model.

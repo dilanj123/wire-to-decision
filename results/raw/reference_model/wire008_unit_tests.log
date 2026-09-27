@@ -1,0 +1,4 @@
+Command: PYTHONPATH=model/python python3 -m unittest discover -s model/python/tests -v
+Result: PASS (exit code 0)
+Tests: 17
+Summary: Ran 17 tests in 0.001s; OK
