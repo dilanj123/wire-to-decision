@@ -80,6 +80,7 @@ nextpnr-ecp5 --25k --package CABGA381 \
 
 ecppack --compress "$build_dir/toolchain_smoke.config" "$build_dir/toolchain_smoke.bit" \
     2>&1 | tee "$raw/ecppack_smoke.log"
+echo "ecppack PASS" | tee -a "$raw/ecppack_smoke.log"
 
 cp "$build_dir/nextpnr_report.json" "$raw/nextpnr_report.json"
 echo "WIRE-004 TOOLCHAIN SMOKE PASS"
