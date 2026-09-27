@@ -44,3 +44,33 @@
 - Scope: Implementation target and experiment methodology only. No protocol or microarchitecture scope change; no application fit or timing result is established.
 - Rationale: The official Lattice resource tables provide substantially more experimental headroom in 85F than 45F, while LFE5U avoids unused SERDES capability at the post-MAC project boundary. The exact target was accepted and routed by the qualified local OSS CAD Suite using the existing trivial smoke design.
 - Status: ADOPTED
+
+## WIRE-D006 — Freeze bounded-order set-index hash
+
+- Date: 2026-09-27
+- Source: WIRE-006 authoritative specification package
+- Context: The 512-set × 2-way order store required a deterministic 64-bit reference to 9-bit set-index function, but no exact function had previously been frozen.
+- Decision: Use the XOR fold `ref[8:0] ^ ref[17:9] ^ ref[26:18] ^ ref[35:27] ^ ref[44:36] ^ ref[53:45] ^ ref[62:54] ^ zero_extend_9(ref[63])`. It is combinational, fixed, seedless, and uses no modulo or divider.
+- Alternatives considered: a runtime-seeded hash, division/modulo, or an uncommitted implementation-defined fold. These were rejected for reproducibility or unnecessary complexity.
+- Consequences: Python, RTL, and C++ must reproduce this exact fold. Collision behavior is measured later; this decision does not claim optimal hash quality.
+- Status: ADOPTED
+
+## WIRE-D007 — Reject unclassified ITCH message types
+
+- Date: 2026-09-27
+- Source: WIRE-006 authoritative specification package
+- Context: WIRE-002 explicitly classified `P` as non-mutating but left the safe handling of other unclassified message types for the implementation specification.
+- Decision: `P` may be consumed without order-state mutation. Any unsupported or unclassified message type shall cause profile rejection, invalidate the book, require explicit re-arm, suppress decisions, and produce no mutation from that message.
+- Alternatives considered: silently skip all unknown types or attempt a broad full-ITCH classification. Silent skipping could hide semantics; full coverage is outside MVP scope.
+- Consequences: the profile fails closed for future/unclassified types and avoids silently corrupting bounded state. The policy must be tested in the Python model and RTL.
+- Status: ADOPTED
+
+## WIRE-D008 — Freeze normalized mutation-event contract
+
+- Date: 2026-09-27
+- Source: WIRE-006 authoritative specification package
+- Context: Controlled Architecture A/B comparison requires a common downstream boundary without prescribing parser implementation details.
+- Decision: A and any later authorized B shall emit the same ready/valid logical event contract: event kind, source type, Mold sequence, ITCH timestamp, Stock Locate, old/new references, quantity, price, side, and field-valid semantics. Invalid fields are not consumed downstream; `P` emits no event.
+- Alternatives considered: parser-specific downstream interfaces or reparsing raw ITCH bytes in the book. These would weaken comparison and duplicate protocol knowledge.
+- Consequences: the common order/aggregate/decision subsystem can be held constant while parser implementations vary. Exact RTL encoding remains an implementation detail.
+- Status: ADOPTED
