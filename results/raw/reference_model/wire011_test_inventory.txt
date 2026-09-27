@@ -1,0 +1,11 @@
+WIRE-011 test inventory:
+- bounded 512-set x 2-way storage and deterministic way selection
+- WIRE-D006 fixed collision vectors and no eviction
+- duplicate, collision, unknown-reference, and over-subtract failures
+- ADD, EXECUTE, EXECUTE_WITH_PRICE, CANCEL, DELETE
+- same-set/different-set U replacement
+- U conflict and destination-capacity failure
+- 48-bit aggregate updates and independent recomputation
+- aggregate range guard
+- invalid-book quarantine and explicit reset
+- decoder-to-book integration

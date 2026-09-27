@@ -1,0 +1,9 @@
+Target: dilanj123/wire-to-decision
+Expected URL: https://github.com/dilanj123/wire-to-decision
+Safety audit: PASS; no secrets, private keys, credentials, prohibited PDFs,
+third-party source snapshots, or large binary/tool archives detected in tracked files.
+gh version: 2.101.0
+gh auth status: BLOCKED; configured dilanj123 token is invalid and requires re-authentication.
+Repository creation: NOT ATTEMPTED because authentication was invalid.
+Remote configured: no
+Publication result: BLOCKED

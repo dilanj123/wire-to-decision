@@ -56,6 +56,14 @@ Normalized events from ITCH bytes: unit-tested
 
 P known non-mutating handling: unit-tested
 
+WIRE-011: complete functionally
+
+Bounded order-state model: unit-tested
+
+Bid/ask aggregates: unit-tested
+
+GitHub publication: blocked pending valid CLI authentication; no remote configured
+
 Order-store mutation model: not started
 
 Decision model: not started
@@ -104,4 +112,4 @@ Bounded order-state and aggregate reference-model behavior have not started.
 
 ## Next task
 
-WIRE-011 — Python bounded order-state and aggregate model.
+WIRE-012 — Python deterministic decision model.

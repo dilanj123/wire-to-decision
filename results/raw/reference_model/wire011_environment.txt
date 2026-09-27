@@ -1,0 +1,6 @@
+Task: WIRE-011
+Repository: /Users/Dilan/Projects/wire-to-decision
+OSS CAD Suite activation: tools/env/setup_oss_cad_suite.sh
+Canonical suite path: /Users/Dilan/eda/wire-to-decision/oss-cad-suite
+Python: 3.11.6
+New third-party dependencies: none

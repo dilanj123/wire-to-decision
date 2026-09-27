@@ -15,6 +15,7 @@ No functional design evidence exists yet.
 | EVID-008 | Phase 1 | Python canonical reference-model data representations, validation primitives and WIRE-D006 hash unit-tested against the frozen normalized-event contract | Complete — WIRE-008 correction | tasks/WIRE-008.md; results/processed/WIRE-008-reference-model-skeleton.md; results/raw/reference_model/ |
 | EVID-009 | Phase 1 | Project-owned Python Ethernet II / IPv4 / UDP / MoldUDP64 framing and sequence model exercised by unit tests against the frozen Wire-to-Decision profile | Complete — WIRE-009 framing evidence | tasks/WIRE-009.md; results/processed/WIRE-009-framing-model.md; results/raw/reference_model/ |
 | EVID-010 | Phase 1 | Project-owned Python decoder for the frozen TotalView-ITCH A/F/E/C/X/D/U subset, P non-mutating classification, tracked-instrument filtering and normalized-event mapping exercised by unit tests | Complete — WIRE-010 decoder evidence | tasks/WIRE-010.md; results/processed/WIRE-010-itch-decoder.md; results/raw/reference_model/ |
+| EVID-011 | Phase 1 | Bounded 512-set × 2-way Python order-state model and 48-bit aggregate accounting exercised by unit tests against frozen mutation semantics | Complete functionally — GitHub publication separate and blocked | tasks/WIRE-011.md; results/processed/WIRE-011-book-model.md; results/raw/reference_model/ |
 
 ## Evidence classification
 
