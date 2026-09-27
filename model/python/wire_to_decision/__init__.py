@@ -1,6 +1,7 @@
 """Canonical Python data primitives for Wire-to-Decision."""
 
 from .constants import MAX_ORDERS, ORDER_SETS, ORDER_WAYS
+from .book import BookErrorCode, BookResult, OrderBook
 from .framing import FramingErrorCode, FramingResult, frame_packet
 from .errors import CanonicalDataError
 from .hash import order_set_index
@@ -22,6 +23,8 @@ from .types import (
 
 __all__ = [
     "CanonicalDataError",
+    "BookErrorCode",
+    "BookResult",
     "DecisionAction",
     "DecisionEvent",
     "DecodeKind",
@@ -43,6 +46,7 @@ __all__ = [
     "ORDER_SETS",
     "ORDER_WAYS",
     "OrderEntry",
+    "OrderBook",
     "Side",
     "SourceMessageType",
     "frame_packet",
