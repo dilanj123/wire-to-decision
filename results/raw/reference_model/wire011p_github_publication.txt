@@ -8,4 +8,9 @@ Local HEAD before publication metadata: 87aeb87cd58992a8b90e52ad4e2bfe0081c14f70
 Initial main push: PASS
 Gate-0 tag push: PASS
 Gate-0 local peeled commit: 06f5643a940ac2c6fcfab0e377169b48ce700107
+Final local main SHA: d365ea5cdee8211927b0708f1622db03def91139
+Final remote main SHA: d365ea5cdee8211927b0708f1622db03def91139
+Remote Gate-0 tag object: 840844fbcb38bb6c8ffa8800b6398c65632b466e
+Remote Gate-0 peeled commit: 06f5643a940ac2c6fcfab0e377169b48ce700107
+Publication result: PASS
 No credentials or tokens recorded.
