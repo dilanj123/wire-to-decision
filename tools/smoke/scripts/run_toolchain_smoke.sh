@@ -3,7 +3,7 @@ set -euo pipefail
 
 # WIRE-004 TOOLCHAIN SMOKE ONLY. No application RTL is exercised.
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
-raw="$repo_root/results/raw/toolchain"
+raw="${WIRE_SMOKE_RAW_ROOT:-$repo_root/results/raw/toolchain}"
 mkdir -p "$raw/formal"
 source "$repo_root/tools/env/setup_oss_cad_suite.sh" >/tmp/wire004-env.$$
 cat /tmp/wire004-env.$$ > "$raw/activation.log"
@@ -23,8 +23,8 @@ trap 'rm -rf "$build_dir"' EXIT
     uname -a
     uname -m
     sw_vers
-    sysctl -n hw.ncpu
-    sysctl -n hw.memsize
+    sysctl -n hw.ncpu 2>&1 || true
+    sysctl -n hw.memsize 2>&1 || true
     xcode-select -p 2>&1 || true
     clang --version 2>&1 || true
     git --version
@@ -52,6 +52,7 @@ verilator --lint-only --Wall --language 1800-2012 \
 # The packaged Python dylib refers to @executable_path/../lib.  The symlink is
 # disposable and stays outside the repository with the disposable simulator.
 ln -s "$suite_root/lib" "$build_dir/lib"
+COCOTB_RESULTS_FILE="$build_dir/cocotb_results.xml" \
 DYLD_LIBRARY_PATH="$suite_root/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}" \
 DYLD_FALLBACK_LIBRARY_PATH="$suite_root/lib${DYLD_FALLBACK_LIBRARY_PATH:+:$DYLD_FALLBACK_LIBRARY_PATH}" \
 make -C "$repo_root/tools/smoke/cocotb" SIM=verilator SIM_BUILD="$build_dir/cocotb_sim_build" \

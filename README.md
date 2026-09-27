@@ -35,3 +35,27 @@ Timing evidence: none
 - live exchange connectivity;
 - mandatory physical FPGA;
 - unnecessary PHY/MAC implementation.
+
+## Phase-0 navigation
+
+The authority order and phase plan are in [00_MASTER_PROJECT_PLAN.md](00_MASTER_PROJECT_PLAN.md). Current state is summarized in [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md), with claims indexed by [docs/EVIDENCE_INDEX.md](docs/EVIDENCE_INDEX.md).
+
+The qualified external OSS CAD Suite is activated with:
+
+```bash
+source tools/env/setup_oss_cad_suite.sh
+```
+
+The WIRE-004 toolchain smoke is run with:
+
+```bash
+tools/smoke/scripts/run_toolchain_smoke.sh
+```
+
+The final Phase-0 repository/environment reproducibility check is:
+
+```bash
+tools/repro/run_phase0_reproducibility.sh
+```
+
+The canonical implementation target is documented in [docs/IMPLEMENTATION_TARGET.md](docs/IMPLEMENTATION_TARGET.md). Raw logs are retained under `results/raw/`; processed evidence is under `results/processed/`.
