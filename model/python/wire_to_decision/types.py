@@ -32,6 +32,7 @@ class Side(str, Enum):
 class MutationKind(str, Enum):
     ADD = "ADD"
     EXECUTE = "EXECUTE"
+    EXECUTE_WITH_PRICE = "EXECUTE_WITH_PRICE"
     CANCEL = "CANCEL"
     DELETE = "DELETE"
     REPLACE = "REPLACE"
@@ -78,9 +79,32 @@ class FailureReason(str, Enum):
     SYMBOL_MISMATCH = "SYMBOL_MISMATCH"
 
 
+@dataclass(frozen=True)
+class FieldValidity:
+    """Named validity indicators for the optional normalized-event fields."""
+
+    old_order_reference: bool
+    new_order_reference: bool
+    quantity: bool
+    price: bool
+    side: bool
+
+    def __post_init__(self) -> None:
+        for name, value in (
+            ("old_order_reference", self.old_order_reference),
+            ("new_order_reference", self.new_order_reference),
+            ("quantity", self.quantity),
+            ("price", self.price),
+            ("side", self.side),
+        ):
+            if not isinstance(value, bool):
+                raise TypeError(f"{name} validity must be bool")
+
+
 _SOURCE_BY_KIND = {
     MutationKind.ADD: frozenset({SourceMessageType.ADD_NO_MPID, SourceMessageType.ADD_MPID}),
-    MutationKind.EXECUTE: frozenset({SourceMessageType.EXECUTE, SourceMessageType.EXECUTE_WITH_PRICE}),
+    MutationKind.EXECUTE: frozenset({SourceMessageType.EXECUTE}),
+    MutationKind.EXECUTE_WITH_PRICE: frozenset({SourceMessageType.EXECUTE_WITH_PRICE}),
     MutationKind.CANCEL: frozenset({SourceMessageType.CANCEL}),
     MutationKind.DELETE: frozenset({SourceMessageType.DELETE}),
     MutationKind.REPLACE: frozenset({SourceMessageType.REPLACE}),
@@ -96,7 +120,8 @@ class NormalizedEvent:
     mold_sequence: int
     itch_timestamp: int
     stock_locate: int
-    order_reference: Optional[int] = None
+    field_valid: FieldValidity
+    old_order_reference: Optional[int] = None
     new_order_reference: Optional[int] = None
     quantity: Optional[int] = None
     price: Optional[int] = None
@@ -110,10 +135,12 @@ class NormalizedEvent:
         require_uint(self.mold_sequence, 64, "mold_sequence")
         require_uint(self.itch_timestamp, 48, "itch_timestamp")
         require_uint(self.stock_locate, 16, "stock_locate")
+        if not isinstance(self.field_valid, FieldValidity):
+            raise TypeError("field_valid must be a FieldValidity")
         if self.source_type not in _SOURCE_BY_KIND[self.kind]:
             raise CanonicalDataError("source_type is incompatible with mutation kind")
-        if self.order_reference is not None:
-            require_uint(self.order_reference, 64, "order_reference")
+        if self.old_order_reference is not None:
+            require_uint(self.old_order_reference, 64, "old_order_reference")
         if self.new_order_reference is not None:
             require_uint(self.new_order_reference, 64, "new_order_reference")
         if self.quantity is not None:
@@ -124,29 +151,33 @@ class NormalizedEvent:
             raise TypeError("side must be a Side")
 
         if self.kind is MutationKind.ADD:
-            self._require(self.order_reference is not None, "ADD requires order_reference")
+            self._require(self.old_order_reference is None, "ADD cannot contain old_order_reference")
+            self._require(self.new_order_reference is not None, "ADD requires new_order_reference")
             self._require(self.quantity is not None and self.quantity > 0, "ADD requires positive quantity")
             self._require(self.price is not None, "ADD requires price")
             self._require(self.side is not None, "ADD requires side")
-            self._require(self.new_order_reference is None, "ADD cannot contain new_order_reference")
-        elif self.kind in (MutationKind.EXECUTE, MutationKind.CANCEL):
-            self._require(self.order_reference is not None, "mutation requires order_reference")
+            self._require(self.field_valid == FieldValidity(False, True, True, True, True), "invalid ADD field_valid")
+        elif self.kind in (MutationKind.EXECUTE, MutationKind.EXECUTE_WITH_PRICE, MutationKind.CANCEL):
+            self._require(self.old_order_reference is not None, "mutation requires old_order_reference")
             self._require(self.quantity is not None and self.quantity > 0, "mutation requires positive quantity")
             self._require(self.new_order_reference is None, "mutation cannot contain new_order_reference")
             self._require(self.price is None, "execute/cancel does not carry resting price")
             self._require(self.side is None, "execute/cancel inherits side from state")
+            self._require(self.field_valid == FieldValidity(True, False, True, False, False), "invalid execution/cancel field_valid")
         elif self.kind is MutationKind.DELETE:
-            self._require(self.order_reference is not None, "DELETE requires order_reference")
+            self._require(self.old_order_reference is not None, "DELETE requires old order_reference")
             self._require(self.new_order_reference is None, "DELETE cannot contain new_order_reference")
             self._require(self.quantity is None, "DELETE cannot contain quantity")
             self._require(self.price is None, "DELETE cannot contain price")
             self._require(self.side is None, "DELETE inherits side from state")
+            self._require(self.field_valid == FieldValidity(True, False, False, False, False), "invalid DELETE field_valid")
         elif self.kind is MutationKind.REPLACE:
-            self._require(self.order_reference is not None, "REPLACE requires old order_reference")
+            self._require(self.old_order_reference is not None, "REPLACE requires old order_reference")
             self._require(self.new_order_reference is not None, "REPLACE requires new_order_reference")
             self._require(self.quantity is not None and self.quantity > 0, "REPLACE requires positive quantity")
             self._require(self.price is not None, "REPLACE requires new price")
             self._require(self.side is None, "REPLACE inherits side from state")
+            self._require(self.field_valid == FieldValidity(True, True, True, True, False), "invalid REPLACE field_valid")
 
     @staticmethod
     def _require(condition: bool, message: str) -> None:

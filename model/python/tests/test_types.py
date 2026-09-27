@@ -5,6 +5,7 @@ from wire_to_decision import (
     DecisionAction,
     DecisionEvent,
     FailureReason,
+    FieldValidity,
     ModelConfig,
     ModelStatus,
     MutationKind,
@@ -13,6 +14,12 @@ from wire_to_decision import (
     Side,
     SourceMessageType,
 )
+
+
+ADD_VALID = FieldValidity(False, True, True, True, True)
+EXECUTION_VALID = FieldValidity(True, False, True, False, False)
+DELETE_VALID = FieldValidity(True, False, False, False, False)
+REPLACE_VALID = FieldValidity(True, True, True, True, False)
 
 
 class TypePrimitiveTests(unittest.TestCase):
@@ -33,59 +40,79 @@ class TypePrimitiveTests(unittest.TestCase):
         with self.assertRaises(CanonicalDataError):
             SourceMessageType.from_encoding("Z")
 
-    def test_valid_add_event(self):
+    def test_valid_add_events_use_new_reference(self):
+        for source in (SourceMessageType.ADD_NO_MPID, SourceMessageType.ADD_MPID):
+            event = NormalizedEvent(
+                MutationKind.ADD, source, 7, 9, 11, ADD_VALID,
+                new_order_reference=13, quantity=17, price=19, side=Side.BUY,
+            )
+            self.assertIsNone(event.old_order_reference)
+            self.assertEqual(event.new_order_reference, 13)
+
+    def test_valid_execute_event(self):
         event = NormalizedEvent(
-            kind=MutationKind.ADD,
-            source_type=SourceMessageType.ADD_NO_MPID,
-            mold_sequence=7,
-            itch_timestamp=9,
-            stock_locate=11,
-            order_reference=13,
-            quantity=17,
-            price=19,
-            side=Side.BUY,
+            MutationKind.EXECUTE, SourceMessageType.EXECUTE, 1, 2, 3,
+            EXECUTION_VALID, old_order_reference=4, quantity=5,
         )
-        self.assertEqual(event.quantity, 17)
+        self.assertEqual(event.old_order_reference, 4)
+        self.assertFalse(event.field_valid.price)
 
-    def test_valid_execute_and_cancel_events(self):
-        for source, kind in ((SourceMessageType.EXECUTE, MutationKind.EXECUTE), (SourceMessageType.EXECUTE_WITH_PRICE, MutationKind.EXECUTE), (SourceMessageType.CANCEL, MutationKind.CANCEL)):
-            with self.subTest(source=source):
-                event = NormalizedEvent(kind, source, 1, 2, 3, order_reference=4, quantity=5)
-                self.assertEqual(event.order_reference, 4)
-
-    def test_valid_delete_event(self):
-        event = NormalizedEvent(MutationKind.DELETE, SourceMessageType.DELETE, 1, 2, 3, order_reference=4)
-        self.assertIsNone(event.quantity)
-
-    def test_valid_replace_event(self):
+    def test_valid_execute_with_price_event(self):
         event = NormalizedEvent(
-            MutationKind.REPLACE,
-            SourceMessageType.REPLACE,
-            1,
-            2,
-            3,
-            order_reference=4,
-            new_order_reference=5,
-            quantity=6,
-            price=7,
+            MutationKind.EXECUTE_WITH_PRICE, SourceMessageType.EXECUTE_WITH_PRICE,
+            1, 2, 3, EXECUTION_VALID, old_order_reference=4, quantity=5,
         )
-        self.assertEqual(event.new_order_reference, 5)
+        self.assertEqual(event.kind, MutationKind.EXECUTE_WITH_PRICE)
+        self.assertIsNone(event.price)
+        self.assertFalse(event.field_valid.price)
+
+    def test_valid_cancel_delete_replace_events(self):
+        cancel = NormalizedEvent(
+            MutationKind.CANCEL, SourceMessageType.CANCEL, 1, 2, 3,
+            EXECUTION_VALID, old_order_reference=4, quantity=5,
+        )
+        delete = NormalizedEvent(
+            MutationKind.DELETE, SourceMessageType.DELETE, 1, 2, 3,
+            DELETE_VALID, old_order_reference=4,
+        )
+        replace = NormalizedEvent(
+            MutationKind.REPLACE, SourceMessageType.REPLACE, 1, 2, 3,
+            REPLACE_VALID, old_order_reference=4, new_order_reference=5,
+            quantity=6, price=7,
+        )
+        self.assertEqual(cancel.quantity, 5)
+        self.assertIsNone(delete.quantity)
+        self.assertEqual(replace.new_order_reference, 5)
 
     def test_event_source_and_fields_are_checked(self):
         cases = [
-            dict(kind=MutationKind.ADD, source_type=SourceMessageType.EXECUTE, order_reference=1, quantity=1, price=1, side=Side.BUY),
-            dict(kind=MutationKind.ADD, source_type=SourceMessageType.ADD_NO_MPID, order_reference=1, quantity=0, price=1, side=Side.BUY),
-            dict(kind=MutationKind.EXECUTE, source_type=SourceMessageType.EXECUTE, order_reference=1, quantity=1, price=1),
-            dict(kind=MutationKind.REPLACE, source_type=SourceMessageType.REPLACE, order_reference=1, new_order_reference=2, quantity=1, price=1, side=Side.SELL),
+            dict(kind=MutationKind.ADD, source_type=SourceMessageType.EXECUTE, field_valid=ADD_VALID, new_order_reference=1, quantity=1, price=1, side=Side.BUY),
+            dict(kind=MutationKind.ADD, source_type=SourceMessageType.ADD_NO_MPID, field_valid=ADD_VALID, new_order_reference=1, quantity=0, price=1, side=Side.BUY),
+            dict(kind=MutationKind.EXECUTE, source_type=SourceMessageType.EXECUTE, field_valid=EXECUTION_VALID, old_order_reference=1, quantity=1, price=1),
+            dict(kind=MutationKind.REPLACE, source_type=SourceMessageType.REPLACE, field_valid=REPLACE_VALID, old_order_reference=1, new_order_reference=2, quantity=1, price=1, side=Side.SELL),
         ]
         for fields in cases:
             with self.subTest(fields=fields), self.assertRaises(CanonicalDataError):
                 NormalizedEvent(mold_sequence=1, itch_timestamp=1, stock_locate=1, **fields)
 
+    def test_event_validity_flags_are_exact(self):
+        with self.assertRaises(CanonicalDataError):
+            NormalizedEvent(
+                MutationKind.ADD, SourceMessageType.ADD_NO_MPID,
+                1, 2, 3, FieldValidity(True, True, True, True, True),
+                new_order_reference=4, quantity=1, price=1, side=Side.BUY,
+            )
+        with self.assertRaises(CanonicalDataError):
+            NormalizedEvent(
+                MutationKind.EXECUTE_WITH_PRICE, SourceMessageType.EXECUTE_WITH_PRICE,
+                1, 2, 3, FieldValidity(True, False, True, True, False),
+                old_order_reference=4, quantity=1,
+            )
+
     def test_event_widths_and_negative_values(self):
-        base = dict(kind=MutationKind.DELETE, source_type=SourceMessageType.DELETE, mold_sequence=0, itch_timestamp=0, stock_locate=0, order_reference=0)
+        base = dict(kind=MutationKind.DELETE, source_type=SourceMessageType.DELETE, mold_sequence=0, itch_timestamp=0, stock_locate=0, field_valid=DELETE_VALID, old_order_reference=0)
         NormalizedEvent(**base)
-        for field, value in (("mold_sequence", 1 << 64), ("itch_timestamp", 1 << 48), ("stock_locate", 1 << 16), ("order_reference", -1)):
+        for field, value in (("mold_sequence", 1 << 64), ("itch_timestamp", 1 << 48), ("stock_locate", 1 << 16), ("old_order_reference", -1)):
             with self.subTest(field=field), self.assertRaises(CanonicalDataError):
                 NormalizedEvent(**{**base, field: value})
 

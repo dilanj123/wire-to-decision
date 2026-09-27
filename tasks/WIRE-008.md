@@ -42,3 +42,11 @@ Completion report:
 Report repository/baseline, files and commits, package/data model, validation,
 hash vectors, test count/result, evidence, unproven behaviour, conflicts,
 specification changes and the next task.
+
+Authority-conflict resolution:
+The initial implementation attempt stopped because the task instructions
+conflicted with the frozen normalized-event contract. Higher-authority
+WIRE-D008 and docs/MICROARCHITECTURE.md were retained unchanged. The Python
+implementation was then aligned to that authority: EXECUTE and
+EXECUTE_WITH_PRICE remain distinct, field_valid is explicit, and A/F/U use the
+authoritative old/new order-reference semantics.
