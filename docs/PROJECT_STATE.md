@@ -6,7 +6,7 @@ Phase 0 — Bootstrap
 
 ## Gate
 
-Gate 0 — not passed; WIRE-001 workflow audit complete
+Gate 0 — not passed; WIRE-001 workflow audit and WIRE-002 source lock complete
 
 ## Known-good commit
 
@@ -40,9 +40,9 @@ Not run.
 
 ## Latest evidence
 
-WIRE-001 workflow/reference audit completed in `8d2a5cc41abb0913c6069d7333989a70a0133d87`. This is process evidence only.
+WIRE-002 external protocol specification lock completed in source-lock commit `8af65aa`. This is specification/source evidence only.
 
-No functional, protocol, formal, synthesis, timing, latency, throughput, CDC, or integration evidence exists.
+No reference-model, RTL, simulation, formal, synthesis, timing, latency, throughput, CDC, or integration evidence exists.
 
 ## Open bugs
 
@@ -55,11 +55,12 @@ None recorded.
 - Exact ECP5 target device/package.
 - Architecture B remains intentionally undefined pending Architecture A measurement.
 - WIRE-001 process adoption details are recorded in `docs/DECISIONS.md`.
+- WIRE-002 external source authority and MVP protocol restrictions are recorded in `docs/DECISIONS.md`.
 
 ## Current bottleneck
 
-Phase-0 environment/toolchain qualification and external protocol specification remain open.
+Phase-0 environment/toolchain qualification and implementation-independent requirements remain open.
 
 ## Next task
 
-WIRE-002 — External protocol specification lock.
+WIRE-003 — Third-party reference/reuse audit and pinning.
