@@ -1,0 +1,6 @@
+Command: source tools/env/setup_oss_cad_suite.sh && PYTHONPATH=model/python python3 -m unittest discover -s model/python/tests -v
+Result: PASS (exit code 0)
+Previous tests: 29
+WIRE-010 tests added: 12
+Total tests: 41
+Summary: Ran 41 tests in 0.002s; OK

@@ -46,7 +46,15 @@ Ethernet/IPv4/UDP/Mold framing model: unit-tested
 
 Mold session/sequence handling: unit-tested
 
-ITCH byte decoding / protocol payload parsing: not started
+ITCH decoding beyond the supported subset: not started
+
+WIRE-010: complete
+
+ITCH A/F/E/C/X/D/U decoder: unit-tested
+
+Normalized events from ITCH bytes: unit-tested
+
+P known non-mutating handling: unit-tested
 
 Order-store mutation model: not started
 
@@ -92,8 +100,8 @@ None recorded.
 
 ## Current bottleneck
 
-ITCH decoding and stateful reference-model behaviour have not started.
+Bounded order-state and aggregate reference-model behavior have not started.
 
 ## Next task
 
-WIRE-010 — Python ITCH subset decoder to normalized events.
+WIRE-011 — Python bounded order-state and aggregate model.

@@ -1,0 +1,11 @@
+WIRE-010 test inventory:
+- A/F exact layouts and equivalent ADD semantics
+- E/C distinction and normalized resting-price protection
+- X/D/U exact mappings and validity flags
+- P known non-mutating classification
+- unknown-type WIRE-D007 fail-closed behavior
+- Stock Locate filtering
+- A/F symbol-check modes and mismatch
+- invalid side and exact-length failures
+- timestamp, Price(4), quantity, and reference propagation
+- FramedMessage integration and late-malformed-prefix decoding
