@@ -1,0 +1,38 @@
+WIRE-005 official device source record
+Retrieval date: 2026-09-27
+
+Primary source:
+  Issuer: Lattice Semiconductor
+  Title: ECP5 and ECP5-5G Family Data Sheet
+  Document: FPGA-DS-02012-3.4
+  Document date: 2025-10-05
+  Canonical URL: https://www.latticesemi.com/-/media/LatticeSemi/Documents/DataSheets/ECP5/FPGA-DS-02012-3-4-ECP5-ECP5G-Family-Data-Sheet.ashx?document_id=50461
+
+Target facts observed in the official family selection/order tables:
+  Exact orderable part: LFE5U-85F-8BG381C
+  Family: LFE5U / ECP5 FPGA
+  Logic capacity: 84K LUTs (order-code shorthand is 85F)
+  sysMEM: 208 blocks of 18 Kbits
+  Embedded memory: 3,744 Kbits
+  Distributed RAM: 669 Kbits
+  18 x 18 multipliers: 156
+  PLLs / DLLs: 4 / 4
+  SERDES: 0
+  381 caBGA package: 0 SERDES / 205 user I/Os for LFE5U-85
+  Speed: -8, listed as fastest in the ordering information
+  Grade: C, commercial
+
+Selection context:
+  LFE5U-45: 44K LUTs, 108 sysMEM blocks, 1,944 Kbits embedded memory,
+  351 Kbits distributed RAM, 72 multipliers, 4 PLLs / 4 DLLs, 0 SERDES,
+  and 203 user I/Os in 381 caBGA.
+  LFE5U-85: 84K LUTs, 208 sysMEM blocks, 3,744 Kbits embedded memory,
+  669 Kbits distributed RAM, 156 multipliers, 4 PLLs / 4 DLLs, 0 SERDES,
+  and 205 user I/Os in 381 caBGA.
+
+Family rationale supported by the source:
+  LFE5U has no SERDES in the selection table. LFE5UM/LFE5UM5G variants
+  provide SERDES channels. The post-MAC project boundary does not require
+  those physical serial resources.
+
+No local copy of the copyrighted PDF is committed.

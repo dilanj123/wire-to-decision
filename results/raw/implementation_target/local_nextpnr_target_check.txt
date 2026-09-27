@@ -1,0 +1,17 @@
+WIRE-005 local target capability record
+Tool environment: /Users/Dilan/eda/wire-to-decision/oss-cad-suite/environment
+nextpnr version: nextpnr-0.11.1-34-gc4fbb55a
+Project Trellis ecppack version: 1.4-83-g65fe191
+
+Installed nextpnr options observed:
+  --85k                         set device type to LFE5U-85F
+  --package arg                 select device package
+  --speed arg                   select device speedgrade (6, 7 or 8)
+  --freq arg                    set target frequency in MHz
+
+Exact target-validation invocation:
+  nextpnr-ecp5 --85k --package CABGA381 --speed 8 --freq 156.25 \
+    --json <smoke-netlist.json> --textcfg <smoke.config> \
+    --report <smoke.report.json> --lpf-allow-unconstrained
+
+The invocation completed normally for the existing WIRE-004 smoke RTL.

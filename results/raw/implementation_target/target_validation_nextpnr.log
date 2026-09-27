@@ -1,0 +1,150 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:        11/83640     0%
+Info:         logic LUTs:      1/83640     0%
+Info:         carry LUTs:     10/83640     0%
+Info:           RAM LUTs:      0/10455     0%
+Info:          RAMW LUTs:      0/20910     0%
+
+Info:      Total DFFs:         9/83640     0%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     9 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0x3c747ce7
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:      27/    365     7%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:       0/    208     0%
+Info: 	          MULT18X18D:       0/    156     0%
+Info: 	              ALU54B:       0/     78     0%
+Info: 	             EHXPLLL:       0/      4     0%
+Info: 	             EXTREFB:       0/      2     0%
+Info: 	                DCUA:       0/      2     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    224     0%
+Info: 	            SIOLOGIC:       0/    141     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/     14     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:       9/  83640     0%
+Info: 	        TRELLIS_COMB:      17/  83640     0%
+Info: 	        TRELLIS_RAMW:       0/  10455     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 3 cells, random placement wirelen = 2485.
+Info:     at initial placer iter 0, wirelen = 2249
+Info:     at initial placer iter 1, wirelen = 2225
+Info:     at initial placer iter 2, wirelen = 2215
+Info:     at initial placer iter 3, wirelen = 2211
+Info: Running main analytical placer, max placement attempts per cell = 10000.
+Info:     at iteration #1, type TRELLIS_COMB: wirelen solved = 2211, spread = 2211, legal = 2213; time = 0.01s
+Info: HeAP Placer Time: 0.07s
+Info:   of which solving equations: 0.01s
+Info:   of which spreading cells: 0.00s
+Info:   of which strict legalisation: 0.00s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 0, wirelen = 2213
+Info:   at iteration #5: temp = 0.000000, timing cost = 0, wirelen = 1528
+Info:   at iteration #10: temp = 0.000000, timing cost = 0, wirelen = 1486
+Info:   at iteration #14: temp = 0.000000, timing cost = 0, wirelen = 1486 
+Info: SA placement time 0.01s
+
+Info: No Fmax available; no interior timing paths found in design.
+Info: Checksum: 0xdefa185e
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 55 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:         55 |        0         48 |    0    48 |         0|       0.11       0.11|
+Info: Routing complete.
+Info: Router1 time 0.11s
+Info: Checksum: 0xb7eb3da5
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source b[1]$tr_io.O
+Info:    routing  5.11  5.11 Net b[1]$TRELLIS_IO_IN (96,95) -> (63,27)
+Info:                          Sink sum_q_TRELLIS_FF_Q_3_DI_CCU2C_S1$CCU2_COMB1.B
+Info:                          Defined in:
+Info:                               tools/smoke/rtl/toolchain_smoke.sv:7.24-7.25
+Info:      logic  0.35  5.46 Source sum_q_TRELLIS_FF_Q_3_DI_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  5.46 Net sum_q_TRELLIS_FF_Q_3_DI_CCU2C_S1_COUT (63,27) -> (63,27)
+Info:                          Sink sum_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               tools/smoke/rtl/toolchain_smoke.sv:15.22-15.43
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  5.52 Source sum_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  5.52 Net sum_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_FCI_INT (63,27) -> (63,27)
+Info:                          Sink sum_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  5.52 Source sum_q_TRELLIS_FF_Q_DI_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  5.52 Net sum_q_TRELLIS_FF_Q_DI_CCU2C_S1_COUT (63,27) -> (63,27)
+Info:                          Sink sum_q_TRELLIS_FF_Q_1_DI_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               tools/smoke/rtl/toolchain_smoke.sv:15.22-15.43
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  5.57 Source sum_q_TRELLIS_FF_Q_1_DI_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  5.57 Net sum_q_TRELLIS_FF_Q_1_DI_CCU2C_S1$CCU2_FCI_INT (63,27) -> (63,27)
+Info:                          Sink sum_q_TRELLIS_FF_Q_1_DI_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  5.57 Source sum_q_TRELLIS_FF_Q_1_DI_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  5.57 Net sum_q_TRELLIS_FF_Q_1_DI_CCU2C_S1_COUT (63,27) -> (64,27)
+Info:                          Sink sum_q_TRELLIS_FF_Q_4_DI_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               tools/smoke/rtl/toolchain_smoke.sv:15.22-15.43
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  5.63 Source sum_q_TRELLIS_FF_Q_4_DI_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  5.63 Net sum_q_TRELLIS_FF_Q_4_DI_CCU2C_S1$CCU2_FCI_INT (64,27) -> (64,27)
+Info:                          Sink sum_q_TRELLIS_FF_Q_4_DI_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  5.63 Source sum_q_TRELLIS_FF_Q_4_DI_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  5.63 Net sum_q_TRELLIS_FF_Q_4_DI_CCU2C_S1_COUT (64,27) -> (64,27)
+Info:                          Sink sum_q_TRELLIS_FF_Q_5_DI_CCU2C_S0$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               tools/smoke/rtl/toolchain_smoke.sv:15.22-15.43
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.33  5.96 Source sum_q_TRELLIS_FF_Q_5_DI_CCU2C_S0$CCU2_COMB0.F
+Info:    routing  0.12  6.08 Net sum_q_TRELLIS_FF_Q_5_DI (64,27) -> (64,27)
+Info:                          Sink sum_q_TRELLIS_FF_Q_5.DI
+Info:      setup  0.00  6.08 Source sum_q_TRELLIS_FF_Q_5.DI
+Info: 0.85 ns logic, 5.22 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.40  0.40 Source sum_q_TRELLIS_FF_Q_2.Q
+Info:    routing  3.13  3.53 Net sum_q[2]$TRELLIS_IO_OUT (63,27) -> (0,29)
+Info:                          Sink sum_q[2]$tr_io.I
+Info:                          Defined in:
+Info:                               tools/smoke/rtl/toolchain_smoke.sv:8.24-8.29
+Info: 0.40 ns logic, 3.13 ns routing
+
+Info: No Fmax available; no interior timing paths found in design.
+
+Info: Program finished normally.

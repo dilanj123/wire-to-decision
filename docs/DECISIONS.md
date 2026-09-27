@@ -35,3 +35,12 @@
 - Scope: Toolchain environment only. The ECP5 `LFE5U-25F` / `CABGA381` combination used in the smoke test is not the Wire-to-Decision production target.
 - Rationale: Each listed flow stage executed successfully on the actual arm64 host using the trivial WIRE-004 smoke design. Exact archive metadata, paths, commands, and logs are retained in the WIRE-004 evidence.
 - Status: ADOPTED
+
+## WIRE-D005 — Freeze canonical implementation target
+
+- Date: 2026-09-27
+- Source: WIRE-005 implementation-target freeze
+- Decision: Use LFE5U-85F-8BG381C as the canonical mandatory implementation target, mapped in nextpnr-ECP5 as `--85k --package CABGA381 --speed 8`, with a primary timing objective of 156.25 MHz (6.4 ns). Architecture A and any later authorized Architecture B comparison must use the same target and controlled P&R methodology. Physical hardware is not required for the CV-ready gate.
+- Scope: Implementation target and experiment methodology only. No protocol or microarchitecture scope change; no application fit or timing result is established.
+- Rationale: The official Lattice resource tables provide substantially more experimental headroom in 85F than 45F, while LFE5U avoids unused SERDES capability at the post-MAC project boundary. The exact target was accepted and routed by the qualified local OSS CAD Suite using the existing trivial smoke design.
+- Status: ADOPTED
