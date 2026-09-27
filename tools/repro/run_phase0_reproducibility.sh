@@ -16,6 +16,7 @@ required_files=(
     docs/SPEC_SOURCES.md docs/THIRD_PARTY_MANIFEST.md docs/IMPLEMENTATION_TARGET.md
     tasks/WIRE-000.md tasks/WIRE-001.md tasks/WIRE-002.md tasks/WIRE-003.md
     tasks/WIRE-004.md tasks/WIRE-005.md tasks/WIRE-006.md
+    tasks/WIRE-007.md
     tools/env/setup_oss_cad_suite.sh tools/smoke/README.md
     tools/smoke/scripts/run_toolchain_smoke.sh
     results/processed/reference_workflow_audit.md
@@ -24,6 +25,7 @@ required_files=(
     results/processed/toolchain_smoke.md
     results/processed/WIRE-005-implementation-target.md
     results/processed/WIRE-006-specification-package.md
+    results/processed/WIRE-007-clean-clone.md
 )
 
 echo "WIRE-007 Phase-0 reproducibility check"
