@@ -1,0 +1,4 @@
+Prior tests: 61
+New WIRE-013 tests: 10
+Total tests: 71
+Coverage: complete-frame decision, multi-message/multi-frame state, heartbeat, P, other-locate filtering, ordinary profile filtering, sequence failure, EOS, unsupported ITCH, duplicate/unknown references, late malformed suffix, quarantine, and re-arm.

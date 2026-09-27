@@ -1,0 +1,3 @@
+Command: PYTHONPATH=model/python python3 -m unittest discover -s model/python/tests -v
+Result: PASS
+Tests: 71

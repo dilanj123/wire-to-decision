@@ -1,0 +1,8 @@
+Late malformed suffix result:
+completed prefix messages retained: 2
+prefix mutations committed: ADD then EXECUTE
+prefix decisions emitted: 1
+terminal error: MESSAGE_TRUNCATED
+final book_valid: false
+final recovery_required: true
+rollback: none

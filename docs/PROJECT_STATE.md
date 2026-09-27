@@ -2,7 +2,7 @@
 
 ## Phase
 
-Phase 1 — Python reference model
+Phase 1 — COMPLETE
 
 ## Gate
 
@@ -76,7 +76,13 @@ Risk-budget model: unit-tested
 
 Full end-to-end Python oracle: not yet complete
 
-Python component regression: 61 tests passing
+WIRE-013: complete
+
+End-to-end Python oracle: unit-tested
+
+Packet-level fail-closed/recovery integration: unit-tested
+
+Python component regression: 71 tests passing
 
 Application RTL functional evidence: none
 
@@ -118,8 +124,8 @@ None recorded.
 
 ## Current bottleneck
 
-Full end-to-end Python oracle and packet-level recovery integration remain.
+SystemVerilog implementation and cross-layer hardware verification remain.
 
 ## Next task
 
-WIRE-013 — Python end-to-end reference oracle and recovery integration.
+WIRE-014 — Architecture A 64-to-8 gearbox RTL and verification.

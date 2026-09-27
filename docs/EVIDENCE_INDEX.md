@@ -17,6 +17,7 @@ No functional design evidence exists yet.
 | EVID-010 | Phase 1 | Project-owned Python decoder for the frozen TotalView-ITCH A/F/E/C/X/D/U subset, P non-mutating classification, tracked-instrument filtering and normalized-event mapping exercised by unit tests | Complete — WIRE-010 decoder evidence | tasks/WIRE-010.md; results/processed/WIRE-010-itch-decoder.md; results/raw/reference_model/ |
 | EVID-011 | Phase 1 | Bounded 512-set × 2-way Python order-state model and 48-bit aggregate accounting exercised by unit tests against frozen mutation semantics | Complete — GitHub publication separately verified | tasks/WIRE-011.md; results/processed/WIRE-011-book-model.md; results/raw/reference_model/ |
 | EVID-012 | Phase 1 | Python deterministic imbalance-crossing decision and risk-budget model exercised by unit tests against frozen decision requirements and bounded-order aggregates | Complete — PYTHON-UNIT-TESTED | tasks/WIRE-012.md; results/processed/WIRE-012-decision-model.md; results/raw/reference_model/ |
+| EVID-013 | Phase 1 | Project-owned Python end-to-end reference oracle integrating framing, ITCH decoding, bounded order state, aggregates, deterministic decisions, fail-closed behavior, recovery, and late-suffix no-rollback | Complete — PYTHON-UNIT-TESTED | tasks/WIRE-013.md; results/processed/WIRE-013-end-to-end-oracle.md; results/raw/reference_model/ |
 
 ## Evidence classification
 

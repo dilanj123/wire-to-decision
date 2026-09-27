@@ -15,7 +15,7 @@ This is a gate checklist, not a duplicate of the master plan. Future items remai
 
 ## Functional baseline gate
 
-- [ ] Independent Python model
+- [x] Independent Python model — WIRE-013 end-to-end oracle unit-tested
 - [ ] Architecture A parser
 - [ ] Bounded order state and decision
 - [ ] Functional regression
