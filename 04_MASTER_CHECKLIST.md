@@ -2,7 +2,7 @@
 
 This is a gate checklist, not a duplicate of the master plan. Future items remain incomplete until evidence is recorded.
 
-## Gate 0 — Phase-0 ready
+## Gate 0 — Phase-0 ready / CLOSED
 
 - [x] Repository bootstrap complete
 - [x] Reference workflow audited
@@ -11,7 +11,7 @@ This is a gate checklist, not a duplicate of the master plan. Future items remai
 - [x] Apple-Silicon open-source toolchain qualified
 - [x] ECP5 implementation target frozen
 - [x] Authoritative specification package complete
-- [ ] Clean-clone/reproducibility closure demonstrated by WIRE-007
+- [x] Clean-clone/reproducibility closure demonstrated by WIRE-007
 
 ## Functional baseline gate
 

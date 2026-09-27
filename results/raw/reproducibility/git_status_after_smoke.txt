@@ -1,2 +1,6 @@
-WIRE-007 post-smoke status result placeholder before final closure run.
-Expected final closure result: clean detached working tree; generated artifacts remain outside the clone or ignored.
+WIRE-007 final clean-clone post-smoke Git status
+Clone commit: e9123ea24a6a3314441bec3617cdb5da559cb775
+Command: git -C /tmp/wire007-final-clean-clone.K2TiBs status --short --branch
+Result:
+  ## HEAD (no branch)
+No tracked or untracked changes remained. Generated artifacts were disposable/outside the clone.

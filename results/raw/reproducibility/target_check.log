@@ -1,2 +1,11 @@
-WIRE-007 target result placeholder before final closure run.
-The final closure run must validate LFE5U-85F through --85k, CABGA381, speed 8, and a 156.25 MHz constraint using the existing toolchain smoke RTL only.
+WIRE-007 final clean-clone target result
+Clone commit: e9123ea24a6a3314441bec3617cdb5da559cb775
+Result: PASS
+Target: LFE5U-85F-8BG381C
+Selectors: --85k --package CABGA381 --speed 8 --freq 156.25
+Yosys ECP5 synthesis: PASS
+nextpnr placement: PASS
+nextpnr routing: PASS; Program finished normally
+156.25 MHz constraint acceptance: PASS
+ecppack bitstream generation: PASS
+This is trivial smoke-target compatibility evidence only.

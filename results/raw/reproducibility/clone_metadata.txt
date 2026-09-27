@@ -1,6 +1,9 @@
 WIRE-007 clean-clone metadata
 Initial source: /Users/Dilan/Projects/wire-to-decision
 Remote inspection: no canonical remote configured; local Git clone semantics used.
-Executable candidate tested before closure evidence: 7ec5d53ca4c232faee0a1f59177380299f58acff
-Final closure clone: created outside the canonical repository after the WIRE-007 evidence-preparation commit.
+Executable candidate tested before closure evidence: e9123ea24a6a3314441bec3617cdb5da559cb775
+Final closure clone: /tmp/wire007-final-clean-clone.K2TiBs
+Final closure clone commit: e9123ea24a6a3314441bec3617cdb5da559cb775
+Final closure result: PASS, exit code 0.
+Clone origin: /Users/Dilan/Projects/wire-to-decision (local Git clone semantics; canonical repository has no configured remote).
 Temporary clone/build directories: outside the repository under /tmp; not committed.

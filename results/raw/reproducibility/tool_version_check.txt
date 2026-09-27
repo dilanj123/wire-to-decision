@@ -10,4 +10,4 @@ Expected versions from WIRE-004:
   Yices 2.7.0
   nextpnr-ecp5 0.11.1-34-gc4fbb55a
   ecppack / Project Trellis 1.4-83-g65fe191
-The final closure run records the active command output in its processed report.
+Final closure result: PASS. The clean clone selected the external suite at `/Users/Dilan/eda/wire-to-decision/oss-cad-suite` and matched the WIRE-004 qualified environment. The active versions were recorded by the smoke inventory and are summarized in the processed report.

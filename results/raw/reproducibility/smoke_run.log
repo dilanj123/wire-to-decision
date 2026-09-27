@@ -1,2 +1,13 @@
-WIRE-007 smoke result placeholder before final closure run.
-The final closure run must execute the repository-owned checker, which redirects WIRE-004 smoke raw logs to a disposable directory and verifies Verilator, cocotb, Yosys, SBY/Yices, nextpnr-ECP5, and ecppack success.
+WIRE-007 final clean-clone smoke result
+Clone commit: e9123ea24a6a3314441bec3617cdb5da559cb775
+Command: tools/repro/run_phase0_reproducibility.sh
+Result: PASS, exit code 0
+Verilator lint/build: PASS
+cocotb + Verilator: PASS, TESTS=1 PASS=1 FAIL=0
+Yosys generic/ECP5 synthesis: PASS
+SBY prove: PASS
+SBY cover: PASS
+Yices execution: PASS
+nextpnr-ECP5 smoke: PASS
+ecppack: PASS
+All generated smoke output used disposable temporary directories.

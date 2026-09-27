@@ -2,11 +2,11 @@
 
 ## Phase
 
-Phase 0 — Bootstrap
+Phase 0 — Complete
 
 ## Gate
 
-Gate 0 — not passed; WIRE-001 through WIRE-006 complete. WIRE-007 clean-clone/reproducibility closure remains open.
+Gate 0 — CLOSED; WIRE-000 through WIRE-007 complete
 
 ## Known-good commit
 
@@ -54,7 +54,7 @@ Not run.
 
 WIRE-004 native Apple Silicon open-source toolchain qualification completed in commit `89e2841` for the trivial smoke design. Canonical suite: OSS CAD Suite `2026-09-27`; details are in `results/processed/toolchain_smoke.md`. This is toolchain-smoke evidence only.
 
-WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; this is specification evidence only. No reference-model, application RTL, simulation, formal, application synthesis, timing, latency, throughput, CDC, or integration evidence exists.
+WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. These are specification/environment evidence only. No reference-model, application RTL, simulation, formal, application synthesis, timing, latency, throughput, CDC, or integration evidence exists.
 
 ## Open bugs
 
@@ -72,8 +72,8 @@ None recorded.
 
 ## Current bottleneck
 
-Clean-clone/reproducibility closure remains open; implementation-independent application work has not started.
+Phase 1 application work has not started; the next work is the independent Python reference model.
 
 ## Next task
 
-WIRE-007 — clean-clone / Phase-0 reproducibility closure.
+WIRE-008 — Python reference-model skeleton and canonical data model.

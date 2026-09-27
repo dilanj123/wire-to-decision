@@ -1,10 +1,11 @@
 WIRE-007 commands
 git remote -v
-git clone /Users/Dilan/Projects/wire-to-decision <temporary-clean-clone>
-git -C <temporary-clean-clone> checkout --detach <final-candidate>
-<temporary-clean-clone>/tools/repro/run_phase0_reproducibility.sh
-git -C <temporary-clean-clone> status --short --branch
-git -C <temporary-clean-clone> rev-parse HEAD
+git clone /Users/Dilan/Projects/wire-to-decision /tmp/wire007-final-clean-clone.K2TiBs
+git -C /tmp/wire007-final-clean-clone.K2TiBs checkout --detach e9123ea24a6a3314441bec3617cdb5da559cb775
+/tmp/wire007-final-clean-clone.K2TiBs/tools/repro/run_phase0_reproducibility.sh
+git -C /tmp/wire007-final-clean-clone.K2TiBs status --short --branch
+git -C /tmp/wire007-final-clean-clone.K2TiBs rev-parse HEAD
+Result: exit code 0; detached clone status clean.
 Exact target validation performed by the repository-owned checker:
   yosys synth_ecp5 on tools/smoke/rtl/toolchain_smoke.sv
   nextpnr-ecp5 --85k --package CABGA381 --speed 8 --freq 156.25

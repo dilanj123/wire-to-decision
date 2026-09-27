@@ -6,7 +6,7 @@ The canonical repository began WIRE-007 at clean `main` HEAD `43189dd01442af9cfc
 
 ## B. Clean-clone source and candidate commit
 
-The clone source was local Git clone semantics from `/Users/Dilan/Projects/wire-to-decision`; no remote URL was invented. The final executable candidate tested by the closure checker is recorded in the final report section below. Temporary clone/build directories were outside the canonical repository under `/tmp`.
+The clone source was local Git clone semantics from `/Users/Dilan/Projects/wire-to-decision`; no remote URL was invented. The final executable candidate tested by the closure checker was `e9123ea24a6a3314441bec3617cdb5da559cb775`. The final clone was `/tmp/wire007-final-clean-clone.K2TiBs`, outside the canonical repository.
 
 ## C. Required-file audit
 
@@ -22,19 +22,19 @@ TOOLCHAIN-REPRODUCED: `tools/env/setup_oss_cad_suite.sh` accepts `WIRE_OSS_CAD_S
 
 ## F. Tool-version validation
 
-TOOLCHAIN-REPRODUCED: The final closure run compares the active tools with WIRE-004’s frozen OSS CAD Suite environment: Python 3.11.6, Verilator 5.053 devel, cocotb 2.1.0.dev0+41564633, Yosys 0.69+154, SBY v0.69, Yices 2.7.0, nextpnr-ecp5 0.11.1-34-gc4fbb55a, and ecppack/Project Trellis 1.4-83-g65fe191.
+TOOLCHAIN-REPRODUCED: The final closure run compared the active tools with WIRE-004’s frozen OSS CAD Suite environment: Python 3.11.6, Verilator 5.053 devel, cocotb 2.1.0.dev0+41564633, Yosys 0.69+154, SBY v0.69, Yices 2.7.0, nextpnr-ecp5 0.11.1-34-gc4fbb55a, and ecppack/Project Trellis 1.4-83-g65fe191. Result: PASS.
 
 ## G. Toolchain smoke result
 
-TOOLCHAIN-REPRODUCED: The final clean-clone checker runs the repository smoke driver with disposable raw/build output. It requires PASS for Verilator lint, cocotb/Verilator, generic and ECP5 Yosys synthesis, SBY prove and cover with Yices, nextpnr placement/routing, and ecppack.
+TOOLCHAIN-REPRODUCED: The final clean-clone checker ran the repository smoke driver with disposable raw/build output. Verilator lint, cocotb/Verilator, generic and ECP5 Yosys synthesis, SBY prove and cover with Yices, nextpnr placement/routing, and ecppack all passed.
 
 ## H. Implementation-target recognition
 
-TOOLCHAIN-REPRODUCED: The final checker independently runs the existing smoke RTL through `--85k --package CABGA381 --speed 8 --freq 156.25`, then requires normal nextpnr completion and a generated bitstream. This is target compatibility evidence only.
+TOOLCHAIN-REPRODUCED: The final checker independently ran the existing smoke RTL through `--85k --package CABGA381 --speed 8 --freq 156.25`, observed normal nextpnr completion, and generated a bitstream. This is target compatibility evidence only.
 
 ## I. Post-smoke Git hygiene
 
-REPOSITORY-REPRODUCED: Smoke output is redirected to disposable directories. The final clean clone must remain clean after execution; retained canonical evidence is concise and does not include generated simulator/formal/P&R directories.
+REPOSITORY-REPRODUCED: Smoke output was redirected to disposable directories. The final clean clone remained clean after execution; retained canonical evidence is concise and does not include generated simulator/formal/P&R directories.
 
 ## J. Evidence-index consistency
 
@@ -56,11 +56,11 @@ The audit found and fixed:
 
 ## M. Final clean-clone run
 
-To be finalized after the evidence-preparation commit: create a new clone of the exact candidate, run `tools/repro/run_phase0_reproducibility.sh`, record its exit status, exact clone commit, tool results, target result, and post-run Git status here.
+REPOSITORY-REPRODUCED / TOOLCHAIN-REPRODUCED: A brand-new clone at `/tmp/wire007-final-clean-clone.K2TiBs`, checked out at `e9123ea24a6a3314441bec3617cdb5da559cb775`, ran `tools/repro/run_phase0_reproducibility.sh` from outside the clone. Exit code was 0. The checker passed required-file presence, 71 requirement IDs, EVID-000 through EVID-007, WIRE-D001 through WIRE-D008, tool activation/version checks, all WIRE-004 smoke stages, WIRE-005 target validation, and post-run clean Git status.
 
 ## N. Gate-0 decision
 
-Pending the final closure run. Gate 0 must remain open until the final clean clone passes all mandatory checks.
+PASS: Gate 0 is closed. Phase 0 is complete for repository/state reproducibility, authoritative specifications, protocol-source lock, provenance policy, qualified external toolchain, implementation-target freeze, and final clean-clone closure. This is not application correctness evidence.
 
 ## O. What remains unproven
 

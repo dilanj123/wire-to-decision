@@ -1,4 +1,4 @@
 WIRE-007 tracked-file audit
 The repository-owned reproducibility checker enumerates the authority package, WIRE-000 through WIRE-007 task/evidence files, smoke infrastructure, and processed WIRE-001 through WIRE-007 evidence.
-Required-file audit result: PASS in the final closure run.
-Top-level tracked structure includes rtl, tb, formal, model/python, tools/cpp, tools/analysis, tools/env, tools/smoke, docs, tasks, results/raw, results/processed, and third_party.
+Required-file audit result: PASS in the final closure run at commit e9123ea24a6a3314441bec3617cdb5da559cb775.
+Top-level tracked structure includes rtl, tb, formal, model/python, tools/cpp, tools/analysis, tools/env, tools/smoke, tools/repro, docs, tasks, results/raw, results/processed, and third_party.

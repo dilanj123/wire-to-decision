@@ -11,7 +11,7 @@ No functional design evidence exists yet.
 | EVID-004 | Phase 0 | Native Apple Silicon open-source toolchain qualification on trivial smoke design | Complete — smoke commit `89e2841` | tasks/WIRE-004.md; results/processed/toolchain_smoke.md; results/raw/toolchain/ |
 | EVID-005 | Phase 0 | Canonical FPGA implementation target and timing objective frozen; exact target validated with trivial smoke P&R | Complete — target-freeze commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16` | tasks/WIRE-005.md; docs/IMPLEMENTATION_TARGET.md; results/processed/WIRE-005-implementation-target.md; results/raw/implementation_target/ |
 | EVID-006 | Phase 0 | Authoritative Wire-to-Decision project specification package created and internally consistency-reviewed | Complete — specification commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd` | 00_MASTER_PROJECT_PLAN.md; 01_CHATGPT_PROJECT_OPERATING_INSTRUCTIONS.md; 04_MASTER_CHECKLIST.md; docs/REQUIREMENTS.md; docs/MICROARCHITECTURE.md; docs/VERIFICATION_PLAN.md; docs/FORMAL.md; results/processed/WIRE-006-specification-package.md |
-| EVID-007 | Phase 0 | Phase-0 repository/environment reproducibility from a clean clone | Pending final WIRE-007 closure run | tasks/WIRE-007.md; results/processed/WIRE-007-clean-clone.md; results/raw/reproducibility/ |
+| EVID-007 | Phase 0 | Phase-0 repository/environment reproducibility from a clean clone | Complete — closure candidate `e9123ea24a6a3314441bec3617cdb5da559cb775` | tasks/WIRE-007.md; results/processed/WIRE-007-clean-clone.md; results/raw/reproducibility/ |
 
 ## Evidence classification
 
