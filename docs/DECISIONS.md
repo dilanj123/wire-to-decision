@@ -74,3 +74,13 @@
 - Alternatives considered: parser-specific downstream interfaces or reparsing raw ITCH bytes in the book. These would weaken comparison and duplicate protocol knowledge.
 - Consequences: the common order/aggregate/decision subsystem can be held constant while parser implementations vary. Exact RTL encoding remains an implementation detail.
 - Status: ADOPTED
+
+## WIRE-D009 — Freeze deterministic bounded-store way selection
+
+- Date: 2026-09-27
+- Source: WIRE-011 bounded order-state model
+- Context: The 512-set × 2-way store requires deterministic allocation when both ways in a target set are free so Python, RTL, and C++ models remain equivalent.
+- Decision: Select way 0 when both ways are free; otherwise select the only free way. Never evict a valid entry. A full target set fails closed.
+- Alternatives considered: selecting way 1 first, implementation-dependent selection, or eviction. These were rejected because they weaken reproducibility or violate the no-eviction policy.
+- Consequences: Free-way selection is deterministic across implementations. This is an implementation-model decision and does not change the 512-set × 2-way architecture or its failure policy.
+- Status: ADOPTED
