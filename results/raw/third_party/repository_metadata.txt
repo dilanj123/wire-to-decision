@@ -1,0 +1,15 @@
+WIRE-003 upstream metadata
+GitHub API metadata was read for the canonical repositories on 2026-09-27. `archived=false` was reported for all seven repositories.
+
+TP-001 | verilog-ethernet | description: Verilog Ethernet components for FPGA implementation | default: master | API licence: MIT | relevant: rtl, tb, example
+TP-002 | cocotbext-eth | description: Ethernet interface modules for Cocotb | default: master | API licence: MIT | relevant: cocotbext/eth, tests
+TP-003 | Corundum | description: Open source FPGA-based NIC and platform for in-network compute | default: master | API licence: NOASSERTION | relevant: fpga, modules, scripts, docs, test infrastructure
+TP-004 | Taxi | description: AXI, AXI stream, Ethernet, and PCIe components in System Verilog | default: master | API licence: CERN-OHL-S-2.0 | relevant: src/eth, src/axis, src/sync, docs, test infrastructure
+TP-005 | Itch-Parser | description: FPGA-based NASDAQ ITCH 5.0 market data decoder and Limit Order Book in pure Verilog | default: main | API licence: no SPDX/API licence value | relevant: itch_decoder.v, order_book.v, packet adapters, testbenches
+TP-006 | fpga-tick-to-trade | description: Deterministic, formally verified tick-to-trade engine in FPGA fabric — 5-cycle latency, zero CPU, proven fail-closed. SystemVerilog on Arty A7. | default: main | API licence: MIT | relevant: rtl, tb, formal, synth, tools, docs
+TP-007 | common_cells | description: Common SystemVerilog components | default: master | API licence: NOASSERTION | relevant: src, formal, test, include
+
+Objective maintenance observations:
+- TP-001 README explicitly says the repository is deprecated and superseded by https://github.com/fpganinja/taxi; all new features and fixes move there.
+- TP-002, TP-004, TP-005, TP-006, and TP-007 have recent inspected commits and were not archived; this is not a claim of support level.
+- TP-003 was not archived but its inspected repository tip predates the other current tips; this audit makes no stronger maintenance claim.

@@ -1,0 +1,15 @@
+WIRE-003 licence-file fingerprints at pinned commits
+
+TP-001 | COPYING | MIT-style permission notice | 8ea57f95365e9b16a5b516f422b71269183a1ae53bab5878ae6d69039e58fe77
+TP-002 | LICENSE | MIT-style permission notice | d10da1a65b4ba610e3df21fc1b8122dca0043e8ee7715eaf341d5d8a4a560729
+TP-003 | LICENSE | BSD-2-Clause-style text; source headers include BSD-2-Clause-Views | e718ce52d815d36c0576b9f759001200731db9b16775286ffc1b66bbf97eb1b6
+TP-004 | LICENSE | CERN Open Hardware Licence Version 2 - Strongly Reciprocal | 253ad3f89603e728abfa60c36fbcaf8225cf55c1eab12725f19fb3d74d647f3a
+TP-005 | no licence file found | README states “MIT — free to use, modify, and build on” | not applicable
+TP-006 | LICENSE | MIT License | b4b3bce4fdab7ccc1ffe899b993ce1b8ad25836f8ebe9e420ea12b9179b6960a
+TP-007 | LICENSE | Solderpad Hardware License version 0.51 / SHL-0.51 | 6527a46225891b976fa94f634f6ee0cd22e1c7129d6f11c5c98c997627625fc7
+
+Relevant per-file SPDX observations:
+- TP-003 source files include BSD-2-Clause-Views, with some Apache-2.0 and MIT files; treat the repository as mixed and inspect any future file individually.
+- TP-004 source tree includes CERN-OHL-S-2.0, BSD-3-Clause, MIT, and GPL identifiers; the repository README says components may have less restrictive licences.
+- TP-007 common RTL, formal, and test files generally use SHL-0.51; selected support files use Apache-2.0.
+- TP-001 and TP-002 use MIT licence files; no project source incorporation occurred.

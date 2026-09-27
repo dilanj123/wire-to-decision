@@ -1,0 +1,13 @@
+WIRE-003 upstream repository pins
+Inspection date: 2026-09-27
+Inspection method: disposable shallow Git clones at each default-branch tip
+
+TP-001 | https://github.com/alexforencich/verilog-ethernet.git | default branch master | 77320a9471d19c7dd383914bc049e02d9f4f1ffb | 2025-02-27T15:50:25-08:00
+TP-002 | https://github.com/alexforencich/cocotbext-eth.git | default branch master | 2ae8a17903e31206140429c036e68cb4d4a0cf24 | 2026-08-28T11:00:56-07:00
+TP-003 | https://github.com/corundum/corundum.git | default branch master | 1ca0151b97af85aa5dd306d74b6bcec65904d2ce | 2023-12-02T01:30:49-08:00
+TP-004 | https://github.com/fpganinja/taxi.git | default branch master | cc70b270b910d369ab1ad7b3855e76399fd461f1 | 2026-08-28T13:34:16-07:00
+TP-005 | https://github.com/tmlee06/Itch-Parser.git | default branch main | 6aebfc3e37c58f4d965ef80e4689a30541bca68e | 2026-06-16T17:54:50+09:00
+TP-006 | https://github.com/namangoyal-work/fpga-tick-to-trade.git | default branch main | ee3ef5fab4d82127c74733e037231e2c7f1f8f58 | 2026-07-05T09:59:34+02:00
+TP-007 | https://github.com/pulp-platform/common_cells.git | default branch master | e73baaec2ca665cd80c3c384e9258e35242b829c | 2026-09-18T17:10:47+00:00
+
+All seven clones were clean after checkout. No clone was placed under Wire-to-Decision.

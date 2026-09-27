@@ -1,0 +1,22 @@
+WIRE-003 audit commands
+
+cd /Users/Dilan/Projects/wire-to-decision
+pwd
+git rev-parse --show-toplevel
+git branch --show-current
+git rev-parse HEAD
+git status --short --branch
+
+Temporary inspection directory: /tmp/wire-to-decision-third-party-audit.GtKoNw
+git clone --quiet --depth 1 <canonical-url> <temporary-path>
+git remote -v
+git branch --show-current
+git rev-parse HEAD
+git show -s --format='%cI' HEAD
+git show -s --format='%s' HEAD
+find <temporary-path> -maxdepth 2 -type f -iname 'license*' -o -iname 'copying*'
+shasum -a 256 <licence-file>
+rg -n 'SPDX-License-Identifier|CERN-OHL|SHL-0.51' <temporary-path>
+curl -sL https://api.github.com/repos/<owner>/<repo> | jq metadata
+
+No source, package, submodule, fork, or upstream modification was performed.
