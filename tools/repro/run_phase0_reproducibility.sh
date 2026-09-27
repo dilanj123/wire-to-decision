@@ -68,7 +68,15 @@ ecppack --version
 echo "=== toolchain smoke ==="
 smoke_raw=""
 target_build=""
-trap 'rm -rf "${smoke_raw:-}" "${target_build:-}"' EXIT
+cleanup() {
+    if [[ -n "$smoke_raw" ]]; then
+        rm -rf "$smoke_raw"
+    fi
+    if [[ -n "$target_build" ]]; then
+        rm -rf "$target_build"
+    fi
+}
+trap cleanup EXIT
 smoke_raw="$(mktemp -d /tmp/wire007-smoke-raw.XXXXXX)"
 WIRE_SMOKE_RAW_ROOT="$smoke_raw" \
     "$repo_root/tools/smoke/scripts/run_toolchain_smoke.sh"
