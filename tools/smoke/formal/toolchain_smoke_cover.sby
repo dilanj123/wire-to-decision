@@ -1,0 +1,14 @@
+[options]
+mode cover
+depth 8
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv toolchain_smoke.sv toolchain_smoke_formal.sv
+prep -top toolchain_smoke_formal
+
+[files]
+tools/smoke/rtl/toolchain_smoke.sv
+tools/smoke/formal/toolchain_smoke_formal.sv

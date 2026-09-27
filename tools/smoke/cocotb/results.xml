@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1790511114" />
+    <testcase name="registered_sum_smoke" classname="test_toolchain_smoke" file="/Users/Dilan/Projects/wire-to-decision/tools/smoke/cocotb/test_toolchain_smoke.py" lineno="8" time="0.00045299530029296875" sim_time_ns="80.0" ratio_time="176602.27368421052" />
+  </testsuite>
+</testsuites>

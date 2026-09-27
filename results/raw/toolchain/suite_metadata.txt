@@ -1,0 +1,14 @@
+WIRE-004 frozen OSS CAD Suite metadata
+
+Release source: https://github.com/YosysHQ/oss-cad-suite-build/releases
+Release tag/build date: 2026-09-27
+Release published: 2026-09-27T05:59:53Z
+Archive: oss-cad-suite-darwin-arm64-20260927.tgz
+Download URL: https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2026-09-27/oss-cad-suite-darwin-arm64-20260927.tgz
+Download/retrieval timestamp UTC: 2026-09-27T13:03:58Z (file creation); file modification completed 2026-09-27T13:04:13Z
+Archive size: 523987393 bytes
+SHA-256: 0df7ff004bb038f5aaef70959da0ba9c23c19472f5887698673d36f4b9528455
+Installation path: /Users/Dilan/eda/wire-to-decision/oss-cad-suite
+Activation: source /Users/Dilan/eda/wire-to-decision/oss-cad-suite/environment
+
+The archive is not committed. The installed suite is outside the Git repository.
