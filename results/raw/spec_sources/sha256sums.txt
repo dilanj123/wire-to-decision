@@ -1,0 +1,9 @@
+SHA-256 fingerprints of exact retrieved representations
+
+be88b9301e53f986aca3a0e55e488d1d79bae3f88fe3f257640397bc089e7035  RFC-894.txt
+6cfb387fcecfc1b72f2f69343c5b6951b5d263d708162e2b5c66ab8f394f6265  RFC-791.txt
+7dc8880e1ecef9c3f9da0db4b876a16e96bfa4f0953cc9d977d414f8f680c2f0  RFC-768.txt
+96cdd02b8728a441cb970d1371a96e73c01e1edaffb2891d43667e2a0ad8add5  moldudp64.pdf
+4eb5a16abf7f32d6c97896f7c1de4aa51a1241f2da973519722614962f71a130  NQTVITCHSpecification__1_.pdf
+
+The downloaded PDFs and RFC text files were temporary retrieval artifacts and are not committed.

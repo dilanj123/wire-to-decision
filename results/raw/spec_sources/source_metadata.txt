@@ -1,0 +1,53 @@
+WIRE-002 source metadata
+Retrieved: 2026-09-27T11:42:10Z (UTC)
+Repository: /Users/Dilan/Projects/wire-to-decision
+
+Source ID: RFC-894
+Protocol: IPv4 over Ethernet II
+Document title: A Standard for the Transmission of IP Datagrams over Ethernet Networks
+Issuing authority: RFC Editor / Internet Engineering Task Force
+Canonical source: https://www.rfc-editor.org/rfc/rfc894.txt
+Declared version: RFC 894 (May 1984)
+Publication/revision information: RFC 894; RFC Editor verified errata 570 and 5141 correct the text describing the 1500-octet Ethernet data-field limit from “minimum” to “maximum”.
+Relevant errata/update documents: https://www.rfc-editor.org/errata/rfc894
+Purpose: IPv4-over-Ethernet EtherType and encapsulation facts for the post-MAC MVP boundary.
+
+Source ID: RFC-791
+Protocol: IPv4
+Document title: Internet Protocol
+Issuing authority: RFC Editor / Internet Engineering Task Force
+Canonical source: https://www.rfc-editor.org/rfc/rfc791.txt
+Declared version: RFC 791 (September 1981), Internet Protocol Version 4
+Publication/revision information: RFC Editor information page identifies updates including RFC 1349, RFC 2474, and RFC 6864; this audit uses RFC 791 for the relevant base header and fragmentation semantics.
+Relevant errata/update documents: https://www.rfc-editor.org/info/rfc791/
+Purpose: IPv4 header fields, checksum, total length, options indicator, protocol field, and fragmentation condition.
+
+Source ID: RFC-768
+Protocol: UDP
+Document title: User Datagram Protocol
+Issuing authority: RFC Editor / Internet Engineering Task Force
+Canonical source: https://www.rfc-editor.org/rfc/rfc768.html
+Declared version: RFC 768 (August 1980)
+Publication/revision information: RFC 768; no separate verified erratum was located for the cited UDP fields during this audit.
+Relevant errata/update documents: https://www.rfc-editor.org/errata/rfc768
+Purpose: UDP ports, length, protocol number, and IPv4 checksum semantics.
+
+Source ID: NASDAQ-MOLDUDP64
+Protocol: MoldUDP64
+Document title: MoldUDP64 Protocol Specification
+Issuing authority: Nasdaq
+Canonical source: https://nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/moldudp64.pdf
+Declared version: V 1.00
+Publication/revision information: Version Control table: 11/2/04 SL Initial version; 12/4/08 SL Updated for 64-bit support; 2/24/09 HT Corrected minor error in documentation; 7/7/09 SM Clarified the data length field definition; 8/2/24 GO Updated formatting.
+Relevant errata/update documents: Version Control table in the artifact; no separate erratum used.
+Purpose: downstream header, message blocks, sequencing, heartbeat, end-of-session, and retransmission-source behavior.
+
+Source ID: NASDAQ-ITCH5
+Protocol: Nasdaq TotalView-ITCH
+Document title: Nasdaq TotalView-ITCH 5.0
+Issuing authority: Nasdaq
+Canonical source: https://assets.ctfassets.net/mx0rke14e5yt/6j4wVwVw76myrW3zid1oay/2444b4b8fc8183ad7aa80154c70bb5cb/NQTVITCHSpecification__1_.pdf
+Declared version: TotalView-ITCH Version 5.0
+Publication/revision information: Current PDF revision log includes 2025-06-16, “Added additional listing market value ‘M’”. Nasdaq Trader notice DTN2025-22 dated 2025-06-23 links the current TotalView ITCH 5.0 specification and identifies the July 14, 2025 technical update.
+Relevant update document: https://www.nasdaqtrader.com/TraderNews.aspx?id=DTN2025-22
+Purpose: common data representation, message lengths/fields, and displayed-book semantics for the MVP message subset.

@@ -1,0 +1,9 @@
+WIRE-002 retrieval notes
+
+Official RFC Editor text representations were retrieved from their canonical RFC Editor URLs. RFC 894 verified errata 570 and 5141 were inspected; both correct the 1500-octet Ethernet data-field wording to “maximum”. RFC 791 update metadata was inspected. RFC 768 checksum wording was inspected, including the transmitted zero-checksum meaning.
+
+The current Nasdaq MoldUDP64 PDF was retrieved from the canonical Nasdaq Trader URL. Its Version Control table ends with 2024-08-02 formatting; the declared protocol version remains V 1.00. It was fingerprinted and deleted after inspection.
+
+The current TotalView-ITCH PDF was reached through Nasdaq Trader notice DTN2025-22 (2025-06-23), which links to the current Nasdaq-hosted asset. The PDF declares TotalView-ITCH Version 5.0 and its revision log includes 2025-06-16. The older classic Nasdaq URL was not treated as authoritative for this lock because it serves an older representation whose revision log stops at 2023-04-28. The current PDF was fingerprinted and deleted after inspection.
+
+No PDFs or copied source text are committed. This metadata is source/retrieval evidence, not an implementation result.
