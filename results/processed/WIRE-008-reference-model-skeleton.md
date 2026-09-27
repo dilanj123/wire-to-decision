@@ -26,17 +26,22 @@ package README.
 ## D. Canonical data types
 
 IMPLEMENTED: Added typed side, mutation-kind, source-message, decision-action,
-and failure-reason enums; immutable `NormalizedEvent`, `ModelConfig`,
-`OrderEntry`, `DecisionEvent`, and `ModelStatus` dataclasses; and the frozen
-project constants needed by these representations.
+and failure-reason enums; immutable `FieldValidity`, `NormalizedEvent`,
+`ModelConfig`, `OrderEntry`, `DecisionEvent`, and `ModelStatus` dataclasses;
+and the frozen project constants needed by these representations.
+
+SOURCE-DERIVED: The normalized kinds remain ADD, EXECUTE,
+EXECUTE_WITH_PRICE, CANCEL, DELETE, and REPLACE. A/F use
+`new_order_reference`; E/C/X/D use `old_order_reference`; U uses both.
 
 ## E. Validation rules
 
 PYTHON-UNIT-TESTED: Integer widths, non-negative values, exact 10-byte Mold
 session and exact 8-byte stock-symbol validation, symbol-check configuration
 consistency, side encodings, event/source compatibility, event-specific field
-requirements, live-order quantity, decision-event range, and fail-closed status
-invariants are checked. Values are rejected rather than silently truncated.
+requirements, exact named `field_valid` flags, live-order quantity,
+decision-event range, and fail-closed status invariants are checked. Values are
+rejected rather than silently truncated.
 
 ## F. WIRE-D006 hash implementation
 
@@ -75,17 +80,14 @@ formal properties remain outside WIRE-008.
 
 ## L. Problems found
 
-BLOCKER / SOURCE-DERIVED CONFLICT: The repository's frozen WIRE-D008 contract
-in `docs/MICROARCHITECTURE.md` specifies `EXECUTE_WITH_PRICE` as an event kind,
-requires `field_valid` semantics, and defines `new_order_reference` for A/F and
-U. The WIRE-008 task text instead asks for one EXECUTE kind, omits a required
-field-valid representation, and says ADD must not use `new_order_reference`.
-These are materially different canonical contracts. The implementation created
-so far follows the task text in these areas and must not be treated as the
-authoritative model until the conflict is resolved.
+SOURCE-DERIVED: The initial WIRE-008 task instructions contradicted the frozen
+WIRE-D008/MICROARCHITECTURE contract by collapsing E/C, omitting field-valid
+semantics, and rejecting the A/F new-reference field. The repository correctly
+stopped. The higher-authority documents were re-read and retained unchanged;
+the implementation was corrected to follow them.
 
 The initial test run also exposed a duplicated positional/keyword test fixture
-construction; that local test defect was corrected before evidence collection.
+construction; that local test defect was corrected before final evidence.
 
 ## M. What remains unproven
 
@@ -95,7 +97,8 @@ latency, throughput, CDC, or integration correctness.
 
 ## N. WIRE-008 conclusion
 
-FAIL / BLOCKED: Python primitive files and 17 passing unit tests exist, but the
-task cannot pass because the canonical normalized-event contract is not
-unambiguously specified. No WIRE-008 completion or EVID-008 PASS claim is made.
-User direction is required before revising the model to follow one contract.
+PASS: The initial blocked attempt is retained in history and recorded above.
+The authoritative WIRE-D008 contract was preserved without specification
+changes, the Python implementation was aligned to it, and 18 standard-library
+unit tests passed. This establishes Python-unit-tested canonical data
+primitives only, not end-to-end reference-model correctness.

@@ -1,0 +1,2 @@
+Command: python3 -m compileall model/python
+Result: PASS (exit code 0)

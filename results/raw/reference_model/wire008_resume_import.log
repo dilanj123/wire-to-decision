@@ -1,0 +1,3 @@
+Command: PYTHONPATH=model/python python3 - <<'PY'\nimport wire_to_decision\nprint("IMPORT_PASS")\nPY
+Output: IMPORT_PASS
+Result: PASS (exit code 0)
