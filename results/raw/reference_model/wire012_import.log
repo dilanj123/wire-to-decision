@@ -1,0 +1,2 @@
+Command: PYTHONPATH=model/python python3 -c 'import wire_to_decision; print("IMPORT_PASS")'
+Result: IMPORT_PASS

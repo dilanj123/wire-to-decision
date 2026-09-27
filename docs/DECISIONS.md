@@ -84,3 +84,13 @@
 - Alternatives considered: selecting way 1 first, implementation-dependent selection, or eviction. These were rejected because they weaken reproducibility or violate the no-eviction policy.
 - Consequences: Free-way selection is deterministic across implementations. This is an implementation-model decision and does not change the 512-set × 2-way architecture or its failure policy.
 - Status: ADOPTED
+
+## WIRE-D010 — Freeze previous-imbalance update semantics
+
+- Date: 2026-09-27
+- Source: WIRE-012 deterministic decision model
+- Context: The crossing equations require a deterministic previous-imbalance state update when emission is suppressed by decision enable or budget.
+- Decision: After every successfully applied tracked mutation, set `previous_imbalance` to the resulting signed aggregate imbalance, regardless of whether decision emission is enabled or budget remains. Failed, non-mutating, filtered, and quarantined events do not advance it.
+- Alternatives considered: advance only when a decision is emitted, or preserve the prior value while disabled/exhausted. These alternatives can create stale crossings when emission is later enabled or budget is restored.
+- Consequences: The state tracks the actual aggregate trajectory, while enable and budget gate only event emission. Re-arm resets the value to zero.
+- Status: ADOPTED

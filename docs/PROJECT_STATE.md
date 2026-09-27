@@ -66,11 +66,19 @@ Canonical GitHub repository: https://github.com/dilanj123/wire-to-decision
 
 GitHub publication: complete; public repository, `main` and `kg-g0-env` pushed
 
-Order-store mutation model: not started
+Order-store mutation model: Python-unit-tested
 
-Decision model: not started
+WIRE-012: complete
 
-Functional evidence: none
+Deterministic decision model: unit-tested
+
+Risk-budget model: unit-tested
+
+Full end-to-end Python oracle: not yet complete
+
+Python component regression: 61 tests passing
+
+Application RTL functional evidence: none
 
 Formal application evidence: none
 
@@ -78,7 +86,7 @@ Application synthesis/P&R evidence: none
 
 ## Regression status
 
-Not run.
+Python component regression: 61 tests passing
 
 ## Formal status
 
@@ -92,7 +100,7 @@ Not run.
 
 WIRE-004 native Apple Silicon open-source toolchain qualification completed in commit `89e2841` for the trivial smoke design. Canonical suite: OSS CAD Suite `2026-09-27`; details are in `results/processed/toolchain_smoke.md`. This is toolchain-smoke evidence only.
 
-WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. These are specification/environment evidence only. No reference-model, application RTL, simulation, formal, application synthesis, timing, latency, throughput, CDC, or integration evidence exists.
+WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. WIRE-008 through WIRE-012 provide Python-unit-tested component evidence. No RTL, application formal, application synthesis, timing, latency, throughput, CDC, or C++ integration evidence exists.
 
 ## Open bugs
 
@@ -110,8 +118,8 @@ None recorded.
 
 ## Current bottleneck
 
-Decision-model behavior has not started.
+Full end-to-end Python oracle and packet-level recovery integration remain.
 
 ## Next task
 
-WIRE-012 — Python deterministic decision model.
+WIRE-013 — Python end-to-end reference oracle and recovery integration.

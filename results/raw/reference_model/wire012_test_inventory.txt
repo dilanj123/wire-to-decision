@@ -1,0 +1,4 @@
+Prior tests: 52
+New WIRE-012 tests: 9
+Total tests: 61
+Coverage: imbalance range, BUY/SELL boundaries, no-repeat, recross, threshold zero, enable/budget suppression, re-arm, invalid-book suppression, and ITCH-to-book-to-decision integration.
