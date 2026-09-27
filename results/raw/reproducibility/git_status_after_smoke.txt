@@ -1,0 +1,2 @@
+WIRE-007 post-smoke status result placeholder before final closure run.
+Expected final closure result: clean detached working tree; generated artifacts remain outside the clone or ignored.

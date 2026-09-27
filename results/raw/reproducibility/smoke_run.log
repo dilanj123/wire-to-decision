@@ -1,0 +1,2 @@
+WIRE-007 smoke result placeholder before final closure run.
+The final closure run must execute the repository-owned checker, which redirects WIRE-004 smoke raw logs to a disposable directory and verifies Verilator, cocotb, Yosys, SBY/Yices, nextpnr-ECP5, and ecppack success.

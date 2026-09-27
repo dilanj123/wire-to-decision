@@ -1,0 +1,2 @@
+WIRE-007 target result placeholder before final closure run.
+The final closure run must validate LFE5U-85F through --85k, CABGA381, speed 8, and a 156.25 MHz constraint using the existing toolchain smoke RTL only.
