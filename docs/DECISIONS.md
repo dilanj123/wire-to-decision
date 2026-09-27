@@ -26,3 +26,12 @@
 - Scope: External source authority and Phase-0 MVP protocol profile only. No RTL, model, verification, timing, or performance requirement is established by this decision.
 - Rationale: The source audit distinguishes protocol facts from deliberate project restrictions, including Ethernet II/IPv4 only, non-fragmented IPv4, zero-only UDP checksums, fail-closed Mold discontinuities, and one configured ITCH Stock Locate.
 - Status: ADOPTED
+
+## WIRE-D004 — Qualify native Apple Silicon open-source toolchain
+
+- Date: 2026-09-27
+- Source: WIRE-004 toolchain smoke execution
+- Decision: Use the native Apple Silicon OSS CAD Suite build `2026-09-27` as the canonical initial open-source flow for Verilator/cocotb, Yosys/SBY, Yices, Yosys `synth_ecp5`, nextpnr-ECP5, and ecppack.
+- Scope: Toolchain environment only. The ECP5 `LFE5U-25F` / `CABGA381` combination used in the smoke test is not the Wire-to-Decision production target.
+- Rationale: Each listed flow stage executed successfully on the actual arm64 host using the trivial WIRE-004 smoke design. Exact archive metadata, paths, commands, and logs are retained in the WIRE-004 evidence.
+- Status: ADOPTED

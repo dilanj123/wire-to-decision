@@ -6,7 +6,7 @@ Phase 0 — Bootstrap
 
 ## Gate
 
-Gate 0 — not passed; WIRE-001 workflow audit, WIRE-002 source lock, and WIRE-003 provenance audit complete
+Gate 0 — not passed; WIRE-001 workflow audit, WIRE-002 source lock, WIRE-003 provenance audit, and WIRE-004 toolchain qualification complete
 
 ## Known-good commit
 
@@ -40,7 +40,7 @@ Not run.
 
 ## Latest evidence
 
-WIRE-003 third-party audit completed in commit `54e6aac`. Mandatory core third-party RTL dependencies: none. Pins and classifications are in `docs/THIRD_PARTY_MANIFEST.md`. This is provenance evidence only.
+WIRE-004 native Apple Silicon open-source toolchain qualification completed in commit `89e2841` for the trivial smoke design. Canonical suite: OSS CAD Suite `2026-09-27`; details are in `results/processed/toolchain_smoke.md`. This is toolchain-smoke evidence only.
 
 No reference-model, RTL, simulation, formal, synthesis, timing, latency, throughput, CDC, or integration evidence exists.
 
@@ -57,11 +57,12 @@ None recorded.
 - WIRE-001 process adoption details are recorded in `docs/DECISIONS.md`.
 - WIRE-002 external source authority and MVP protocol restrictions are recorded in `docs/DECISIONS.md`.
 - WIRE-003 originality and third-party provenance policy are recorded in `docs/DECISIONS.md`.
+- WIRE-004 canonical toolchain decision is recorded in `docs/DECISIONS.md`.
 
 ## Current bottleneck
 
-Phase-0 environment/toolchain qualification and implementation-independent requirements remain open.
+Implementation-independent requirements and production ECP5 target selection remain open.
 
 ## Next task
 
-WIRE-004 — Apple Silicon open-source toolchain qualification.
+WIRE-005 — Implementation target freeze.
