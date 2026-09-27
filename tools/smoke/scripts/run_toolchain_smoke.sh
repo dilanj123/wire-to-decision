@@ -3,6 +3,7 @@ set -euo pipefail
 
 # WIRE-004 TOOLCHAIN SMOKE ONLY. No application RTL is exercised.
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
+cd "$repo_root"
 raw="${WIRE_SMOKE_RAW_ROOT:-$repo_root/results/raw/toolchain}"
 mkdir -p "$raw/formal"
 source "$repo_root/tools/env/setup_oss_cad_suite.sh" >/tmp/wire004-env.$$
