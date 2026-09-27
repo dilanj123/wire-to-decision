@@ -40,9 +40,13 @@ Python canonical data model: implemented and unit-tested
 
 WIRE-D006 hash: implemented and unit-tested in Python
 
-Protocol parsing: not started
+WIRE-009: complete
 
-ITCH byte decoding: not started
+Ethernet/IPv4/UDP/Mold framing model: unit-tested
+
+Mold session/sequence handling: unit-tested
+
+ITCH byte decoding / protocol payload parsing: not started
 
 Order-store mutation model: not started
 
@@ -88,8 +92,8 @@ None recorded.
 
 ## Current bottleneck
 
-Protocol parsing and stateful reference-model behaviour have not started.
+ITCH decoding and stateful reference-model behaviour have not started.
 
 ## Next task
 
-WIRE-009 — Python Ethernet/IPv4/UDP/MoldUDP64 framing model.
+WIRE-010 — Python ITCH subset decoder to normalized events.

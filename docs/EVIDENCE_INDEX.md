@@ -13,6 +13,7 @@ No functional design evidence exists yet.
 | EVID-006 | Phase 0 | Authoritative Wire-to-Decision project specification package created and internally consistency-reviewed | Complete — specification commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd` | 00_MASTER_PROJECT_PLAN.md; 01_CHATGPT_PROJECT_OPERATING_INSTRUCTIONS.md; 04_MASTER_CHECKLIST.md; docs/REQUIREMENTS.md; docs/MICROARCHITECTURE.md; docs/VERIFICATION_PLAN.md; docs/FORMAL.md; results/processed/WIRE-006-specification-package.md |
 | EVID-007 | Phase 0 | Phase-0 repository/environment reproducibility from a clean clone | Complete — closure candidate `e9123ea24a6a3314441bec3617cdb5da559cb775` | tasks/WIRE-007.md; results/processed/WIRE-007-clean-clone.md; results/raw/reproducibility/ |
 | EVID-008 | Phase 1 | Python canonical reference-model data representations, validation primitives and WIRE-D006 hash unit-tested against the frozen normalized-event contract | Complete — WIRE-008 correction | tasks/WIRE-008.md; results/processed/WIRE-008-reference-model-skeleton.md; results/raw/reference_model/ |
+| EVID-009 | Phase 1 | Project-owned Python Ethernet II / IPv4 / UDP / MoldUDP64 framing and sequence model exercised by unit tests against the frozen Wire-to-Decision profile | Complete — WIRE-009 framing evidence | tasks/WIRE-009.md; results/processed/WIRE-009-framing-model.md; results/raw/reference_model/ |
 
 ## Evidence classification
 

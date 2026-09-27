@@ -1,0 +1,2 @@
+Command: source tools/env/setup_oss_cad_suite.sh && python3 -m compileall model/python
+Result: PASS (exit code 0)

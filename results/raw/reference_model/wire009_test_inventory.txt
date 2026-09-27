@@ -1,0 +1,9 @@
+WIRE-009 test inventory:
+- fixed IPv4 checksum vector and corruption cases
+- one- and multi-message Mold packets
+- Ethernet padding boundary
+- heartbeat and end-of-session
+- sequence gap/regression and session mismatch
+- Mold header/message/trailing-byte truncation
+- late malformed suffix prefix retention
+- Ethernet, IPv4, fragmentation, destination, UDP, port, length, and checksum policy failures
