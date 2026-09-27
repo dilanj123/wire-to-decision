@@ -6,7 +6,7 @@ Phase 0 — Bootstrap
 
 ## Gate
 
-Gate 0 — not passed; WIRE-001 workflow audit and WIRE-002 source lock complete
+Gate 0 — not passed; WIRE-001 workflow audit, WIRE-002 source lock, and WIRE-003 provenance audit complete
 
 ## Known-good commit
 
@@ -40,7 +40,7 @@ Not run.
 
 ## Latest evidence
 
-WIRE-002 external protocol specification lock completed in source-lock commit `8af65aa`. This is specification/source evidence only.
+WIRE-003 third-party audit completed in commit `54e6aac`. Mandatory core third-party RTL dependencies: none. Pins and classifications are in `docs/THIRD_PARTY_MANIFEST.md`. This is provenance evidence only.
 
 No reference-model, RTL, simulation, formal, synthesis, timing, latency, throughput, CDC, or integration evidence exists.
 
@@ -56,6 +56,7 @@ None recorded.
 - Architecture B remains intentionally undefined pending Architecture A measurement.
 - WIRE-001 process adoption details are recorded in `docs/DECISIONS.md`.
 - WIRE-002 external source authority and MVP protocol restrictions are recorded in `docs/DECISIONS.md`.
+- WIRE-003 originality and third-party provenance policy are recorded in `docs/DECISIONS.md`.
 
 ## Current bottleneck
 
@@ -63,4 +64,4 @@ Phase-0 environment/toolchain qualification and implementation-independent requi
 
 ## Next task
 
-WIRE-003 — Third-party reference/reuse audit and pinning.
+WIRE-004 — Apple Silicon open-source toolchain qualification.

@@ -9,6 +9,15 @@
 - Rationale: These controls are supported by the inspected RTL-to-Pixels workflow and strengthened by later repository references.
 - Status: ADOPTED
 
+## WIRE-D003 — Lock third-party provenance and originality policy
+
+- Date: 2026-09-27
+- Source: WIRE-003 third-party reference/reuse audit
+- Decision: Keep mandatory Wire-to-Decision datapath, parser, order-state, decision, CDC, formal, reference-model, and project-specific verification work original. Pin audited third-party repositories as reference-only or potential test-only sources without adding dependencies.
+- Scope: Provenance and reuse policy only. No protocol or microarchitecture scope changes.
+- Rationale: Direct-overlap market-data projects create structural-derivation risk independent of licence permission; generic infrastructure references do not become dependencies merely because they were audited. Any future test infrastructure must be pinned and separated from project-owned expected-value logic.
+- Status: ADOPTED
+
 ## WIRE-D002 — Lock external protocol source basis and explicit MVP restrictions
 
 - Date: 2026-09-27
