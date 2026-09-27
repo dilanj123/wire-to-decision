@@ -1,0 +1,14 @@
+[options]
+mode cover
+depth 20
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv wire_gearbox_64to8.sv wire_gearbox_safety.sv
+prep -top wire_gearbox_safety
+
+[files]
+rtl/arch_a/wire_gearbox_64to8.sv
+formal/gearbox/wire_gearbox_safety.sv
