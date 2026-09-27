@@ -2,6 +2,7 @@
 
 from .constants import MAX_ORDERS, ORDER_SETS, ORDER_WAYS
 from .book import BookErrorCode, BookResult, OrderBook
+from .decision import DecisionModel, DecisionResult
 from .framing import FramingErrorCode, FramingResult, frame_packet
 from .errors import CanonicalDataError
 from .hash import order_set_index
@@ -27,6 +28,8 @@ __all__ = [
     "BookResult",
     "DecisionAction",
     "DecisionEvent",
+    "DecisionModel",
+    "DecisionResult",
     "DecodeKind",
     "DecodeResult",
     "FailureReason",
