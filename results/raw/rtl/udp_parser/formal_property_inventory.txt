@@ -1,0 +1,13 @@
+UDP formal jobs (all public DUT ports only; DUT-private state used: NO)
+safety: BOUNDED CHECKED depth 20; output/rejection stall stability and upstream stability assumptions
+header: FIXED-VECTOR BOUNDED CHECKED depth 20; length priority, wrong-port, checksum, WIRE-D014 empty case
+header1: FIXED-VECTOR BOUNDED CHECKED depth 20; nonzero checksum with length mismatch
+header2: FIXED-VECTOR BOUNDED CHECKED depth 20; wrong port with valid length overrides checksum
+header3: FIXED-VECTOR BOUNDED CHECKED depth 20; WIRE-D014 exact empty payload
+payload: FIXED-VECTOR BOUNDED CHECKED depth 24; accepted two-byte payload correspondence and final marker
+short: FIXED-VECTOR BOUNDED CHECKED depth 20; physical-short UDP_LENGTH and no successful out_last
+long: FIXED-VECTOR BOUNDED CHECKED depth 24; physical-long UDP_LENGTH and no successful out_last
+next_packet: FIXED-VECTOR BOUNDED CHECKED depth 32; two accepted packets restart cleanly
+cover: COVERED depth 24; accepted final byte, rejection codes, payload/rejection stalls
+Assumptions: synchronous reset initialization, normal upstream valid/data/last stability while stalled; targeted fixed-vector jobs hold downstream ready high.
+Limitations: fixed vectors and bounded traces do not exhaust all 16-bit lengths or all header values; no unbounded proof claim.

@@ -1,0 +1,36 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_gearbox COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_gearbox_64to8 TOPLEVEL_LANG=verilog \
+         sim_build/Vtop
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1790632410
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gearbox.test_all_legal_final_keep_masks (1/6)
+   756.00ns INFO     cocotb.regression                  test_gearbox.test_all_legal_final_keep_masks passed
+   756.00ns INFO     cocotb.regression                  running test_gearbox.test_multibeat_and_back_to_back_frames (2/6)
+  1012.00ns INFO     cocotb.regression                  test_gearbox.test_multibeat_and_back_to_back_frames passed
+  1012.00ns INFO     cocotb.regression                  running test_gearbox.test_output_backpressure_and_input_pressure (3/6)
+  1728.00ns INFO     cocotb.regression                  test_gearbox.test_output_backpressure_and_input_pressure passed
+  1728.00ns INFO     cocotb.regression                  running test_gearbox.test_same_cycle_retire_refill (4/6)
+  1934.00ns INFO     cocotb.regression                  test_gearbox.test_same_cycle_retire_refill passed
+  1934.00ns INFO     cocotb.regression                  running test_gearbox.test_reset_idle_stalled_and_partial (5/6)
+  2110.00ns INFO     cocotb.regression                  test_gearbox.test_reset_idle_stalled_and_partial passed
+  2110.00ns INFO     cocotb.regression                  running test_gearbox.test_fixed_random_legal_frames (6/6)
+  4776.01ns INFO     cocotb.regression                  test_gearbox.test_fixed_random_legal_frames passed
+  4776.01ns INFO     cocotb.regression                  ******************************************************************************************************************
+                                                        ** TEST                                                      STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ******************************************************************************************************************
+                                                        ** test_gearbox.test_all_legal_final_keep_masks               PASS         756.00           0.00     256607.09  **
+                                                        ** test_gearbox.test_multibeat_and_back_to_back_frames        PASS         256.00           0.00     282266.52  **
+                                                        ** test_gearbox.test_output_backpressure_and_input_pressure   PASS         716.00           0.00     290718.46  **
+                                                        ** test_gearbox.test_same_cycle_retire_refill                 PASS         206.00           0.00     306936.63  **
+                                                        ** test_gearbox.test_reset_idle_stalled_and_partial           PASS         176.00           0.00     389344.68  **
+                                                        ** test_gearbox.test_fixed_random_legal_frames                PASS        2666.00           0.01     302723.87  **
+                                                        ******************************************************************************************************************
+                                                        ** TESTS=6 PASS=6 FAIL=0 SKIP=0                                           4776.01           0.02     241748.63  **
+                                                        ******************************************************************************************************************
+- :0: Verilog $finish

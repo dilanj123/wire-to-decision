@@ -1,0 +1,15 @@
+WIRE-018 standalone cocotb: 5 tests PASS
+- valid source-port independence and destination-port endianness
+- header truncation lengths 1..7 and lower Length values
+- length priority, filters, WIRE-D014, physical-short/long cases
+- payload/rejection stalls and back-to-back packets
+- deterministic random cases, seeds 1, 7, 19
+
+WIRE-018 composition cocotb: 3 tests PASS
+- valid five-stage path
+- localized UDP invalid paths including speculative short-length prefix
+- deterministic random valid frames, seeds 1, 7, 19
+
+Python regression: 71/71 PASS
+Primitive simulation preservation: gearbox, ingress buffer, ingress composition,
+Ethernet standalone/composition, and IPv4 standalone/composition PASS.

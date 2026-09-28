@@ -123,3 +123,12 @@
 - Decision: For this pipeline, an otherwise profile-valid IPv4/UDP header with `Total Length == 20` is rejected locally as fatal `IPV4_EMPTY_PROJECT_PAYLOAD`. This is a stage representation decision, not a claim that IPv4 generally requires a non-empty payload.
 - Consequences: The RTL stage emits no payload and reports a fatal local status. The Python model is not changed; it may report the later UDP-header truncation for the same bytes. The externally relevant integration outcome remains fatal, with no downstream mutation or decision once later control integration exists.
 - Status: ADOPTED
+
+## WIRE-D014 — Define zero-byte UDP project-payload handling
+
+- Date: 2026-09-28
+- Source: WIRE-018 Architecture-A UDP parser implementation
+- Context: The downstream byte stream represents packet termination with `out_last` on a valid byte and cannot represent an accepted zero-byte MoldUDP64 packet.
+- Decision: For this pipeline, an otherwise profile-valid UDP datagram with `UDP Length == 8`, matching destination port, zero checksum, and exactly eight physical IPv4-payload bytes is rejected locally as fatal `UDP_EMPTY_PROJECT_PAYLOAD`.
+- Consequences: This is a project/pipeline representation decision, not a claim that UDP generally requires a nonempty payload. The Python model remains unchanged and reaches its later empty MoldUDP64 failure for equivalent bytes. Higher-priority UDP length, wrong-port, and nonzero-checksum outcomes remain authoritative.
+- Status: ADOPTED

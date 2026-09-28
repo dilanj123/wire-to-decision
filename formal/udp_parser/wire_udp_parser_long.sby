@@ -1,0 +1,11 @@
+[options]
+mode bmc
+depth 24
+[engines]
+smtbmc yices
+[script]
+read_verilog -formal -sv wire_udp_parser.sv wire_udp_parser_formal.sv
+prep -top udp_long_length
+[files]
+../../rtl/arch_a/wire_udp_parser.sv
+wire_udp_parser_formal.sv

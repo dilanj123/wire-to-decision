@@ -1,0 +1,6 @@
+udp_header_truncated FramingErrorCode.UDP_HEADER_TRUNCATED
+udp_length_lower FramingErrorCode.UDP_LENGTH
+wrong_destination FramingErrorCode.WRONG_DESTINATION_PORT
+nonzero_checksum FramingErrorCode.UDP_CHECKSUM_UNSUPPORTED
+length_short FramingErrorCode.UDP_LENGTH
+length_long FramingErrorCode.UDP_LENGTH
