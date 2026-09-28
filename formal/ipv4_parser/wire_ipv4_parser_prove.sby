@@ -1,0 +1,14 @@
+[options]
+mode bmc
+depth 20
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv wire_ipv4_parser.sv wire_ipv4_parser_safety.sv
+prep -top wire_ipv4_parser_safety
+
+[files]
+../../rtl/arch_a/wire_ipv4_parser.sv
+wire_ipv4_parser_safety.sv

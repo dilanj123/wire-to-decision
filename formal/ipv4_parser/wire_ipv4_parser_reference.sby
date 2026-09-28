@@ -1,0 +1,14 @@
+[options]
+mode bmc
+depth 32
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv wire_ipv4_parser.sv wire_ipv4_parser_reference.sv
+prep -top wire_ipv4_parser_reference
+
+[files]
+../../rtl/arch_a/wire_ipv4_parser.sv
+wire_ipv4_parser_reference.sv
