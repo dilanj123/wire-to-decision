@@ -1,0 +1,2 @@
+Cross-check cases: EtherType 0x0800 accepted; EtherTypes 0x8100, 0x0806, 0x86dd, 0x1234 and 0x0008 filtered; Ethernet header truncation classified fatal; empty 0x0800 payload classified fatal.
+Result: RTL stage behavior agrees with the frozen Python Ethernet profile overlap.

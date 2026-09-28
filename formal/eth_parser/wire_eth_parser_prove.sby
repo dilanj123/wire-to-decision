@@ -1,0 +1,14 @@
+[options]
+mode bmc
+depth 20
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv wire_eth_parser.sv wire_eth_parser_safety.sv
+prep -top wire_eth_parser_safety
+
+[files]
+../../rtl/arch_a/wire_eth_parser.sv
+wire_eth_parser_safety.sv

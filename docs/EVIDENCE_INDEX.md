@@ -1,6 +1,6 @@
 # Evidence Index
 
-Python-unit-tested reference-model evidence exists. No application RTL functional evidence exists yet beyond the separately classified WIRE-014 gearbox primitive evidence.
+Python-unit-tested reference-model evidence exists. Application RTL evidence exists for EVID-014 gearbox and EVID-015 common ingress-buffer/composition primitives; protocol-parser RTL evidence begins with WIRE-016.
 
 | Evidence ID | Phase | Claim / purpose | Status | Source |
 |---|---|---|---|---|
@@ -20,6 +20,7 @@ Python-unit-tested reference-model evidence exists. No application RTL functiona
 | EVID-013 | Phase 1 | Project-owned Python end-to-end reference oracle integrating framing, ITCH decoding, bounded order state, aggregates, deterministic decisions, fail-closed behavior, recovery, and late-suffix no-rollback | Complete — PYTHON-UNIT-TESTED | tasks/WIRE-013.md; results/processed/WIRE-013-end-to-end-oracle.md; results/raw/reference_model/ |
 | EVID-014 | Phase 2 | Architecture-A 64-to-8 gearbox preserves legal beat byte order, accepted valid-byte conservation, and exact frame-final marker under ready/valid simulation; local safety properties are inductively checked and the independent public-interface correspondence is bounded-checked through depth 20 under documented assumptions | Complete — RTL-SIMULATED; FORMALLY CHECKED UNDER DOCUMENTED ASSUMPTIONS | tasks/WIRE-014.md; tasks/WIRE-014A.md; results/processed/WIRE-014-gearbox-rtl.md; results/raw/rtl/gearbox/ |
 | EVID-015 | Phase 2 | Common two-entry synchronous ingress beat buffer preserves accepted `{data, keep, last}` ordering and ready/valid behavior under backpressure; buffer-to-gearbox composition preserves the framed byte stream | Complete — RTL-SIMULATED; FORMALLY CHECKED UNDER DOCUMENTED ASSUMPTIONS; public-interface correspondence bounded through depth 10 | tasks/WIRE-015.md; results/processed/WIRE-015-ingress-buffer-rtl.md; results/raw/rtl/ingress_buffer/ |
+| EVID-016 | Phase 2 | Architecture-A Ethernet II byte parser accepts only IPv4 EtherType `0x0800`, strips the Ethernet header, preserves payload framing under backpressure, and distinguishes filtered from fatal Ethernet outcomes | Complete — RTL-SIMULATED; FORMALLY CHECKED UNDER DOCUMENTED ASSUMPTIONS; public-interface correspondence bounded through depth 40 | tasks/WIRE-016.md; results/processed/WIRE-016-ethernet-parser-rtl.md; results/raw/rtl/eth_parser/ |
 
 ## Evidence classification
 

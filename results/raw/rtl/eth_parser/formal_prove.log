@@ -1,0 +1,4 @@
+Command: sby -f formal/eth_parser/wire_eth_parser_prove.sby
+Configuration: SBY 0.69, smtbmc yices, BMC depth 20.
+Result: PASS.
+Properties: payload/rejection stall stability, pending rejection blocks input/output, no simultaneous payload/rejection activity in the checked traces.

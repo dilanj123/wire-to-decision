@@ -1,0 +1,3 @@
+Command: make -f tb/eth_parser/Makefile SIM=verilator
+Result: 4/4 PASS
+Coverage: valid/endianness/filter table; truncation lengths 1..13; empty and one-byte payload; rejection/output stalls; deterministic random seeds 1, 7, 19.

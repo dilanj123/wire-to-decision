@@ -1,0 +1,3 @@
+Command: make -f tb/eth_parser/Makefile.composition SIM=verilator
+Result: 1/1 PASS
+Composition: common ingress buffer → 64-to-8 gearbox → Ethernet parser; accepted IPv4 payload and filtered VLAN frame under output stalls.

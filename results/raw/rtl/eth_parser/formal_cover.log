@@ -1,0 +1,4 @@
+Command: sby -f formal/eth_parser/wire_eth_parser_cover.sby
+Configuration: SBY 0.69, smtbmc yices, cover depth 40.
+Result: PASS.
+Reachability: payload transfer, unsupported/drop completion, rejection stall, and terminal payload transfer.

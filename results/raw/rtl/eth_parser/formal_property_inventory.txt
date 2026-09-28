@@ -1,0 +1,6 @@
+Tool: SBY 0.69 / smtbmc yices / Yices 2.7.0
+wire_eth_parser_prove.sby: BMC depth 20; stall stability, rejection stability, terminal status exclusion while stalled.
+wire_eth_parser_reference.sby: independent public-interface reference correspondence, BMC depth 40.
+wire_eth_parser_cover.sby: cover depth 40; payload, drop/filter, rejection stall, and terminal payload transfer reachability.
+DUT-private state used by reference: NO.
+Formal status: all three jobs PASS.

@@ -1,0 +1,5 @@
+WIRE-014 gearbox cocotb: 6/6 PASS; seeds 1, 7, 19.
+WIRE-014 gearbox formal: prove/reference/cover PASS.
+WIRE-015 ingress-buffer cocotb: 5/5 PASS; seeds 1, 7, 19.
+WIRE-015 buffer→gearbox cocotb: 1/1 PASS.
+WIRE-015 formal: prove/reference/cover PASS.

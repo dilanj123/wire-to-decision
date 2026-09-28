@@ -1,0 +1,14 @@
+[options]
+mode cover
+depth 40
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv wire_eth_parser.sv wire_eth_parser_reference.sv
+prep -top wire_eth_parser_reference
+
+[files]
+../../rtl/arch_a/wire_eth_parser.sv
+wire_eth_parser_reference.sv

@@ -1,0 +1,2 @@
+Commands: standalone and buffer→gearbox→Ethernet Yosys read/prep/check/hierarchy.
+Result: PASS for parser and composition; no problems reported.

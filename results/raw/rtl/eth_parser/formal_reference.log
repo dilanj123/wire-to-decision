@@ -1,0 +1,4 @@
+Command: sby -f formal/eth_parser/wire_eth_parser_reference.sby
+Configuration: SBY 0.69, smtbmc yices, public-interface reference BMC depth 40.
+Result: PASS.
+Reference uses only public DUT ports and checks header/drop/reject/payload behavior.

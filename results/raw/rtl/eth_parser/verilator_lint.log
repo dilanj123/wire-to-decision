@@ -1,0 +1,3 @@
+Command: verilator --lint-only --Wall --Wno-fatal --language 1800-2012 rtl/arch_a/wire_eth_parser.sv rtl/common/wire_ingress_buffer.sv rtl/arch_a/wire_gearbox_64to8.sv rtl/arch_a/wire_buffer_gearbox_eth_top.sv
+Result: PASS
+Warnings: no meaningful warnings.
