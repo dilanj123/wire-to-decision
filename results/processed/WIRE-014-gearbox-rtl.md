@@ -38,3 +38,13 @@ Common ingress buffering, protocol parser RTL, normalized-event integration, bou
 ## I. Conclusion
 
 WIRE-014 passes its scoped gearbox simulation and local formal acceptance criteria. No protocol scope or Architecture-B authorization changed.
+
+## J. WIRE-014A formal-closure addendum
+
+Independent review found that the original WIRE-014 formal harness proved stall stability, `out_last` validity, first-byte loading, and refill reachability, but did not establish full lane ordering, accepted-byte conservation, or exact last-marker preservation. This was a proof-coverage gap, not an RTL counterexample.
+
+WIRE-014A preserved the production RTL and added `formal/gearbox/wire_gearbox_reference.sv`, an independent public-interface serializer reference. It tracks accepted beat data, contiguous valid-byte count, current byte index, and frame-final state without inspecting DUT-private signals. Legal keep and upstream stability assumptions remain explicit.
+
+The existing `wire_gearbox_prove.sby` safety proof passes by k-induction at depth 20. The strengthened reference-contract BMC `wire_gearbox_reference_bmc.sby` passes through depth 20 for expected ready, pending-valid correspondence, exact lane-order/data correspondence, conservation through the reference transition, exact `out_last`, and same-cycle refill. `wire_gearbox_cover.sby` reaches both non-final and final refill covers. This is bounded formal evidence for the reference correspondence; the existing safety properties remain inductively proved.
+
+WIRE-014A reran the unchanged six-test cocotb regression, Verilator lint, all 71 Python tests, and Yosys component sanity. All passed. No production RTL changed. EVID-014 is strengthened with this addendum; no EVID-015 is created.

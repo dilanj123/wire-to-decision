@@ -1,0 +1,2 @@
+Command: temporary-build make -C tb/gearbox SIM_BUILD=<temporary>/sim_build
+Result: TESTS=6 PASS=6 FAIL=0; seeds 1, 7, 19.

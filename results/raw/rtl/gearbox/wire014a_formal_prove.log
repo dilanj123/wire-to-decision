@@ -1,0 +1,2 @@
+Command: source tools/env/setup_oss_cad_suite.sh; sby -f -d <temporary> formal/gearbox/wire_gearbox_prove.sby
+Result: PASS; existing local safety properties proved by k-induction at depth 20.

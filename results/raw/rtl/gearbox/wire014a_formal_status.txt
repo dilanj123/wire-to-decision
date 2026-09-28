@@ -1,0 +1,10 @@
+WIRE-014A formal closure status
+SBY: v0.69
+Yices: 2.7.0
+Engine: smtbmc yices
+Depth: 20
+Existing inductive safety proof: PASS (k-induction)
+Independent public-interface reference BMC: PASS through depth 20
+Reference cover: PASS; non-final and final retire/refill covers reached
+Production RTL changed: NO
+No private DUT signals are referenced by the reference model.

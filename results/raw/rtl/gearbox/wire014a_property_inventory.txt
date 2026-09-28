@@ -1,0 +1,8 @@
+P1 stall stability: wire_gearbox_safety.sv, inductive prove PASS
+P2 expected input-ready/reference-ready correspondence: wire_gearbox_reference.sv, depth-20 BMC PASS
+P3 out_valid/reference pending correspondence: wire_gearbox_reference.sv, depth-20 BMC PASS
+P4 exact lane-order/data correspondence: wire_gearbox_reference.sv, depth-20 BMC PASS
+P5 accepted-byte conservation/no loss/no duplication: reference state transition plus exact output correspondence, depth-20 BMC PASS
+P6 exact out_last/reference correspondence: wire_gearbox_reference.sv, depth-20 BMC PASS
+P7 same-cycle retire/refill correctness: reference BMC PASS; non-final and final covers PASS
+Assumptions: legal contiguous keep, non-final keep FF, stable upstream payload while valid&&!ready, synchronous active-high reset.

@@ -88,7 +88,7 @@ Python component regression: 71 tests passing
 
 64-to-8 gearbox: RTL-simulated
 
-Gearbox local formal: checked under documented assumptions
+Gearbox local formal: closed under documented assumptions for ordering, accepted valid-byte conservation, exact last-marker behavior, stall stability, and refill safety; reference correspondence bounded-checked through depth 20
 
 Application RTL functional evidence: gearbox-only
 
