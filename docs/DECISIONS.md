@@ -114,3 +114,12 @@
 - Alternatives considered: advance only when a decision is emitted, or preserve the prior value while disabled/exhausted. These alternatives can create stale crossings when emission is later enabled or budget is restored.
 - Consequences: The state tracks the actual aggregate trajectory, while enable and budget gate only event emission. Re-arm resets the value to zero.
 - Status: ADOPTED
+
+## WIRE-D013 — Define zero-byte IPv4 project-payload handling
+
+- Date: 2026-09-28
+- Source: WIRE-017 Architecture-A IPv4 parser implementation
+- Context: A byte-stream downstream interface represents packet termination with `out_last` on a valid byte and cannot represent an accepted zero-byte project payload.
+- Decision: For this pipeline, an otherwise profile-valid IPv4/UDP header with `Total Length == 20` is rejected locally as fatal `IPV4_EMPTY_PROJECT_PAYLOAD`. This is a stage representation decision, not a claim that IPv4 generally requires a non-empty payload.
+- Consequences: The RTL stage emits no payload and reports a fatal local status. The Python model is not changed; it may report the later UDP-header truncation for the same bytes. The externally relevant integration outcome remains fatal, with no downstream mutation or decision once later control integration exists.
+- Status: ADOPTED

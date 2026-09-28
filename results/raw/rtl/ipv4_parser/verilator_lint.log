@@ -1,0 +1,3 @@
+Verilator lint/build: PASS.
+Command: verilator --lint-only --Wall --Wno-fatal on wire_ipv4_parser and buffer→gearbox→Ethernet→IPv4 sources.
+Result: no meaningful warnings.

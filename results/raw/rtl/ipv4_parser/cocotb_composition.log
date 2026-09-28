@@ -1,0 +1,2 @@
+Buffer→gearbox→Ethernet→IPv4 cocotb: 3/3 PASS.
+Coverage includes accepted padded payload, filtered/fatal composition cases including late Total-Length truncation, and deterministic random accepted frames with output stalls.

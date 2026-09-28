@@ -1,0 +1,2 @@
+Standalone IPv4 cocotb: 5/5 PASS.
+Coverage includes fixed checksum/corruption, validation priority, exhaustive 1..19-byte header truncation, Total-Length lower bound, WIRE-D013 empty payload, fragmentation/DF, destination/protocol filtering, stalls, reset/back-to-back, and random seeds 1, 7, 19.

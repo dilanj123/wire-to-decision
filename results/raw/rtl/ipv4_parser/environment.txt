@@ -1,0 +1,10 @@
+WIRE-017 environment summary
+Repository: /Users/Dilan/Projects/wire-to-decision
+Python: 3.11.6
+Verilator: 5.053 devel
+cocotb: 2.1.0.dev0+41564633
+Yosys: 0.69+154
+SBY: 0.69
+Yices: 2.7.0
+Reset: synchronous active-high rst
+Formal configuration: smtbmc yices; safety depth 20; reference/cover depth 32

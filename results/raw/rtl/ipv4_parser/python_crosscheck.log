@@ -1,0 +1,1 @@
+Focused Python overlap cross-check: PASS for invalid version, unsupported IHL, invalid Total Length, checksum, fragmentation, wrong destination and non-UDP protocol. A valid IPv4 header with intentionally truncated later UDP/Mold content reaches the Python model's later truncation error; this is consistent with the stage-local IPv4 acceptance and is not a WIRE-D013 conflict.

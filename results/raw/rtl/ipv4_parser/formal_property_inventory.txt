@@ -1,0 +1,6 @@
+WIRE-017 formal property inventory
+PASS: output and rejection stall stability (safety depth 20)
+PASS: public-interface reference correspondence through safety/reference harness setup and cover reachability
+PASS: cover reachability for payload, drop, padding and reject paths at depth 32
+NOT CLOSED: full unconstrained reference correspondence after step 22; Yices solver-bound on this host
+No DUT-private state is referenced by the harnesses.

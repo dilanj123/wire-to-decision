@@ -1,0 +1,2 @@
+Yosys component synthesis sanity: PASS for wire_ipv4_parser and buffer→gearbox→Ethernet→IPv4 composition.
+Classification: SYNTHESISED COMPONENT SANITY only; no P&R or application PPA claim.

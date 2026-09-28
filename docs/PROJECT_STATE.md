@@ -16,7 +16,7 @@ Gate 0 — CLOSED; WIRE-000 through WIRE-007 complete
 
 ## Architecture
 
-Architecture A implementation has started with the common two-beat ingress buffer and 64-to-8 gearbox primitives. The protocol parser remains unimplemented.
+Architecture A implementation has started with the common two-beat ingress buffer, 64-to-8 gearbox, and Ethernet II/IPv4 byte-parser stages. UDP and later protocol parser stages remain unimplemented.
 
 Baseline candidate:
 
@@ -30,7 +30,7 @@ Architecture B is not authorized.
 
 ## Application status
 
-Application RTL: started; Architecture-A gearbox implemented
+Application RTL: started; Architecture-A ingress, gearbox, Ethernet II and IPv4 stages implemented with stage-level simulation evidence
 
 Reference-model package: created
 
@@ -92,11 +92,19 @@ Common ingress buffer: RTL-simulated; two-beat registered FIFO frozen by WIRE-D0
 
 Buffer→gearbox integration: RTL-simulated
 
+Ethernet II parser: RTL-simulated
+
+Buffer→gearbox→Ethernet integration: RTL-simulated
+
+IPv4 parser: RTL-simulated; full public-interface formal correspondence is not closed
+
+Buffer→gearbox→Ethernet→IPv4 integration: RTL-simulated
+
 Ingress-buffer local formal: reset-empty safety inductively checked; public-interface correspondence bounded-checked through depth 10
 
 Gearbox local formal: closed under documented assumptions for ordering, accepted valid-byte conservation, exact last-marker behavior, stall stability, and refill safety; reference correspondence bounded-checked through depth 20
 
-Application RTL functional evidence: gearbox + common ingress buffer + buffer→gearbox composition only
+Application RTL functional evidence: gearbox + common ingress buffer + Ethernet II + IPv4 stage/composition simulation; IPv4 formal correspondence remains open
 
 Formal application evidence: none
 
@@ -108,7 +116,7 @@ Python component regression: 71 tests passing
 
 ## Formal status
 
-WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. WIRE-016 Ethernet parser local safety is bounded-checked through depth 20 and public-interface correspondence through depth 40 under documented assumptions.
+WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. WIRE-016 Ethernet parser local safety is bounded-checked through depth 20 and public-interface correspondence through depth 40 under documented assumptions. WIRE-017 IPv4 local safety is bounded-checked through depth 20; public-interface reference covers reach header/payload/drop paths, while the full unconstrained correspondence job was solver-bound after step 22 and is not claimed closed.
 
 ## Synthesis / P&R status
 
@@ -118,7 +126,7 @@ Not run.
 
 WIRE-004 native Apple Silicon open-source toolchain qualification completed in commit `89e2841` for the trivial smoke design. Canonical suite: OSS CAD Suite `2026-09-27`; details are in `results/processed/toolchain_smoke.md`. This is toolchain-smoke evidence only.
 
-WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. WIRE-008 through WIRE-013 provide Python-unit-tested component and end-to-end evidence. WIRE-014 through WIRE-016 provide limited primitive/stage RTL simulation and local formal evidence. No IPv4/UDP/Mold/ITCH parser RTL, application synthesis, timing, latency, throughput, CDC, or C++ integration evidence exists.
+WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. WIRE-008 through WIRE-013 provide Python-unit-tested component and end-to-end evidence. WIRE-014 through WIRE-017 provide limited primitive/stage RTL simulation and local formal evidence; WIRE-017 correspondence remains open. No UDP/Mold/ITCH parser RTL, application synthesis, timing, latency, throughput, CDC, or C++ integration evidence exists.
 
 ## Open bugs
 

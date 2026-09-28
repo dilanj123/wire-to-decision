@@ -1,0 +1,1 @@
+Preserved primitive simulation regressions: WIRE-014 gearbox 6/6 PASS; WIRE-015 ingress buffer 5/5 standalone and 1/1 buffer→gearbox composition; WIRE-016 Ethernet parser 4/4 standalone and 1/1 composition.

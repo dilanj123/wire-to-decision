@@ -1,0 +1,2 @@
+SBY local safety: PASS, smtbmc yices, depth 20.
+Checked ready/valid stall stability and rejection quarantine interface invariants.

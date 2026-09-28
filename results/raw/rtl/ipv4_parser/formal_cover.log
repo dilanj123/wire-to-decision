@@ -1,0 +1,2 @@
+SBY cover: PASS, smtbmc yices, depth 32.
+Reached reference payload, drop, padding and rejection paths. Covers are reachability evidence only.
