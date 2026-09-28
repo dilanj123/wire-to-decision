@@ -16,7 +16,7 @@ Gate 0 — CLOSED; WIRE-000 through WIRE-007 complete
 
 ## Architecture
 
-Architecture A implementation has started with the common two-beat ingress buffer, 64-to-8 gearbox, Ethernet II, IPv4, and UDP byte-parser stages. MoldUDP64 and later protocol parser stages remain unimplemented.
+Architecture A implementation has started with the common two-beat ingress buffer, 64-to-8 gearbox, Ethernet II, IPv4, UDP, and MoldUDP64 header/sequence stages. Mold message-block and later protocol parser stages remain unimplemented.
 
 Baseline candidate:
 
@@ -31,6 +31,10 @@ Architecture B is not authorized.
 ## Application status
 
 Application RTL: started; Architecture-A ingress, gearbox, Ethernet II, IPv4, and UDP stages implemented with stage-level simulation evidence
+
+MoldUDP64 header/sequence controller: RTL-simulated; named header, heartbeat/EOS, deferred-commit, recovery, stall, and wrap properties checked under documented bounded/fixed-vector assumptions
+
+MoldUDP64 message-block parser: not started
 
 Reference-model package: created
 
@@ -108,7 +112,7 @@ Ingress-buffer local formal: reset-empty safety inductively checked; public-inte
 
 Gearbox local formal: closed under documented assumptions for ordering, accepted valid-byte conservation, exact last-marker behavior, stall stability, and refill safety; reference correspondence bounded-checked through depth 20
 
-Application RTL functional evidence: gearbox + common ingress buffer + Ethernet II + IPv4 + UDP stage/composition simulation; named local formal checks recorded per stage
+Application RTL functional evidence: gearbox + common ingress buffer + Ethernet II + IPv4 + UDP + Mold header/sequence stage/composition simulation; named local formal checks recorded per stage
 
 Formal application evidence: none
 
@@ -120,7 +124,7 @@ Python component regression: 71 tests passing
 
 ## Formal status
 
-WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. WIRE-016 Ethernet parser local safety is bounded-checked through depth 20 and public-interface correspondence through depth 40 under documented assumptions. WIRE-017 IPv4 local safety is bounded-checked through depth 20; WIRE-017A decomposed public-interface checks cover classification, checksum, payload, Total-Length boundary, padding, truncation and restart at recorded depths. The original monolithic correspondence job remains recorded as solver-bound after step 22. WIRE-018 UDP uses decomposed fixed-vector and bounded public-interface checks at recorded depths; coverage is reported separately.
+WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. WIRE-016 Ethernet parser local safety is bounded-checked through depth 20 and public-interface correspondence through depth 40 under documented assumptions. WIRE-017 IPv4 local safety is bounded-checked through depth 20; WIRE-017A decomposed public-interface checks cover classification, checksum, payload, Total-Length boundary, padding, truncation and restart at recorded depths. The original monolithic correspondence job remains recorded as solver-bound after step 22. WIRE-018 UDP uses decomposed fixed-vector and bounded public-interface checks at recorded depths; WIRE-019 Mold header/sequence control uses public-interface safety BMC, fixed-vector header/control BMC, deferred-commit, recovery, stall, and sequence-wrap checks at recorded depths; coverage is reported separately.
 
 ## Synthesis / P&R status
 
@@ -130,7 +134,7 @@ Not run.
 
 WIRE-004 native Apple Silicon open-source toolchain qualification completed in commit `89e2841` for the trivial smoke design. Canonical suite: OSS CAD Suite `2026-09-27`; details are in `results/processed/toolchain_smoke.md`. This is toolchain-smoke evidence only.
 
-WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. WIRE-008 through WIRE-013 provide Python-unit-tested component and end-to-end evidence. WIRE-014 through WIRE-018 provide limited primitive/stage RTL simulation and local formal evidence. WIRE-017A closed the named IPv4 correspondence set with decomposed bounded/fixed-vector checks; the original monolithic BMC remains solver-bound historical evidence. No Mold/ITCH parser RTL, application synthesis, timing, latency, throughput, CDC, or C++ integration evidence exists.
+WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. WIRE-008 through WIRE-013 provide Python-unit-tested component and end-to-end evidence. WIRE-014 through WIRE-019 provide limited primitive/stage RTL simulation and local formal evidence. WIRE-017A closed the named IPv4 correspondence set with decomposed bounded/fixed-vector checks; the original monolithic BMC remains solver-bound historical evidence. No Mold message-block/ITCH parser RTL, application synthesis, timing, latency, throughput, CDC, or C++ integration evidence exists.
 
 ## Open bugs
 
@@ -146,6 +150,7 @@ None recorded.
 - WIRE-005 canonical implementation target and experiment invariants are recorded in `docs/DECISIONS.md` and `docs/IMPLEMENTATION_TARGET.md`.
 - WIRE-006 authoritative requirements, microarchitecture, verification, and formal package is recorded in the master/specification documents. WIRE-014 added the single-clock reset convention and gearbox evidence.
 - WIRE-D012 common ingress buffer depth decision is recorded in `docs/DECISIONS.md` and WIRE-015 evidence.
+- WIRE-D015 deferred Mold normal-packet sequence commit is recorded in `docs/DECISIONS.md` and WIRE-019 evidence.
 
 ## Current bottleneck
 
@@ -153,4 +158,4 @@ SystemVerilog implementation and cross-layer hardware verification remain.
 
 ## Next task
 
-WIRE-019 — Architecture A MoldUDP64 packet-header and sequence-controller RTL and verification.
+WIRE-020 — Architecture A MoldUDP64 message-block framing RTL and verification.

@@ -132,3 +132,12 @@
 - Decision: For this pipeline, an otherwise profile-valid UDP datagram with `UDP Length == 8`, matching destination port, zero checksum, and exactly eight physical IPv4-payload bytes is rejected locally as fatal `UDP_EMPTY_PROJECT_PAYLOAD`.
 - Consequences: This is a project/pipeline representation decision, not a claim that UDP generally requires a nonempty payload. The Python model remains unchanged and reaches its later empty MoldUDP64 failure for equivalent bytes. Higher-priority UDP length, wrong-port, and nonzero-checksum outcomes remain authoritative.
 - Status: ADOPTED
+
+## WIRE-D015 — Freeze Mold normal-packet completion/sequence-commit contract
+
+- Date: 2026-09-28
+- Source: WIRE-019 Architecture-A MoldUDP64 header/sequence controller
+- Decision: Capture `cfg_active_session` and `cfg_expected_sequence` on synchronous reset or explicit `rearm`. Validate the 20-byte Mold header and expose normal-packet metadata before forwarding its opaque message-block body. For a normal packet, `expected_sequence` advances only after a downstream `packet_result_valid && packet_result_ready && packet_result_success` handshake, by `packet_message_count` modulo 2^64. Heartbeats do not advance sequence or require a result. End-of-session and failed downstream results leave sequence unchanged and require recovery.
+- Rationale: Python advances sequence only after complete successful message-block parsing. Deferring the commit prevents a malformed future WIRE-020 suffix from corrupting the sequence epoch.
+- Consequences: Partial/pending Mold packets are discarded by reset or explicit re-arm. The stage exposes local `controller_valid` and `recovery_required`; it does not implement message blocks, ITCH, book state, or a global error arbiter.
+- Status: ADOPTED

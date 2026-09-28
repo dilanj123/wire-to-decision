@@ -1,0 +1,11 @@
+[options]
+mode cover
+depth 40
+[engines]
+smtbmc yices
+[script]
+read_verilog -formal -sv wire_mold_header_seq.sv wire_mold_header_seq_formal.sv
+prep -top mold_cover
+[files]
+../../rtl/arch_a/wire_mold_header_seq.sv
+wire_mold_header_seq_formal.sv

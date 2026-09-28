@@ -1,0 +1,12 @@
+[options]
+mode bmc
+depth 28
+[engines]
+smtbmc yices
+[script]
+read_verilog -formal -sv wire_mold_header_seq.sv wire_mold_header_seq_vectors.sv
+chparam -set CASE 6 mold_vector
+prep -top mold_vector
+[files]
+../../rtl/arch_a/wire_mold_header_seq.sv
+wire_mold_header_seq_vectors.sv

@@ -1,0 +1,36 @@
+WIRE-019 formal property inventory
+
+Public-interface-only reference: YES; DUT-private state used: NO
+Assumptions: synchronous reset initialization; upstream in_valid/data/last
+stable while in_valid && !in_ready; configuration stable within a reset/rearm
+epoch. General downstream ready signals remain unconstrained in safety BMC.
+
+wire_mold_header_seq.sby: bounded safety BMC, depth 36, smtbmc yices.
+Checks: output stall stability; rejection stall stability and input/output
+blocking; metadata stall stability; recovery blocking; successful deferred
+sequence commit; failed-result sequence hold.
+
+wire_mold_header_seq_vectors.sby: fixed-vector normal packet, depth 40.
+Checks: metadata fields, opaque body path, no early sequence advance, commit.
+wire_mold_header_seq_heartbeat.sby: fixed-vector BMC depth 28.
+Checks: exact heartbeat no metadata/body/rejection and sequence hold.
+wire_mold_header_seq_eos.sby: fixed-vector BMC depth 28.
+Checks: exact EOS rejection and recovery.
+wire_mold_header_seq_session.sby: fixed-vector BMC depth 28.
+Checks: session mismatch code/priority and recovery.
+wire_mold_header_seq_sequence.sby: fixed-vector BMC depth 28.
+Checks: sequence mismatch code/priority and recovery.
+wire_mold_header_seq_wrap.sby: fixed-vector BMC depth 40.
+Checks: normal count-two sequence wrap from FFFFFFFFFFFFFFFE to zero.
+wire_mold_header_seq_empty_normal.sby: fixed-vector BMC depth 28.
+Checks: normal count-one body-empty metadata representation.
+wire_mold_header_seq_heartbeat_trailing.sby and
+wire_mold_header_seq_eos_trailing.sby: fixed-vector BMC depth 28.
+Checks: trailing-byte precedence over heartbeat/EOS classification.
+wire_mold_header_seq_truncated.sby: fixed-vector BMC depth 16.
+Checks: header truncation and fatal recovery result.
+wire_mold_header_seq_cover.sby: cover depth 40.
+Covers: metadata, body, rejection, result success, recovery/rearm reachability.
+
+All listed jobs PASS. These are bounded/fixed-vector checks, not exhaustive
+unbounded proofs, and do not cover message-block parsing.

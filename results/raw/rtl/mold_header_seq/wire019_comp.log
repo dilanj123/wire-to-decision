@@ -1,0 +1,24 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile.composition results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_mold_composition COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_buffer_gearbox_eth_ipv4_udp_mold_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1790633960
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_mold_composition.test_six_stage_normal_and_heartbeat (1/2)
+  1350.00ns INFO     cocotb.regression                  test_mold_composition.test_six_stage_normal_and_heartbeat passed
+  1350.00ns INFO     cocotb.regression                  running test_mold_composition.test_six_stage_mold_errors_are_local (2/2)
+  2090.00ns INFO     cocotb.regression                  test_mold_composition.test_six_stage_mold_errors_are_local passed
+  2090.00ns INFO     cocotb.regression                  ********************************************************************************************************************
+                                                        ** TEST                                                        STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************************************
+                                                        ** test_mold_composition.test_six_stage_normal_and_heartbeat    PASS        1350.00           0.01     251211.64  **
+                                                        ** test_mold_composition.test_six_stage_mold_errors_are_local   PASS         740.00           0.00     282110.98  **
+                                                        ********************************************************************************************************************
+                                                        ** TESTS=2 PASS=2 FAIL=0 SKIP=0                                             2090.00           0.01     203012.96  **
+                                                        ********************************************************************************************************************
+- :0: Verilog $finish

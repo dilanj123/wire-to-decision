@@ -1,0 +1,44 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_mold_header_seq COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_mold_header_seq TOPLEVEL_LANG=verilog \
+         sim_build/Vtop
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1790633562
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_mold_header_seq.test_normal_metadata_body_and_deferred_commit (1/8)
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/wire-to-decision/tb/mold_header_seq/test_mold_header_seq.py:21: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+                                                          cocotb.start_soon(Clock(self.dut.clk, 10, units="ns").start())
+   290.00ns INFO     cocotb.regression                  test_mold_header_seq.test_normal_metadata_body_and_deferred_commit passed
+   290.00ns INFO     cocotb.regression                  running test_mold_header_seq.test_empty_normal_body_failed_result_and_rearm (2/8)
+   820.00ns INFO     cocotb.regression                  test_mold_header_seq.test_empty_normal_body_failed_result_and_rearm passed
+   820.00ns INFO     cocotb.regression                  running test_mold_header_seq.test_heartbeat_and_sequence_wrap (3/8)
+  1585.00ns INFO     cocotb.regression                  test_mold_header_seq.test_heartbeat_and_sequence_wrap passed
+  1585.00ns INFO     cocotb.regression                  running test_mold_header_seq.test_heartbeat_and_eos_trailing_precedence (4/8)
+  2055.00ns INFO     cocotb.regression                  test_mold_header_seq.test_heartbeat_and_eos_trailing_precedence passed
+  2055.00ns INFO     cocotb.regression                  running test_mold_header_seq.test_eos_exact_and_recovery_blocks_input (5/8)
+  2300.00ns INFO     cocotb.regression                  test_mold_header_seq.test_eos_exact_and_recovery_blocks_input passed
+  2300.00ns INFO     cocotb.regression                  running test_mold_header_seq.test_session_sequence_priority_and_drop (6/8)
+  2830.01ns INFO     cocotb.regression                  test_mold_header_seq.test_session_sequence_priority_and_drop passed
+  2830.01ns INFO     cocotb.regression                  running test_mold_header_seq.test_header_truncation_and_reject_stall (7/8)
+  2920.01ns INFO     cocotb.regression                  test_mold_header_seq.test_header_truncation_and_reject_stall passed
+  2920.01ns INFO     cocotb.regression                  running test_mold_header_seq.test_metadata_and_body_stalls (8/8)
+  3240.01ns INFO     cocotb.regression                  test_mold_header_seq.test_metadata_and_body_stalls passed
+  3240.01ns INFO     cocotb.regression                  *****************************************************************************************************************************
+                                                        ** TEST                                                                 STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************************************
+                                                        ** test_mold_header_seq.test_normal_metadata_body_and_deferred_commit    PASS         290.00           0.00     190769.79  **
+                                                        ** test_mold_header_seq.test_empty_normal_body_failed_result_and_rearm   PASS         530.00           0.00     326572.81  **
+                                                        ** test_mold_header_seq.test_heartbeat_and_sequence_wrap                 PASS         765.00           0.00     333608.08  **
+                                                        ** test_mold_header_seq.test_heartbeat_and_eos_trailing_precedence       PASS         470.00           0.00     326594.25  **
+                                                        ** test_mold_header_seq.test_eos_exact_and_recovery_blocks_input         PASS         245.00           0.00     318143.80  **
+                                                        ** test_mold_header_seq.test_session_sequence_priority_and_drop          PASS         530.00           0.00     334333.15  **
+                                                        ** test_mold_header_seq.test_header_truncation_and_reject_stall          PASS          90.00           0.00     322638.77  **
+                                                        ** test_mold_header_seq.test_metadata_and_body_stalls                    PASS         320.00           0.00     320023.20  **
+                                                        *****************************************************************************************************************************
+                                                        ** TESTS=8 PASS=8 FAIL=0 SKIP=0                                                      3240.01           0.01     217461.02  **
+                                                        *****************************************************************************************************************************
+- :0: Verilog $finish

@@ -1,0 +1,9 @@
+standalone cocotb: 9/9 PASS; seeds 1,7,19
+six-stage composition cocotb: 2/2 PASS
+Verilator standalone/composition lint: PASS; no meaningful warnings
+Yosys standalone/composition sanity: PASS
+Python regression: 71/71 PASS
+Mold safety BMC: PASS, depth 36, smtbmc yices
+Mold cover: PASS, depth 40, smtbmc yices
+Fixed-vector BMC: normal depth 40; heartbeat/EOS/session/sequence/empty-normal depth 28; wrap depth 40; heartbeat/EOS trailing depth 28; header truncation depth 16
+DUT-private state used by formal reference: NO

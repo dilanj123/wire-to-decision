@@ -1,0 +1,410 @@
+SBY 23:17:26 [wire_mold_header_seq_cover] Removing directory '/Users/Dilan/Projects/wire-to-decision/formal/mold_header_seq/wire_mold_header_seq_cover'.
+SBY 23:17:26 [wire_mold_header_seq_cover] Copy '/Users/Dilan/Projects/wire-to-decision/formal/mold_header_seq/../../rtl/arch_a/wire_mold_header_seq.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/mold_header_seq/wire_mold_header_seq_cover/src/wire_mold_header_seq.sv'.
+SBY 23:17:26 [wire_mold_header_seq_cover] Copy '/Users/Dilan/Projects/wire-to-decision/formal/mold_header_seq/wire_mold_header_seq_formal.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/mold_header_seq/wire_mold_header_seq_cover/src/wire_mold_header_seq_formal.sv'.
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: smtbmc yices
+SBY 23:17:26 [wire_mold_header_seq_cover] base: starting process "cd wire_mold_header_seq_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 23:17:26 [wire_mold_header_seq_cover] base: wire_mold_header_seq_formal.sv:73: Warning: Identifier `\base.clk' is implicitly declared.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: wire_mold_header_seq_formal.sv:74: Warning: Identifier `\base.packet_valid' is implicitly declared.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: wire_mold_header_seq_formal.sv:75: Warning: Identifier `\base.out_valid' is implicitly declared.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: wire_mold_header_seq_formal.sv:76: Warning: Identifier `\base.reject_valid' is implicitly declared.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: wire_mold_header_seq_formal.sv:77: Warning: Identifier `\base.packet_result_valid' is implicitly declared.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: wire_mold_header_seq_formal.sv:77: Warning: Identifier `\base.packet_result_ready' is implicitly declared.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: wire_mold_header_seq_formal.sv:77: Warning: Identifier `\base.packet_result_success' is implicitly declared.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: wire_mold_header_seq_formal.sv:78: Warning: Identifier `\base.recovery_required' is implicitly declared.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: wire_mold_header_seq_formal.sv:78: Warning: Identifier `\base.rearm' is implicitly declared.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_cover.\base.packet_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_cover.\base.out_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_cover.\base.reject_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_cover.\base.packet_result_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_cover.\base.packet_result_ready is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_cover.\base.packet_result_success is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_cover.\base.recovery_required is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_cover.\base.rearm is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_cover.\base.clk is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [63] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [62] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [61] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [60] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [59] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [58] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [57] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [56] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [55] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [54] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [53] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [52] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [51] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [50] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [49] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [48] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [47] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [46] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [45] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [44] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [43] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [42] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [41] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [40] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [39] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [38] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [37] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [36] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [35] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [34] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [33] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [32] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [31] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [30] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [29] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [28] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [27] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [26] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [25] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [24] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [23] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [22] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [21] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [20] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [19] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [18] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [17] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [16] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [15] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [14] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [13] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [12] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [11] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [10] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [9] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [8] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [7] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [6] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [5] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [4] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [3] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [2] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [1] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_expected_sequence [0] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [79] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [78] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [77] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [76] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [75] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [74] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [73] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [72] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [71] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [70] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [69] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [68] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [67] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [66] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [65] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [64] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [63] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [62] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [61] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [60] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [59] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [58] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [57] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [56] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [55] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [54] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [53] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [52] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [51] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [50] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [49] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [48] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [47] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [46] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [45] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [44] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [43] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [42] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [41] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [40] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [39] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [38] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [37] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [36] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [35] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [34] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [33] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [32] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [31] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [30] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [29] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [28] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [27] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [26] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [25] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [24] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [23] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [22] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [21] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [20] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [19] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [18] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [17] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [16] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [15] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [14] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [13] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [12] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [11] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [10] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [9] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [8] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [7] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [6] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [5] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [4] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [3] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [2] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [1] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\cfg_active_session [0] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\clk is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\in_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\out_ready is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\reject_ready is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\packet_ready is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\packet_result_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\packet_result_success is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\rst is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\rearm is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\in_data [7] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\in_data [6] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\in_data [5] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\in_data [4] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\in_data [3] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\in_data [2] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\in_data [1] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\in_data [0] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: Warning: Wire mold_safety.\in_last is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] base: finished (returncode=0)
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: starting process "cd wire_mold_header_seq_cover/model; yosys -ql design_prep.log design_prep.ys"
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_cover.\base.rearm is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_cover.\base.recovery_required is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_cover.\base.packet_result_success is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_cover.\base.packet_result_ready is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_cover.\base.packet_result_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_cover.\base.packet_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_cover.\base.out_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_cover.\base.reject_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\reject_ready is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\packet_result_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\packet_result_success is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\packet_ready is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\out_ready is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\clk is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [63] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [62] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [61] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [60] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [59] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [58] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [57] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [56] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [55] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [54] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [53] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [52] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [51] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [50] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [49] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [48] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [47] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [46] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [45] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [44] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [43] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [42] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [41] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [40] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [39] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [38] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [37] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [36] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [35] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [34] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [33] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [32] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [31] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [30] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [29] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [28] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [27] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [26] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [25] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [24] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [23] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [22] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [21] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [20] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [19] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [18] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [17] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [16] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [15] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [14] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [13] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [12] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [11] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [10] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [9] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [8] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [7] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [6] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [5] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [4] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [3] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [2] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [1] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_expected_sequence [0] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [79] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [78] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [77] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [76] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [75] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [74] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [73] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [72] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [71] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [70] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [69] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [68] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [67] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [66] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [65] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [64] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [63] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [62] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [61] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [60] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [59] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [58] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [57] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [56] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [55] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [54] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [53] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [52] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [51] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [50] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [49] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [48] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [47] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [46] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [45] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [44] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [43] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [42] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [41] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [40] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [39] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [38] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [37] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [36] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [35] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [34] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [33] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [32] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [31] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [30] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [29] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [28] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [27] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [26] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [25] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [24] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [23] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [22] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [21] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [20] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [19] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [18] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [17] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [16] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [15] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [14] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [13] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [12] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [11] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [10] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [9] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [8] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [7] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [6] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [5] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [4] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [3] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [2] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [1] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\cfg_active_session [0] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\rearm is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\in_valid is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\rst is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\in_last is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\in_data [7] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\in_data [6] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\in_data [5] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\in_data [4] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\in_data [3] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\in_data [2] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\in_data [1] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: Warning: Wire mold_safety.\in_data [0] is used but has no driver.
+SBY 23:17:26 [wire_mold_header_seq_cover] prep: finished (returncode=0)
+SBY 23:17:26 [wire_mold_header_seq_cover] smt2: starting process "cd wire_mold_header_seq_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 23:17:26 [wire_mold_header_seq_cover] smt2: finished (returncode=0)
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: starting process "cd wire_mold_header_seq_cover; yosys-smtbmc -s yices --presat --unroll -c --noprogress -t 40  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Solver: yices
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at mold_cover: wire_mold_header_seq_formal.sv:74.9-74.33 (_witness_.check_cover_wire_mold_header_seq_formal_sv_74_220)
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at mold_cover: wire_mold_header_seq_formal.sv:75.9-75.30 (_witness_.check_cover_wire_mold_header_seq_formal_sv_75_221)
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at mold_cover: wire_mold_header_seq_formal.sv:76.9-76.33 (_witness_.check_cover_wire_mold_header_seq_formal_sv_76_222)
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at mold_cover: wire_mold_header_seq_formal.sv:77.9-77.98 (_witness_.check_cover_wire_mold_header_seq_formal_sv_77_223)
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at mold_cover: wire_mold_header_seq_formal.sv:78.9-78.52 (_witness_.check_cover_wire_mold_header_seq_formal_sv_78_226)
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: ##   0:00:00  Status: passed
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: finished (returncode=0)
+SBY 23:17:26 [wire_mold_header_seq_cover] engine_0: Status returned by engine: pass
+SBY 23:17:26 [wire_mold_header_seq_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 23:17:26 [wire_mold_header_seq_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 23:17:26 [wire_mold_header_seq_cover] summary: engine_0 (smtbmc yices) returned pass
+SBY 23:17:26 [wire_mold_header_seq_cover] summary: cover trace: wire_mold_header_seq_cover/engine_0/trace0.vcd
+SBY 23:17:26 [wire_mold_header_seq_cover] summary:   reached cover statement mold_cover._witness_.check_cover_wire_mold_header_seq_formal_sv_74_220 at wire_mold_header_seq_formal.sv:74.9-74.33 step 1
+SBY 23:17:26 [wire_mold_header_seq_cover] summary: cover trace: wire_mold_header_seq_cover/engine_0/trace1.vcd
+SBY 23:17:26 [wire_mold_header_seq_cover] summary:   reached cover statement mold_cover._witness_.check_cover_wire_mold_header_seq_formal_sv_75_221 at wire_mold_header_seq_formal.sv:75.9-75.30 step 1
+SBY 23:17:26 [wire_mold_header_seq_cover] summary: cover trace: wire_mold_header_seq_cover/engine_0/trace2.vcd
+SBY 23:17:26 [wire_mold_header_seq_cover] summary:   reached cover statement mold_cover._witness_.check_cover_wire_mold_header_seq_formal_sv_76_222 at wire_mold_header_seq_formal.sv:76.9-76.33 step 1
+SBY 23:17:26 [wire_mold_header_seq_cover] summary: cover trace: wire_mold_header_seq_cover/engine_0/trace3.vcd
+SBY 23:17:26 [wire_mold_header_seq_cover] summary:   reached cover statement mold_cover._witness_.check_cover_wire_mold_header_seq_formal_sv_77_223 at wire_mold_header_seq_formal.sv:77.9-77.98 step 1
+SBY 23:17:26 [wire_mold_header_seq_cover] summary: cover trace: wire_mold_header_seq_cover/engine_0/trace4.vcd
+SBY 23:17:26 [wire_mold_header_seq_cover] summary:   reached cover statement mold_cover._witness_.check_cover_wire_mold_header_seq_formal_sv_78_226 at wire_mold_header_seq_formal.sv:78.9-78.52 step 1
+SBY 23:17:26 [wire_mold_header_seq_cover] DONE (PASS, rc=0)
