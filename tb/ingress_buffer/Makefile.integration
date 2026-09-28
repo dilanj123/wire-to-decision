@@ -1,0 +1,11 @@
+# WIRE-015 buffer-to-gearbox composition cocotb regression.
+TOPLEVEL_LANG := verilog
+SIM ?= verilator
+TOPLEVEL := wire_buffer_gearbox_top
+COCOTB_TEST_MODULES := test_buffer_gearbox
+VERILOG_SOURCES := $(abspath ../../rtl/common/wire_ingress_buffer.sv) \
+                   $(abspath ../../rtl/arch_a/wire_gearbox_64to8.sv) \
+                   $(abspath wire_buffer_gearbox_top.sv)
+COMPILE_ARGS += --language 1800-2012
+
+include $(shell cocotb-config --makefiles)/Makefile.sim

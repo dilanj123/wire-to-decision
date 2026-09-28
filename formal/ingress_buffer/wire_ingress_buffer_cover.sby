@@ -1,0 +1,14 @@
+[options]
+mode cover
+depth 10
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv wire_ingress_buffer.sv wire_ingress_buffer_reference.sv
+prep -top wire_ingress_buffer_reference
+
+[files]
+rtl/common/wire_ingress_buffer.sv
+formal/ingress_buffer/wire_ingress_buffer_reference.sv

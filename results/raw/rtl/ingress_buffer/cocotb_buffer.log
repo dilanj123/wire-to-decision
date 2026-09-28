@@ -1,0 +1,4 @@
+Command: make -f tb/ingress_buffer/Makefile SIM=verilator
+Result: PASS
+Tests: 5/5
+Coverage: empty/single/stall; fill/full backpressure; occupancy-one/two simultaneous push/pop; reset flush and frame-shaped tuples; deterministic random traffic.

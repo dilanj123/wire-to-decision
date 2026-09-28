@@ -16,7 +16,7 @@ Gate 0 — CLOSED; WIRE-000 through WIRE-007 complete
 
 ## Architecture
 
-Architecture A implementation has started with the 64-to-8 gearbox primitive. The common ingress buffer and protocol parser remain unimplemented.
+Architecture A implementation has started with the common two-beat ingress buffer and 64-to-8 gearbox primitives. The protocol parser remains unimplemented.
 
 Baseline candidate:
 
@@ -88,6 +88,12 @@ Python component regression: 71 tests passing
 
 64-to-8 gearbox: RTL-simulated
 
+Common ingress buffer: RTL-simulated; two-beat registered FIFO frozen by WIRE-D012
+
+Buffer→gearbox integration: RTL-simulated
+
+Ingress-buffer local formal: reset-empty safety inductively checked; public-interface correspondence bounded-checked through depth 10
+
 Gearbox local formal: closed under documented assumptions for ordering, accepted valid-byte conservation, exact last-marker behavior, stall stability, and refill safety; reference correspondence bounded-checked through depth 20
 
 Application RTL functional evidence: gearbox-only
@@ -102,7 +108,7 @@ Python component regression: 71 tests passing
 
 ## Formal status
 
-WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. Application parser formal verification has not started.
+WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. Application parser formal verification has not started.
 
 ## Synthesis / P&R status
 
@@ -127,6 +133,7 @@ None recorded.
 - WIRE-004 canonical toolchain decision is recorded in `docs/DECISIONS.md`.
 - WIRE-005 canonical implementation target and experiment invariants are recorded in `docs/DECISIONS.md` and `docs/IMPLEMENTATION_TARGET.md`.
 - WIRE-006 authoritative requirements, microarchitecture, verification, and formal package is recorded in the master/specification documents. WIRE-014 added the single-clock reset convention and gearbox evidence.
+- WIRE-D012 common ingress buffer depth decision is recorded in `docs/DECISIONS.md` and WIRE-015 evidence.
 
 ## Current bottleneck
 
@@ -134,4 +141,4 @@ SystemVerilog implementation and cross-layer hardware verification remain.
 
 ## Next task
 
-WIRE-015 — Architecture A common ingress beat buffer RTL and verification.
+WIRE-016 — Architecture A Ethernet II byte parser RTL and verification.

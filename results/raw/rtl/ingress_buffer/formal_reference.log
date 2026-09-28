@@ -1,0 +1,4 @@
+Command: sby -f -d /tmp/wire015-reference-bmc formal/ingress_buffer/wire_ingress_buffer_reference_bmc.sby
+SBY: v0.69; engine smtbmc yices; bounded depth 10
+Result: PASS
+Scope: independent public-interface two-entry queue correspondence for ready, valid, oldest payload, stall, and interface safety

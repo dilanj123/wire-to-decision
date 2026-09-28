@@ -1,0 +1,4 @@
+Command: sby -f -d /tmp/wire015-formal-cover formal/ingress_buffer/wire_ingress_buffer_cover.sby
+SBY: v0.69; engine smtbmc yices; cover depth 10
+Result: PASS
+Covers reached: occupancy-one simultaneous push/pop; full simultaneous push/pop

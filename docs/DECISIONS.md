@@ -19,6 +19,16 @@
 - Consequences: The gearbox and subsequent single-clock primitives use deterministic clocked reset behavior; CDC-specific reset requirements remain a separate future decision.
 - Status: ADOPTED
 
+## WIRE-D012 — Freeze common ingress buffer depth
+
+- Date: 2026-09-28
+- Source: WIRE-015 common ingress buffer implementation
+- Context: The common ingress-buffer depth was intentionally left open until the first shared Phase-2 buffering task.
+- Decision: Use a synchronous two-entry 64-bit framed-beat FIFO storing `{data[63:0], keep[7:0], last}`. Use it unchanged by Architecture A and any later authorized Architecture B.
+- Rationale: This is the smallest useful elastic buffer beyond the gearbox's active beat, provides real producer/serializer decoupling, keeps RTL/formal state small and auditable, and preserves a controlled common input for a later A/B comparison. It is not claimed to be performance-optimal.
+- Consequences: The FIFO has registered/no-empty-fall-through output behavior, accepts full-queue replacement on same-cycle pop/push, and does not validate or transform keep/last fields. It is not a CDC FIFO.
+- Status: ADOPTED
+
 ## WIRE-D003 — Lock third-party provenance and originality policy
 
 - Date: 2026-09-27

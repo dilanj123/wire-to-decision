@@ -1,0 +1,4 @@
+Command: yosys -p 'read_verilog -sv rtl/common/wire_ingress_buffer.sv; hierarchy -top wire_ingress_buffer; proc; opt; stat'
+Result: PASS
+Composition: buffer plus gearbox hierarchy also elaborated/optimized successfully
+Classification: SYNTHESISED COMPONENT SANITY

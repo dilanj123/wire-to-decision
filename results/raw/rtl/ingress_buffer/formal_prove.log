@@ -1,0 +1,4 @@
+Command: sby -f -d /tmp/wire015-safety-prove formal/ingress_buffer/wire_ingress_buffer_prove.sby
+SBY: v0.69; engine smtbmc yices; depth 20
+Result: PASS; basecase PASS; temporal induction PASS
+Scope: reset-empty safety with public interface and upstream stability assumption

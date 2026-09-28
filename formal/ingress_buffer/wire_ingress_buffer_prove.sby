@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 20
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv wire_ingress_buffer.sv wire_ingress_buffer_safety.sv
+prep -top wire_ingress_buffer_safety
+
+[files]
+rtl/common/wire_ingress_buffer.sv
+formal/ingress_buffer/wire_ingress_buffer_safety.sv

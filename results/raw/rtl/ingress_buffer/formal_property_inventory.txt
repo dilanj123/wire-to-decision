@@ -1,0 +1,10 @@
+P1 reset -> empty: INDUCTIVELY PROVED through safety harness
+P2 out_valid/reference occupancy: BOUNDED CHECKED depth 10
+P3 input-ready/capacity: BOUNDED CHECKED depth 10
+P4 output payload equals oldest queued payload: BOUNDED CHECKED depth 10
+P5 stall stability: BOUNDED CHECKED depth 10 in reference harness
+P6 no overflow/underflow at interface: INDUCTIVELY PROVED reset safety / BOUNDED CHECKED depth 10 correspondence
+P7 token conservation: BOUNDED CHECKED depth 10 through reference queue transitions
+P8 occupancy-one simultaneous push/pop: COVERED
+P9 full simultaneous push/pop ordering: COVERED and BOUNDED CHECKED depth 10
+DUT-private state used by formal reference: NO
