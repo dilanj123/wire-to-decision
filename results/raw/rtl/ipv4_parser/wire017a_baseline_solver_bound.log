@@ -1,0 +1,7 @@
+Original WIRE-017 monolithic correspondence reproduction:
+SBY 0.69, smtbmc yices, BMC depth 32.
+Run from formal/ipv4_parser with wire_ipv4_parser_reference.sby.
+Steps 0 through 21 completed; step 22 entered solver wait.
+Yices reported waiting for solver after approximately one minute; run was
+terminated by keyboard interrupt. No assertion counterexample was reported.
+Result: solver-bound / OPEN, not FAIL and not PASS.

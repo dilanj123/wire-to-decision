@@ -1,0 +1,2 @@
+wire_ipv4_checksum_reference.sby: PASS, SBY 0.69, smtbmc yices, BMC depth 28.
+Valid and corrupted public-input checksum vectors passed.

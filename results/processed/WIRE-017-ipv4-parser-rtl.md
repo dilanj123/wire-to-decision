@@ -101,4 +101,40 @@ UDP, MoldUDP64, ITCH, normalized-event, order-state and decision RTL; end-to-end
 
 ## Y. WIRE-017 conclusion
 
-The IPv4 stage is implemented and functionally RTL-simulated, with local safety formal checks and covers passing. WIRE-017 formal correspondence is not closed, so the task is recorded as `PARTIAL / FORMAL CLOSURE OPEN`; WIRE-018 must not begin until this gap is resolved.
+The IPv4 stage is implemented and functionally RTL-simulated, with local safety formal checks and covers passing. WIRE-017A closes the named correspondence groups using decomposed bounded jobs documented below. `REQ-IP-007` end-to-end mutation suppression remains unproven because no downstream mutating RTL exists.
+
+## WIRE-017A formal-closure addendum
+
+The original monolithic public-interface BMC used SBY 0.69, `smtbmc yices`,
+depth 32, reached step 22 and became solver-bound. It produced no RTL
+counterexample and remains retained as historical evidence rather than being
+relabelled as a failure or proof.
+
+WIRE-017A left `rtl/arch_a/wire_ipv4_parser.sv` unchanged and split the
+correspondence into public-interface-only jobs:
+
+| Job | Scope | Result |
+| --- | --- | --- |
+| `wire_ipv4_header_reference.sby` | Eight fixed header vectors, priority, code/fatal result, no output | PASS, BMC depth 28 |
+| `wire_ipv4_checksum_reference.sby` | Valid/corrupt checksum vectors | PASS, BMC depth 28 |
+| `wire_ipv4_payload_reference.sby` | Four symbolic payload bytes, ordering and final marker | PASS, BMC depth 32 |
+| `wire_ipv4_padding_reference.sby` | Declared boundary and physical padding suppression | PASS, BMC depth 40 |
+| `wire_ipv4_truncation_reference.sby` | Physical end before declared length | PASS, BMC depth 32 |
+| `wire_ipv4_next_packet_reference.sby` | Two rejected packets and new header-byte-zero alignment | PASS, BMC depth 44 |
+| existing safety job | Output/rejection stall stability | PASS, BMC depth 20 |
+| existing cover job | Payload/drop/padding/reject reachability | PASS, cover depth 32 |
+
+The reference harnesses use no DUT-private state. Assumptions are
+synchronous reset initialization, upstream valid/data/last stability while
+stalled, and fixed `cfg_destination_ipv4 = 0xC6336407`. Targeted data-path
+jobs hold downstream ready high to isolate the correspondence; the separate
+safety job leaves downstream stalls unconstrained. Header and checksum jobs
+use fixed vectors, while payload values are symbolic. These are bounded and
+finite-vector checks, not exhaustive proofs over all 16-bit lengths or all
+160-bit header combinations.
+
+The existing cocotb suite remains 5/5 standalone and 3/3 composition, the
+Python suite remains 71/71, and Verilator/Yosys checks remain passing. No
+production RTL change was required. WIRE-017 is therefore closed for the
+named local formal property set under documented assumptions, while
+end-to-end mutation suppression and later protocol stages remain unproven.

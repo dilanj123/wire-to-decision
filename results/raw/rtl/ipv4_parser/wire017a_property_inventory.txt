@@ -1,0 +1,28 @@
+WIRE-017A property inventory
+Toolchain: SBY 0.69, Yices 2.7.0, smtbmc yices
+DUT-private state used by references: NO
+
+wire_ipv4_header_reference.sby: PASS, BMC depth 28
+  Eight fixed public-input header vectors cover accepted-profile/empty,
+  invalid version, unsupported IHL, invalid length, checksum, fragmented,
+  wrong destination, and non-UDP priority outcomes.
+wire_ipv4_checksum_reference.sby: PASS, BMC depth 28
+  Valid and corrupted fixed checksum-bearing headers.
+wire_ipv4_payload_reference.sby: PASS, BMC depth 32
+  Four symbolic payload bytes; valid fixed profile; output ordering and last.
+wire_ipv4_padding_reference.sby: PASS, BMC depth 40
+  Declared payload followed by physical padding; padding suppressed.
+wire_ipv4_truncation_reference.sby: PASS, BMC depth 32
+  Physical end before declared Total Length; fatal invalid length, no false last.
+wire_ipv4_next_packet_reference.sby: PASS, BMC depth 44
+  Two complete rejected packets; second packet starts at header byte zero.
+wire_ipv4_parser_prove.sby: PASS, BMC depth 20
+  Existing output/rejection stall safety.
+wire_ipv4_parser_cover.sby: PASS, cover depth 32
+  Existing payload/drop/padding/reject reachability.
+
+Targeted assumptions: synchronous reset initialization; input valid/data/last
+stability while stalled; cfg_destination_ipv4 fixed at 0xC6336407 for these
+bounded jobs. Targeted data-path jobs hold out_ready/reject_ready high to
+isolate correspondence; the separate safety job leaves downstream stalls
+unconstrained. No assertion assumes a DUT-generated result.

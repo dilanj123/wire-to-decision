@@ -1,0 +1,3 @@
+Late physical truncation targeted job: PASS, BMC depth 32.
+No rollback property was asserted; previously emitted prefix bytes remain a
+documented speculative-prefix limitation of WIRE-017.

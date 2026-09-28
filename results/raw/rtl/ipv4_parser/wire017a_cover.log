@@ -1,0 +1,2 @@
+Existing wire_ipv4_parser_cover.sby: PASS, cover depth 32.
+Reachability retained for payload, drop, padding and rejection paths.

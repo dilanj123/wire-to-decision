@@ -1,0 +1,7 @@
+WIRE-017 standalone cocotb: 5/5 PASS; seeds 1, 7, 19 retained.
+WIRE-017 composition cocotb: 3/3 PASS; seeds 1, 7, 19 retained.
+WIRE-014 gearbox: 6/6 cocotb PASS; formal jobs PASS.
+WIRE-015 ingress buffer: 5/5 standalone, 1/1 composition; formal jobs PASS.
+WIRE-016 Ethernet: 4/4 standalone, 1/1 composition; formal jobs PASS.
+Python reference regression: 71/71 PASS.
+Verilator and Yosys parser/composition sanity: PASS.

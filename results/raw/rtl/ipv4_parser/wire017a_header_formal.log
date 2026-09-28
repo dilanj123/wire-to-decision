@@ -1,0 +1,2 @@
+wire_ipv4_header_reference.sby: PASS, SBY 0.69, smtbmc yices, BMC depth 28.
+Public-interface fixed-vector header/classification correspondence passed.

@@ -1,0 +1,2 @@
+wire_ipv4_payload_reference.sby: PASS, SBY 0.69, smtbmc yices, BMC depth 32.
+Symbolic payload data correspondence, ordering and final marker passed.

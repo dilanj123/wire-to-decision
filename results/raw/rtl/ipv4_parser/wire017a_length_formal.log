@@ -1,0 +1,2 @@
+wire_ipv4_truncation_reference.sby: PASS, SBY 0.69, smtbmc yices, BMC depth 32.
+Physical early end before declared Total Length passed as fatal invalid length.

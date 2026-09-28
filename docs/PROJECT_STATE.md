@@ -96,7 +96,7 @@ Ethernet II parser: RTL-simulated
 
 Buffer→gearbox→Ethernet integration: RTL-simulated
 
-IPv4 parser: RTL-simulated; full public-interface formal correspondence is not closed
+IPv4 parser: RTL-simulated; named public-interface formal correspondence closed with decomposed bounded checks under documented assumptions
 
 Buffer→gearbox→Ethernet→IPv4 integration: RTL-simulated
 
@@ -104,7 +104,7 @@ Ingress-buffer local formal: reset-empty safety inductively checked; public-inte
 
 Gearbox local formal: closed under documented assumptions for ordering, accepted valid-byte conservation, exact last-marker behavior, stall stability, and refill safety; reference correspondence bounded-checked through depth 20
 
-Application RTL functional evidence: gearbox + common ingress buffer + Ethernet II + IPv4 stage/composition simulation; IPv4 formal correspondence remains open
+Application RTL functional evidence: gearbox + common ingress buffer + Ethernet II + IPv4 stage/composition simulation; IPv4 local formal property set closed with decomposed bounded checks
 
 Formal application evidence: none
 
@@ -116,7 +116,7 @@ Python component regression: 71 tests passing
 
 ## Formal status
 
-WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. WIRE-016 Ethernet parser local safety is bounded-checked through depth 20 and public-interface correspondence through depth 40 under documented assumptions. WIRE-017 IPv4 local safety is bounded-checked through depth 20; public-interface reference covers reach header/payload/drop paths, while the full unconstrained correspondence job was solver-bound after step 22 and is not claimed closed.
+WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. WIRE-016 Ethernet parser local safety is bounded-checked through depth 20 and public-interface correspondence through depth 40 under documented assumptions. WIRE-017 IPv4 local safety is bounded-checked through depth 20; WIRE-017A decomposed public-interface checks cover classification, checksum, payload, Total-Length boundary, padding, truncation and restart at recorded depths. The original monolithic correspondence job remains recorded as solver-bound after step 22.
 
 ## Synthesis / P&R status
 
@@ -149,4 +149,4 @@ SystemVerilog implementation and cross-layer hardware verification remain.
 
 ## Next task
 
-WIRE-017 — Architecture A IPv4 byte parser RTL and verification.
+WIRE-018 — Architecture A UDP byte parser RTL and verification.
