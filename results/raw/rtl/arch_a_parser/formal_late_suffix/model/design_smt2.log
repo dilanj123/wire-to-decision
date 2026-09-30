@@ -1,0 +1,395 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `wire_arch_a_parser_late_suffix'. Setting top module to wire_arch_a_parser_late_suffix.
+
+2.1. Analyzing design hierarchy..
+Top module:  \wire_arch_a_parser_late_suffix
+Used module:     \wire_arch_a_parser_top
+Used module:         \wire_eth_parser
+Used module:         \wire_mold_message_framer
+Used module:         \wire_gearbox_64to8
+Used module:         \wire_ingress_buffer
+Used module:         \wire_ipv4_parser
+Used module:         \wire_itch_decoder
+Used module:         \wire_mold_header_seq
+Used module:         \wire_udp_parser
+
+2.2. Analyzing design hierarchy..
+Top module:  \wire_arch_a_parser_late_suffix
+Used module:     \wire_arch_a_parser_top
+Used module:         \wire_eth_parser
+Used module:         \wire_mold_message_framer
+Used module:         \wire_gearbox_64to8
+Used module:         \wire_ingress_buffer
+Used module:         \wire_ipv4_parser
+Used module:         \wire_itch_decoder
+Used module:         \wire_mold_header_seq
+Used module:         \wire_udp_parser
+Removed 0 unused modules.
+Module wire_arch_a_parser_late_suffix directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== wire_arch_a_parser_late_suffix ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       99 wires
+      608 wire bits
+       46 public wires
+      527 public wire bits
+        2 ports
+        2 port bits
+       74 cells
+        3   $add
+        4   $anyinit
+       10   $assert
+        3   $assume
+       10   $eq
+       13   $ff
+        1   $initstate
+        3   $logic_and
+        3   $logic_not
+        1   $lt
+        1   $mem_v2
+       21   $mux
+        1   $not
+        1 submodules
+        1   wire_arch_a_parser_top
+
+=== wire_arch_a_parser_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      149 wires
+     1241 wire bits
+      116 public wires
+     1187 public wire bits
+       51 ports
+      786 port bits
+       43 cells
+        3   $anyinit
+        1   $assume
+       15   $logic_and
+        3   $logic_not
+        8   $logic_or
+       11   $mux
+        1   $not
+        1   $or
+        8 submodules
+        1   wire_eth_parser
+        1   wire_gearbox_64to8
+        1   wire_ingress_buffer
+        1   wire_ipv4_parser
+        1   wire_itch_decoder
+        1   wire_mold_header_seq
+        1   wire_mold_message_framer
+        1   wire_udp_parser
+
+=== wire_eth_parser ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       94 wires
+      231 wire bits
+       24 public wires
+       58 public wire bits
+       14 ports
+       29 port bits
+       84 cells
+        1   $add
+        8   $anyinit
+        1   $assume
+        6   $eq
+        8   $logic_and
+        3   $logic_not
+        3   $logic_or
+        1   $lt
+       48   $mux
+        1   $not
+        4   $pmux
+
+=== wire_gearbox_64to8 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       52 wires
+      352 wire bits
+       18 public wires
+      163 public wire bits
+       11 ports
+       88 port bits
+       44 cells
+        1   $add
+        5   $anyinit
+        1   $assume
+        9   $eq
+        5   $logic_and
+        1   $logic_not
+        1   $logic_or
+       17   $mux
+        1   $not
+        1   $pmux
+        1   $shiftx
+        1   $sub
+
+=== wire_ingress_buffer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       49 wires
+      600 wire bits
+       25 public wires
+      306 public wire bits
+       12 ports
+      152 port bits
+       43 cells
+        3   $add
+        3   $anyinit
+        8   $anyseq
+        1   $assume
+        2   $eq
+        2   $logic_and
+        1   $logic_or
+        3   $mem_v2
+       15   $mux
+        1   $ne
+        1   $not
+        1   $pmux
+        1   $reduce_bool
+        1   $sub
+
+=== wire_ipv4_parser ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      174 wires
+     2705 wire bits
+       29 public wires
+      421 public wire bits
+       15 ports
+       63 port bits
+      162 cells
+       13   $add
+        1   $and
+       10   $anyinit
+        1   $assume
+       13   $eq
+        1   $gt
+        9   $logic_and
+        3   $logic_not
+        9   $logic_or
+        2   $lt
+       80   $mux
+        4   $ne
+        1   $neg
+        2   $not
+        1   $or
+        4   $pmux
+        2   $reduce_bool
+        2   $shift
+        4   $sub
+
+=== wire_itch_decoder ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      396 wires
+     3859 wire bits
+       75 public wires
+     1102 public wire bits
+       38 ports
+      525 port bits
+      331 cells
+        2   $add
+       25   $anyinit
+        8   $anyseq
+        1   $assume
+       22   $eq
+       16   $logic_and
+        6   $logic_not
+        7   $logic_or
+        1   $lt
+        1   $mem_v2
+      203   $mux
+       21   $ne
+        1   $not
+       12   $pmux
+        1   $reduce_bool
+        4   $reduce_or
+
+=== wire_mold_header_seq ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      231 wires
+     3957 wire bits
+       55 public wires
+     1058 public wire bits
+       28 ports
+      327 port bits
+      205 cells
+        3   $add
+        1   $and
+       18   $anyinit
+        1   $assume
+        5   $eq
+       11   $logic_and
+        4   $logic_not
+        4   $logic_or
+        1   $lt
+      140   $mux
+        4   $ne
+        1   $neg
+        2   $not
+        1   $or
+        5   $pmux
+        2   $shift
+        2   $sub
+
+=== wire_mold_message_framer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      197 wires
+     1050 wire bits
+       51 public wires
+      380 public wire bits
+       28 ports
+      199 port bits
+      178 cells
+        2   $add
+       16   $anyinit
+        1   $assume
+       13   $eq
+       13   $logic_and
+        6   $logic_not
+        8   $logic_or
+      109   $mux
+        1   $not
+        5   $pmux
+        3   $reduce_or
+        1   $sub
+
+=== wire_udp_parser ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      195 wires
+     1667 wire bits
+       36 public wires
+      290 public wire bits
+       15 ports
+       46 port bits
+      180 cells
+        3   $add
+        1   $and
+       13   $anyinit
+        1   $assume
+        5   $eq
+        1   $gt
+        9   $logic_and
+        3   $logic_not
+        4   $logic_or
+        2   $lt
+      118   $mux
+        2   $ne
+        1   $neg
+        2   $not
+        1   $or
+        7   $pmux
+        1   $reduce_bool
+        2   $shift
+        4   $sub
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+     1344 wire_arch_a_parser_late_suffix
+       43 wire_arch_a_parser_top
+       84   wire_eth_parser
+       44   wire_gearbox_64to8
+       43   wire_ingress_buffer
+      162   wire_ipv4_parser
+      331   wire_itch_decoder
+      205   wire_mold_header_seq
+      178   wire_mold_message_framer
+      180   wire_udp_parser
+
+        +----------Count including submodules.
+        | 
+     1636 wires
+    16270 wire bits
+      475 public wires
+     5492 public wire bits
+      214 ports
+     2217 port bits
+        - memories
+        - memory bits
+        - processes
+     1344 cells
+       31   $add
+        3   $and
+      105   $anyinit
+       16   $anyseq
+       10   $assert
+       12   $assume
+       85   $eq
+       13   $ff
+        2   $gt
+        1   $initstate
+       91   $logic_and
+       32   $logic_not
+       45   $logic_or
+        8   $lt
+        5   $mem_v2
+      762   $mux
+       32   $ne
+        3   $neg
+       13   $not
+        4   $or
+       39   $pmux
+        5   $reduce_bool
+        7   $reduce_or
+        6   $shift
+        1   $shiftx
+       13   $sub
+        1 submodules
+        1   wire_arch_a_parser_top
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module wire_udp_parser.
+Creating SMT-LIBv2 representation of module wire_mold_message_framer.
+Creating SMT-LIBv2 representation of module wire_mold_header_seq.
+Creating SMT-LIBv2 representation of module wire_itch_decoder.
+Creating SMT-LIBv2 representation of module wire_ipv4_parser.
+Creating SMT-LIBv2 representation of module wire_ingress_buffer.
+Creating SMT-LIBv2 representation of module wire_gearbox_64to8.
+Creating SMT-LIBv2 representation of module wire_eth_parser.
+Creating SMT-LIBv2 representation of module wire_arch_a_parser_top.
+Creating SMT-LIBv2 representation of module wire_arch_a_parser_late_suffix.
+
+End of script. Logfile hash: 014f17fbd1, time: 0.03s, user: 0.03s, system: 0.01s, MEM: 16.45 MB peak
+Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+Time spent: 77% 2x write_smt2 (0 sec), 13% 2x read_rtlil (0 sec), ...

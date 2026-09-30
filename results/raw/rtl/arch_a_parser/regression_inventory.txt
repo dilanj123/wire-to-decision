@@ -1,0 +1,30 @@
+WIRE-022 complete parser closure regression inventory
+
+Standalone cocotb (all PASS):
+  WIRE-014 gearbox                         6/6
+  WIRE-015 ingress buffer                  5/5
+  WIRE-016 Ethernet                        4/4
+  WIRE-017 IPv4                            5/5
+  WIRE-018 UDP                             5/5
+  WIRE-019/019A Mold header/sequence       14/14
+  WIRE-020 Mold message framer            10/10
+  WIRE-021 ITCH decoder                    6/6
+  WIRE-022 complete external ingress       6/6
+
+Prior composition cocotb (all PASS after clean sim-build reruns):
+  WIRE-015 buffer→gearbox                  1/1
+  WIRE-016 Ethernet composition            1/1
+  WIRE-017 IPv4 composition                3/3
+  WIRE-018 UDP composition                 3/3
+  WIRE-019 Mold composition                2/2
+  WIRE-020 message-framer composition      2/2
+  WIRE-021 ITCH composition                2/2
+
+Formal:
+  68 established WIRE-014..021 jobs rerun PASS. The historical WIRE-017
+  monolithic IPv4 BMC is excluded (solver-bound as documented by WIRE-017A).
+  WIRE-022 top safety BMC PASS depth 20. WIRE-022 full-top late-suffix
+  BMC is solver-bound after step 69 at depth 270; see
+  formal_late_suffix_result.txt. It is not counted as PASS.
+
+Python model unittest regression: 71/71 PASS.

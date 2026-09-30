@@ -2,7 +2,9 @@
 
 ## Phase
 
-Phase 2 — Parser primitives and complete Architecture A parser
+Phase 2 — COMPLETE: Architecture-A parser integration and normalized-event boundary
+
+Next: Phase 3 — bounded order state and deterministic decision
 
 Phase 1: COMPLETE — 71-test Python end-to-end oracle baseline
 
@@ -16,7 +18,7 @@ Gate 0 — CLOSED; WIRE-000 through WIRE-007 complete
 
 ## Architecture
 
-Architecture A implementation has started with the common two-beat ingress buffer, 64-to-8 gearbox, Ethernet II, IPv4, UDP, MoldUDP64 header/sequence control, Mold message-block framing, and the ITCH normalized-event decoder. Order state and later stages remain unimplemented.
+Architecture-A parser boundary is implemented and RTL-simulated from the common two-beat ingress buffer through Ethernet II, IPv4, UDP, MoldUDP64 header/sequence control, message-block framing, and ITCH normalized events. WIRE-022 composes these stages in a production-style top and adds parser-wide fatal recovery/rearm and external-frame drain gating. Order state and decisions remain unimplemented.
 
 Baseline candidate:
 
@@ -30,7 +32,7 @@ Architecture B is not authorized.
 
 ## Application status
 
-Application RTL: started; Architecture-A ingress, gearbox, Ethernet II, IPv4, and UDP stages implemented with stage-level simulation evidence
+Application RTL: Architecture-A parser boundary implemented; stage and full external-ingress simulation evidence recorded. This excludes order state, decisions, application P&R, and application timing evidence.
 
 MoldUDP64 header/sequence controller: RTL-simulated; fatal session/sequence and heartbeat/EOS trailing-byte conditions immediately clear stage validity and assert recovery while the current malformed packet drains; named header/control, deferred-commit, recovery, stall, and wrap properties checked under documented bounded/fixed-vector assumptions
 
@@ -116,7 +118,7 @@ Ingress-buffer local formal: reset-empty safety inductively checked; public-inte
 
 Gearbox local formal: closed under documented assumptions for ordering, accepted valid-byte conservation, exact last-marker behavior, stall stability, and refill safety; reference correspondence bounded-checked through depth 20
 
-Application RTL functional evidence: gearbox + common ingress buffer + Ethernet II + IPv4 + UDP + Mold header/sequence + Mold message framer and Mold→framer→ITCH composition simulation; named local formal checks recorded per stage. The complete external-ingress-to-normalized-event production top remains WIRE-022.
+Application RTL functional evidence: WIRE-014..021 stage/composition evidence plus WIRE-022 complete external-ingress-to-normalized-event RTL simulation; named local/integration formal checks are bounded or fixed-vector as individually recorded. No complete parser formal proof is claimed.
 
 Formal application evidence: none
 
@@ -138,7 +140,7 @@ Not run.
 
 WIRE-004 native Apple Silicon open-source toolchain qualification completed in commit `89e2841` for the trivial smoke design. Canonical suite: OSS CAD Suite `2026-09-27`; details are in `results/processed/toolchain_smoke.md`. This is toolchain-smoke evidence only.
 
-WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. WIRE-008 through WIRE-013 provide Python-unit-tested component and end-to-end evidence. WIRE-014 through WIRE-021 provide limited primitive/stage RTL simulation and local formal evidence. WIRE-017A closed the named IPv4 correspondence set with decomposed bounded/fixed-vector checks; the original monolithic BMC remains solver-bound historical evidence. WIRE-020 closes Mold message-block structural framing. WIRE-021 adds ITCH decoder and normalized-event stage evidence, but not full external-ingress composition, order-state mutation, or global recovery control. Application synthesis, timing, latency, throughput, CDC, and C++ integration evidence do not exist.
+WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. WIRE-008 through WIRE-013 provide Python-unit-tested component and end-to-end evidence. WIRE-014 through WIRE-021 provide limited primitive/stage RTL simulation and local formal evidence. WIRE-017A closed the named IPv4 correspondence set with decomposed bounded/fixed-vector checks; its original monolithic BMC remains solver-bound historical evidence. WIRE-022 composes the current Architecture-A parser through the normalized-event boundary and records parser-wide fatal recovery. Its full-top fixed-vector late-suffix BMC was solver-bound after step 69 (no counterexample); that end-to-end case passes cocotb and relevant lower-stage properties pass the established decomposed jobs. Application P&R/timing, latency, throughput, CDC, C++ integration, order state and decisions remain unimplemented/unproven.
 
 ## Open bugs
 
@@ -146,7 +148,7 @@ None recorded.
 
 ## Open decisions
 
-- Architecture B remains intentionally undefined pending Architecture A measurement.
+- Architecture B remains unauthorized and undefined.
 - WIRE-001 process adoption details are recorded in `docs/DECISIONS.md`.
 - WIRE-002 external source authority and MVP protocol restrictions are recorded in `docs/DECISIONS.md`.
 - WIRE-003 originality and third-party provenance policy are recorded in `docs/DECISIONS.md`.
@@ -157,6 +159,7 @@ None recorded.
 - WIRE-D015 deferred Mold normal-packet sequence commit is recorded in `docs/DECISIONS.md` and WIRE-019 evidence.
 - WIRE-D016 Mold complete-message boundaries and structural packet-result semantics are recorded in `docs/DECISIONS.md` and WIRE-020 evidence.
 - WIRE-D017 ITCH normalized-event RTL encoding and complete-message commit boundary are recorded in `docs/DECISIONS.md` and WIRE-021 evidence.
+- WIRE-D018 parser-wide fatal recovery, current-frame drain, event-boundary no-rollback, and explicit rearm are recorded in `docs/DECISIONS.md` and WIRE-022 evidence.
 
 ## Current bottleneck
 
@@ -164,4 +167,4 @@ SystemVerilog implementation and cross-layer hardware verification remain.
 
 ## Next task
 
-WIRE-022 — Complete Architecture-A parser integration, recovery and Phase-2 closure (not started).
+WIRE-023 — Bounded 512-set × 2-way order-state and aggregate RTL.

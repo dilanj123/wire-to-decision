@@ -1,0 +1,8 @@
+WIRE-022 fixed-vector full-top late-suffix BMC attempt
+
+Harness: formal/arch_a_parser/wire_arch_a_parser_late_suffix.sv
+Job: formal/arch_a_parser/wire_arch_a_parser_late_suffix.sby
+SBY 0.69, mode bmc, depth 270, engine smtbmc yices, Yices 2.7.0.
+The vector encodes two complete ITCH D messages followed by a third structurally truncated Mold message in one legal full Ethernet/IPv4/UDP/Mold frame. Assertions expect two event handshakes, no third event, parser recovery, and unchanged Mold expected sequence.
+
+Observed: no counterexample by the time the engine was stopped. The solver was checking assumptions at step 69 after approximately 2:06 elapsed. The run did not reach PASS and is not counted as a completed proof or as FAIL. The complete scenario passes the full-ingress cocotb test; independently rerun WIRE-020 structural late-suffix and WIRE-019 deferred-result formal jobs pass, as do WIRE-021 complete-message/event-boundary fixed-vector jobs.

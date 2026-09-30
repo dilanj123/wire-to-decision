@@ -1,0 +1,2212 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: wire_ingress_buffer.sv
+Parsing formal SystemVerilog input from `wire_ingress_buffer.sv' to AST representation.
+Storing AST representation for module `$abstract\wire_ingress_buffer'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: wire_gearbox_64to8.sv
+Parsing formal SystemVerilog input from `wire_gearbox_64to8.sv' to AST representation.
+Storing AST representation for module `$abstract\wire_gearbox_64to8'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: wire_eth_parser.sv
+Parsing formal SystemVerilog input from `wire_eth_parser.sv' to AST representation.
+Storing AST representation for module `$abstract\wire_eth_parser'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: wire_ipv4_parser.sv
+Parsing formal SystemVerilog input from `wire_ipv4_parser.sv' to AST representation.
+Storing AST representation for module `$abstract\wire_ipv4_parser'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: wire_udp_parser.sv
+Parsing formal SystemVerilog input from `wire_udp_parser.sv' to AST representation.
+Storing AST representation for module `$abstract\wire_udp_parser'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: wire_mold_header_seq.sv
+Parsing formal SystemVerilog input from `wire_mold_header_seq.sv' to AST representation.
+Storing AST representation for module `$abstract\wire_mold_header_seq'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: wire_mold_message_framer.sv
+Parsing formal SystemVerilog input from `wire_mold_message_framer.sv' to AST representation.
+Storing AST representation for module `$abstract\wire_mold_message_framer'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: wire_itch_decoder.sv
+Parsing formal SystemVerilog input from `wire_itch_decoder.sv' to AST representation.
+Storing AST representation for module `$abstract\wire_itch_decoder'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: wire_arch_a_parser_top.sv
+Parsing formal SystemVerilog input from `wire_arch_a_parser_top.sv' to AST representation.
+Storing AST representation for module `$abstract\wire_arch_a_parser_top'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: wire_arch_a_parser_late_suffix.sv
+Parsing formal SystemVerilog input from `wire_arch_a_parser_late_suffix.sv' to AST representation.
+Storing AST representation for module `$abstract\wire_arch_a_parser_late_suffix'.
+Successfully finished Verilog frontend.
+
+11. Executing PREP pass.
+
+11.1. Executing HIERARCHY pass (managing design hierarchy).
+
+11.2. Executing AST frontend in derive mode using pre-parsed AST for module `\wire_arch_a_parser_late_suffix'.
+Generating RTLIL representation for module `\wire_arch_a_parser_late_suffix'.
+
+11.2.1. Analyzing design hierarchy..
+Top module:  \wire_arch_a_parser_late_suffix
+
+11.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\wire_arch_a_parser_top'.
+Generating RTLIL representation for module `\wire_arch_a_parser_top'.
+
+11.2.3. Analyzing design hierarchy..
+Top module:  \wire_arch_a_parser_late_suffix
+Used module:     \wire_arch_a_parser_top
+
+11.2.4. Executing AST frontend in derive mode using pre-parsed AST for module `\wire_itch_decoder'.
+Generating RTLIL representation for module `\wire_itch_decoder'.
+
+11.2.5. Executing AST frontend in derive mode using pre-parsed AST for module `\wire_mold_message_framer'.
+Generating RTLIL representation for module `\wire_mold_message_framer'.
+
+11.2.6. Executing AST frontend in derive mode using pre-parsed AST for module `\wire_mold_header_seq'.
+Generating RTLIL representation for module `\wire_mold_header_seq'.
+
+11.2.7. Executing AST frontend in derive mode using pre-parsed AST for module `\wire_udp_parser'.
+Generating RTLIL representation for module `\wire_udp_parser'.
+
+11.2.8. Executing AST frontend in derive mode using pre-parsed AST for module `\wire_ipv4_parser'.
+Generating RTLIL representation for module `\wire_ipv4_parser'.
+
+11.2.9. Executing AST frontend in derive mode using pre-parsed AST for module `\wire_eth_parser'.
+Generating RTLIL representation for module `\wire_eth_parser'.
+
+11.2.10. Executing AST frontend in derive mode using pre-parsed AST for module `\wire_gearbox_64to8'.
+Generating RTLIL representation for module `\wire_gearbox_64to8'.
+
+11.2.11. Executing AST frontend in derive mode using pre-parsed AST for module `\wire_ingress_buffer'.
+Generating RTLIL representation for module `\wire_ingress_buffer'.
+
+11.2.12. Analyzing design hierarchy..
+Top module:  \wire_arch_a_parser_late_suffix
+Used module:     \wire_arch_a_parser_top
+Used module:         \wire_itch_decoder
+Used module:         \wire_mold_message_framer
+Used module:         \wire_mold_header_seq
+Used module:         \wire_udp_parser
+Used module:         \wire_ipv4_parser
+Used module:         \wire_eth_parser
+Used module:         \wire_gearbox_64to8
+Used module:         \wire_ingress_buffer
+
+11.2.13. Analyzing design hierarchy..
+Top module:  \wire_arch_a_parser_late_suffix
+Used module:     \wire_arch_a_parser_top
+Used module:         \wire_itch_decoder
+Used module:         \wire_mold_message_framer
+Used module:         \wire_mold_header_seq
+Used module:         \wire_udp_parser
+Used module:         \wire_ipv4_parser
+Used module:         \wire_eth_parser
+Used module:         \wire_gearbox_64to8
+Used module:         \wire_ingress_buffer
+Removing unused module `$abstract\wire_arch_a_parser_late_suffix'.
+Removing unused module `$abstract\wire_arch_a_parser_top'.
+Removing unused module `$abstract\wire_itch_decoder'.
+Removing unused module `$abstract\wire_mold_message_framer'.
+Removing unused module `$abstract\wire_mold_header_seq'.
+Removing unused module `$abstract\wire_udp_parser'.
+Removing unused module `$abstract\wire_ipv4_parser'.
+Removing unused module `$abstract\wire_eth_parser'.
+Removing unused module `$abstract\wire_gearbox_64to8'.
+Removing unused module `$abstract\wire_ingress_buffer'.
+Removed 10 unused modules.
+Module wire_arch_a_parser_late_suffix directly or indirectly contains formal properties -> setting "keep" attribute.
+
+11.3. Executing PROC pass (convert processes to netlists).
+
+11.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+11.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$wire_ingress_buffer.sv:37$799 in module wire_ingress_buffer.
+Marked 4 switch rules as full_case in process $proc$wire_gearbox_64to8.sv:49$777 in module wire_gearbox_64to8.
+Marked 6 switch rules as full_case in process $proc$wire_eth_parser.sv:55$755 in module wire_eth_parser.
+Marked 7 switch rules as full_case in process $proc$wire_ipv4_parser.sv:102$695 in module wire_ipv4_parser.
+Marked 10 switch rules as full_case in process $proc$wire_ipv4_parser.sv:119$631 in module wire_ipv4_parser.
+Marked 19 switch rules as full_case in process $proc$wire_udp_parser.sv:66$566 in module wire_udp_parser.
+Marked 15 switch rules as full_case in process $proc$wire_mold_header_seq.sv:111$516 in module wire_mold_header_seq.
+Marked 13 switch rules as full_case in process $proc$wire_mold_message_framer.sv:112$473 in module wire_mold_message_framer.
+Marked 1 switch rules as full_case in process $proc$wire_itch_decoder.sv:112$439 in module wire_itch_decoder.
+Marked 1 switch rules as full_case in process $proc$wire_itch_decoder.sv:112$434 in module wire_itch_decoder.
+Marked 15 switch rules as full_case in process $proc$wire_itch_decoder.sv:137$130 in module wire_itch_decoder.
+Marked 6 switch rules as full_case in process $proc$wire_arch_a_parser_top.sv:136$76 in module wire_arch_a_parser_top.
+Marked 1 switch rules as full_case in process $proc$wire_arch_a_parser_late_suffix.sv:47$44 in module wire_arch_a_parser_late_suffix.
+Marked 3 switch rules as full_case in process $proc$wire_arch_a_parser_late_suffix.sv:75$10 in module wire_arch_a_parser_late_suffix.
+Removed a total of 0 dead cases.
+
+11.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 61 assignments to connections.
+
+11.3.4. Executing PROC_INIT pass (extract init attributes).
+
+11.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+11.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 1 switch.
+<suppressed ~175 debug messages>
+
+11.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+     1/21: $2$memwr$\last_q$wire_ingress_buffer.sv:46$790_EN[0:0]$826
+     2/21: $2$memwr$\last_q$wire_ingress_buffer.sv:46$790_DATA[0:0]$825
+     3/21: $2$memwr$\last_q$wire_ingress_buffer.sv:46$790_ADDR[0:0]$824
+     4/21: $2$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$823
+     5/21: $2$memwr$\keep_q$wire_ingress_buffer.sv:45$789_DATA[7:0]$822
+     6/21: $2$memwr$\keep_q$wire_ingress_buffer.sv:45$789_ADDR[0:0]$821
+     7/21: $2$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$820
+     8/21: $2$memwr$\data_q$wire_ingress_buffer.sv:44$788_DATA[63:0]$819
+     9/21: $2$memwr$\data_q$wire_ingress_buffer.sv:44$788_ADDR[0:0]$818
+    10/21: $0\count_q[1:0]
+    11/21: $1$memwr$\last_q$wire_ingress_buffer.sv:46$790_EN[0:0]$817
+    12/21: $1$memwr$\last_q$wire_ingress_buffer.sv:46$790_DATA[0:0]$816
+    13/21: $1$memwr$\last_q$wire_ingress_buffer.sv:46$790_ADDR[0:0]$815
+    14/21: $1$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$814
+    15/21: $1$memwr$\keep_q$wire_ingress_buffer.sv:45$789_DATA[7:0]$813
+    16/21: $1$memwr$\keep_q$wire_ingress_buffer.sv:45$789_ADDR[0:0]$812
+    17/21: $1$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$811
+    18/21: $1$memwr$\data_q$wire_ingress_buffer.sv:44$788_DATA[63:0]$810
+    19/21: $1$memwr$\data_q$wire_ingress_buffer.sv:44$788_ADDR[0:0]$809
+    20/21: $0\write_ptr_q[0:0]
+    21/21: $0\read_ptr_q[0:0]
+Creating decoders for process `\wire_gearbox_64to8.$proc$wire_gearbox_64to8.sv:49$777'.
+     1/10: $3\keep_count$func$wire_gearbox_64to8.sv:58$764.$result[3:0]$785
+     2/10: $2\keep_count$func$wire_gearbox_64to8.sv:58$764.$result[3:0]$783
+     3/10: $2\keep_count$func$wire_gearbox_64to8.sv:58$764.keep[7:0]$784
+     4/10: $1\keep_count$func$wire_gearbox_64to8.sv:58$764.keep[7:0]$781
+     5/10: $1\keep_count$func$wire_gearbox_64to8.sv:58$764.$result[3:0]$780
+     6/10: $0\valid_q[0:0]
+     7/10: $0\last_q[0:0]
+     8/10: $0\index_q[2:0]
+     9/10: $0\count_q[3:0]
+    10/10: $0\data_q[63:0]
+Creating decoders for process `\wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+     1/8: $0\ethertype_high_q[7:0]
+     2/8: $0\reject_fatal_q[0:0]
+     3/8: $0\header_index_q[3:0]
+     4/8: $0\payload_last_q[0:0]
+     5/8: $0\payload_valid_q[0:0]
+     6/8: $0\payload_data_q[7:0]
+     7/8: $0\reject_code_q[1:0]
+     8/8: $0\state_q[1:0]
+Creating decoders for process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:102$695'.
+     1/16: $7\classify_header$func$wire_ipv4_parser.sv:102$612.$result[3:0]$740
+     2/16: $6\classify_header$func$wire_ipv4_parser.sv:102$612.$result[3:0]$738
+     3/16: $5\classify_header$func$wire_ipv4_parser.sv:102$612.$result[3:0]$736
+     4/16: $4\classify_header$func$wire_ipv4_parser.sv:102$612.$result[3:0]$733
+     5/16: $3\classify_header$func$wire_ipv4_parser.sv:102$612.$result[3:0]$716
+     6/16: $3\checksum_valid$func$wire_ipv4_parser.sv:76$613.sum[17:0]$719
+     7/16: $3\checksum_valid$func$wire_ipv4_parser.sv:76$613.h[159:0]$718
+     8/16: $3\checksum_valid$func$wire_ipv4_parser.sv:76$613.$result[0:0]$717
+     9/16: $2\classify_header$func$wire_ipv4_parser.sv:102$612.$result[3:0]$711
+    10/16: $2\checksum_valid$func$wire_ipv4_parser.sv:76$613.sum[17:0]$714
+    11/16: $2\checksum_valid$func$wire_ipv4_parser.sv:76$613.h[159:0]$713
+    12/16: $2\checksum_valid$func$wire_ipv4_parser.sv:76$613.$result[0:0]$712
+    13/16: $1\classify_header$func$wire_ipv4_parser.sv:102$612.$result[3:0]$706
+    14/16: $1\checksum_valid$func$wire_ipv4_parser.sv:76$613.sum[17:0]$709
+    15/16: $1\checksum_valid$func$wire_ipv4_parser.sv:76$613.h[159:0]$708
+    16/16: $1\checksum_valid$func$wire_ipv4_parser.sv:76$613.$result[0:0]$707
+Creating decoders for process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+     1/31: $6\code_is_fatal$func$wire_ipv4_parser.sv:173$611.code[3:0]$678
+     2/31: $6\code_is_fatal$func$wire_ipv4_parser.sv:173$611.$result[0:0]$677
+     3/31: $5$lookahead\header_q$630[151:0]$663
+     4/31: $5$bitselwrite$pos$wire_ipv4_parser.sv:155$610[31:0]$660
+     5/31: $5\code_is_fatal$func$wire_ipv4_parser.sv:173$611.code[3:0]$662
+     6/31: $5\code_is_fatal$func$wire_ipv4_parser.sv:173$611.$result[0:0]$661
+     7/31: $4$lookahead\header_q$630[151:0]$658
+     8/31: $4\code_is_fatal$func$wire_ipv4_parser.sv:173$611.code[3:0]$657
+     9/31: $4\code_is_fatal$func$wire_ipv4_parser.sv:173$611.$result[0:0]$656
+    10/31: $4$bitselwrite$pos$wire_ipv4_parser.sv:155$610[31:0]$655
+    11/31: $3$lookahead\header_q$630[151:0]$652
+    12/31: $3\code_is_fatal$func$wire_ipv4_parser.sv:173$611.code[3:0]$651
+    13/31: $3\code_is_fatal$func$wire_ipv4_parser.sv:173$611.$result[0:0]$650
+    14/31: $3$bitselwrite$pos$wire_ipv4_parser.sv:155$610[31:0]$649
+    15/31: $2$lookahead\header_q$630[151:0]$648
+    16/31: $2\code_is_fatal$func$wire_ipv4_parser.sv:173$611.code[3:0]$647
+    17/31: $2\code_is_fatal$func$wire_ipv4_parser.sv:173$611.$result[0:0]$646
+    18/31: $2$bitselwrite$pos$wire_ipv4_parser.sv:155$610[31:0]$645
+    19/31: $1$lookahead\header_q$630[151:0]$639
+    20/31: $1\code_is_fatal$func$wire_ipv4_parser.sv:173$611.code[3:0]$638
+    21/31: $1\code_is_fatal$func$wire_ipv4_parser.sv:173$611.$result[0:0]$637
+    22/31: $1$bitselwrite$pos$wire_ipv4_parser.sv:155$610[31:0]$636
+    23/31: $0\payload_physical_last_q[0:0]
+    24/31: $0\remaining_q[15:0]
+    25/31: $0\reject_fatal_q[0:0]
+    26/31: $0\header_index_q[4:0]
+    27/31: $0\payload_last_q[0:0]
+    28/31: $0\payload_valid_q[0:0]
+    29/31: $0\payload_data_q[7:0]
+    30/31: $0\reject_code_q[3:0]
+    31/31: $0\state_q[2:0]
+Creating decoders for process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+     1/22: $5$lookahead\header_q$565[55:0]$585
+     2/22: $5$bitselwrite$pos$wire_udp_parser.sv:104$548[31:0]$584
+     3/22: $4$lookahead\header_q$565[55:0]$582
+     4/22: $4$bitselwrite$pos$wire_udp_parser.sv:104$548[31:0]$581
+     5/22: $3$lookahead\header_q$565[55:0]$578
+     6/22: $3$bitselwrite$pos$wire_udp_parser.sv:104$548[31:0]$577
+     7/22: $2$lookahead\header_q$565[55:0]$576
+     8/22: $2$bitselwrite$pos$wire_udp_parser.sv:104$548[31:0]$575
+     9/22: $1$lookahead\header_q$565[55:0]$570
+    10/22: $1$bitselwrite$pos$wire_udp_parser.sv:104$548[31:0]$569
+    11/22: $0\remaining_q[15:0]
+    12/22: $0\actual_count_q[15:0]
+    13/22: $0\pending_fatal_q[0:0]
+    14/22: $0\pending_code_q[2:0]
+    15/22: $0\reject_fatal_q[0:0]
+    16/22: $0\header_index_q[3:0]
+    17/22: $0\payload_last_q[0:0]
+    18/22: $0\payload_valid_q[0:0]
+    19/22: $0\payload_data_q[7:0]
+    20/22: $0\reject_code_q[2:0]
+    21/22: $0\declared_length_q[15:0]
+    22/22: $0\state_q[1:0]
+Creating decoders for process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+     1/27: $5$lookahead\header_q$515[151:0]$531
+     2/27: $5$bitselwrite$pos$wire_mold_header_seq.sv:180$491[31:0]$530
+     3/27: $4$lookahead\header_q$515[151:0]$529
+     4/27: $4$bitselwrite$pos$wire_mold_header_seq.sv:180$491[31:0]$528
+     5/27: $3$lookahead\header_q$515[151:0]$526
+     6/27: $3$bitselwrite$pos$wire_mold_header_seq.sv:180$491[31:0]$525
+     7/27: $2$lookahead\header_q$515[151:0]$524
+     8/27: $2$bitselwrite$pos$wire_mold_header_seq.sv:180$491[31:0]$523
+     9/27: $1$lookahead\header_q$515[151:0]$521
+    10/27: $1$bitselwrite$pos$wire_mold_header_seq.sv:180$491[31:0]$520
+    11/27: $0\recovery_required_q[0:0]
+    12/27: $0\controller_valid_q[0:0]
+    13/27: $0\pending_fatal_q[0:0]
+    14/27: $0\pending_code_q[2:0]
+    15/27: $0\reject_fatal_q[0:0]
+    16/27: $0\body_last_q[0:0]
+    17/27: $0\body_valid_q[0:0]
+    18/27: $0\body_data_q[7:0]
+    19/27: $0\packet_valid_q[0:0]
+    20/27: $0\packet_empty_q[0:0]
+    21/27: $0\expected_sequence_q[63:0]
+    22/27: $0\active_session_q[79:0]
+    23/27: $0\header_index_q[4:0]
+    24/27: $0\packet_count_q[15:0]
+    25/27: $0\packet_sequence_q[63:0]
+    26/27: $0\reject_code_q[2:0]
+    27/27: $0\state_q[2:0]
+Creating decoders for process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+     1/16: $0\result_pending_q[0:0]
+     2/16: $0\payload_last_q[0:0]
+     3/16: $0\payload_valid_q[0:0]
+     4/16: $0\payload_data_q[7:0]
+     5/16: $0\header_ended_q[0:0]
+     6/16: $0\message_empty_q[0:0]
+     7/16: $0\payload_remaining_q[15:0]
+     8/16: $0\message_length_q[15:0]
+     9/16: $0\length_hi_q[7:0]
+    10/16: $0\messages_done_q[15:0]
+    11/16: $0\packet_count_q[15:0]
+    12/16: $0\packet_sequence_q[63:0]
+    13/16: $0\payload_action_q[2:0]
+    14/16: $0\reject_pending_q[0:0]
+    15/16: $0\reject_code_q[1:0]
+    16/16: $0\state_q[3:0]
+Creating decoders for process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:112$439'.
+     1/1: $1\required_length$func$wire_itch_decoder.sv:112$110.$result[15:0]$443
+Creating decoders for process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:112$434'.
+     1/1: $1\required_length$func$wire_itch_decoder.sv:112$109.$result[15:0]$438
+Creating decoders for process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+     1/131: $6\u32$func$wire_itch_decoder.sv:218$99.$result[31:0]$351
+     2/131: $6\u64$func$wire_itch_decoder.sv:218$98.$result[63:0]$350
+     3/131: $6\u32$func$wire_itch_decoder.sv:222$108.$result[31:0]$360
+     4/131: $6\u32$func$wire_itch_decoder.sv:222$107.$result[31:0]$359
+     5/131: $6\u64$func$wire_itch_decoder.sv:222$106.$result[63:0]$358
+     6/131: $6\u64$func$wire_itch_decoder.sv:222$105.$result[63:0]$357
+     7/131: $6\u64$func$wire_itch_decoder.sv:221$104.$result[63:0]$356
+     8/131: $6\u32$func$wire_itch_decoder.sv:220$103.$result[31:0]$355
+     9/131: $6\u64$func$wire_itch_decoder.sv:220$102.$result[63:0]$354
+    10/131: $6\u32$func$wire_itch_decoder.sv:219$101.$result[31:0]$353
+    11/131: $6\u64$func$wire_itch_decoder.sv:219$100.$result[63:0]$352
+    12/131: $7\u32$func$wire_itch_decoder.sv:212$97.$result[31:0]$329
+    13/131: $7\u32$func$wire_itch_decoder.sv:212$96.$result[31:0]$328
+    14/131: $7\u64$func$wire_itch_decoder.sv:212$95.$result[63:0]$327
+    15/131: $6\u32$func$wire_itch_decoder.sv:212$97.$result[31:0]$320
+    16/131: $6\u32$func$wire_itch_decoder.sv:212$96.$result[31:0]$319
+    17/131: $6\u64$func$wire_itch_decoder.sv:212$95.$result[63:0]$318
+    18/131: $5\u32$func$wire_itch_decoder.sv:212$97.$result[31:0]$296
+    19/131: $5\u32$func$wire_itch_decoder.sv:212$96.$result[31:0]$295
+    20/131: $5\u64$func$wire_itch_decoder.sv:212$95.$result[63:0]$294
+    21/131: $5\u32$func$wire_itch_decoder.sv:222$108.$result[31:0]$307
+    22/131: $5\u32$func$wire_itch_decoder.sv:222$107.$result[31:0]$306
+    23/131: $5\u64$func$wire_itch_decoder.sv:222$106.$result[63:0]$305
+    24/131: $5\u64$func$wire_itch_decoder.sv:222$105.$result[63:0]$304
+    25/131: $5\u64$func$wire_itch_decoder.sv:221$104.$result[63:0]$303
+    26/131: $5\u32$func$wire_itch_decoder.sv:220$103.$result[31:0]$302
+    27/131: $5\u64$func$wire_itch_decoder.sv:220$102.$result[63:0]$301
+    28/131: $5\u32$func$wire_itch_decoder.sv:219$101.$result[31:0]$300
+    29/131: $5\u64$func$wire_itch_decoder.sv:219$100.$result[63:0]$299
+    30/131: $5\u32$func$wire_itch_decoder.sv:218$99.$result[31:0]$298
+    31/131: $5\u64$func$wire_itch_decoder.sv:218$98.$result[63:0]$297
+    32/131: $4\u32$func$wire_itch_decoder.sv:222$108.$result[31:0]$288
+    33/131: $4\u32$func$wire_itch_decoder.sv:222$107.$result[31:0]$287
+    34/131: $4\u64$func$wire_itch_decoder.sv:222$106.$result[63:0]$286
+    35/131: $4\u64$func$wire_itch_decoder.sv:222$105.$result[63:0]$285
+    36/131: $4\u64$func$wire_itch_decoder.sv:221$104.$result[63:0]$284
+    37/131: $4\u32$func$wire_itch_decoder.sv:220$103.$result[31:0]$283
+    38/131: $4\u64$func$wire_itch_decoder.sv:220$102.$result[63:0]$282
+    39/131: $4\u32$func$wire_itch_decoder.sv:219$101.$result[31:0]$281
+    40/131: $4\u64$func$wire_itch_decoder.sv:219$100.$result[63:0]$280
+    41/131: $4\u32$func$wire_itch_decoder.sv:218$99.$result[31:0]$279
+    42/131: $4\u64$func$wire_itch_decoder.sv:218$98.$result[63:0]$278
+    43/131: $4\u32$func$wire_itch_decoder.sv:212$97.$result[31:0]$277
+    44/131: $4\u32$func$wire_itch_decoder.sv:212$96.$result[31:0]$276
+    45/131: $4\u64$func$wire_itch_decoder.sv:212$95.$result[63:0]$275
+    46/131: $3\u32$func$wire_itch_decoder.sv:222$108.$result[31:0]$271
+    47/131: $3\u32$func$wire_itch_decoder.sv:222$107.$result[31:0]$270
+    48/131: $3\u64$func$wire_itch_decoder.sv:222$106.$result[63:0]$269
+    49/131: $3\u64$func$wire_itch_decoder.sv:222$105.$result[63:0]$268
+    50/131: $3\u64$func$wire_itch_decoder.sv:221$104.$result[63:0]$267
+    51/131: $3\u32$func$wire_itch_decoder.sv:220$103.$result[31:0]$266
+    52/131: $3\u64$func$wire_itch_decoder.sv:220$102.$result[63:0]$265
+    53/131: $3\u32$func$wire_itch_decoder.sv:219$101.$result[31:0]$264
+    54/131: $3\u64$func$wire_itch_decoder.sv:219$100.$result[63:0]$263
+    55/131: $3\u32$func$wire_itch_decoder.sv:218$99.$result[31:0]$262
+    56/131: $3\u64$func$wire_itch_decoder.sv:218$98.$result[63:0]$261
+    57/131: $3\u32$func$wire_itch_decoder.sv:212$97.$result[31:0]$260
+    58/131: $3\u32$func$wire_itch_decoder.sv:212$96.$result[31:0]$259
+    59/131: $3\u64$func$wire_itch_decoder.sv:212$95.$result[63:0]$258
+    60/131: $3\u16$func$wire_itch_decoder.sv:205$94.$result[15:0]$257
+    61/131: $4$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$202
+    62/131: $4$memwr$\bytes_q$wire_itch_decoder.sv:167$111_DATA[7:0]$201
+    63/131: $4$memwr$\bytes_q$wire_itch_decoder.sv:167$111_ADDR[5:0]$200
+    64/131: $3$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$198
+    65/131: $3$memwr$\bytes_q$wire_itch_decoder.sv:167$111_DATA[7:0]$197
+    66/131: $3$memwr$\bytes_q$wire_itch_decoder.sv:167$111_ADDR[5:0]$196
+    67/131: $2$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$192
+    68/131: $2$memwr$\bytes_q$wire_itch_decoder.sv:167$111_DATA[7:0]$191
+    69/131: $2$memwr$\bytes_q$wire_itch_decoder.sv:167$111_ADDR[5:0]$190
+    70/131: $2\u32$func$wire_itch_decoder.sv:222$108.$result[31:0]$189
+    71/131: $2\u32$func$wire_itch_decoder.sv:222$107.$result[31:0]$188
+    72/131: $2\u64$func$wire_itch_decoder.sv:222$106.$result[63:0]$187
+    73/131: $2\u64$func$wire_itch_decoder.sv:222$105.$result[63:0]$186
+    74/131: $2\u64$func$wire_itch_decoder.sv:221$104.$result[63:0]$185
+    75/131: $2\u32$func$wire_itch_decoder.sv:220$103.$result[31:0]$184
+    76/131: $2\u64$func$wire_itch_decoder.sv:220$102.$result[63:0]$183
+    77/131: $2\u32$func$wire_itch_decoder.sv:219$101.$result[31:0]$182
+    78/131: $2\u64$func$wire_itch_decoder.sv:219$100.$result[63:0]$181
+    79/131: $2\u32$func$wire_itch_decoder.sv:218$99.$result[31:0]$180
+    80/131: $2\u64$func$wire_itch_decoder.sv:218$98.$result[63:0]$179
+    81/131: $2\u32$func$wire_itch_decoder.sv:212$97.$result[31:0]$178
+    82/131: $2\u32$func$wire_itch_decoder.sv:212$96.$result[31:0]$177
+    83/131: $2\u64$func$wire_itch_decoder.sv:212$95.$result[63:0]$176
+    84/131: $2\u16$func$wire_itch_decoder.sv:205$94.$result[15:0]$175
+    85/131: $2\u16$func$wire_itch_decoder.sv:200$93.$result[15:0]$174
+    86/131: $2\u48$func$wire_itch_decoder.sv:199$92.$result[47:0]$173
+    87/131: $1$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$171
+    88/131: $1$memwr$\bytes_q$wire_itch_decoder.sv:167$111_DATA[7:0]$170
+    89/131: $1$memwr$\bytes_q$wire_itch_decoder.sv:167$111_ADDR[5:0]$169
+    90/131: $1\u32$func$wire_itch_decoder.sv:222$108.$result[31:0]$168
+    91/131: $1\u32$func$wire_itch_decoder.sv:222$107.$result[31:0]$167
+    92/131: $1\u64$func$wire_itch_decoder.sv:222$106.$result[63:0]$166
+    93/131: $1\u64$func$wire_itch_decoder.sv:222$105.$result[63:0]$165
+    94/131: $1\u64$func$wire_itch_decoder.sv:221$104.$result[63:0]$164
+    95/131: $1\u32$func$wire_itch_decoder.sv:220$103.$result[31:0]$163
+    96/131: $1\u64$func$wire_itch_decoder.sv:220$102.$result[63:0]$162
+    97/131: $1\u32$func$wire_itch_decoder.sv:219$101.$result[31:0]$161
+    98/131: $1\u64$func$wire_itch_decoder.sv:219$100.$result[63:0]$160
+    99/131: $1\u32$func$wire_itch_decoder.sv:218$99.$result[31:0]$159
+   100/131: $1\u64$func$wire_itch_decoder.sv:218$98.$result[63:0]$158
+   101/131: $1\u32$func$wire_itch_decoder.sv:212$97.$result[31:0]$157
+   102/131: $1\u32$func$wire_itch_decoder.sv:212$96.$result[31:0]$156
+   103/131: $1\u64$func$wire_itch_decoder.sv:212$95.$result[63:0]$155
+   104/131: $1\u16$func$wire_itch_decoder.sv:205$94.$result[15:0]$154
+   105/131: $1\u16$func$wire_itch_decoder.sv:200$93.$result[15:0]$153
+   106/131: $1\u48$func$wire_itch_decoder.sv:199$92.$result[47:0]$152
+   107/131: $0\side_valid_q[0:0]
+   108/131: $0\price_valid_q[0:0]
+   109/131: $0\quantity_valid_q[0:0]
+   110/131: $0\new_valid_q[0:0]
+   111/131: $0\old_valid_q[0:0]
+   112/131: $0\side_q[0:0]
+   113/131: $0\price_q[31:0]
+   114/131: $0\quantity_q[31:0]
+   115/131: $0\new_ref_q[63:0]
+   116/131: $0\old_ref_q[63:0]
+   117/131: $0\stock_locate_q[15:0]
+   118/131: $0\timestamp_q[47:0]
+   119/131: $0\mold_sequence_q[63:0]
+   120/131: $0\source_type_q[7:0]
+   121/131: $0\event_kind_q[2:0]
+   122/131: $0\reject_pending_q[0:0]
+   123/131: $0\reject_code_q[2:0]
+   124/131: $0\expected_symbol_q[63:0]
+   125/131: $0\symbol_enable_q[0:0]
+   126/131: $0\tracked_locate_q[15:0]
+   127/131: $0\message_sequence_q[63:0]
+   128/131: $0\declared_length_q[15:0]
+   129/131: $0\byte_index_q[5:0]
+   130/131: $0\state_q[2:0]
+   131/131: $0\recovery_required[0:0]
+Creating decoders for process `\wire_arch_a_parser_top.$proc$wire_arch_a_parser_top.sv:136$76'.
+     1/3: $0\frame_open_q[0:0]
+     2/3: $0\recovery_stage_q[3:0]
+     3/3: $0\parser_recovery_q[0:0]
+Creating decoders for process `\wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:47$44'.
+     1/1: $1\beat_data$func$wire_arch_a_parser_late_suffix.sv:47$4.$result[63:0]$48
+Creating decoders for process `\wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:75$10'.
+     1/15: $0\cycle_q[8:0]
+     2/15: $assert$wire_arch_a_parser_late_suffix.sv:103$42_EN
+     3/15: $assert$wire_arch_a_parser_late_suffix.sv:102$40_EN
+     4/15: $assert$wire_arch_a_parser_late_suffix.sv:101$38_EN
+     5/15: $assert$wire_arch_a_parser_late_suffix.sv:100$37_EN
+     6/15: $assert$wire_arch_a_parser_late_suffix.sv:99$35_EN
+     7/15: $assert$wire_arch_a_parser_late_suffix.sv:94$32_EN
+     8/15: $assert$wire_arch_a_parser_late_suffix.sv:92$30_EN
+     9/15: $assert$wire_arch_a_parser_late_suffix.sv:91$26_EN
+    10/15: $assert$wire_arch_a_parser_late_suffix.sv:89$23_EN
+    11/15: $assert$wire_arch_a_parser_late_suffix.sv:88$19_EN
+    12/15: $assume$wire_arch_a_parser_late_suffix.sv:77$13_EN
+    13/15: $assume$wire_arch_a_parser_late_suffix.sv:76$12_EN
+    14/15: $0\event_count_q[1:0]
+    15/15: $0\beat_index_q[3:0]
+
+11.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\wire_ipv4_parser.\classify_header$func$wire_ipv4_parser.sv:102$609.$result' from process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:102$695'.
+No latch inferred for signal `\wire_itch_decoder.\required_length$func$wire_itch_decoder.sv:112$91.$result' from process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:112$439'.
+No latch inferred for signal `\wire_itch_decoder.\required_length$func$wire_itch_decoder.sv:112$90.$result' from process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:112$434'.
+No latch inferred for signal `\wire_arch_a_parser_late_suffix.\beat_data$func$wire_arch_a_parser_late_suffix.sv:47$1.$result' from process `\wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:47$44'.
+
+11.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\wire_ingress_buffer.\count_q' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5438' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.\read_ptr_q' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5439' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.\write_ptr_q' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5440' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.$memwr$\data_q$wire_ingress_buffer.sv:44$788_ADDR' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5441' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.$memwr$\data_q$wire_ingress_buffer.sv:44$788_DATA' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5442' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5443' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.$memwr$\keep_q$wire_ingress_buffer.sv:45$789_ADDR' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5444' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.$memwr$\keep_q$wire_ingress_buffer.sv:45$789_DATA' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5445' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5446' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.$memwr$\last_q$wire_ingress_buffer.sv:46$790_ADDR' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5447' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.$memwr$\last_q$wire_ingress_buffer.sv:46$790_DATA' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5448' with positive edge clock.
+Creating register for signal `\wire_ingress_buffer.$memwr$\last_q$wire_ingress_buffer.sv:46$790_EN' using process `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+  created $dff cell `$procdff$5449' with positive edge clock.
+Creating register for signal `\wire_gearbox_64to8.\data_q' using process `\wire_gearbox_64to8.$proc$wire_gearbox_64to8.sv:49$777'.
+  created $dff cell `$procdff$5450' with positive edge clock.
+Creating register for signal `\wire_gearbox_64to8.\count_q' using process `\wire_gearbox_64to8.$proc$wire_gearbox_64to8.sv:49$777'.
+  created $dff cell `$procdff$5451' with positive edge clock.
+Creating register for signal `\wire_gearbox_64to8.\index_q' using process `\wire_gearbox_64to8.$proc$wire_gearbox_64to8.sv:49$777'.
+  created $dff cell `$procdff$5452' with positive edge clock.
+Creating register for signal `\wire_gearbox_64to8.\last_q' using process `\wire_gearbox_64to8.$proc$wire_gearbox_64to8.sv:49$777'.
+  created $dff cell `$procdff$5453' with positive edge clock.
+Creating register for signal `\wire_gearbox_64to8.\valid_q' using process `\wire_gearbox_64to8.$proc$wire_gearbox_64to8.sv:49$777'.
+  created $dff cell `$procdff$5454' with positive edge clock.
+Creating register for signal `\wire_gearbox_64to8.\keep_count$func$wire_gearbox_64to8.sv:58$764.$result' using process `\wire_gearbox_64to8.$proc$wire_gearbox_64to8.sv:49$777'.
+  created $dff cell `$procdff$5455' with positive edge clock.
+Creating register for signal `\wire_gearbox_64to8.\keep_count$func$wire_gearbox_64to8.sv:58$764.keep' using process `\wire_gearbox_64to8.$proc$wire_gearbox_64to8.sv:49$777'.
+  created $dff cell `$procdff$5456' with positive edge clock.
+Creating register for signal `\wire_eth_parser.\state_q' using process `\wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+  created $dff cell `$procdff$5457' with positive edge clock.
+Creating register for signal `\wire_eth_parser.\reject_code_q' using process `\wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+  created $dff cell `$procdff$5458' with positive edge clock.
+Creating register for signal `\wire_eth_parser.\payload_data_q' using process `\wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+  created $dff cell `$procdff$5459' with positive edge clock.
+Creating register for signal `\wire_eth_parser.\payload_valid_q' using process `\wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+  created $dff cell `$procdff$5460' with positive edge clock.
+Creating register for signal `\wire_eth_parser.\payload_last_q' using process `\wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+  created $dff cell `$procdff$5461' with positive edge clock.
+Creating register for signal `\wire_eth_parser.\header_index_q' using process `\wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+  created $dff cell `$procdff$5462' with positive edge clock.
+Creating register for signal `\wire_eth_parser.\reject_fatal_q' using process `\wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+  created $dff cell `$procdff$5463' with positive edge clock.
+Creating register for signal `\wire_eth_parser.\ethertype_high_q' using process `\wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+  created $dff cell `$procdff$5464' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\state_q' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5465' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\reject_code_q' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5466' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\payload_data_q' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5467' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\payload_valid_q' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5468' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\payload_last_q' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5469' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\header_index_q' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5470' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\header_q' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5471' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\reject_fatal_q' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5472' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\remaining_q' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5473' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\payload_physical_last_q' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5474' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.$bitselwrite$pos$wire_ipv4_parser.sv:155$610' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5475' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\code_is_fatal$func$wire_ipv4_parser.sv:173$611.$result' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5476' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.\code_is_fatal$func$wire_ipv4_parser.sv:173$611.code' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5477' with positive edge clock.
+Creating register for signal `\wire_ipv4_parser.$lookahead\header_q$630' using process `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+  created $dff cell `$procdff$5478' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\state_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5479' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\declared_length_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5480' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\reject_code_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5481' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\payload_data_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5482' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\payload_valid_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5483' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\payload_last_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5484' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\header_index_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5485' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\header_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5486' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\reject_fatal_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5487' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\pending_code_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5488' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\pending_fatal_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5489' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\actual_count_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5490' with positive edge clock.
+Creating register for signal `\wire_udp_parser.\remaining_q' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5491' with positive edge clock.
+Creating register for signal `\wire_udp_parser.$bitselwrite$pos$wire_udp_parser.sv:104$548' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5492' with positive edge clock.
+Creating register for signal `\wire_udp_parser.$lookahead\header_q$565' using process `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+  created $dff cell `$procdff$5493' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\state_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5494' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\reject_code_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5495' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\packet_sequence_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5496' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\packet_count_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5497' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\header_index_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5498' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\header_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5499' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\active_session_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5500' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\expected_sequence_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5501' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\packet_empty_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5502' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\packet_valid_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5503' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\body_data_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5504' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\body_valid_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5505' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\body_last_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5506' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\reject_fatal_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5507' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\pending_code_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5508' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\pending_fatal_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5509' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\controller_valid_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5510' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\recovery_required_q' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5511' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.$bitselwrite$pos$wire_mold_header_seq.sv:180$491' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5512' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.$lookahead\header_q$515' using process `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+  created $dff cell `$procdff$5513' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\state_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5514' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\reject_code_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5515' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\reject_pending_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5516' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\payload_action_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5517' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\packet_sequence_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5518' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\packet_count_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5519' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\messages_done_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5520' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\length_hi_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5521' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\message_length_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5522' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\payload_remaining_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5523' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\message_empty_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5524' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\header_ended_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5525' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\payload_data_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5526' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\payload_valid_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5527' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\payload_last_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5528' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\result_pending_q' using process `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+  created $dff cell `$procdff$5529' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\recovery_required' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5530' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\state_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5531' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\byte_index_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5532' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\declared_length_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5533' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\message_sequence_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5534' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\tracked_locate_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5535' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\symbol_enable_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5536' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\expected_symbol_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5537' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\reject_code_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5538' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\reject_pending_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5539' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\event_kind_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5540' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\source_type_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5541' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\mold_sequence_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5542' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\timestamp_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5543' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\stock_locate_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5544' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\old_ref_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5545' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\new_ref_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5546' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\quantity_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5547' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\price_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5548' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\side_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5549' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\old_valid_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5550' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\new_valid_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5551' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\quantity_valid_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5552' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\price_valid_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5553' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\side_valid_q' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5554' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u48$func$wire_itch_decoder.sv:199$92.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5555' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u16$func$wire_itch_decoder.sv:200$93.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5556' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u16$func$wire_itch_decoder.sv:205$94.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5557' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$wire_itch_decoder.sv:212$95.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5558' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$wire_itch_decoder.sv:212$96.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5559' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$wire_itch_decoder.sv:212$97.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5560' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$wire_itch_decoder.sv:218$98.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5561' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$wire_itch_decoder.sv:218$99.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5562' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$wire_itch_decoder.sv:219$100.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5563' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$wire_itch_decoder.sv:219$101.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5564' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$wire_itch_decoder.sv:220$102.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5565' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$wire_itch_decoder.sv:220$103.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5566' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$wire_itch_decoder.sv:221$104.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5567' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$wire_itch_decoder.sv:222$105.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5568' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$wire_itch_decoder.sv:222$106.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5569' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$wire_itch_decoder.sv:222$107.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5570' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$wire_itch_decoder.sv:222$108.$result' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5571' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.$memwr$\bytes_q$wire_itch_decoder.sv:167$111_ADDR' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5572' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.$memwr$\bytes_q$wire_itch_decoder.sv:167$111_DATA' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5573' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN' using process `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+  created $dff cell `$procdff$5574' with positive edge clock.
+Creating register for signal `\wire_arch_a_parser_top.\parser_recovery_q' using process `\wire_arch_a_parser_top.$proc$wire_arch_a_parser_top.sv:136$76'.
+  created $dff cell `$procdff$5575' with positive edge clock.
+Creating register for signal `\wire_arch_a_parser_top.\recovery_stage_q' using process `\wire_arch_a_parser_top.$proc$wire_arch_a_parser_top.sv:136$76'.
+  created $dff cell `$procdff$5576' with positive edge clock.
+Creating register for signal `\wire_arch_a_parser_top.\frame_open_q' using process `\wire_arch_a_parser_top.$proc$wire_arch_a_parser_top.sv:136$76'.
+  created $dff cell `$procdff$5577' with positive edge clock.
+Creating register for signal `\wire_arch_a_parser_late_suffix.\beat_index_q' using process `\wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:75$10'.
+  created $dff cell `$procdff$5578' with positive edge clock.
+Creating register for signal `\wire_arch_a_parser_late_suffix.\cycle_q' using process `\wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:75$10'.
+  created $dff cell `$procdff$5579' with positive edge clock.
+Creating register for signal `\wire_arch_a_parser_late_suffix.\event_count_q' using process `\wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:75$10'.
+  created $dff cell `$procdff$5580' with positive edge clock.
+Creating register for signal `\wire_arch_a_parser_late_suffix.$past$wire_arch_a_parser_late_suffix.sv:77$3$0' using process `\wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:75$10'.
+  created $dff cell `$procdff$5581' with positive edge clock.
+
+11.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+11.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+Removing empty process `wire_ingress_buffer.$proc$wire_ingress_buffer.sv:37$799'.
+Found and cleaned up 5 empty switches in `\wire_gearbox_64to8.$proc$wire_gearbox_64to8.sv:49$777'.
+Removing empty process `wire_gearbox_64to8.$proc$wire_gearbox_64to8.sv:49$777'.
+Found and cleaned up 12 empty switches in `\wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+Removing empty process `wire_eth_parser.$proc$wire_eth_parser.sv:55$755'.
+Found and cleaned up 7 empty switches in `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:102$695'.
+Removing empty process `wire_ipv4_parser.$proc$wire_ipv4_parser.sv:102$695'.
+Found and cleaned up 16 empty switches in `\wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+Removing empty process `wire_ipv4_parser.$proc$wire_ipv4_parser.sv:119$631'.
+Found and cleaned up 23 empty switches in `\wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+Removing empty process `wire_udp_parser.$proc$wire_udp_parser.sv:66$566'.
+Found and cleaned up 21 empty switches in `\wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+Removing empty process `wire_mold_header_seq.$proc$wire_mold_header_seq.sv:111$516'.
+Found and cleaned up 26 empty switches in `\wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+Removing empty process `wire_mold_message_framer.$proc$wire_mold_message_framer.sv:112$473'.
+Found and cleaned up 1 empty switch in `\wire_itch_decoder.$proc$wire_itch_decoder.sv:112$439'.
+Removing empty process `wire_itch_decoder.$proc$wire_itch_decoder.sv:112$439'.
+Found and cleaned up 1 empty switch in `\wire_itch_decoder.$proc$wire_itch_decoder.sv:112$434'.
+Removing empty process `wire_itch_decoder.$proc$wire_itch_decoder.sv:112$434'.
+Found and cleaned up 43 empty switches in `\wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+Removing empty process `wire_itch_decoder.$proc$wire_itch_decoder.sv:137$130'.
+Found and cleaned up 8 empty switches in `\wire_arch_a_parser_top.$proc$wire_arch_a_parser_top.sv:136$76'.
+Removing empty process `wire_arch_a_parser_top.$proc$wire_arch_a_parser_top.sv:136$76'.
+Found and cleaned up 1 empty switch in `\wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:47$44'.
+Removing empty process `wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:47$44'.
+Found and cleaned up 8 empty switches in `\wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:75$10'.
+Removing empty process `wire_arch_a_parser_late_suffix.$proc$wire_arch_a_parser_late_suffix.sv:75$10'.
+Cleaned up 176 empty switches.
+
+11.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_ingress_buffer.
+<suppressed ~1 debug messages>
+Optimizing module wire_gearbox_64to8.
+Optimizing module wire_eth_parser.
+<suppressed ~6 debug messages>
+Optimizing module wire_ipv4_parser.
+<suppressed ~26 debug messages>
+Optimizing module wire_udp_parser.
+<suppressed ~17 debug messages>
+Optimizing module wire_mold_header_seq.
+<suppressed ~20 debug messages>
+Optimizing module wire_mold_message_framer.
+<suppressed ~3 debug messages>
+Optimizing module wire_itch_decoder.
+<suppressed ~49 debug messages>
+Optimizing module wire_arch_a_parser_top.
+Optimizing module wire_arch_a_parser_late_suffix.
+<suppressed ~1 debug messages>
+
+11.4. Executing FUTURE pass.
+
+11.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_ingress_buffer.
+Optimizing module wire_gearbox_64to8.
+Optimizing module wire_eth_parser.
+Optimizing module wire_ipv4_parser.
+Optimizing module wire_udp_parser.
+Optimizing module wire_mold_header_seq.
+Optimizing module wire_mold_message_framer.
+Optimizing module wire_itch_decoder.
+Optimizing module wire_arch_a_parser_top.
+Optimizing module wire_arch_a_parser_late_suffix.
+
+11.6. Executing CHECK pass (checking for obvious problems).
+Checking module wire_ingress_buffer...
+Checking module wire_gearbox_64to8...
+Checking module wire_eth_parser...
+Checking module wire_ipv4_parser...
+Checking module wire_udp_parser...
+Checking module wire_mold_header_seq...
+Checking module wire_mold_message_framer...
+Checking module wire_itch_decoder...
+Checking module wire_arch_a_parser_top...
+Checking module wire_arch_a_parser_late_suffix...
+Found and reported 0 problems.
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_ingress_buffer..
+Finding unused cells or wires in module \wire_gearbox_64to8..
+Finding unused cells or wires in module \wire_eth_parser..
+Finding unused cells or wires in module \wire_ipv4_parser..
+Finding unused cells or wires in module \wire_udp_parser..
+Finding unused cells or wires in module \wire_mold_header_seq..
+Finding unused cells or wires in module \wire_mold_message_framer..
+Finding unused cells or wires in module \wire_itch_decoder..
+Finding unused cells or wires in module \wire_arch_a_parser_top..
+Finding unused cells or wires in module \wire_arch_a_parser_late_suffix..
+Removed 595 unused cells and 2217 unused wires.
+<suppressed ~607 debug messages>
+
+11.8. Executing OPT pass (performing simple optimizations).
+
+11.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_ingress_buffer.
+Optimizing module wire_gearbox_64to8.
+Optimizing module wire_eth_parser.
+Optimizing module wire_ipv4_parser.
+Optimizing module wire_udp_parser.
+Optimizing module wire_mold_header_seq.
+Optimizing module wire_mold_message_framer.
+Optimizing module wire_itch_decoder.
+Optimizing module wire_arch_a_parser_top.
+Optimizing module wire_arch_a_parser_late_suffix.
+
+11.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_ingress_buffer'.
+Computing hashes of 53 cells of `\wire_ingress_buffer'.
+Finding duplicate cells in `\wire_ingress_buffer'.
+Finding identical cells in module `\wire_gearbox_64to8'.
+Computing hashes of 47 cells of `\wire_gearbox_64to8'.
+Finding duplicate cells in `\wire_gearbox_64to8'.
+Computing hashes of 46 cells of `\wire_gearbox_64to8'.
+Finding duplicate cells in `\wire_gearbox_64to8'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\wire_eth_parser'.
+Computing hashes of 102 cells of `\wire_eth_parser'.
+Finding duplicate cells in `\wire_eth_parser'.
+Computing hashes of 85 cells of `\wire_eth_parser'.
+Finding duplicate cells in `\wire_eth_parser'.
+<suppressed ~51 debug messages>
+Finding identical cells in module `\wire_ipv4_parser'.
+Computing hashes of 215 cells of `\wire_ipv4_parser'.
+Finding duplicate cells in `\wire_ipv4_parser'.
+Computing hashes of 193 cells of `\wire_ipv4_parser'.
+Finding duplicate cells in `\wire_ipv4_parser'.
+<suppressed ~66 debug messages>
+Finding identical cells in module `\wire_udp_parser'.
+Computing hashes of 231 cells of `\wire_udp_parser'.
+Finding duplicate cells in `\wire_udp_parser'.
+Computing hashes of 200 cells of `\wire_udp_parser'.
+Finding duplicate cells in `\wire_udp_parser'.
+<suppressed ~93 debug messages>
+Finding identical cells in module `\wire_mold_header_seq'.
+Computing hashes of 249 cells of `\wire_mold_header_seq'.
+Finding duplicate cells in `\wire_mold_header_seq'.
+Computing hashes of 225 cells of `\wire_mold_header_seq'.
+Finding duplicate cells in `\wire_mold_header_seq'.
+<suppressed ~72 debug messages>
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 212 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 177 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+<suppressed ~105 debug messages>
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 607 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 419 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 416 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+<suppressed ~573 debug messages>
+Finding identical cells in module `\wire_arch_a_parser_top'.
+Computing hashes of 62 cells of `\wire_arch_a_parser_top'.
+Finding duplicate cells in `\wire_arch_a_parser_top'.
+Computing hashes of 51 cells of `\wire_arch_a_parser_top'.
+Finding duplicate cells in `\wire_arch_a_parser_top'.
+Computing hashes of 50 cells of `\wire_arch_a_parser_top'.
+Finding duplicate cells in `\wire_arch_a_parser_top'.
+Computing hashes of 49 cells of `\wire_arch_a_parser_top'.
+Finding duplicate cells in `\wire_arch_a_parser_top'.
+<suppressed ~39 debug messages>
+Finding identical cells in module `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 80 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 77 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 76 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+<suppressed ~12 debug messages>
+Removed a total of 338 cells.
+
+11.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_ingress_buffer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$887.
+    dead port 1/2 on $mux $procmux$881.
+    dead port 1/2 on $mux $procmux$875.
+    dead port 1/2 on $mux $procmux$869.
+    dead port 1/2 on $mux $procmux$863.
+    dead port 1/2 on $mux $procmux$857.
+    dead port 1/2 on $mux $procmux$851.
+    dead port 1/2 on $mux $procmux$845.
+    dead port 1/2 on $mux $procmux$839.
+Running muxtree optimizer on module \wire_gearbox_64to8..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$948.
+    dead port 2/2 on $mux $procmux$945.
+Running muxtree optimizer on module \wire_eth_parser..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $procmux$1076: \payload_last_q -> 1'0
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_ipv4_parser..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $procmux$1662: \payload_last_q -> 1'0
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1484.
+    dead port 2/2 on $mux $procmux$1481.
+    dead port 1/2 on $mux $procmux$1427.
+    dead port 2/2 on $mux $procmux$1424.
+    dead port 2/2 on $mux $procmux$1422.
+    dead port 1/2 on $mux $procmux$1358.
+    dead port 2/2 on $mux $procmux$1355.
+    dead port 2/2 on $mux $procmux$1353.
+    dead port 1/2 on $mux $procmux$1351.
+    dead port 1/2 on $mux $procmux$1268.
+    dead port 1/2 on $mux $procmux$1235.
+    dead port 1/2 on $mux $procmux$1232.
+    dead port 1/2 on $mux $procmux$1226.
+    dead port 1/2 on $mux $procmux$1223.
+    dead port 1/2 on $mux $procmux$1220.
+    dead port 1/2 on $mux $procmux$1214.
+    dead port 1/2 on $mux $procmux$1211.
+    dead port 1/2 on $mux $procmux$1208.
+    dead port 2/2 on $mux $procmux$1205.
+    dead port 1/2 on $mux $procmux$1199.
+    dead port 1/2 on $mux $procmux$1196.
+    dead port 1/2 on $mux $procmux$1193.
+    dead port 2/2 on $mux $procmux$1190.
+    dead port 1/2 on $mux $procmux$1187.
+    dead port 1/2 on $mux $procmux$1181.
+    dead port 1/2 on $mux $procmux$1178.
+    dead port 1/2 on $mux $procmux$1175.
+    dead port 2/2 on $mux $procmux$1172.
+    dead port 1/2 on $mux $procmux$1169.
+    dead port 1/2 on $mux $procmux$1166.
+    dead port 1/2 on $mux $procmux$1526.
+Running muxtree optimizer on module \wire_udp_parser..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $procmux$2102: \payload_last_q -> 1'0
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1871.
+    dead port 1/2 on $mux $procmux$1854.
+    dead port 2/2 on $mux $procmux$1851.
+    dead port 1/2 on $mux $procmux$1829.
+    dead port 2/2 on $mux $procmux$1826.
+    dead port 2/2 on $mux $procmux$1824.
+    dead port 1/2 on $mux $procmux$1798.
+    dead port 2/2 on $mux $procmux$1795.
+    dead port 2/2 on $mux $procmux$1793.
+    dead port 1/2 on $mux $procmux$1791.
+Running muxtree optimizer on module \wire_mold_header_seq..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $procmux$2589: \body_last_q -> 1'0
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$2377.
+    dead port 1/2 on $mux $procmux$2360.
+    dead port 2/2 on $mux $procmux$2357.
+    dead port 1/2 on $mux $procmux$2335.
+    dead port 2/2 on $mux $procmux$2332.
+    dead port 2/2 on $mux $procmux$2330.
+    dead port 1/2 on $mux $procmux$2304.
+    dead port 2/2 on $mux $procmux$2301.
+    dead port 2/2 on $mux $procmux$2299.
+    dead port 2/2 on $mux $procmux$2297.
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port B of cell $procmux$5285: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$5248: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$5254: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$5259: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$5264: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$5269: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$5274: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$5279: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$5233: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$5228: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$5306: \recovery_required -> 1'1
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$4242.
+    dead port 2/2 on $mux $procmux$4239.
+    dead port 2/2 on $mux $procmux$4237.
+    dead port 1/2 on $mux $procmux$4343.
+    dead port 1/2 on $mux $procmux$4333.
+    dead port 1/2 on $mux $procmux$4323.
+    dead port 1/2 on $mux $procmux$4313.
+    dead port 2/2 on $mux $procmux$4310.
+    dead port 1/2 on $mux $procmux$4300.
+    dead port 2/2 on $mux $procmux$4297.
+    dead port 1/2 on $mux $procmux$4287.
+    dead port 2/2 on $mux $procmux$4284.
+    dead port 1/2 on $mux $procmux$4274.
+    dead port 2/2 on $mux $procmux$4271.
+    dead port 2/2 on $mux $procmux$4269.
+    dead port 1/2 on $mux $procmux$4258.
+    dead port 2/2 on $mux $procmux$4255.
+    dead port 2/2 on $mux $procmux$4253.
+    dead port 1/2 on $mux $ternary$wire_itch_decoder.sv:182$241.
+    dead port 1/2 on $mux $ternary$wire_itch_decoder.sv:181$238.
+    dead port 1/2 on $mux $ternary$wire_itch_decoder.sv:180$235.
+    dead port 1/2 on $mux $ternary$wire_itch_decoder.sv:179$232.
+    dead port 1/2 on $mux $ternary$wire_itch_decoder.sv:178$229.
+    dead port 1/2 on $mux $ternary$wire_itch_decoder.sv:177$226.
+    dead port 1/2 on $mux $ternary$wire_itch_decoder.sv:176$223.
+    dead port 1/2 on $mux $ternary$wire_itch_decoder.sv:173$220.
+Running muxtree optimizer on module \wire_arch_a_parser_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_arch_a_parser_late_suffix..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 88 multiplexer ports.
+<suppressed ~2335 debug messages>
+
+11.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_ingress_buffer.
+    Consolidated identical input bits for $mux cell $procmux$872:
+      Old ports: A=64'0000000000000000000000000000000000000000000000000000000000000000, B=64'1111111111111111111111111111111111111111111111111111111111111111, Y=$procmux$872_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$872_Y [0]
+      New connections: $procmux$872_Y [63:1] = { $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] $procmux$872_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$854:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$854_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$854_Y [0]
+      New connections: $procmux$854_Y [7:1] = { $procmux$854_Y [0] $procmux$854_Y [0] $procmux$854_Y [0] $procmux$854_Y [0] $procmux$854_Y [0] $procmux$854_Y [0] $procmux$854_Y [0] }
+  Optimizing cells in module \wire_ingress_buffer.
+    Consolidated identical input bits for $mux cell $procmux$915:
+      Old ports: A=$2$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$820, B=64'0000000000000000000000000000000000000000000000000000000000000000, Y=$0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802
+      New ports: A=$procmux$872_Y [0], B=1'0, Y=$0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0]
+      New connections: $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [63:1] = { $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] $0$memwr$\data_q$wire_ingress_buffer.sv:44$788_EN[63:0]$802 [0] }
+    Consolidated identical input bits for $mux cell $procmux$906:
+      Old ports: A=$2$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$823, B=8'00000000, Y=$0$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$805
+      New ports: A=$procmux$854_Y [0], B=1'0, Y=$0$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$805 [0]
+      New connections: $0$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$805 [7:1] = { $0$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$805 [0] $0$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$805 [0] $0$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$805 [0] $0$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$805 [0] $0$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$805 [0] $0$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$805 [0] $0$memwr$\keep_q$wire_ingress_buffer.sv:45$789_EN[7:0]$805 [0] }
+  Optimizing cells in module \wire_ingress_buffer.
+  Optimizing cells in module \wire_gearbox_64to8.
+  Optimizing cells in module \wire_eth_parser.
+  Optimizing cells in module \wire_eth_parser.
+  Optimizing cells in module \wire_ipv4_parser.
+  Optimizing cells in module \wire_ipv4_parser.
+  Optimizing cells in module \wire_udp_parser.
+  Optimizing cells in module \wire_udp_parser.
+  Optimizing cells in module \wire_mold_header_seq.
+  Optimizing cells in module \wire_mold_header_seq.
+  Optimizing cells in module \wire_mold_message_framer.
+    New ctrl vector for $pmux cell $procmux$3124: { $auto$opt_reduce.cc:137:opt_pmux$5587 $procmux$3127_CMP $procmux$3128_CMP }
+    New ctrl vector for $pmux cell $procmux$3040: $auto$opt_reduce.cc:137:opt_pmux$5589
+    New ctrl vector for $pmux cell $procmux$2861: $auto$opt_reduce.cc:137:opt_pmux$5591
+  Optimizing cells in module \wire_mold_message_framer.
+  Optimizing cells in module \wire_itch_decoder.
+    Consolidated identical input bits for $mux cell $procmux$4235:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$4235_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$4235_Y [0]
+      New connections: $procmux$4235_Y [7:1] = { $procmux$4235_Y [0] $procmux$4235_Y [0] $procmux$4235_Y [0] $procmux$4235_Y [0] $procmux$4235_Y [0] $procmux$4235_Y [0] $procmux$4235_Y [0] }
+    New ctrl vector for $pmux cell $procmux$5151: $auto$opt_reduce.cc:137:opt_pmux$5593
+    New ctrl vector for $pmux cell $procmux$4671: $auto$opt_reduce.cc:137:opt_pmux$5595
+    New ctrl vector for $pmux cell $procmux$4747: { $procmux$4615_CMP $auto$opt_reduce.cc:137:opt_pmux$5597 }
+    New ctrl vector for $pmux cell $procmux$3192: { $procmux$4924_CMP $procmux$4929_CMP $procmux$4934_CMP $procmux$4939_CMP $auto$opt_reduce.cc:137:opt_pmux$5599 $procmux$4944_CMP $procmux$4949_CMP }
+    New ctrl vector for $pmux cell $procmux$4614: $auto$opt_reduce.cc:137:opt_pmux$5601
+    New ctrl vector for $pmux cell $procmux$3182: { $procmux$4924_CMP $procmux$4929_CMP $procmux$4934_CMP $procmux$4939_CMP $auto$opt_reduce.cc:137:opt_pmux$5603 $procmux$4944_CMP $procmux$4949_CMP }
+    New ctrl vector for $pmux cell $procmux$4804: $auto$opt_reduce.cc:137:opt_pmux$5605
+  Optimizing cells in module \wire_itch_decoder.
+    Consolidated identical input bits for $mux cell $procmux$4282:
+      Old ports: A=8'00000000, B=$4$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$202, Y=$procmux$4282_Y
+      New ports: A=1'0, B=$procmux$4235_Y [0], Y=$procmux$4282_Y [0]
+      New connections: $procmux$4282_Y [7:1] = { $procmux$4282_Y [0] $procmux$4282_Y [0] $procmux$4282_Y [0] $procmux$4282_Y [0] $procmux$4282_Y [0] $procmux$4282_Y [0] $procmux$4282_Y [0] }
+  Optimizing cells in module \wire_itch_decoder.
+    Consolidated identical input bits for $mux cell $procmux$4320:
+      Old ports: A=8'00000000, B=$3$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$198, Y=$procmux$4320_Y
+      New ports: A=1'0, B=$procmux$4282_Y [0], Y=$procmux$4320_Y [0]
+      New connections: $procmux$4320_Y [7:1] = { $procmux$4320_Y [0] $procmux$4320_Y [0] $procmux$4320_Y [0] $procmux$4320_Y [0] $procmux$4320_Y [0] $procmux$4320_Y [0] $procmux$4320_Y [0] }
+  Optimizing cells in module \wire_itch_decoder.
+    Consolidated identical input bits for $mux cell $procmux$4499:
+      Old ports: A=$2$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$192, B=8'00000000, Y=$0$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$150
+      New ports: A=$procmux$4320_Y [0], B=1'0, Y=$0$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$150 [0]
+      New connections: $0$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$150 [7:1] = { $0$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$150 [0] $0$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$150 [0] $0$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$150 [0] $0$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$150 [0] $0$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$150 [0] $0$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$150 [0] $0$memwr$\bytes_q$wire_itch_decoder.sv:167$111_EN[7:0]$150 [0] }
+  Optimizing cells in module \wire_itch_decoder.
+  Optimizing cells in module \wire_arch_a_parser_top.
+  Optimizing cells in module \wire_arch_a_parser_late_suffix.
+Performed a total of 33 changes.
+
+11.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_ingress_buffer'.
+Computing hashes of 44 cells of `\wire_ingress_buffer'.
+Finding duplicate cells in `\wire_ingress_buffer'.
+Computing hashes of 40 cells of `\wire_ingress_buffer'.
+Finding duplicate cells in `\wire_ingress_buffer'.
+Computing hashes of 36 cells of `\wire_ingress_buffer'.
+Finding duplicate cells in `\wire_ingress_buffer'.
+<suppressed ~24 debug messages>
+Finding identical cells in module `\wire_gearbox_64to8'.
+Computing hashes of 44 cells of `\wire_gearbox_64to8'.
+Finding duplicate cells in `\wire_gearbox_64to8'.
+Finding identical cells in module `\wire_eth_parser'.
+Computing hashes of 84 cells of `\wire_eth_parser'.
+Finding duplicate cells in `\wire_eth_parser'.
+Computing hashes of 82 cells of `\wire_eth_parser'.
+Finding duplicate cells in `\wire_eth_parser'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\wire_ipv4_parser'.
+Computing hashes of 161 cells of `\wire_ipv4_parser'.
+Finding duplicate cells in `\wire_ipv4_parser'.
+Finding identical cells in module `\wire_udp_parser'.
+Computing hashes of 189 cells of `\wire_udp_parser'.
+Finding duplicate cells in `\wire_udp_parser'.
+Computing hashes of 181 cells of `\wire_udp_parser'.
+Finding duplicate cells in `\wire_udp_parser'.
+<suppressed ~24 debug messages>
+Finding identical cells in module `\wire_mold_header_seq'.
+Computing hashes of 214 cells of `\wire_mold_header_seq'.
+Finding duplicate cells in `\wire_mold_header_seq'.
+Computing hashes of 204 cells of `\wire_mold_header_seq'.
+Finding duplicate cells in `\wire_mold_header_seq'.
+<suppressed ~30 debug messages>
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 180 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 176 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+<suppressed ~12 debug messages>
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 386 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 362 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 358 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 357 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 356 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 355 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+<suppressed ~93 debug messages>
+Finding identical cells in module `\wire_arch_a_parser_top'.
+Computing hashes of 49 cells of `\wire_arch_a_parser_top'.
+Finding duplicate cells in `\wire_arch_a_parser_top'.
+Finding identical cells in module `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 76 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 70 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 64 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 62 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 61 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+<suppressed ~45 debug messages>
+Removed a total of 78 cells.
+
+11.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_ingress_buffer..
+Finding unused cells or wires in module \wire_gearbox_64to8..
+Finding unused cells or wires in module \wire_eth_parser..
+Finding unused cells or wires in module \wire_ipv4_parser..
+Finding unused cells or wires in module \wire_udp_parser..
+Finding unused cells or wires in module \wire_mold_header_seq..
+Finding unused cells or wires in module \wire_mold_message_framer..
+Finding unused cells or wires in module \wire_itch_decoder..
+Finding unused cells or wires in module \wire_arch_a_parser_top..
+Finding unused cells or wires in module \wire_arch_a_parser_late_suffix..
+Removed 0 unused cells and 515 unused wires.
+<suppressed ~10 debug messages>
+
+11.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_ingress_buffer.
+Optimizing module wire_gearbox_64to8.
+Optimizing module wire_eth_parser.
+Optimizing module wire_ipv4_parser.
+Optimizing module wire_udp_parser.
+<suppressed ~2 debug messages>
+Optimizing module wire_mold_header_seq.
+Optimizing module wire_mold_message_framer.
+<suppressed ~1 debug messages>
+Optimizing module wire_itch_decoder.
+Optimizing module wire_arch_a_parser_top.
+Optimizing module wire_arch_a_parser_late_suffix.
+
+11.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_ingress_buffer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_gearbox_64to8..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_eth_parser..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_ipv4_parser..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_udp_parser..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_mold_header_seq..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_arch_a_parser_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_arch_a_parser_late_suffix..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1998 debug messages>
+
+11.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_ingress_buffer.
+  Optimizing cells in module \wire_gearbox_64to8.
+  Optimizing cells in module \wire_eth_parser.
+  Optimizing cells in module \wire_ipv4_parser.
+  Optimizing cells in module \wire_udp_parser.
+  Optimizing cells in module \wire_mold_header_seq.
+  Optimizing cells in module \wire_mold_message_framer.
+    New ctrl vector for $pmux cell $procmux$3068: $auto$opt_reduce.cc:137:opt_pmux$5607
+    New ctrl vector for $pmux cell $procmux$2889: $auto$opt_reduce.cc:137:opt_pmux$5609
+  Optimizing cells in module \wire_mold_message_framer.
+  Optimizing cells in module \wire_itch_decoder.
+  Optimizing cells in module \wire_arch_a_parser_top.
+  Optimizing cells in module \wire_arch_a_parser_late_suffix.
+Performed a total of 2 changes.
+
+11.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_ingress_buffer'.
+Computing hashes of 36 cells of `\wire_ingress_buffer'.
+Finding duplicate cells in `\wire_ingress_buffer'.
+Finding identical cells in module `\wire_gearbox_64to8'.
+Computing hashes of 44 cells of `\wire_gearbox_64to8'.
+Finding duplicate cells in `\wire_gearbox_64to8'.
+Finding identical cells in module `\wire_eth_parser'.
+Computing hashes of 82 cells of `\wire_eth_parser'.
+Finding duplicate cells in `\wire_eth_parser'.
+Finding identical cells in module `\wire_ipv4_parser'.
+Computing hashes of 161 cells of `\wire_ipv4_parser'.
+Finding duplicate cells in `\wire_ipv4_parser'.
+Finding identical cells in module `\wire_udp_parser'.
+Computing hashes of 179 cells of `\wire_udp_parser'.
+Finding duplicate cells in `\wire_udp_parser'.
+Finding identical cells in module `\wire_mold_header_seq'.
+Computing hashes of 204 cells of `\wire_mold_header_seq'.
+Finding duplicate cells in `\wire_mold_header_seq'.
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 177 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 176 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 355 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Finding identical cells in module `\wire_arch_a_parser_top'.
+Computing hashes of 49 cells of `\wire_arch_a_parser_top'.
+Finding duplicate cells in `\wire_arch_a_parser_top'.
+Finding identical cells in module `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 61 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+Removed a total of 1 cells.
+
+11.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_ingress_buffer..
+Finding unused cells or wires in module \wire_gearbox_64to8..
+Finding unused cells or wires in module \wire_eth_parser..
+Finding unused cells or wires in module \wire_ipv4_parser..
+Finding unused cells or wires in module \wire_udp_parser..
+Finding unused cells or wires in module \wire_mold_header_seq..
+Finding unused cells or wires in module \wire_mold_message_framer..
+Finding unused cells or wires in module \wire_itch_decoder..
+Finding unused cells or wires in module \wire_arch_a_parser_top..
+Finding unused cells or wires in module \wire_arch_a_parser_late_suffix..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~2 debug messages>
+
+11.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_ingress_buffer.
+Optimizing module wire_gearbox_64to8.
+Optimizing module wire_eth_parser.
+Optimizing module wire_ipv4_parser.
+Optimizing module wire_udp_parser.
+Optimizing module wire_mold_header_seq.
+Optimizing module wire_mold_message_framer.
+Optimizing module wire_itch_decoder.
+Optimizing module wire_arch_a_parser_top.
+Optimizing module wire_arch_a_parser_late_suffix.
+
+11.8.14. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.8.15. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_ingress_buffer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_gearbox_64to8..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_eth_parser..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_ipv4_parser..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_udp_parser..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_mold_header_seq..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_arch_a_parser_top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \wire_arch_a_parser_late_suffix..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2094 debug messages>
+
+11.8.16. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_ingress_buffer.
+  Optimizing cells in module \wire_gearbox_64to8.
+  Optimizing cells in module \wire_eth_parser.
+  Optimizing cells in module \wire_ipv4_parser.
+  Optimizing cells in module \wire_udp_parser.
+  Optimizing cells in module \wire_mold_header_seq.
+  Optimizing cells in module \wire_mold_message_framer.
+  Optimizing cells in module \wire_itch_decoder.
+  Optimizing cells in module \wire_arch_a_parser_top.
+  Optimizing cells in module \wire_arch_a_parser_late_suffix.
+Performed a total of 0 changes.
+
+11.8.17. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_ingress_buffer'.
+Computing hashes of 36 cells of `\wire_ingress_buffer'.
+Finding duplicate cells in `\wire_ingress_buffer'.
+Finding identical cells in module `\wire_gearbox_64to8'.
+Computing hashes of 44 cells of `\wire_gearbox_64to8'.
+Finding duplicate cells in `\wire_gearbox_64to8'.
+Finding identical cells in module `\wire_eth_parser'.
+Computing hashes of 82 cells of `\wire_eth_parser'.
+Finding duplicate cells in `\wire_eth_parser'.
+Finding identical cells in module `\wire_ipv4_parser'.
+Computing hashes of 161 cells of `\wire_ipv4_parser'.
+Finding duplicate cells in `\wire_ipv4_parser'.
+Finding identical cells in module `\wire_udp_parser'.
+Computing hashes of 179 cells of `\wire_udp_parser'.
+Finding duplicate cells in `\wire_udp_parser'.
+Finding identical cells in module `\wire_mold_header_seq'.
+Computing hashes of 204 cells of `\wire_mold_header_seq'.
+Finding duplicate cells in `\wire_mold_header_seq'.
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 176 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 355 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Finding identical cells in module `\wire_arch_a_parser_top'.
+Computing hashes of 49 cells of `\wire_arch_a_parser_top'.
+Finding duplicate cells in `\wire_arch_a_parser_top'.
+Finding identical cells in module `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 61 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+Removed a total of 0 cells.
+
+11.8.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_ingress_buffer..
+Finding unused cells or wires in module \wire_gearbox_64to8..
+Finding unused cells or wires in module \wire_eth_parser..
+Finding unused cells or wires in module \wire_ipv4_parser..
+Finding unused cells or wires in module \wire_udp_parser..
+Finding unused cells or wires in module \wire_mold_header_seq..
+Finding unused cells or wires in module \wire_mold_message_framer..
+Finding unused cells or wires in module \wire_itch_decoder..
+Finding unused cells or wires in module \wire_arch_a_parser_top..
+Finding unused cells or wires in module \wire_arch_a_parser_late_suffix..
+
+11.8.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_ingress_buffer.
+Optimizing module wire_gearbox_64to8.
+Optimizing module wire_eth_parser.
+Optimizing module wire_ipv4_parser.
+Optimizing module wire_udp_parser.
+Optimizing module wire_mold_header_seq.
+Optimizing module wire_mold_message_framer.
+Optimizing module wire_itch_decoder.
+Optimizing module wire_arch_a_parser_top.
+Optimizing module wire_arch_a_parser_late_suffix.
+
+11.8.20. Finished fast OPT passes. (There is nothing left to do.)
+
+11.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from port B of cell wire_ingress_buffer.$add$wire_ingress_buffer.sv:54$829 ($add).
+Removed top 1 bits (of 2) from port B of cell wire_ingress_buffer.$sub$wire_ingress_buffer.sv:55$830 ($sub).
+Removed top 1 bits (of 2) from port B of cell wire_ingress_buffer.$procmux$891_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell wire_gearbox_64to8.$sub$wire_gearbox_64to8.sv:38$765 ($sub).
+Removed top 1 bits (of 4) from port A of cell wire_gearbox_64to8.$eq$wire_gearbox_64to8.sv:38$766 ($eq).
+Removed top 28 bits (of 32) from port B of cell wire_gearbox_64to8.$mul$wire_gearbox_64to8.sv:42$769 ($mul).
+Removed top 25 bits (of 32) from port Y of cell wire_gearbox_64to8.$mul$wire_gearbox_64to8.sv:42$769 ($mul).
+Removed top 25 bits (of 32) from port A of cell wire_gearbox_64to8.$add$wire_gearbox_64to8.sv:42$770 ($add).
+Removed top 31 bits (of 32) from port B of cell wire_gearbox_64to8.$add$wire_gearbox_64to8.sv:42$770 ($add).
+Removed top 24 bits (of 32) from port Y of cell wire_gearbox_64to8.$add$wire_gearbox_64to8.sv:42$770 ($add).
+Removed top 23 bits (of 32) from port B of cell wire_gearbox_64to8.$shiftx$wire_gearbox_64to8.sv:42$771 ($shiftx).
+Removed top 2 bits (of 3) from port B of cell wire_gearbox_64to8.$add$wire_gearbox_64to8.sv:68$787 ($add).
+Removed top 1 bits (of 8) from port B of cell wire_gearbox_64to8.$procmux$938_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell wire_gearbox_64to8.$procmux$939_CMP0 ($eq).
+Removed top 3 bits (of 8) from port B of cell wire_gearbox_64to8.$procmux$940_CMP0 ($eq).
+Removed top 4 bits (of 8) from port B of cell wire_gearbox_64to8.$procmux$941_CMP0 ($eq).
+Removed top 5 bits (of 8) from port B of cell wire_gearbox_64to8.$procmux$942_CMP0 ($eq).
+Removed top 6 bits (of 8) from port B of cell wire_gearbox_64to8.$procmux$943_CMP0 ($eq).
+Removed top 7 bits (of 8) from port B of cell wire_gearbox_64to8.$procmux$944_CMP0 ($eq).
+Removed top 24 bits (of 32) from wire wire_gearbox_64to8.$add$wire_gearbox_64to8.sv:42$770_Y.
+Removed top 25 bits (of 32) from wire wire_gearbox_64to8.$mul$wire_gearbox_64to8.sv:42$769_Y.
+Removed top 4 bits (of 16) from port B of cell wire_eth_parser.$eq$wire_eth_parser.sv:94$762 ($eq).
+Removed top 3 bits (of 4) from port B of cell wire_eth_parser.$add$wire_eth_parser.sv:110$763 ($add).
+Removed top 1 bits (of 2) from port B of cell wire_eth_parser.$procmux$1100_CMP0 ($eq).
+Removed top 1 bits (of 2) from mux cell wire_eth_parser.$procmux$1143 ($mux).
+Removed top 1 bits (of 2) from wire wire_eth_parser.$procmux$1143_Y.
+Removed top 1 bits (of 3) from mux cell wire_ipv4_parser.$ternary$wire_ipv4_parser.sv:137$642 ($mux).
+Removed top 28 bits (of 32) from port B of cell wire_ipv4_parser.$mul$wire_ipv4_parser.sv:155$664 ($mul).
+Removed top 23 bits (of 32) from port Y of cell wire_ipv4_parser.$mul$wire_ipv4_parser.sv:155$664 ($mul).
+Removed top 24 bits (of 32) from port A of cell wire_ipv4_parser.$sub$wire_ipv4_parser.sv:155$665 ($sub).
+Removed top 23 bits (of 32) from port B of cell wire_ipv4_parser.$sub$wire_ipv4_parser.sv:155$665 ($sub).
+Removed top 22 bits (of 32) from port Y of cell wire_ipv4_parser.$sub$wire_ipv4_parser.sv:155$665 ($sub).
+Converting cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:155$666 ($add) from unsigned to signed.
+Removed top 22 bits (of 32) from port A of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:155$666 ($add).
+Removed top 30 bits (of 32) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:155$666 ($add).
+Removed top 21 bits (of 32) from port Y of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:155$666 ($add).
+Converting cell wire_ipv4_parser.$sub$wire_ipv4_parser.sv:155$667 ($sub) from unsigned to signed.
+Removed top 21 bits (of 32) from port A of cell wire_ipv4_parser.$sub$wire_ipv4_parser.sv:155$667 ($sub).
+Removed top 27 bits (of 32) from port B of cell wire_ipv4_parser.$sub$wire_ipv4_parser.sv:155$667 ($sub).
+Removed top 20 bits (of 32) from port Y of cell wire_ipv4_parser.$sub$wire_ipv4_parser.sv:155$667 ($sub).
+Converting cell wire_ipv4_parser.$neg$wire_ipv4_parser.sv:155$672 ($neg) from signed to unsigned.
+Removed top 1 bits (of 33) from port A of cell wire_ipv4_parser.$neg$wire_ipv4_parser.sv:155$672 ($neg).
+Removed top 4 bits (of 5) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:156$675 ($add).
+Removed top 11 bits (of 16) from port B of cell wire_ipv4_parser.$eq$wire_ipv4_parser.sv:160$679 ($eq).
+Removed top 11 bits (of 16) from port B of cell wire_ipv4_parser.$sub$wire_ipv4_parser.sv:169$680 ($sub).
+Removed top 2 bits (of 4) from port B of cell wire_ipv4_parser.$eq$wire_ipv4_parser.sv:91$681 ($eq).
+Removed top 2 bits (of 4) from port B of cell wire_ipv4_parser.$eq$wire_ipv4_parser.sv:92$682 ($eq).
+Removed top 1 bits (of 4) from port B of cell wire_ipv4_parser.$eq$wire_ipv4_parser.sv:93$684 ($eq).
+Removed top 1 bits (of 4) from port B of cell wire_ipv4_parser.$eq$wire_ipv4_parser.sv:94$686 ($eq).
+Removed top 15 bits (of 16) from port B of cell wire_ipv4_parser.$gt$wire_ipv4_parser.sv:183$690 ($gt).
+Removed top 15 bits (of 16) from port B of cell wire_ipv4_parser.$eq$wire_ipv4_parser.sv:189$692 ($eq).
+Removed top 15 bits (of 16) from port B of cell wire_ipv4_parser.$sub$wire_ipv4_parser.sv:193$694 ($sub).
+Removed top 1 bits (of 4) from port B of cell wire_ipv4_parser.$ne$wire_ipv4_parser.sv:70$705 ($ne).
+Removed top 1 bits (of 4) from port B of cell wire_ipv4_parser.$ne$wire_ipv4_parser.sv:72$710 ($ne).
+Removed top 11 bits (of 16) from port B of cell wire_ipv4_parser.$lt$wire_ipv4_parser.sv:74$715 ($lt).
+Removed top 2 bits (of 18) from port A of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$720 ($add).
+Removed top 2 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$720 ($add).
+Removed top 1 bits (of 18) from port Y of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$720 ($add).
+Removed top 1 bits (of 18) from port A of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$721 ($add).
+Removed top 2 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$721 ($add).
+Removed top 2 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$722 ($add).
+Removed top 2 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$723 ($add).
+Removed top 2 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$724 ($add).
+Removed top 2 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$725 ($add).
+Removed top 2 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$726 ($add).
+Removed top 2 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$727 ($add).
+Removed top 2 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$728 ($add).
+Removed top 2 bits (of 18) from port A of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:55$729 ($add).
+Removed top 16 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:55$729 ($add).
+Removed top 1 bits (of 18) from port Y of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:55$729 ($add).
+Removed top 2 bits (of 18) from port A of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:56$730 ($add).
+Removed top 17 bits (of 18) from port B of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:56$730 ($add).
+Removed top 2 bits (of 18) from port Y of cell wire_ipv4_parser.$add$wire_ipv4_parser.sv:56$730 ($add).
+Removed top 3 bits (of 8) from port B of cell wire_ipv4_parser.$ne$wire_ipv4_parser.sv:82$739 ($ne).
+Removed top 2 bits (of 3) from port B of cell wire_ipv4_parser.$procmux$1586_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell wire_ipv4_parser.$procmux$1751_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell wire_ipv4_parser.$procmux$1754_CMP0 ($eq).
+Removed top 2 bits (of 18) from wire wire_ipv4_parser.$add$wire_ipv4_parser.sv:56$730_Y.
+Removed top 1 bits (of 18) from wire wire_ipv4_parser.$add$wire_ipv4_parser.sv:55$729_Y.
+Removed top 1 bits (of 18) from wire wire_ipv4_parser.$add$wire_ipv4_parser.sv:50$720_Y.
+Removed top 23 bits (of 32) from wire wire_ipv4_parser.$mul$wire_ipv4_parser.sv:155$664_Y.
+Removed top 1 bits (of 3) from wire wire_ipv4_parser.$ternary$wire_ipv4_parser.sv:137$642_Y.
+Removed top 1 bits (of 4) from port B of cell wire_udp_parser.$lt$wire_udp_parser.sv:103$583 ($lt).
+Removed top 28 bits (of 32) from port B of cell wire_udp_parser.$mul$wire_udp_parser.sv:104$586 ($mul).
+Removed top 24 bits (of 32) from port Y of cell wire_udp_parser.$mul$wire_udp_parser.sv:104$586 ($mul).
+Removed top 26 bits (of 32) from port A of cell wire_udp_parser.$sub$wire_udp_parser.sv:104$587 ($sub).
+Removed top 24 bits (of 32) from port B of cell wire_udp_parser.$sub$wire_udp_parser.sv:104$587 ($sub).
+Removed top 23 bits (of 32) from port Y of cell wire_udp_parser.$sub$wire_udp_parser.sv:104$587 ($sub).
+Converting cell wire_udp_parser.$add$wire_udp_parser.sv:104$588 ($add) from unsigned to signed.
+Removed top 23 bits (of 32) from port A of cell wire_udp_parser.$add$wire_udp_parser.sv:104$588 ($add).
+Removed top 30 bits (of 32) from port B of cell wire_udp_parser.$add$wire_udp_parser.sv:104$588 ($add).
+Removed top 22 bits (of 32) from port Y of cell wire_udp_parser.$add$wire_udp_parser.sv:104$588 ($add).
+Converting cell wire_udp_parser.$sub$wire_udp_parser.sv:104$589 ($sub) from unsigned to signed.
+Removed top 22 bits (of 32) from port A of cell wire_udp_parser.$sub$wire_udp_parser.sv:104$589 ($sub).
+Removed top 27 bits (of 32) from port B of cell wire_udp_parser.$sub$wire_udp_parser.sv:104$589 ($sub).
+Removed top 21 bits (of 32) from port Y of cell wire_udp_parser.$sub$wire_udp_parser.sv:104$589 ($sub).
+Converting cell wire_udp_parser.$neg$wire_udp_parser.sv:104$594 ($neg) from signed to unsigned.
+Removed top 1 bits (of 33) from port A of cell wire_udp_parser.$neg$wire_udp_parser.sv:104$594 ($neg).
+Removed top 3 bits (of 4) from port B of cell wire_udp_parser.$add$wire_udp_parser.sv:105$597 ($add).
+Removed top 12 bits (of 16) from port B of cell wire_udp_parser.$lt$wire_udp_parser.sv:111$598 ($lt).
+Removed top 12 bits (of 16) from port B of cell wire_udp_parser.$eq$wire_udp_parser.sv:121$599 ($eq).
+Removed top 12 bits (of 16) from port B of cell wire_udp_parser.$sub$wire_udp_parser.sv:159$601 ($sub).
+Removed top 15 bits (of 16) from port B of cell wire_udp_parser.$gt$wire_udp_parser.sv:166$602 ($gt).
+Removed top 15 bits (of 16) from port B of cell wire_udp_parser.$eq$wire_udp_parser.sv:170$604 ($eq).
+Removed top 15 bits (of 16) from port B of cell wire_udp_parser.$sub$wire_udp_parser.sv:186$605 ($sub).
+Removed top 15 bits (of 16) from port B of cell wire_udp_parser.$add$wire_udp_parser.sv:193$607 ($add).
+Removed top 2 bits (of 3) from mux cell wire_udp_parser.$procmux$2002 ($mux).
+Removed top 1 bits (of 2) from port B of cell wire_udp_parser.$procmux$2255_CMP0 ($eq).
+Removed top 1 bits (of 2) from mux cell wire_udp_parser.$procmux$2267 ($mux).
+Removed top 1 bits (of 2) from wire wire_udp_parser.$procmux$2261_Y.
+Removed top 24 bits (of 32) from wire wire_udp_parser.$mul$wire_udp_parser.sv:104$586_Y.
+Removed top 2 bits (of 3) from wire wire_udp_parser.$procmux$2002_Y.
+Removed top 1 bits (of 3) from port B of cell wire_mold_header_seq.$eq$wire_mold_header_seq.sv:100$503 ($eq).
+Removed top 48 bits (of 64) from port B of cell wire_mold_header_seq.$add$wire_mold_header_seq.sv:151$522 ($add).
+Removed top 28 bits (of 32) from port B of cell wire_mold_header_seq.$mul$wire_mold_header_seq.sv:180$532 ($mul).
+Removed top 23 bits (of 32) from port Y of cell wire_mold_header_seq.$mul$wire_mold_header_seq.sv:180$532 ($mul).
+Removed top 24 bits (of 32) from port A of cell wire_mold_header_seq.$sub$wire_mold_header_seq.sv:180$533 ($sub).
+Removed top 23 bits (of 32) from port B of cell wire_mold_header_seq.$sub$wire_mold_header_seq.sv:180$533 ($sub).
+Removed top 22 bits (of 32) from port Y of cell wire_mold_header_seq.$sub$wire_mold_header_seq.sv:180$533 ($sub).
+Converting cell wire_mold_header_seq.$add$wire_mold_header_seq.sv:180$534 ($add) from unsigned to signed.
+Removed top 22 bits (of 32) from port A of cell wire_mold_header_seq.$add$wire_mold_header_seq.sv:180$534 ($add).
+Removed top 30 bits (of 32) from port B of cell wire_mold_header_seq.$add$wire_mold_header_seq.sv:180$534 ($add).
+Removed top 21 bits (of 32) from port Y of cell wire_mold_header_seq.$add$wire_mold_header_seq.sv:180$534 ($add).
+Converting cell wire_mold_header_seq.$sub$wire_mold_header_seq.sv:180$535 ($sub) from unsigned to signed.
+Removed top 21 bits (of 32) from port A of cell wire_mold_header_seq.$sub$wire_mold_header_seq.sv:180$535 ($sub).
+Removed top 27 bits (of 32) from port B of cell wire_mold_header_seq.$sub$wire_mold_header_seq.sv:180$535 ($sub).
+Removed top 20 bits (of 32) from port Y of cell wire_mold_header_seq.$sub$wire_mold_header_seq.sv:180$535 ($sub).
+Converting cell wire_mold_header_seq.$neg$wire_mold_header_seq.sv:180$540 ($neg) from signed to unsigned.
+Removed top 1 bits (of 33) from port A of cell wire_mold_header_seq.$neg$wire_mold_header_seq.sv:180$540 ($neg).
+Removed top 4 bits (of 5) from port B of cell wire_mold_header_seq.$add$wire_mold_header_seq.sv:181$543 ($add).
+Removed top 1 bits (of 3) from port B of cell wire_mold_header_seq.$procmux$2616_CMP0 ($eq).
+Removed top 2 bits (of 3) from mux cell wire_mold_header_seq.$procmux$2802 ($mux).
+Removed top 2 bits (of 3) from mux cell wire_mold_header_seq.$procmux$2844 ($mux).
+Removed top 2 bits (of 3) from wire wire_mold_header_seq.$procmux$2802_Y.
+Removed top 2 bits (of 3) from wire wire_mold_header_seq.$procmux$2826_Y.
+Removed top 23 bits (of 32) from wire wire_mold_header_seq.$mul$wire_mold_header_seq.sv:180$532_Y.
+Removed top 15 bits (of 16) from port B of cell wire_mold_message_framer.$add$wire_mold_message_framer.sv:86$450 ($add).
+Removed top 2 bits (of 4) from port B of cell wire_mold_message_framer.$eq$wire_mold_message_framer.sv:96$462 ($eq).
+Removed top 48 bits (of 64) from port B of cell wire_mold_message_framer.$add$wire_mold_message_framer.sv:97$463 ($add).
+Removed top 1 bits (of 4) from port B of cell wire_mold_message_framer.$eq$wire_mold_message_framer.sv:134$475 ($eq).
+Removed top 15 bits (of 16) from port B of cell wire_mold_message_framer.$eq$wire_mold_message_framer.sv:223$479 ($eq).
+Removed top 15 bits (of 16) from port B of cell wire_mold_message_framer.$sub$wire_mold_message_framer.sv:239$482 ($sub).
+Removed top 1 bits (of 4) from port B of cell wire_mold_message_framer.$eq$wire_mold_message_framer.sv:260$483 ($eq).
+Removed top 1 bits (of 3) from mux cell wire_mold_message_framer.$procmux$3022 ($mux).
+Removed top 1 bits (of 3) from mux cell wire_mold_message_framer.$procmux$3026 ($mux).
+Removed top 1 bits (of 3) from mux cell wire_mold_message_framer.$procmux$3028 ($mux).
+Removed top 1 bits (of 3) from port B of cell wire_mold_message_framer.$procmux$3126_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell wire_mold_message_framer.$procmux$3127_CMP0 ($eq).
+Removed top 1 bits (of 4) from mux cell wire_mold_message_framer.$procmux$3138 ($mux).
+Removed top 1 bits (of 4) from port B of cell wire_mold_message_framer.$procmux$3158_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell wire_mold_message_framer.$procmux$3164_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell wire_mold_message_framer.$procmux$3165_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell wire_mold_message_framer.$procmux$3169_CMP0 ($eq).
+Removed top 1 bits (of 4) from wire wire_mold_message_framer.$procmux$3138_Y.
+Removed top 1 bits (of 3) from wire wire_mold_message_framer.$procmux$3028_Y.
+Removed top 1 bits (of 3) from wire wire_mold_message_framer.$procmux$3026_Y.
+Removed top 1 bits (of 3) from wire wire_mold_message_framer.$procmux$3022_Y.
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:84$428 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:84$427 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:84$426 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:84$425 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:84$424 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:84$423 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:84$422 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:84$421 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:87$420 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:87$419 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:87$418 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:87$417 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:88$416 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:88$415 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:88$414 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:88$413 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:87$412 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:87$411 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:87$410 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:87$409 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:88$408 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:88$407 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:88$406 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:88$405 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:217$349 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:84$343 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:81$273 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:81$272 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:91$252 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:91$251 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:91$250 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:92$249 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:92$248 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$wire_itch_decoder.sv:92$247 (bytes_q).
+Removed top 26 bits (of 32) from port B of cell wire_itch_decoder.$lt$wire_itch_decoder.sv:167$199 ($lt).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:169$204 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:169$205 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:169$207 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:170$209 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:170$211 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:170$213 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:171$215 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:171$217 ($ne).
+Removed top 10 bits (of 16) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:176$221 ($ne).
+Removed top 10 bits (of 16) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:177$224 ($ne).
+Removed top 11 bits (of 16) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:178$227 ($ne).
+Removed top 11 bits (of 16) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:179$230 ($ne).
+Removed top 11 bits (of 16) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:180$233 ($ne).
+Removed top 10 bits (of 16) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:181$236 ($ne).
+Removed top 10 bits (of 16) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:182$239 ($ne).
+Removed top 10 bits (of 16) from port A of cell wire_itch_decoder.$add$wire_itch_decoder.sv:190$242 ($add).
+Removed top 15 bits (of 16) from port B of cell wire_itch_decoder.$add$wire_itch_decoder.sv:190$242 ($add).
+Removed top 9 bits (of 16) from port Y of cell wire_itch_decoder.$add$wire_itch_decoder.sv:190$242 ($add).
+Removed top 9 bits (of 16) from port A of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:190$243 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$eq$wire_itch_decoder.sv:204$256 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$eq$wire_itch_decoder.sv:206$290 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$eq$wire_itch_decoder.sv:206$292 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:209$323 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$wire_itch_decoder.sv:209$325 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$eq$wire_itch_decoder.sv:213$348 ($eq).
+Removed top 10 bits (of 16) from mux cell wire_itch_decoder.$procmux$3192 ($pmux).
+Removed top 2 bits (of 3) from port B of cell wire_itch_decoder.$procmux$4341_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4615_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4616_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4617_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4618_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell wire_itch_decoder.$procmux$4635_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4673_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4924_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4929_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4934_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4939_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4944_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4949_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4954_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$4954_CMP1 ($eq).
+Removed top 1 bits (of 3) from port B of cell wire_itch_decoder.$procmux$5149_CMP0 ($eq).
+Removed top 1 bits (of 3) from mux cell wire_itch_decoder.$procmux$5151 ($mux).
+Removed top 1 bits (of 3) from wire wire_itch_decoder.$procmux$5151_Y.
+Removed top 9 bits (of 16) from wire wire_itch_decoder.$add$wire_itch_decoder.sv:190$242_Y.
+Removed top 10 bits (of 16) from wire wire_itch_decoder.required_length$func$wire_itch_decoder.sv:112$90.$result.
+Removed top 2 bits (of 4) from mux cell wire_arch_a_parser_top.$procmux$5322 ($mux).
+Removed top 2 bits (of 4) from mux cell wire_arch_a_parser_top.$procmux$5325 ($mux).
+Removed top 1 bits (of 4) from mux cell wire_arch_a_parser_top.$procmux$5328 ($mux).
+Removed top 1 bits (of 4) from mux cell wire_arch_a_parser_top.$procmux$5331 ($mux).
+Removed top 1 bits (of 4) from mux cell wire_arch_a_parser_top.$procmux$5334 ($mux).
+Removed top 1 bits (of 4) from wire wire_arch_a_parser_top.$procmux$5331_Y.
+Removed top 2 bits (of 4) from wire wire_arch_a_parser_top.$procmux$5322_Y.
+Removed top 1 bits (of 4) from wire wire_arch_a_parser_top.$procmux$5328_Y.
+Removed top 1 bits (of 4) from wire wire_arch_a_parser_top.$procmux$5334_Y.
+Removed top 2 bits (of 4) from wire wire_arch_a_parser_top.$procmux$5325_Y.
+Removed top 28 address bits (of 32) from memory init port wire_arch_a_parser_late_suffix.$auto$mem.cc:351:emit$834 ($auto$proc_rom.cc:155:do_switch$832).
+Removed top 3 bits (of 64) from port B of cell wire_arch_a_parser_late_suffix.$eq$wire_arch_a_parser_late_suffix.sv:89$24 ($eq).
+Removed top 1 bits (of 2) from port B of cell wire_arch_a_parser_late_suffix.$eq$wire_arch_a_parser_late_suffix.sv:90$25 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_arch_a_parser_late_suffix.$eq$wire_arch_a_parser_late_suffix.sv:91$28 ($eq).
+Removed top 3 bits (of 64) from port B of cell wire_arch_a_parser_late_suffix.$eq$wire_arch_a_parser_late_suffix.sv:92$31 ($eq).
+Removed top 3 bits (of 64) from port B of cell wire_arch_a_parser_late_suffix.$eq$wire_arch_a_parser_late_suffix.sv:102$41 ($eq).
+
+11.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_ingress_buffer..
+Finding unused cells or wires in module \wire_gearbox_64to8..
+Finding unused cells or wires in module \wire_eth_parser..
+Finding unused cells or wires in module \wire_ipv4_parser..
+Finding unused cells or wires in module \wire_udp_parser..
+Finding unused cells or wires in module \wire_mold_header_seq..
+Finding unused cells or wires in module \wire_mold_message_framer..
+Finding unused cells or wires in module \wire_itch_decoder..
+Finding unused cells or wires in module \wire_arch_a_parser_top..
+Finding unused cells or wires in module \wire_arch_a_parser_late_suffix..
+Removed 0 unused cells and 26 unused wires.
+<suppressed ~8 debug messages>
+
+11.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+11.12. Executing OPT pass (performing simple optimizations).
+
+11.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_ingress_buffer.
+Optimizing module wire_gearbox_64to8.
+Optimizing module wire_eth_parser.
+Optimizing module wire_ipv4_parser.
+Optimizing module wire_udp_parser.
+Optimizing module wire_mold_header_seq.
+Optimizing module wire_mold_message_framer.
+Optimizing module wire_itch_decoder.
+Optimizing module wire_arch_a_parser_top.
+Optimizing module wire_arch_a_parser_late_suffix.
+
+11.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_ingress_buffer'.
+Computing hashes of 33 cells of `\wire_ingress_buffer'.
+Finding duplicate cells in `\wire_ingress_buffer'.
+Finding identical cells in module `\wire_gearbox_64to8'.
+Computing hashes of 44 cells of `\wire_gearbox_64to8'.
+Finding duplicate cells in `\wire_gearbox_64to8'.
+Finding identical cells in module `\wire_eth_parser'.
+Computing hashes of 82 cells of `\wire_eth_parser'.
+Finding duplicate cells in `\wire_eth_parser'.
+Finding identical cells in module `\wire_ipv4_parser'.
+Computing hashes of 161 cells of `\wire_ipv4_parser'.
+Finding duplicate cells in `\wire_ipv4_parser'.
+Finding identical cells in module `\wire_udp_parser'.
+Computing hashes of 179 cells of `\wire_udp_parser'.
+Finding duplicate cells in `\wire_udp_parser'.
+Finding identical cells in module `\wire_mold_header_seq'.
+Computing hashes of 204 cells of `\wire_mold_header_seq'.
+Finding duplicate cells in `\wire_mold_header_seq'.
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 176 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 321 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Finding identical cells in module `\wire_arch_a_parser_top'.
+Computing hashes of 49 cells of `\wire_arch_a_parser_top'.
+Finding duplicate cells in `\wire_arch_a_parser_top'.
+Finding identical cells in module `\wire_arch_a_parser_late_suffix'.
+Computing hashes of 60 cells of `\wire_arch_a_parser_late_suffix'.
+Finding duplicate cells in `\wire_arch_a_parser_late_suffix'.
+Removed a total of 0 cells.
+
+11.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_ingress_buffer..
+Finding unused cells or wires in module \wire_gearbox_64to8..
+Finding unused cells or wires in module \wire_eth_parser..
+Finding unused cells or wires in module \wire_ipv4_parser..
+Finding unused cells or wires in module \wire_udp_parser..
+Finding unused cells or wires in module \wire_mold_header_seq..
+Finding unused cells or wires in module \wire_mold_message_framer..
+Finding unused cells or wires in module \wire_itch_decoder..
+Finding unused cells or wires in module \wire_arch_a_parser_top..
+Finding unused cells or wires in module \wire_arch_a_parser_late_suffix..
+
+11.12.4. Finished fast OPT passes.
+
+11.13. Executing SORT pass.
+
+11.14. Printing statistics.
+
+=== wire_arch_a_parser_late_suffix ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       86 wires
+      598 wire bits
+       46 public wires
+      530 public wire bits
+        2 ports
+        2 port bits
+       59 cells
+        3   $add
+       12   $check
+        4   $dff
+       10   $eq
+        1   $initstate
+        3   $logic_and
+        3   $logic_not
+        1   $lt
+        1   $mem_v2
+       21   $mux
+        1 submodules
+        1   wire_arch_a_parser_top
+
+=== wire_arch_a_parser_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      148 wires
+     1240 wire bits
+      116 public wires
+     1187 public wire bits
+       51 ports
+      786 port bits
+       41 cells
+        3   $dff
+       15   $logic_and
+        3   $logic_not
+        8   $logic_or
+       11   $mux
+        1   $or
+        8 submodules
+        1   wire_eth_parser
+        1   wire_gearbox_64to8
+        1   wire_ingress_buffer
+        1   wire_ipv4_parser
+        1   wire_itch_decoder
+        1   wire_mold_header_seq
+        1   wire_mold_message_framer
+        1   wire_udp_parser
+
+=== wire_eth_parser ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       93 wires
+      230 wire bits
+       24 public wires
+       58 public wire bits
+       14 ports
+       29 port bits
+       82 cells
+        1   $add
+        8   $dff
+        6   $eq
+        8   $logic_and
+        3   $logic_not
+        3   $logic_or
+        1   $lt
+       48   $mux
+        4   $pmux
+
+=== wire_gearbox_64to8 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       53 wires
+      391 wire bits
+       18 public wires
+      163 public wire bits
+       11 ports
+       88 port bits
+       44 cells
+        2   $add
+        5   $dff
+        9   $eq
+        5   $logic_and
+        1   $logic_not
+        1   $logic_or
+        1   $mul
+       17   $mux
+        1   $pmux
+        1   $shiftx
+        1   $sub
+
+=== wire_ingress_buffer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       40 wires
+      451 wire bits
+       17 public wires
+      158 public wire bits
+       12 ports
+      152 port bits
+       33 cells
+        3   $add
+        3   $dff
+        2   $eq
+        2   $logic_and
+        1   $logic_or
+        3   $mem_v2
+       15   $mux
+        1   $ne
+        1   $pmux
+        1   $reduce_bool
+        1   $sub
+
+=== wire_ipv4_parser ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      180 wires
+     3136 wire bits
+       35 public wires
+      821 public wire bits
+       15 ports
+       63 port bits
+      161 cells
+       13   $add
+        1   $and
+       10   $dff
+       13   $eq
+        1   $gt
+        9   $logic_and
+        3   $logic_not
+        9   $logic_or
+        2   $lt
+        1   $mul
+       80   $mux
+        4   $ne
+        1   $neg
+        1   $not
+        1   $or
+        4   $pmux
+        2   $reduce_bool
+        2   $shift
+        4   $sub
+
+=== wire_itch_decoder ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      389 wires
+     3818 wire bits
+       69 public wires
+     1062 public wire bits
+       38 ports
+      525 port bits
+      321 cells
+        2   $add
+       25   $dff
+       22   $eq
+       16   $logic_and
+        6   $logic_not
+        7   $logic_or
+        1   $lt
+        1   $mem_v2
+      203   $mux
+       21   $ne
+       12   $pmux
+        1   $reduce_bool
+        4   $reduce_or
+
+=== wire_mold_header_seq ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      231 wires
+     3988 wire bits
+       55 public wires
+     1058 public wire bits
+       28 ports
+      327 port bits
+      204 cells
+        3   $add
+        1   $and
+       18   $dff
+        5   $eq
+       11   $logic_and
+        4   $logic_not
+        4   $logic_or
+        1   $lt
+        1   $mul
+      140   $mux
+        4   $ne
+        1   $neg
+        1   $not
+        1   $or
+        5   $pmux
+        2   $shift
+        2   $sub
+
+=== wire_mold_message_framer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      196 wires
+     1049 wire bits
+       51 public wires
+      380 public wire bits
+       28 ports
+      199 port bits
+      176 cells
+        2   $add
+       16   $dff
+       13   $eq
+       13   $logic_and
+        6   $logic_not
+        8   $logic_or
+      109   $mux
+        5   $pmux
+        3   $reduce_or
+        1   $sub
+
+=== wire_udp_parser ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      195 wires
+     1698 wire bits
+       36 public wires
+      290 public wire bits
+       15 ports
+       46 port bits
+      179 cells
+        3   $add
+        1   $and
+       13   $dff
+        5   $eq
+        1   $gt
+        9   $logic_and
+        3   $logic_not
+        4   $logic_or
+        2   $lt
+        1   $mul
+      118   $mux
+        2   $ne
+        1   $neg
+        1   $not
+        1   $or
+        7   $pmux
+        1   $reduce_bool
+        2   $shift
+        4   $sub
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+     1300 wire_arch_a_parser_late_suffix
+       41 wire_arch_a_parser_top
+       82   wire_eth_parser
+       44   wire_gearbox_64to8
+       33   wire_ingress_buffer
+      161   wire_ipv4_parser
+      321   wire_itch_decoder
+      204   wire_mold_header_seq
+      176   wire_mold_message_framer
+      179   wire_udp_parser
+
+        +----------Count including submodules.
+        | 
+     1611 wires
+    16599 wire bits
+      467 public wires
+     5707 public wire bits
+      214 ports
+     2217 port bits
+        - memories
+        - memory bits
+        - processes
+     1300 cells
+       32   $add
+        3   $and
+       12   $check
+      105   $dff
+       85   $eq
+        2   $gt
+        1   $initstate
+       91   $logic_and
+       32   $logic_not
+       45   $logic_or
+        8   $lt
+        5   $mem_v2
+        4   $mul
+      762   $mux
+       32   $ne
+        3   $neg
+        3   $not
+        4   $or
+       39   $pmux
+        5   $reduce_bool
+        7   $reduce_or
+        6   $shift
+        1   $shiftx
+       13   $sub
+        1 submodules
+        1   wire_arch_a_parser_top
+
+11.15. Executing CHECK pass (checking for obvious problems).
+Checking module wire_arch_a_parser_late_suffix...
+Checking module wire_arch_a_parser_top...
+Checking module wire_eth_parser...
+Checking module wire_gearbox_64to8...
+Checking module wire_ingress_buffer...
+Checking module wire_ipv4_parser...
+Checking module wire_itch_decoder...
+Checking module wire_mold_header_seq...
+Checking module wire_mold_message_framer...
+Checking module wire_udp_parser...
+Found and reported 0 problems.
+
+12. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `wire_arch_a_parser_late_suffix'. Setting top module to wire_arch_a_parser_late_suffix.
+
+12.1. Analyzing design hierarchy..
+Top module:  \wire_arch_a_parser_late_suffix
+Used module:     \wire_arch_a_parser_top
+Used module:         \wire_eth_parser
+Used module:         \wire_mold_message_framer
+Used module:         \wire_gearbox_64to8
+Used module:         \wire_ingress_buffer
+Used module:         \wire_ipv4_parser
+Used module:         \wire_itch_decoder
+Used module:         \wire_mold_header_seq
+Used module:         \wire_udp_parser
+
+12.2. Analyzing design hierarchy..
+Top module:  \wire_arch_a_parser_late_suffix
+Used module:     \wire_arch_a_parser_top
+Used module:         \wire_eth_parser
+Used module:         \wire_mold_message_framer
+Used module:         \wire_gearbox_64to8
+Used module:         \wire_ingress_buffer
+Used module:         \wire_ipv4_parser
+Used module:         \wire_itch_decoder
+Used module:         \wire_mold_header_seq
+Used module:         \wire_udp_parser
+Removed 0 unused modules.
+Module wire_arch_a_parser_late_suffix directly or indirectly contains formal properties -> setting "keep" attribute.
+
+13. Executing jny backend.
+
+14. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: b52a255e24, time: 0.33s, user: 0.31s, system: 0.03s, MEM: 56.19 MB peak
+Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+Time spent: 18% 2x check (0 sec), 15% 6x opt_clean (0 sec), ...

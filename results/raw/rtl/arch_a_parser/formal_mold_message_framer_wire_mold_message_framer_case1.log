@@ -1,0 +1,70 @@
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] Removing directory '/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1'.
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] Copy '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/../../rtl/arch_a/wire_mold_message_framer.sv' to '/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1/src/wire_mold_message_framer.sv'.
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] Copy '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/wire_mold_message_framer_vectors.sv' to '/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1/src/wire_mold_message_framer_vectors.sv'.
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: smtbmc yices
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] base: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] base: Warning: Wire mold_framer_vector.\clk is used but has no driver.
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] base: finished (returncode=0)
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] prep: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1/model; yosys -ql design_prep.log design_prep.ys"
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] prep: Warning: Wire mold_framer_vector.\clk is used but has no driver.
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] prep: finished (returncode=0)
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] smt2: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] smt2: finished (returncode=0)
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1; yosys-smtbmc -s yices --presat --unroll --noprogress -t 24  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Solver: yices
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 20..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 20..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 21..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 21..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 22..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 22..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assumptions in step 23..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Checking assertions in step 23..
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: ##   0:00:00  Status: passed
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: finished (returncode=0)
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] engine_0: Status returned by engine: pass
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] summary: engine_0 (smtbmc yices) returned pass
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] summary: engine_0 did not produce any traces
+SBY 23:47:04 [/tmp/wire022-formal-regressions.5hzp7m/mold_message_framer_wire_mold_message_framer_case1] DONE (PASS, rc=0)

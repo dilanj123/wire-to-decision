@@ -1,0 +1,22 @@
+[options]
+mode bmc
+depth 20
+
+[engines]
+smtbmc yices
+
+[script]
+read -formal -sv wire_ingress_buffer.sv wire_gearbox_64to8.sv wire_eth_parser.sv wire_ipv4_parser.sv wire_udp_parser.sv wire_mold_header_seq.sv wire_mold_message_framer.sv wire_itch_decoder.sv wire_arch_a_parser_top.sv wire_arch_a_parser_safety.sv
+prep -top wire_arch_a_parser_safety
+
+[files]
+rtl/common/wire_ingress_buffer.sv
+rtl/arch_a/wire_gearbox_64to8.sv
+rtl/arch_a/wire_eth_parser.sv
+rtl/arch_a/wire_ipv4_parser.sv
+rtl/arch_a/wire_udp_parser.sv
+rtl/arch_a/wire_mold_header_seq.sv
+rtl/arch_a/wire_mold_message_framer.sv
+rtl/arch_a/wire_itch_decoder.sv
+rtl/arch_a/wire_arch_a_parser_top.sv
+formal/arch_a_parser/wire_arch_a_parser_safety.sv

@@ -9,6 +9,7 @@
 - Rationale: These controls are supported by the inspected RTL-to-Pixels workflow and strengthened by later repository references.
 - Status: ADOPTED
 
+
 ## WIRE-D011 — Freeze Phase-2 single-clock RTL reset convention
 
 - Date: 2026-09-28
@@ -160,4 +161,16 @@
 - Decision: Encode event kinds as `0 ADD`, `1 EXECUTE`, `2 EXECUTE_WITH_PRICE`, `3 CANCEL`, `4 DELETE`, and `5 REPLACE`. Encode side as `0 BUY/B`, `1 SELL/S`. Preserve source type as the original ASCII byte and provide individual validity outputs for old reference, new reference, quantity, price, and side; invalid values are deterministic zero where practical.
 - Decision: An event may assert valid only after the corresponding WIRE-D016 complete-message boundary has transferred. A semantic failure latches decoder recovery, preserves the first local fatal reason, suppresses later events, and drains the current and subsequent framed ITCH messages without changing WIRE-020 structural packet success. Reset/re-arm clears decoder-local recovery and partial-message state.
 - Consequences: WIRE-020 structural success and WIRE-019 sequence commit remain independent of ITCH semantic support. This is stage-local decoder recovery, not global `book_valid`, order-state commit, or decision gating. Tracked-locate and symbol configuration are captured on reset/re-arm and must be stable for the active configuration epoch.
+- Status: ADOPTED
+
+## WIRE-D018 — Freeze parser-wide fatal recovery and external-frame drain
+
+- Date: 2026-09-30
+- Source: WIRE-022 complete Architecture-A parser integration
+- Context: Stage-local fail-closed behavior must compose without deadlocking a post-MAC frame already entering the two-beat buffer when a downstream fatal result becomes known.
+- Decision: A fatal parser condition immediately suppresses new mutation events and latches parser recovery. If the external Ethernet frame whose first beat was accepted is still open, the top may accept/backpressure-control only the remaining beats through that frame's accepted `rx_last`. Once the frame closes—or if it was already closed when recovery became known—no next frame is accepted until explicit parser-wide rearm or reset.
+- Decision: Nonfatal Ethernet/IPv4/UDP profile filters remain non-recovery outcomes. Mold structural failures, Mold header/sequence recovery, and ITCH semantic recovery latch parser-wide recovery. ITCH semantic failure does not alter WIRE-020 structural packet-result semantics.
+- Decision: Events from earlier complete Mold messages that already handshook remain committed at the parser/event boundary if a later suffix fails; there is no rollback transaction. The incomplete/failing message and later semantic messages produce no events after fatal recovery is detected.
+- Decision: Parser-wide rearm synchronously clears parser-stage transient and recovery state and captures the configured parser epoch. Rearm does not perform hidden protocol recovery.
+- Consequence: This defines parser/event-boundary behavior only. It does not implement or assert `book_valid`, order-state rollback, or decision suppression beyond the event interface.
 - Status: ADOPTED

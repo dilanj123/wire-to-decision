@@ -1,0 +1,41 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_arch_a_parser COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_a_parser_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1790808572
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_full_ingress_all_mutation_mappings_and_python_crosscheck (1/6)
+ 13090.00ns INFO     cocotb.regression                  test_arch_a_parser.test_full_ingress_all_mutation_mappings_and_python_crosscheck passed
+ 13090.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_filters_heartbeat_multi_message_and_reuse (2/6)
+ 24030.00ns INFO     cocotb.regression                  test_arch_a_parser.test_filters_heartbeat_multi_message_and_reuse passed
+ 24030.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_late_structural_suffix_and_itch_quarantine (3/6)
+ 30540.00ns INFO     cocotb.regression                  test_arch_a_parser.test_late_structural_suffix_and_itch_quarantine passed
+ 30540.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_semantic_and_outer_fatal_recovery_rearm (4/6)
+ 42030.00ns INFO     cocotb.regression                  test_arch_a_parser.test_semantic_and_outer_fatal_recovery_rearm passed
+ 42030.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_mold_header_eos_and_trailing_recovery (5/6)
+ 46250.00ns INFO     cocotb.regression                  test_arch_a_parser.test_mold_header_eos_and_trailing_recovery passed
+ 46250.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_random_replayable_frames_and_fail_closed_rearm (6/6)
+WIRE022_VECTOR seed=1 messages=4 malformed=wrong_length frame_hex=0201020304050a0b0c0d0e0f08004510005545674000401108c5c0000221c6336407beef12340041000057324454455354303031102030405060708400010023412345ab0101020304050111223344556677014210203041414c504820202020506070
+WIRE022_VECTOR seed=7 messages=4 malformed=wrong_length frame_hex=0201020304050a0b0c0d0e0f08004510005545674000401108c5c0000221c6336407beef12340041000057324454455354303031102030405060708400010023412345ab0701020304050711223344556677074210203047414c504820202020506070
+WIRE022_VECTOR seed=19 messages=4 malformed=wrong_length frame_hex=0201020304050a0b0c0d0e0f08004510005545674000401108c5c0000221c6336407beef12340041000057324454455354303031102030405060708400010023412345ab1301020304051311223344556677134210203053414c504820202020506070
+WIRE022_VECTOR seed=42 messages=4 malformed=wrong_length frame_hex=0201020304050a0b0c0d0e0f08004510005545674000401108c5c0000221c6336407beef12340041000057324454455354303031102030405060708400010023412345ab2a01020304052a112233445566772a421020306a414c504820202020506070
+WIRE022_VECTOR seed=97 messages=4 malformed=wrong_length frame_hex=0201020304050a0b0c0d0e0f08004510005545674000401108c5c0000221c6336407beef12340041000057324454455354303031102030405060708400010023412345ab61010203040561112233445566776142102030a1414c504820202020506070
+ 92160.01ns INFO     cocotb.regression                  test_arch_a_parser.test_random_replayable_frames_and_fail_closed_rearm passed
+ 92160.01ns INFO     cocotb.regression                  ******************************************************************************************************************************************
+                                                        ** TEST                                                                              STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ******************************************************************************************************************************************
+                                                        ** test_arch_a_parser.test_full_ingress_all_mutation_mappings_and_python_crosscheck   PASS       13090.00           0.04     320267.39  **
+                                                        ** test_arch_a_parser.test_filters_heartbeat_multi_message_and_reuse                  PASS       10940.00           0.03     332509.79  **
+                                                        ** test_arch_a_parser.test_late_structural_suffix_and_itch_quarantine                 PASS        6510.00           0.02     321988.17  **
+                                                        ** test_arch_a_parser.test_semantic_and_outer_fatal_recovery_rearm                    PASS       11490.00           0.04     322265.52  **
+                                                        ** test_arch_a_parser.test_mold_header_eos_and_trailing_recovery                      PASS        4220.00           0.01     314380.97  **
+                                                        ** test_arch_a_parser.test_random_replayable_frames_and_fail_closed_rearm             PASS       45910.00           0.14     320965.19  **
+                                                        ******************************************************************************************************************************************
+                                                        ** TESTS=6 PASS=6 FAIL=0 SKIP=0                                                                  92160.01           0.30     311118.06  **
+                                                        ******************************************************************************************************************************************
+- :0: Verilog $finish

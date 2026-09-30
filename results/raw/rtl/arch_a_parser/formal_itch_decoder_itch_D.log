@@ -1,0 +1,84 @@
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] Removing directory '/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D'.
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] Copy '/Users/Dilan/Projects/wire-to-decision/formal/itch_decoder/../../rtl/arch_a/wire_itch_decoder.sv' to '/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D/src/wire_itch_decoder.sv'.
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] Copy '/Users/Dilan/Projects/wire-to-decision/formal/itch_decoder/itch_fixed_case.sv' to '/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D/src/itch_fixed_case.sv'.
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: smtbmc yices
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] base: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] base: Warning: Wire itch_fixed_case.\clk is used but has no driver.
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] base: finished (returncode=0)
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] prep: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D/model; yosys -ql design_prep.log design_prep.ys"
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] prep: Warning: Wire itch_fixed_case.\clk is used but has no driver.
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] prep: finished (returncode=0)
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] smt2: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] smt2: finished (returncode=0)
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D; yosys-smtbmc -s yices --presat --unroll --noprogress -t 31  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Solver: yices
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 23:47:12 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 20..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 20..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 21..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 21..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 22..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 22..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 23..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 23..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 24..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 24..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 25..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 25..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 26..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 26..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 27..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 27..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 28..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 28..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 29..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 29..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assumptions in step 30..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Checking assertions in step 30..
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: ##   0:00:00  Status: passed
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: finished (returncode=0)
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] engine_0: Status returned by engine: pass
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] summary: engine_0 (smtbmc yices) returned pass
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] summary: engine_0 did not produce any traces
+SBY 23:47:13 [/tmp/wire022-formal-regressions.5hzp7m/itch_decoder_itch_D] DONE (PASS, rc=0)

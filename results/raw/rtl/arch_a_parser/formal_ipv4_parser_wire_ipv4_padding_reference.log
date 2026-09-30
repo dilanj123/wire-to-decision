@@ -1,0 +1,104 @@
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] Removing directory '/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference'.
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] Copy '/Users/Dilan/Projects/wire-to-decision/formal/ipv4_parser/wire_ipv4_parser_decomposed.sv' to '/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference/src/wire_ipv4_parser_decomposed.sv'.
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] Copy '/Users/Dilan/Projects/wire-to-decision/formal/ipv4_parser/../../rtl/arch_a/wire_ipv4_parser.sv' to '/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference/src/wire_ipv4_parser.sv'.
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: smtbmc yices
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] base: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] base: Warning: Wire ipv4_padding_correspondence.\rst is used but has no driver.
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] base: Warning: Wire ipv4_padding_correspondence.\clk is used but has no driver.
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] base: finished (returncode=0)
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] prep: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference/model; yosys -ql design_prep.log design_prep.ys"
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] prep: Warning: Wire ipv4_padding_correspondence.\clk is used but has no driver.
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] prep: Warning: Wire ipv4_padding_correspondence.\rst is used but has no driver.
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] prep: finished (returncode=0)
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] smt2: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] smt2: finished (returncode=0)
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: starting process "cd /tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference; yosys-smtbmc -s yices --presat --unroll --noprogress -t 40  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Solver: yices
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY 23:46:25 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 20..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 20..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 21..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 21..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 22..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 22..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 23..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 23..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 24..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 24..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 25..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 25..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assumptions in step 26..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:00  Checking assertions in step 26..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:01  Checking assumptions in step 27..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:01  Checking assertions in step 27..
+SBY 23:46:26 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:01  Checking assumptions in step 28..
+SBY 23:46:27 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:01  Checking assertions in step 28..
+SBY 23:46:27 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:01  Checking assumptions in step 29..
+SBY 23:46:27 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:01  Checking assertions in step 29..
+SBY 23:46:27 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:01  Checking assumptions in step 30..
+SBY 23:46:27 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:01  Checking assertions in step 30..
+SBY 23:46:27 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:02  Checking assumptions in step 31..
+SBY 23:46:27 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:02  Checking assertions in step 31..
+SBY 23:46:28 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:02  Checking assumptions in step 32..
+SBY 23:46:28 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:02  Checking assertions in step 32..
+SBY 23:46:28 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:02  Checking assumptions in step 33..
+SBY 23:46:28 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:02  Checking assertions in step 33..
+SBY 23:46:28 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:03  Checking assumptions in step 34..
+SBY 23:46:29 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:03  Checking assertions in step 34..
+SBY 23:46:29 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:03  Checking assumptions in step 35..
+SBY 23:46:29 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:03  Checking assertions in step 35..
+SBY 23:46:30 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:04  Checking assumptions in step 36..
+SBY 23:46:30 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:04  Checking assertions in step 36..
+SBY 23:46:30 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:05  Checking assumptions in step 37..
+SBY 23:46:30 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:05  Checking assertions in step 37..
+SBY 23:46:31 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:05  Checking assumptions in step 38..
+SBY 23:46:31 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:05  Checking assertions in step 38..
+SBY 23:46:32 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:06  Checking assumptions in step 39..
+SBY 23:46:32 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:06  Checking assertions in step 39..
+SBY 23:46:32 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: ##   0:00:07  Status: passed
+SBY 23:46:32 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: finished (returncode=0)
+SBY 23:46:32 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] engine_0: Status returned by engine: pass
+SBY 23:46:32 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:07 (7)
+SBY 23:46:32 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:07 (7)
+SBY 23:46:32 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] summary: engine_0 (smtbmc yices) returned pass
+SBY 23:46:32 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] summary: engine_0 did not produce any traces
+SBY 23:46:32 [/tmp/wire022-formal-regressions.5hzp7m/ipv4_parser_wire_ipv4_padding_reference] DONE (PASS, rc=0)

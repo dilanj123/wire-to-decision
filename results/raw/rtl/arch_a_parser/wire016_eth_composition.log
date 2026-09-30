@@ -1,0 +1,23 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile.composition results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_eth_composition COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_buffer_gearbox_eth_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1790808140
+     0.00ns ERROR    gpi                                VPI: Couldn't find root handle wire_buffer_gearbox_eth_top
+     0.00ns ERROR    gpi                                VPI: Toplevel instances: wire_buffer_gearbox_eth_top != wire_eth_parser...
+     0.00ns ERROR    gpi                                No root handle found
+Traceback (most recent call last):
+  File "/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/pygpi/entry.py", line 44, in load_entry
+    entry_func(argv)
+  File "/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/_init.py", line 88, in init_package_from_simulation
+    _setup_root_handle()
+  File "/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/_init.py", line 264, in _setup_root_handle
+    raise RuntimeError(f"Can not find root handle {root_name!r}")
+RuntimeError: Can not find root handle 'wire_buffer_gearbox_eth_top'
+- :0: Verilog $finish
+make[1]: *** [results.xml] Error 1
+make: *** [sim] Error 2

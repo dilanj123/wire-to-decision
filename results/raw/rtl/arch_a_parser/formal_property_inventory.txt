@@ -1,0 +1,21 @@
+WIRE-022 integration formal inventory
+
+Top safety job
+  Harness: formal/arch_a_parser/wire_arch_a_parser_safety.sv
+  SBY 0.69; mode bmc; depth 20; engine smtbmc yices; Yices 2.7.0
+  Assumptions: reset in initial state; upstream holds valid/data/keep/last after backpressure. Configuration is fixed by the harness. event_ready unconstrained.
+  Result: PASS (bounded depth 20)
+  Checks: event tuple stall stability; recovery suppresses event_valid; after current external frame closes while in recovery, rx_ready stays low; rearm clears parser recovery/invalid state.
+  Reference uses public top ports only; DUT-private state: NO.
+
+Full-top late malformed suffix
+  Harness: formal/arch_a_parser/wire_arch_a_parser_late_suffix.sv
+  SBY 0.69; mode bmc; depth 270; engine smtbmc yices; fixed packet vector.
+  Result: solver-bound/interrupted after approximately 2:06 while checking step 69; no counterexample observed. NOT PASS, NOT FAIL.
+  End-to-end same scenario passes cocotb. Decomposed framing/sequence/event properties are covered by rerun WIRE-019/020/021 local jobs; this does not imply a full-stack proof.
+
+Regression of prior SBY groups
+  68 previously established WIRE-014..021 formal jobs rerun PASS.
+  Historical WIRE-017 monolithic IPv4 reference BMC remains solver-bound per WIRE-017A and is not counted among the passing jobs.
+
+No cover from these integration harnesses is claimed.

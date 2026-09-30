@@ -1,0 +1,160 @@
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Removing directory '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Copy '/Users/Dilan/Projects/wire-to-decision/rtl/common/wire_ingress_buffer.sv' to '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix/src/wire_ingress_buffer.sv'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Copy '/Users/Dilan/Projects/wire-to-decision/rtl/arch_a/wire_gearbox_64to8.sv' to '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix/src/wire_gearbox_64to8.sv'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Copy '/Users/Dilan/Projects/wire-to-decision/rtl/arch_a/wire_eth_parser.sv' to '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix/src/wire_eth_parser.sv'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Copy '/Users/Dilan/Projects/wire-to-decision/rtl/arch_a/wire_ipv4_parser.sv' to '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix/src/wire_ipv4_parser.sv'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Copy '/Users/Dilan/Projects/wire-to-decision/rtl/arch_a/wire_udp_parser.sv' to '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix/src/wire_udp_parser.sv'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Copy '/Users/Dilan/Projects/wire-to-decision/rtl/arch_a/wire_mold_header_seq.sv' to '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix/src/wire_mold_header_seq.sv'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Copy '/Users/Dilan/Projects/wire-to-decision/rtl/arch_a/wire_mold_message_framer.sv' to '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix/src/wire_mold_message_framer.sv'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Copy '/Users/Dilan/Projects/wire-to-decision/rtl/arch_a/wire_itch_decoder.sv' to '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix/src/wire_itch_decoder.sv'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Copy '/Users/Dilan/Projects/wire-to-decision/rtl/arch_a/wire_arch_a_parser_top.sv' to '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix/src/wire_arch_a_parser_top.sv'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] Copy '/Users/Dilan/Projects/wire-to-decision/formal/arch_a_parser/wire_arch_a_parser_late_suffix.sv' to '/Users/Dilan/Projects/wire-to-decision/results/raw/rtl/arch_a_parser/formal_late_suffix/src/wire_arch_a_parser_late_suffix.sv'.
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: smtbmc yices
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] base: starting process "cd results/raw/rtl/arch_a_parser/formal_late_suffix/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] base: finished (returncode=0)
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] prep: starting process "cd results/raw/rtl/arch_a_parser/formal_late_suffix/model; yosys -ql design_prep.log design_prep.ys"
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] prep: finished (returncode=0)
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] smt2: starting process "cd results/raw/rtl/arch_a_parser/formal_late_suffix/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] smt2: finished (returncode=0)
+SBY 23:37:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: starting process "cd results/raw/rtl/arch_a_parser/formal_late_suffix; yosys-smtbmc -s yices --presat --unroll --noprogress -t 270  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Solver: yices
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 20..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 20..
+SBY 23:37:28 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assumptions in step 21..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:00  Checking assertions in step 21..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assumptions in step 22..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assertions in step 22..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assumptions in step 23..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assertions in step 23..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assumptions in step 24..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assertions in step 24..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assumptions in step 25..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assertions in step 25..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assumptions in step 26..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assertions in step 26..
+SBY 23:37:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:01  Checking assumptions in step 27..
+SBY 23:37:30 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:02  Checking assertions in step 27..
+SBY 23:37:30 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:02  Checking assumptions in step 28..
+SBY 23:37:30 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:02  Checking assertions in step 28..
+SBY 23:37:30 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:02  Checking assumptions in step 29..
+SBY 23:37:30 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:02  Checking assertions in step 29..
+SBY 23:37:30 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:02  Checking assumptions in step 30..
+SBY 23:37:31 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:03  Checking assertions in step 30..
+SBY 23:37:31 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:03  Checking assumptions in step 31..
+SBY 23:37:31 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:03  Checking assertions in step 31..
+SBY 23:37:31 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:03  Checking assumptions in step 32..
+SBY 23:37:32 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:04  Checking assertions in step 32..
+SBY 23:37:32 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:04  Checking assumptions in step 33..
+SBY 23:37:32 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:04  Checking assertions in step 33..
+SBY 23:37:32 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:04  Checking assumptions in step 34..
+SBY 23:37:32 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:04  Checking assertions in step 34..
+SBY 23:37:32 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:04  Checking assumptions in step 35..
+SBY 23:37:32 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:04  Checking assertions in step 35..
+SBY 23:37:32 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:04  Checking assumptions in step 36..
+SBY 23:37:33 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:04  Checking assertions in step 36..
+SBY 23:37:33 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:05  Checking assumptions in step 37..
+SBY 23:37:34 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:06  Checking assertions in step 37..
+SBY 23:37:34 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:06  Checking assumptions in step 38..
+SBY 23:37:35 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:07  Checking assertions in step 38..
+SBY 23:37:35 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:07  Checking assumptions in step 39..
+SBY 23:37:37 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:09  Checking assertions in step 39..
+SBY 23:37:37 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:09  Checking assumptions in step 40..
+SBY 23:37:37 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:09  Checking assertions in step 40..
+SBY 23:37:37 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:09  Checking assumptions in step 41..
+SBY 23:37:38 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:10  Checking assertions in step 41..
+SBY 23:37:38 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:10  Checking assumptions in step 42..
+SBY 23:37:38 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:10  Checking assertions in step 42..
+SBY 23:37:38 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:10  Checking assumptions in step 43..
+SBY 23:37:39 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:11  Checking assertions in step 43..
+SBY 23:37:39 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:11  Checking assumptions in step 44..
+SBY 23:37:45 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:17  Checking assertions in step 44..
+SBY 23:37:45 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:17  Checking assumptions in step 45..
+SBY 23:37:48 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:20  Checking assertions in step 45..
+SBY 23:37:48 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:20  Checking assumptions in step 46..
+SBY 23:37:49 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:21  Checking assertions in step 46..
+SBY 23:37:50 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:21  Checking assumptions in step 47..
+SBY 23:37:50 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:22  Checking assertions in step 47..
+SBY 23:37:50 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:22  Checking assumptions in step 48..
+SBY 23:37:53 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:25  Checking assertions in step 48..
+SBY 23:37:53 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:25  Checking assumptions in step 49..
+SBY 23:37:54 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:26  Checking assertions in step 49..
+SBY 23:37:54 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:26  Checking assumptions in step 50..
+SBY 23:37:55 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:27  Checking assertions in step 50..
+SBY 23:37:55 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:27  Checking assumptions in step 51..
+SBY 23:37:56 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:28  Checking assertions in step 51..
+SBY 23:37:56 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:28  Checking assumptions in step 52..
+SBY 23:37:58 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:30  Checking assertions in step 52..
+SBY 23:37:58 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:30  Checking assumptions in step 53..
+SBY 23:38:00 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:32  Checking assertions in step 53..
+SBY 23:38:00 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:32  Checking assumptions in step 54..
+SBY 23:38:02 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:34  Checking assertions in step 54..
+SBY 23:38:02 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:34  Checking assumptions in step 55..
+SBY 23:38:02 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:34  Checking assertions in step 55..
+SBY 23:38:03 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:35  Checking assumptions in step 56..
+SBY 23:38:08 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:40  Checking assertions in step 56..
+SBY 23:38:08 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:40  Checking assumptions in step 57..
+SBY 23:38:17 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:49  Checking assertions in step 57..
+SBY 23:38:18 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:49  Checking assumptions in step 58..
+SBY 23:38:21 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:53  Checking assertions in step 58..
+SBY 23:38:21 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:53  Checking assumptions in step 59..
+SBY 23:38:24 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:56  Checking assertions in step 59..
+SBY 23:38:24 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:00:56  Checking assumptions in step 60..
+SBY 23:38:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:01  Checking assertions in step 60..
+SBY 23:38:29 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:01  Checking assumptions in step 61..
+SBY 23:38:35 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:07  Checking assertions in step 61..
+SBY 23:38:35 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:07  Checking assumptions in step 62..
+SBY 23:38:39 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:11  Checking assertions in step 62..
+SBY 23:38:39 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:11  Checking assumptions in step 63..
+SBY 23:38:46 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:17  Checking assertions in step 63..
+SBY 23:38:46 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:18  Checking assumptions in step 64..
+SBY 23:38:59 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:31  Checking assertions in step 64..
+SBY 23:39:00 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:31  Checking assumptions in step 65..
+SBY 23:39:15 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:47  Checking assertions in step 65..
+SBY 23:39:16 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:47  Checking assumptions in step 66..
+SBY 23:39:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:59  Checking assertions in step 66..
+SBY 23:39:27 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:01:59  Checking assumptions in step 67..
+SBY 23:39:32 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:02:04  Checking assertions in step 67..
+SBY 23:39:33 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:02:05  Checking assumptions in step 68..
+SBY 23:39:33 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:02:05  Checking assertions in step 68..
+SBY 23:39:34 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: ##   0:02:06  Checking assumptions in step 69..
+SBY 23:40:00 [results/raw/rtl/arch_a_parser/formal_late_suffix] engine_0: terminating process
