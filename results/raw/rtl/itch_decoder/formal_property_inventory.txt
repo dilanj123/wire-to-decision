@@ -1,0 +1,30 @@
+WIRE-021 formal property inventory
+==================================
+All assertions use public module ports; DUT-private state is not referenced.
+Toolchain: SBY 0.69; smtbmc yices; Yices 2.7.0.
+
+Fixed-vector BMC:
+itch_A depth 48: exact A mapping/field-valid and no event before complete boundary. PASS.
+itch_F depth 52: exact F mapping/field-valid. PASS.
+itch_E depth 44: exact E mapping/field-valid. PASS.
+itch_C depth 48: C mapping and normalized price invalid. PASS.
+itch_X depth 35: X mapping/field-valid. PASS.
+itch_D depth 31: D mapping/field-valid. PASS.
+itch_U depth 47: U mapping/field-valid and inherited side invalid. PASS.
+itch_P depth 56: exact P consumed with no event/recovery. PASS.
+itch_side depth 48: complete A with invalid side; fatal side code and no event. PASS.
+itch_symbol depth 48: enabled exact-symbol mismatch; fatal symbol code and no event. PASS.
+itch_length_edge depth 16: one-byte A with declared length 1; fatal length code, drain state, no event. PASS.
+itch_unknown depth 24: unsupported type drains; fatal unsupported code, no event. PASS.
+itch_locate_filter depth 48: otherwise valid A for another locate; no event and no recovery. PASS.
+itch_empty depth 12: zero-length empty metadata; fatal empty-message code, no event. PASS.
+
+Generic public-interface safety BMC:
+itch_safety depth 24: event stability under arbitrary event_ready stalls; rejection stability under arbitrary reject_ready stalls; recovery suppresses events; drain remains possible; rearm clears recovery/pending outputs. PASS.
+
+Assumptions and limits:
+- Synchronous active-high reset is assumed at formal initialization.
+- Fixed-vector jobs use the exact listed byte streams and message lengths; configuration is constant through the test epoch.
+- Safety job leaves message/payload/event/reject valid/ready and data unconstrained after initial reset.
+- All results are bounded checks, not induction or unbounded proof. There is no exhaustive proof over arbitrary ITCH contents or config values and no separate formal cover result.
+- A real pre-fix counterexample to the one-byte known-type/wrong-declared-length state transition is retained in itch_safety_counterexample_before_fix.log; corrected logic is checked by itch_length_edge and itch_safety.

@@ -16,7 +16,7 @@ Gate 0 — CLOSED; WIRE-000 through WIRE-007 complete
 
 ## Architecture
 
-Architecture A implementation has started with the common two-beat ingress buffer, 64-to-8 gearbox, Ethernet II, IPv4, UDP, MoldUDP64 header/sequence control, and Mold message-block framing. ITCH decoding and later stages remain unimplemented.
+Architecture A implementation has started with the common two-beat ingress buffer, 64-to-8 gearbox, Ethernet II, IPv4, UDP, MoldUDP64 header/sequence control, Mold message-block framing, and the ITCH normalized-event decoder. Order state and later stages remain unimplemented.
 
 Baseline candidate:
 
@@ -36,7 +36,9 @@ MoldUDP64 header/sequence controller: RTL-simulated; fatal session/sequence and 
 
 MoldUDP64 message-block framer: RTL-simulated; preserves per-message boundaries and opaque payloads, supports zero-length structural messages, and reports exact-count/truncation/trailing errors. Named fixed-vector public-interface checks and bounded ready/valid safety checks pass; structural result drives WIRE-019 deferred sequence commit/recovery in seven-stage simulation.
 
-ITCH decoder RTL: not started
+ITCH decoder / normalized-event boundary: RTL-simulated; A/F/E/C/X/D/U mappings, P handling, tracked-locate filtering, exact symbol policy, and stage-local fail-closed drain are exercised. Events are gated on WIRE-D016 complete-message boundaries. Named fixed-vector/safety public-interface formal checks pass; Mold header→framer→ITCH composition confirms semantic ITCH failure does not alter Mold structural success.
+
+ITCH decoder RTL: implemented for the frozen A/F/E/C/X/D/U/P subset; broader ITCH remains unsupported by design
 
 Reference-model package: created
 
@@ -114,7 +116,7 @@ Ingress-buffer local formal: reset-empty safety inductively checked; public-inte
 
 Gearbox local formal: closed under documented assumptions for ordering, accepted valid-byte conservation, exact last-marker behavior, stall stability, and refill safety; reference correspondence bounded-checked through depth 20
 
-Application RTL functional evidence: gearbox + common ingress buffer + Ethernet II + IPv4 + UDP + Mold header/sequence + Mold message framer and seven-stage composition simulation; named local formal checks recorded per stage
+Application RTL functional evidence: gearbox + common ingress buffer + Ethernet II + IPv4 + UDP + Mold header/sequence + Mold message framer and Mold→framer→ITCH composition simulation; named local formal checks recorded per stage. The complete external-ingress-to-normalized-event production top remains WIRE-022.
 
 Formal application evidence: none
 
@@ -126,7 +128,7 @@ Python component regression: 71 tests passing
 
 ## Formal status
 
-WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. WIRE-016 Ethernet parser local safety is bounded-checked through depth 20 and public-interface correspondence through depth 40 under documented assumptions. WIRE-017 IPv4 local safety is bounded-checked through depth 20; WIRE-017A decomposed public-interface checks cover classification, checksum, payload, Total-Length boundary, padding, truncation and restart at recorded depths. The original monolithic correspondence job remains recorded as solver-bound after step 22. WIRE-018 UDP uses decomposed fixed-vector and bounded public-interface checks at recorded depths. WIRE-019/019A Mold header/sequence control uses public-interface safety BMC and fixed-vector header/control checks; immediate fail-closed behavior while draining session/sequence mismatch and heartbeat/EOS trailing bytes is checked at depth 28. Deferred-commit, recovery, stall, and wrap jobs are recorded at their bounded/fixed-vector depths; coverage is reported separately. WIRE-020 Mold message framing has fixed-vector public-interface BMC at depths 24/32, stall safety at depth 20, rearm at depth 12, and separate successful/zero-length/late-suffix covers; all are bounded, not unbounded proofs.
+WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. WIRE-016 Ethernet parser local safety is bounded-checked through depth 20 and public-interface correspondence through depth 40 under documented assumptions. WIRE-017 IPv4 local safety is bounded-checked through depth 20; WIRE-017A decomposed public-interface checks cover classification, checksum, payload, Total-Length boundary, padding, truncation and restart at recorded depths. The original monolithic correspondence job remains recorded as solver-bound after step 22. WIRE-018 UDP uses decomposed fixed-vector and bounded public-interface checks at recorded depths. WIRE-019/019A Mold header/sequence control uses public-interface safety BMC and fixed-vector header/control checks; immediate fail-closed behavior while draining session/sequence mismatch and heartbeat/EOS trailing bytes is checked at depth 28. Deferred-commit, recovery, stall, and wrap jobs are recorded at their bounded/fixed-vector depths; coverage is reported separately. WIRE-020 Mold message framing has fixed-vector public-interface BMC at depths 24/32, stall safety at depth 20, rearm at depth 12, and separate successful/zero-length/late-suffix covers. WIRE-021 ITCH uses fixed-vector public-interface BMC for each supported mapping and selected rejection/filter cases (depths 12–56), plus unconstrained-ready stall/recovery safety BMC depth 24. All WIRE-020/021 claims are bounded, not unbounded proofs.
 
 ## Synthesis / P&R status
 
@@ -136,7 +138,7 @@ Not run.
 
 WIRE-004 native Apple Silicon open-source toolchain qualification completed in commit `89e2841` for the trivial smoke design. Canonical suite: OSS CAD Suite `2026-09-27`; details are in `results/processed/toolchain_smoke.md`. This is toolchain-smoke evidence only.
 
-WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. WIRE-008 through WIRE-013 provide Python-unit-tested component and end-to-end evidence. WIRE-014 through WIRE-020 provide limited primitive/stage RTL simulation and local formal evidence. WIRE-017A closed the named IPv4 correspondence set with decomposed bounded/fixed-vector checks; the original monolithic BMC remains solver-bound historical evidence. WIRE-020 closes Mold message-block structural framing only; ITCH decoder RTL, application synthesis, timing, latency, throughput, CDC, and C++ integration evidence do not exist.
+WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. WIRE-008 through WIRE-013 provide Python-unit-tested component and end-to-end evidence. WIRE-014 through WIRE-021 provide limited primitive/stage RTL simulation and local formal evidence. WIRE-017A closed the named IPv4 correspondence set with decomposed bounded/fixed-vector checks; the original monolithic BMC remains solver-bound historical evidence. WIRE-020 closes Mold message-block structural framing. WIRE-021 adds ITCH decoder and normalized-event stage evidence, but not full external-ingress composition, order-state mutation, or global recovery control. Application synthesis, timing, latency, throughput, CDC, and C++ integration evidence do not exist.
 
 ## Open bugs
 
@@ -154,6 +156,7 @@ None recorded.
 - WIRE-D012 common ingress buffer depth decision is recorded in `docs/DECISIONS.md` and WIRE-015 evidence.
 - WIRE-D015 deferred Mold normal-packet sequence commit is recorded in `docs/DECISIONS.md` and WIRE-019 evidence.
 - WIRE-D016 Mold complete-message boundaries and structural packet-result semantics are recorded in `docs/DECISIONS.md` and WIRE-020 evidence.
+- WIRE-D017 ITCH normalized-event RTL encoding and complete-message commit boundary are recorded in `docs/DECISIONS.md` and WIRE-021 evidence.
 
 ## Current bottleneck
 
@@ -161,4 +164,4 @@ SystemVerilog implementation and cross-layer hardware verification remain.
 
 ## Next task
 
-WIRE-021 — Architecture A ITCH message decoder RTL and verification (not started).
+WIRE-022 — Complete Architecture-A parser integration, recovery and Phase-2 closure (not started).

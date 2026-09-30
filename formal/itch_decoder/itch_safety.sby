@@ -1,0 +1,11 @@
+[options]
+mode bmc
+depth 24
+[engines]
+smtbmc yices
+[script]
+read_verilog -formal -sv wire_itch_decoder.sv itch_safety.sv
+prep -top itch_safety
+[files]
+../../rtl/arch_a/wire_itch_decoder.sv
+itch_safety.sv

@@ -151,3 +151,13 @@
 - Decision: A future ITCH decoder must not produce a mutation event until the corresponding complete-message boundary exists. An incomplete current message never receives that boundary. Structural packet success depends only on Mold message-block framing, not ITCH semantics.
 - Consequences: Earlier complete messages remain visible when a later suffix is malformed; no rollback transaction exists. Missing/partial length fields report `MESSAGE_LENGTH_TRUNCATED`, insufficient payload reports `MESSAGE_TRUNCATED`, and bytes after the declared count report `TRAILING_BYTES`. Zero-length structural messages are permitted and left for the future ITCH layer to reject semantically if required.
 - Status: ADOPTED
+
+## WIRE-D017 — Freeze Architecture-A normalized-event RTL encoding and commit boundary
+
+- Date: 2026-09-30
+- Source: WIRE-021 Architecture-A ITCH decoder and normalized-event RTL
+- Context: WIRE-D008 defines the common logical normalized-event contract but leaves the RTL encoding and message-completion boundary implementation-specific.
+- Decision: Encode event kinds as `0 ADD`, `1 EXECUTE`, `2 EXECUTE_WITH_PRICE`, `3 CANCEL`, `4 DELETE`, and `5 REPLACE`. Encode side as `0 BUY/B`, `1 SELL/S`. Preserve source type as the original ASCII byte and provide individual validity outputs for old reference, new reference, quantity, price, and side; invalid values are deterministic zero where practical.
+- Decision: An event may assert valid only after the corresponding WIRE-D016 complete-message boundary has transferred. A semantic failure latches decoder recovery, preserves the first local fatal reason, suppresses later events, and drains the current and subsequent framed ITCH messages without changing WIRE-020 structural packet success. Reset/re-arm clears decoder-local recovery and partial-message state.
+- Consequences: WIRE-020 structural success and WIRE-019 sequence commit remain independent of ITCH semantic support. This is stage-local decoder recovery, not global `book_valid`, order-state commit, or decision gating. Tracked-locate and symbol configuration are captured on reset/re-arm and must be stable for the active configuration epoch.
+- Status: ADOPTED

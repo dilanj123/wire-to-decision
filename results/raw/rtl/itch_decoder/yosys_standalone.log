@@ -1,0 +1,3018 @@
+
+-- Running command `read_verilog -sv rtl/arch_a/wire_itch_decoder.sv; hierarchy -check -top wire_itch_decoder; synth -top wire_itch_decoder; check' --
+
+1. Executing Verilog-2005 frontend: rtl/arch_a/wire_itch_decoder.sv
+Parsing SystemVerilog input from `rtl/arch_a/wire_itch_decoder.sv' to AST representation.
+Generating RTLIL representation for module `\wire_itch_decoder'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \wire_itch_decoder
+
+2.2. Analyzing design hierarchy..
+Top module:  \wire_itch_decoder
+Removed 0 unused modules.
+
+3. Executing SYNTH pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \wire_itch_decoder
+
+3.1.2. Analyzing design hierarchy..
+Top module:  \wire_itch_decoder
+Removed 0 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/arch_a/wire_itch_decoder.sv:112$350 in module wire_itch_decoder.
+Marked 1 switch rules as full_case in process $proc$rtl/arch_a/wire_itch_decoder.sv:112$345 in module wire_itch_decoder.
+Marked 15 switch rules as full_case in process $proc$rtl/arch_a/wire_itch_decoder.sv:137$41 in module wire_itch_decoder.
+Removed a total of 0 dead cases.
+
+3.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 26 assignments to connections.
+
+3.2.4. Executing PROC_INIT pass (extract init attributes).
+
+3.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~45 debug messages>
+
+3.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:112$350'.
+     1/1: $1\required_length$func$rtl/arch_a/wire_itch_decoder.sv:112$21.$result[15:0]$354
+Creating decoders for process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:112$345'.
+     1/1: $1\required_length$func$rtl/arch_a/wire_itch_decoder.sv:112$20.$result[15:0]$349
+Creating decoders for process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+     1/131: $6\u32$func$rtl/arch_a/wire_itch_decoder.sv:218$10.$result[31:0]$262
+     2/131: $6\u64$func$rtl/arch_a/wire_itch_decoder.sv:218$9.$result[63:0]$261
+     3/131: $6\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$19.$result[31:0]$271
+     4/131: $6\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$18.$result[31:0]$270
+     5/131: $6\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$17.$result[63:0]$269
+     6/131: $6\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$16.$result[63:0]$268
+     7/131: $6\u64$func$rtl/arch_a/wire_itch_decoder.sv:221$15.$result[63:0]$267
+     8/131: $6\u32$func$rtl/arch_a/wire_itch_decoder.sv:220$14.$result[31:0]$266
+     9/131: $6\u64$func$rtl/arch_a/wire_itch_decoder.sv:220$13.$result[63:0]$265
+    10/131: $6\u32$func$rtl/arch_a/wire_itch_decoder.sv:219$12.$result[31:0]$264
+    11/131: $6\u64$func$rtl/arch_a/wire_itch_decoder.sv:219$11.$result[63:0]$263
+    12/131: $7\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$8.$result[31:0]$240
+    13/131: $7\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$7.$result[31:0]$239
+    14/131: $7\u64$func$rtl/arch_a/wire_itch_decoder.sv:212$6.$result[63:0]$238
+    15/131: $6\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$8.$result[31:0]$231
+    16/131: $6\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$7.$result[31:0]$230
+    17/131: $6\u64$func$rtl/arch_a/wire_itch_decoder.sv:212$6.$result[63:0]$229
+    18/131: $5\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$8.$result[31:0]$207
+    19/131: $5\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$7.$result[31:0]$206
+    20/131: $5\u64$func$rtl/arch_a/wire_itch_decoder.sv:212$6.$result[63:0]$205
+    21/131: $5\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$19.$result[31:0]$218
+    22/131: $5\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$18.$result[31:0]$217
+    23/131: $5\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$17.$result[63:0]$216
+    24/131: $5\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$16.$result[63:0]$215
+    25/131: $5\u64$func$rtl/arch_a/wire_itch_decoder.sv:221$15.$result[63:0]$214
+    26/131: $5\u32$func$rtl/arch_a/wire_itch_decoder.sv:220$14.$result[31:0]$213
+    27/131: $5\u64$func$rtl/arch_a/wire_itch_decoder.sv:220$13.$result[63:0]$212
+    28/131: $5\u32$func$rtl/arch_a/wire_itch_decoder.sv:219$12.$result[31:0]$211
+    29/131: $5\u64$func$rtl/arch_a/wire_itch_decoder.sv:219$11.$result[63:0]$210
+    30/131: $5\u32$func$rtl/arch_a/wire_itch_decoder.sv:218$10.$result[31:0]$209
+    31/131: $5\u64$func$rtl/arch_a/wire_itch_decoder.sv:218$9.$result[63:0]$208
+    32/131: $4\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$19.$result[31:0]$199
+    33/131: $4\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$18.$result[31:0]$198
+    34/131: $4\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$17.$result[63:0]$197
+    35/131: $4\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$16.$result[63:0]$196
+    36/131: $4\u64$func$rtl/arch_a/wire_itch_decoder.sv:221$15.$result[63:0]$195
+    37/131: $4\u32$func$rtl/arch_a/wire_itch_decoder.sv:220$14.$result[31:0]$194
+    38/131: $4\u64$func$rtl/arch_a/wire_itch_decoder.sv:220$13.$result[63:0]$193
+    39/131: $4\u32$func$rtl/arch_a/wire_itch_decoder.sv:219$12.$result[31:0]$192
+    40/131: $4\u64$func$rtl/arch_a/wire_itch_decoder.sv:219$11.$result[63:0]$191
+    41/131: $4\u32$func$rtl/arch_a/wire_itch_decoder.sv:218$10.$result[31:0]$190
+    42/131: $4\u64$func$rtl/arch_a/wire_itch_decoder.sv:218$9.$result[63:0]$189
+    43/131: $4\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$8.$result[31:0]$188
+    44/131: $4\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$7.$result[31:0]$187
+    45/131: $4\u64$func$rtl/arch_a/wire_itch_decoder.sv:212$6.$result[63:0]$186
+    46/131: $3\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$19.$result[31:0]$182
+    47/131: $3\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$18.$result[31:0]$181
+    48/131: $3\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$17.$result[63:0]$180
+    49/131: $3\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$16.$result[63:0]$179
+    50/131: $3\u64$func$rtl/arch_a/wire_itch_decoder.sv:221$15.$result[63:0]$178
+    51/131: $3\u32$func$rtl/arch_a/wire_itch_decoder.sv:220$14.$result[31:0]$177
+    52/131: $3\u64$func$rtl/arch_a/wire_itch_decoder.sv:220$13.$result[63:0]$176
+    53/131: $3\u32$func$rtl/arch_a/wire_itch_decoder.sv:219$12.$result[31:0]$175
+    54/131: $3\u64$func$rtl/arch_a/wire_itch_decoder.sv:219$11.$result[63:0]$174
+    55/131: $3\u32$func$rtl/arch_a/wire_itch_decoder.sv:218$10.$result[31:0]$173
+    56/131: $3\u64$func$rtl/arch_a/wire_itch_decoder.sv:218$9.$result[63:0]$172
+    57/131: $3\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$8.$result[31:0]$171
+    58/131: $3\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$7.$result[31:0]$170
+    59/131: $3\u64$func$rtl/arch_a/wire_itch_decoder.sv:212$6.$result[63:0]$169
+    60/131: $3\u16$func$rtl/arch_a/wire_itch_decoder.sv:205$5.$result[15:0]$168
+    61/131: $4$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$113
+    62/131: $4$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_DATA[7:0]$112
+    63/131: $4$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_ADDR[5:0]$111
+    64/131: $3$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$109
+    65/131: $3$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_DATA[7:0]$108
+    66/131: $3$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_ADDR[5:0]$107
+    67/131: $2$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$103
+    68/131: $2$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_DATA[7:0]$102
+    69/131: $2$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_ADDR[5:0]$101
+    70/131: $2\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$19.$result[31:0]$100
+    71/131: $2\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$18.$result[31:0]$99
+    72/131: $2\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$17.$result[63:0]$98
+    73/131: $2\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$16.$result[63:0]$97
+    74/131: $2\u64$func$rtl/arch_a/wire_itch_decoder.sv:221$15.$result[63:0]$96
+    75/131: $2\u32$func$rtl/arch_a/wire_itch_decoder.sv:220$14.$result[31:0]$95
+    76/131: $2\u64$func$rtl/arch_a/wire_itch_decoder.sv:220$13.$result[63:0]$94
+    77/131: $2\u32$func$rtl/arch_a/wire_itch_decoder.sv:219$12.$result[31:0]$93
+    78/131: $2\u64$func$rtl/arch_a/wire_itch_decoder.sv:219$11.$result[63:0]$92
+    79/131: $2\u32$func$rtl/arch_a/wire_itch_decoder.sv:218$10.$result[31:0]$91
+    80/131: $2\u64$func$rtl/arch_a/wire_itch_decoder.sv:218$9.$result[63:0]$90
+    81/131: $2\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$8.$result[31:0]$89
+    82/131: $2\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$7.$result[31:0]$88
+    83/131: $2\u64$func$rtl/arch_a/wire_itch_decoder.sv:212$6.$result[63:0]$87
+    84/131: $2\u16$func$rtl/arch_a/wire_itch_decoder.sv:205$5.$result[15:0]$86
+    85/131: $2\u16$func$rtl/arch_a/wire_itch_decoder.sv:200$4.$result[15:0]$85
+    86/131: $2\u48$func$rtl/arch_a/wire_itch_decoder.sv:199$3.$result[47:0]$84
+    87/131: $1$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$82
+    88/131: $1$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_DATA[7:0]$81
+    89/131: $1$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_ADDR[5:0]$80
+    90/131: $1\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$19.$result[31:0]$79
+    91/131: $1\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$18.$result[31:0]$78
+    92/131: $1\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$17.$result[63:0]$77
+    93/131: $1\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$16.$result[63:0]$76
+    94/131: $1\u64$func$rtl/arch_a/wire_itch_decoder.sv:221$15.$result[63:0]$75
+    95/131: $1\u32$func$rtl/arch_a/wire_itch_decoder.sv:220$14.$result[31:0]$74
+    96/131: $1\u64$func$rtl/arch_a/wire_itch_decoder.sv:220$13.$result[63:0]$73
+    97/131: $1\u32$func$rtl/arch_a/wire_itch_decoder.sv:219$12.$result[31:0]$72
+    98/131: $1\u64$func$rtl/arch_a/wire_itch_decoder.sv:219$11.$result[63:0]$71
+    99/131: $1\u32$func$rtl/arch_a/wire_itch_decoder.sv:218$10.$result[31:0]$70
+   100/131: $1\u64$func$rtl/arch_a/wire_itch_decoder.sv:218$9.$result[63:0]$69
+   101/131: $1\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$8.$result[31:0]$68
+   102/131: $1\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$7.$result[31:0]$67
+   103/131: $1\u64$func$rtl/arch_a/wire_itch_decoder.sv:212$6.$result[63:0]$66
+   104/131: $1\u16$func$rtl/arch_a/wire_itch_decoder.sv:205$5.$result[15:0]$65
+   105/131: $1\u16$func$rtl/arch_a/wire_itch_decoder.sv:200$4.$result[15:0]$64
+   106/131: $1\u48$func$rtl/arch_a/wire_itch_decoder.sv:199$3.$result[47:0]$63
+   107/131: $0\side_valid_q[0:0]
+   108/131: $0\price_valid_q[0:0]
+   109/131: $0\quantity_valid_q[0:0]
+   110/131: $0\new_valid_q[0:0]
+   111/131: $0\old_valid_q[0:0]
+   112/131: $0\side_q[0:0]
+   113/131: $0\price_q[31:0]
+   114/131: $0\quantity_q[31:0]
+   115/131: $0\new_ref_q[63:0]
+   116/131: $0\old_ref_q[63:0]
+   117/131: $0\stock_locate_q[15:0]
+   118/131: $0\timestamp_q[47:0]
+   119/131: $0\mold_sequence_q[63:0]
+   120/131: $0\source_type_q[7:0]
+   121/131: $0\event_kind_q[2:0]
+   122/131: $0\reject_pending_q[0:0]
+   123/131: $0\reject_code_q[2:0]
+   124/131: $0\expected_symbol_q[63:0]
+   125/131: $0\symbol_enable_q[0:0]
+   126/131: $0\tracked_locate_q[15:0]
+   127/131: $0\message_sequence_q[63:0]
+   128/131: $0\declared_length_q[15:0]
+   129/131: $0\byte_index_q[5:0]
+   130/131: $0\state_q[2:0]
+   131/131: $0\recovery_required[0:0]
+
+3.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\wire_itch_decoder.\required_length$func$rtl/arch_a/wire_itch_decoder.sv:112$2.$result' from process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:112$350'.
+No latch inferred for signal `\wire_itch_decoder.\required_length$func$rtl/arch_a/wire_itch_decoder.sv:112$1.$result' from process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:112$345'.
+
+3.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\wire_itch_decoder.\recovery_required' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2490' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\state_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2491' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\byte_index_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2492' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\declared_length_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2493' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\message_sequence_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2494' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\tracked_locate_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2495' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\symbol_enable_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2496' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\expected_symbol_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2497' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\reject_code_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2498' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\reject_pending_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2499' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\event_kind_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2500' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\source_type_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2501' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\mold_sequence_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2502' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\timestamp_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2503' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\stock_locate_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2504' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\old_ref_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2505' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\new_ref_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2506' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\quantity_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2507' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\price_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2508' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\side_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2509' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\old_valid_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2510' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\new_valid_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2511' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\quantity_valid_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2512' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\price_valid_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2513' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\side_valid_q' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2514' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u48$func$rtl/arch_a/wire_itch_decoder.sv:199$3.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2515' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u16$func$rtl/arch_a/wire_itch_decoder.sv:200$4.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2516' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u16$func$rtl/arch_a/wire_itch_decoder.sv:205$5.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2517' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$rtl/arch_a/wire_itch_decoder.sv:212$6.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2518' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$7.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2519' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$rtl/arch_a/wire_itch_decoder.sv:212$8.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2520' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$rtl/arch_a/wire_itch_decoder.sv:218$9.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2521' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$rtl/arch_a/wire_itch_decoder.sv:218$10.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2522' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$rtl/arch_a/wire_itch_decoder.sv:219$11.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2523' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$rtl/arch_a/wire_itch_decoder.sv:219$12.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2524' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$rtl/arch_a/wire_itch_decoder.sv:220$13.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2525' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$rtl/arch_a/wire_itch_decoder.sv:220$14.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2526' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$rtl/arch_a/wire_itch_decoder.sv:221$15.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2527' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$16.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2528' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u64$func$rtl/arch_a/wire_itch_decoder.sv:222$17.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2529' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$18.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2530' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.\u32$func$rtl/arch_a/wire_itch_decoder.sv:222$19.$result' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2531' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_ADDR' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2532' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_DATA' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2533' with positive edge clock.
+Creating register for signal `\wire_itch_decoder.$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN' using process `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+  created $dff cell `$procdff$2534' with positive edge clock.
+
+3.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:112$350'.
+Removing empty process `wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:112$350'.
+Found and cleaned up 1 empty switch in `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:112$345'.
+Removing empty process `wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:112$345'.
+Found and cleaned up 43 empty switches in `\wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+Removing empty process `wire_itch_decoder.$proc$rtl/arch_a/wire_itch_decoder.sv:137$41'.
+Cleaned up 45 empty switches.
+
+3.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+<suppressed ~49 debug messages>
+
+3.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+
+3.4. Executing CHECK pass (checking for obvious problems).
+Checking module wire_itch_decoder...
+Found and reported 0 problems.
+
+3.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 447 unused cells and 1081 unused wires.
+<suppressed ~448 debug messages>
+
+3.6. Executing OPT pass (performing simple optimizations).
+
+3.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+
+3.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 607 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 419 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 416 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+<suppressed ~573 debug messages>
+Removed a total of 191 cells.
+
+3.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port B of cell $procmux$2459: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$2422: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$2428: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$2433: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$2438: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$2443: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$2448: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$2453: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$2407: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$2402: \recovery_required -> 1'1
+      Replacing known input bits on port B of cell $procmux$2480: \recovery_required -> 1'1
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1416.
+    dead port 2/2 on $mux $procmux$1413.
+    dead port 2/2 on $mux $procmux$1411.
+    dead port 1/2 on $mux $procmux$1517.
+    dead port 1/2 on $mux $procmux$1507.
+    dead port 1/2 on $mux $procmux$1497.
+    dead port 1/2 on $mux $procmux$1487.
+    dead port 2/2 on $mux $procmux$1484.
+    dead port 1/2 on $mux $procmux$1474.
+    dead port 2/2 on $mux $procmux$1471.
+    dead port 1/2 on $mux $procmux$1461.
+    dead port 2/2 on $mux $procmux$1458.
+    dead port 1/2 on $mux $procmux$1448.
+    dead port 2/2 on $mux $procmux$1445.
+    dead port 2/2 on $mux $procmux$1443.
+    dead port 1/2 on $mux $procmux$1432.
+    dead port 2/2 on $mux $procmux$1429.
+    dead port 2/2 on $mux $procmux$1427.
+    dead port 1/2 on $mux $ternary$rtl/arch_a/wire_itch_decoder.sv:182$152.
+    dead port 1/2 on $mux $ternary$rtl/arch_a/wire_itch_decoder.sv:181$149.
+    dead port 1/2 on $mux $ternary$rtl/arch_a/wire_itch_decoder.sv:180$146.
+    dead port 1/2 on $mux $ternary$rtl/arch_a/wire_itch_decoder.sv:179$143.
+    dead port 1/2 on $mux $ternary$rtl/arch_a/wire_itch_decoder.sv:178$140.
+    dead port 1/2 on $mux $ternary$rtl/arch_a/wire_itch_decoder.sv:177$137.
+    dead port 1/2 on $mux $ternary$rtl/arch_a/wire_itch_decoder.sv:176$134.
+    dead port 1/2 on $mux $ternary$rtl/arch_a/wire_itch_decoder.sv:173$131.
+Removed 26 multiplexer ports.
+<suppressed ~625 debug messages>
+
+3.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_itch_decoder.
+    Consolidated identical input bits for $mux cell $procmux$1409:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$1409_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$1409_Y [0]
+      New connections: $procmux$1409_Y [7:1] = { $procmux$1409_Y [0] $procmux$1409_Y [0] $procmux$1409_Y [0] $procmux$1409_Y [0] $procmux$1409_Y [0] $procmux$1409_Y [0] $procmux$1409_Y [0] }
+    New ctrl vector for $pmux cell $procmux$2325: $auto$opt_reduce.cc:137:opt_pmux$2537
+    New ctrl vector for $pmux cell $procmux$1845: $auto$opt_reduce.cc:137:opt_pmux$2539
+    New ctrl vector for $pmux cell $procmux$1921: { $procmux$1789_CMP $auto$opt_reduce.cc:137:opt_pmux$2541 }
+    New ctrl vector for $pmux cell $procmux$366: { $procmux$2098_CMP $procmux$2103_CMP $procmux$2108_CMP $procmux$2113_CMP $auto$opt_reduce.cc:137:opt_pmux$2543 $procmux$2118_CMP $procmux$2123_CMP }
+    New ctrl vector for $pmux cell $procmux$1788: $auto$opt_reduce.cc:137:opt_pmux$2545
+    New ctrl vector for $pmux cell $procmux$356: { $procmux$2098_CMP $procmux$2103_CMP $procmux$2108_CMP $procmux$2113_CMP $auto$opt_reduce.cc:137:opt_pmux$2547 $procmux$2118_CMP $procmux$2123_CMP }
+    New ctrl vector for $pmux cell $procmux$1978: $auto$opt_reduce.cc:137:opt_pmux$2549
+  Optimizing cells in module \wire_itch_decoder.
+    Consolidated identical input bits for $mux cell $procmux$1456:
+      Old ports: A=8'00000000, B=$4$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$113, Y=$procmux$1456_Y
+      New ports: A=1'0, B=$procmux$1409_Y [0], Y=$procmux$1456_Y [0]
+      New connections: $procmux$1456_Y [7:1] = { $procmux$1456_Y [0] $procmux$1456_Y [0] $procmux$1456_Y [0] $procmux$1456_Y [0] $procmux$1456_Y [0] $procmux$1456_Y [0] $procmux$1456_Y [0] }
+  Optimizing cells in module \wire_itch_decoder.
+    Consolidated identical input bits for $mux cell $procmux$1494:
+      Old ports: A=8'00000000, B=$3$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$109, Y=$procmux$1494_Y
+      New ports: A=1'0, B=$procmux$1456_Y [0], Y=$procmux$1494_Y [0]
+      New connections: $procmux$1494_Y [7:1] = { $procmux$1494_Y [0] $procmux$1494_Y [0] $procmux$1494_Y [0] $procmux$1494_Y [0] $procmux$1494_Y [0] $procmux$1494_Y [0] $procmux$1494_Y [0] }
+  Optimizing cells in module \wire_itch_decoder.
+    Consolidated identical input bits for $mux cell $procmux$1673:
+      Old ports: A=$2$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$103, B=8'00000000, Y=$0$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$61
+      New ports: A=$procmux$1494_Y [0], B=1'0, Y=$0$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$61 [0]
+      New connections: $0$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$61 [7:1] = { $0$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$61 [0] $0$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$61 [0] $0$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$61 [0] $0$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$61 [0] $0$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$61 [0] $0$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$61 [0] $0$memwr$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:167$22_EN[7:0]$61 [0] }
+  Optimizing cells in module \wire_itch_decoder.
+Performed a total of 22 changes.
+
+3.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 386 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 362 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 358 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 357 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 356 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 355 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+<suppressed ~93 debug messages>
+Removed a total of 31 cells.
+
+3.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 0 unused cells and 256 unused wires.
+<suppressed ~1 debug messages>
+
+3.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+
+3.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~569 debug messages>
+
+3.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_itch_decoder.
+Performed a total of 0 changes.
+
+3.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 355 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+
+3.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+
+3.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+3.7. Executing FSM pass (extract and optimize FSM).
+
+3.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking wire_itch_decoder.event_kind_q as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+Not marking wire_itch_decoder.reject_code_q as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+Found FSM state register wire_itch_decoder.state_q.
+
+3.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\state_q' from module `\wire_itch_decoder'.
+  found $dff cell for state register: $procdff$2491
+  root of input selection tree: $0\state_q[2:0]
+  found reset state: 3'000 (guessed from mux tree)
+  found ctrl input: $logic_or$rtl/arch_a/wire_itch_decoder.sv:138$62_Y
+  found ctrl input: $eq$rtl/arch_a/wire_itch_decoder.sv:113$32_Y
+  found ctrl input: $eq$rtl/arch_a/wire_itch_decoder.sv:114$35_Y
+  found ctrl input: \event_valid
+  found ctrl input: $procmux$1752_CMP
+  found ctrl input: $eq$rtl/arch_a/wire_itch_decoder.sv:114$34_Y
+  found ctrl input: $eq$rtl/arch_a/wire_itch_decoder.sv:113$31_Y
+  found state code: 3'000
+  found ctrl input: $logic_and$rtl/arch_a/wire_itch_decoder.sv:228$340_Y
+  found ctrl input: \message_fire
+  found ctrl input: $logic_and$rtl/arch_a/wire_itch_decoder.sv:231$343_Y
+  found state code: 3'100
+  found state code: 3'101
+  found ctrl input: \event_fire
+  found ctrl input: $eq$rtl/arch_a/wire_itch_decoder.sv:204$167_Y
+  found ctrl input: $ne$rtl/arch_a/wire_itch_decoder.sv:205$185_Y
+  found ctrl input: $logic_or$rtl/arch_a/wire_itch_decoder.sv:206$204_Y
+  found ctrl input: $auto$opt_reduce.cc:137:opt_pmux$2537
+  found state code: 3'011
+  found ctrl input: $logic_and$rtl/arch_a/wire_itch_decoder.sv:207$228_Y
+  found ctrl input: $logic_and$rtl/arch_a/wire_itch_decoder.sv:209$237_Y
+  found ctrl input: \byte_fire
+  found ctrl input: \in_last
+  found ctrl input: $eq$rtl/arch_a/wire_itch_decoder.sv:111$26_Y
+  found ctrl input: $logic_and$rtl/arch_a/wire_itch_decoder.sv:169$129_Y
+  found ctrl input: $procmux$2098_CMP
+  found ctrl input: $procmux$2103_CMP
+  found ctrl input: $procmux$2108_CMP
+  found ctrl input: $procmux$2113_CMP
+  found ctrl input: $procmux$2118_CMP
+  found ctrl input: $procmux$2123_CMP
+  found ctrl input: $auto$opt_reduce.cc:137:opt_pmux$2543
+  found ctrl input: $ne$rtl/arch_a/wire_itch_decoder.sv:182$150_Y
+  found ctrl input: $ne$rtl/arch_a/wire_itch_decoder.sv:181$147_Y
+  found ctrl input: $ne$rtl/arch_a/wire_itch_decoder.sv:180$144_Y
+  found ctrl input: $ne$rtl/arch_a/wire_itch_decoder.sv:179$141_Y
+  found ctrl input: $ne$rtl/arch_a/wire_itch_decoder.sv:178$138_Y
+  found ctrl input: $ne$rtl/arch_a/wire_itch_decoder.sv:177$135_Y
+  found ctrl input: $ne$rtl/arch_a/wire_itch_decoder.sv:176$132_Y
+  found ctrl input: \first_byte_invalid
+  found ctrl input: $ne$rtl/arch_a/wire_itch_decoder.sv:190$154_Y
+  found state code: 3'010
+  found ctrl input: $logic_or$rtl/arch_a/wire_itch_decoder.sv:161$105_Y
+  found state code: 3'001
+  found ctrl output: $eq$rtl/arch_a/wire_itch_decoder.sv:114$34_Y
+  found ctrl output: $procmux$1752_CMP
+  found ctrl output: $eq$rtl/arch_a/wire_itch_decoder.sv:113$31_Y
+  found ctrl output: $eq$rtl/arch_a/wire_itch_decoder.sv:113$32_Y
+  found ctrl output: $eq$rtl/arch_a/wire_itch_decoder.sv:114$35_Y
+  found ctrl output: \event_valid
+  ctrl inputs: { $procmux$2123_CMP $procmux$2118_CMP $procmux$2113_CMP $procmux$2108_CMP $procmux$2103_CMP $procmux$2098_CMP $logic_and$rtl/arch_a/wire_itch_decoder.sv:231$343_Y $logic_and$rtl/arch_a/wire_itch_decoder.sv:228$340_Y $logic_and$rtl/arch_a/wire_itch_decoder.sv:209$237_Y $logic_and$rtl/arch_a/wire_itch_decoder.sv:207$228_Y $logic_or$rtl/arch_a/wire_itch_decoder.sv:206$204_Y $ne$rtl/arch_a/wire_itch_decoder.sv:205$185_Y $eq$rtl/arch_a/wire_itch_decoder.sv:204$167_Y $ne$rtl/arch_a/wire_itch_decoder.sv:190$154_Y $ne$rtl/arch_a/wire_itch_decoder.sv:182$150_Y $ne$rtl/arch_a/wire_itch_decoder.sv:181$147_Y $ne$rtl/arch_a/wire_itch_decoder.sv:180$144_Y $ne$rtl/arch_a/wire_itch_decoder.sv:179$141_Y $ne$rtl/arch_a/wire_itch_decoder.sv:178$138_Y $ne$rtl/arch_a/wire_itch_decoder.sv:177$135_Y $ne$rtl/arch_a/wire_itch_decoder.sv:176$132_Y $logic_and$rtl/arch_a/wire_itch_decoder.sv:169$129_Y $logic_or$rtl/arch_a/wire_itch_decoder.sv:161$105_Y $logic_or$rtl/arch_a/wire_itch_decoder.sv:138$62_Y $eq$rtl/arch_a/wire_itch_decoder.sv:111$26_Y \first_byte_invalid \event_fire \byte_fire \message_fire \in_last $auto$opt_reduce.cc:137:opt_pmux$2537 $auto$opt_reduce.cc:137:opt_pmux$2543 }
+  ctrl outputs: { $procmux$1752_CMP $0\state_q[2:0] $eq$rtl/arch_a/wire_itch_decoder.sv:114$35_Y $eq$rtl/arch_a/wire_itch_decoder.sv:114$34_Y $eq$rtl/arch_a/wire_itch_decoder.sv:113$32_Y $eq$rtl/arch_a/wire_itch_decoder.sv:113$31_Y \event_valid }
+  transition:      3'000 32'-----------------------0----0--- ->      3'000 9'000000010
+  transition:      3'000 32'----------------------00----1--- ->      3'001 9'000100010
+  transition:      3'000 32'----------------------10----1--- ->      3'101 9'010100010
+  transition:      3'000 32'-----------------------1-------- ->      3'000 9'000000010
+  transition:      3'100 32'-------0---------------0-------- ->      3'100 9'010010000
+  transition:      3'100 32'-------1---------------0-------- ->      3'101 9'010110000
+  transition:      3'100 32'-----------------------1-------- ->      3'000 9'000010000
+  transition:      3'010 32'----------000----------0------0- ->      3'000 9'100000000
+  transition:      3'010 32'----------000----------0------1- ->      3'011 9'101100000
+  transition:      3'010 32'--------00100----------0-------- ->      3'011 9'101100000
+  transition:      3'010 32'--------10100----------0-------- ->      3'101 9'110100000
+  transition:      3'010 32'---------1100----------0-------- ->      3'101 9'110100000
+  transition:      3'010 32'-----------10----------0-------- ->      3'000 9'100000000
+  transition:      3'010 32'------------1----------0-------- ->      3'000 9'100000000
+  transition:      3'010 32'-----------------------1-------- ->      3'000 9'100000000
+  transition:      3'001 32'-----------------------0---0---- ->      3'001 9'000101000
+  transition:      3'001 32'-----------------------00--1-0-- ->      3'001 9'000101000
+  transition:      3'001 32'000000---------------0-01--1-0-0 ->      3'001 9'000101000
+  transition:      3'001 32'--------------------00-01--1-0-1 ->      3'001 9'000101000
+  transition:      3'001 32'--------------------10-01--1-0-1 ->      3'100 9'010001000
+  transition:      3'001 32'1------------------0-0-01--1-0-- ->      3'001 9'000101000
+  transition:      3'001 32'1------------------1-0-01--1-0-- ->      3'100 9'010001000
+  transition:      3'001 32'-1----------------0--0-01--1-0-- ->      3'001 9'000101000
+  transition:      3'001 32'-1----------------1--0-01--1-0-- ->      3'100 9'010001000
+  transition:      3'001 32'--1--------------0---0-01--1-0-- ->      3'001 9'000101000
+  transition:      3'001 32'--1--------------1---0-01--1-0-- ->      3'100 9'010001000
+  transition:      3'001 32'---1------------0----0-01--1-0-- ->      3'001 9'000101000
+  transition:      3'001 32'---1------------1----0-01--1-0-- ->      3'100 9'010001000
+  transition:      3'001 32'----1----------0-----0-01--1-0-- ->      3'001 9'000101000
+  transition:      3'001 32'----1----------1-----0-01--1-0-- ->      3'100 9'010001000
+  transition:      3'001 32'-----1--------0------0-01--1-0-- ->      3'001 9'000101000
+  transition:      3'001 32'-----1--------1------0-01--1-0-- ->      3'100 9'010001000
+  transition:      3'001 32'---------------------1-01--1-0-- ->      3'100 9'010001000
+  transition:      3'001 32'-------------0---------0-0-1-1-- ->      3'010 9'001001000
+  transition:      3'001 32'-------------1---------0-0-1-1-- ->      3'101 9'010101000
+  transition:      3'001 32'-----------------------0-1-1-1-- ->      3'101 9'010101000
+  transition:      3'001 32'-----------------------1-------- ->      3'000 9'000001000
+  transition:      3'101 32'-------0---------------0----0--- ->      3'101 9'010100100
+  transition:      3'101 32'------00---------------0----1--- ->      3'101 9'010100100
+  transition:      3'101 32'------10---------------0----1--- ->      3'100 9'010000100
+  transition:      3'101 32'-------1---------------0-------- ->      3'101 9'010100100
+  transition:      3'101 32'-----------------------1-------- ->      3'000 9'000000100
+  transition:      3'011 32'-----------------------0--0----- ->      3'011 9'001100001
+  transition:      3'011 32'-----------------------0--1----- ->      3'000 9'000000001
+  transition:      3'011 32'-----------------------1-------- ->      3'000 9'000000001
+
+3.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\state_q$2550' from module `\wire_itch_decoder'.
+
+3.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 36 unused cells and 36 unused wires.
+<suppressed ~37 debug messages>
+
+3.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\state_q$2550' from module `\wire_itch_decoder'.
+  Removing unused output signal $0\state_q[2:0] [0].
+  Removing unused output signal $0\state_q[2:0] [1].
+  Removing unused output signal $0\state_q[2:0] [2].
+
+3.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\state_q$2550' from module `\wire_itch_decoder' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> -----1
+  100 -> ----1-
+  010 -> ---1--
+  001 -> --1---
+  101 -> -1----
+  011 -> 1-----
+
+3.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\state_q$2550' from module `wire_itch_decoder':
+-------------------------------------
+
+  Information on FSM $fsm$\state_q$2550 (\state_q):
+
+  Number of input signals:   32
+  Number of output signals:   6
+  Number of state bits:       6
+
+  Input signals:
+    0: $auto$opt_reduce.cc:137:opt_pmux$2543
+    1: $auto$opt_reduce.cc:137:opt_pmux$2537
+    2: \in_last
+    3: \message_fire
+    4: \byte_fire
+    5: \event_fire
+    6: \first_byte_invalid
+    7: $eq$rtl/arch_a/wire_itch_decoder.sv:111$26_Y
+    8: $logic_or$rtl/arch_a/wire_itch_decoder.sv:138$62_Y
+    9: $logic_or$rtl/arch_a/wire_itch_decoder.sv:161$105_Y
+   10: $logic_and$rtl/arch_a/wire_itch_decoder.sv:169$129_Y
+   11: $ne$rtl/arch_a/wire_itch_decoder.sv:176$132_Y
+   12: $ne$rtl/arch_a/wire_itch_decoder.sv:177$135_Y
+   13: $ne$rtl/arch_a/wire_itch_decoder.sv:178$138_Y
+   14: $ne$rtl/arch_a/wire_itch_decoder.sv:179$141_Y
+   15: $ne$rtl/arch_a/wire_itch_decoder.sv:180$144_Y
+   16: $ne$rtl/arch_a/wire_itch_decoder.sv:181$147_Y
+   17: $ne$rtl/arch_a/wire_itch_decoder.sv:182$150_Y
+   18: $ne$rtl/arch_a/wire_itch_decoder.sv:190$154_Y
+   19: $eq$rtl/arch_a/wire_itch_decoder.sv:204$167_Y
+   20: $ne$rtl/arch_a/wire_itch_decoder.sv:205$185_Y
+   21: $logic_or$rtl/arch_a/wire_itch_decoder.sv:206$204_Y
+   22: $logic_and$rtl/arch_a/wire_itch_decoder.sv:207$228_Y
+   23: $logic_and$rtl/arch_a/wire_itch_decoder.sv:209$237_Y
+   24: $logic_and$rtl/arch_a/wire_itch_decoder.sv:228$340_Y
+   25: $logic_and$rtl/arch_a/wire_itch_decoder.sv:231$343_Y
+   26: $procmux$2098_CMP
+   27: $procmux$2103_CMP
+   28: $procmux$2108_CMP
+   29: $procmux$2113_CMP
+   30: $procmux$2118_CMP
+   31: $procmux$2123_CMP
+
+  Output signals:
+    0: \event_valid
+    1: $eq$rtl/arch_a/wire_itch_decoder.sv:113$31_Y
+    2: $eq$rtl/arch_a/wire_itch_decoder.sv:113$32_Y
+    3: $eq$rtl/arch_a/wire_itch_decoder.sv:114$34_Y
+    4: $eq$rtl/arch_a/wire_itch_decoder.sv:114$35_Y
+    5: $procmux$1752_CMP
+
+  State encoding:
+    0:   6'-----1  <RESET STATE>
+    1:   6'----1-
+    2:   6'---1--
+    3:   6'--1---
+    4:   6'-1----
+    5:   6'1-----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 32'-----------------------0----0---   ->     0 6'000010
+      1:     0 32'-----------------------1--------   ->     0 6'000010
+      2:     0 32'----------------------00----1---   ->     3 6'000010
+      3:     0 32'----------------------10----1---   ->     4 6'000010
+      4:     1 32'-----------------------1--------   ->     0 6'010000
+      5:     1 32'-------0---------------0--------   ->     1 6'010000
+      6:     1 32'-------1---------------0--------   ->     4 6'010000
+      7:     2 32'----------000----------0------0-   ->     0 6'100000
+      8:     2 32'-----------10----------0--------   ->     0 6'100000
+      9:     2 32'------------1----------0--------   ->     0 6'100000
+     10:     2 32'-----------------------1--------   ->     0 6'100000
+     11:     2 32'--------10100----------0--------   ->     4 6'100000
+     12:     2 32'---------1100----------0--------   ->     4 6'100000
+     13:     2 32'----------000----------0------1-   ->     5 6'100000
+     14:     2 32'--------00100----------0--------   ->     5 6'100000
+     15:     3 32'-----------------------1--------   ->     0 6'001000
+     16:     3 32'--------------------10-01--1-0-1   ->     1 6'001000
+     17:     3 32'1------------------1-0-01--1-0--   ->     1 6'001000
+     18:     3 32'-1----------------1--0-01--1-0--   ->     1 6'001000
+     19:     3 32'--1--------------1---0-01--1-0--   ->     1 6'001000
+     20:     3 32'---1------------1----0-01--1-0--   ->     1 6'001000
+     21:     3 32'----1----------1-----0-01--1-0--   ->     1 6'001000
+     22:     3 32'-----1--------1------0-01--1-0--   ->     1 6'001000
+     23:     3 32'---------------------1-01--1-0--   ->     1 6'001000
+     24:     3 32'-------------0---------0-0-1-1--   ->     2 6'001000
+     25:     3 32'000000---------------0-01--1-0-0   ->     3 6'001000
+     26:     3 32'--------------------00-01--1-0-1   ->     3 6'001000
+     27:     3 32'-----------------------00--1-0--   ->     3 6'001000
+     28:     3 32'1------------------0-0-01--1-0--   ->     3 6'001000
+     29:     3 32'-1----------------0--0-01--1-0--   ->     3 6'001000
+     30:     3 32'--1--------------0---0-01--1-0--   ->     3 6'001000
+     31:     3 32'---1------------0----0-01--1-0--   ->     3 6'001000
+     32:     3 32'----1----------0-----0-01--1-0--   ->     3 6'001000
+     33:     3 32'-----1--------0------0-01--1-0--   ->     3 6'001000
+     34:     3 32'-----------------------0---0----   ->     3 6'001000
+     35:     3 32'-------------1---------0-0-1-1--   ->     4 6'001000
+     36:     3 32'-----------------------0-1-1-1--   ->     4 6'001000
+     37:     4 32'-----------------------1--------   ->     0 6'000100
+     38:     4 32'------10---------------0----1---   ->     1 6'000100
+     39:     4 32'-------0---------------0----0---   ->     4 6'000100
+     40:     4 32'------00---------------0----1---   ->     4 6'000100
+     41:     4 32'-------1---------------0--------   ->     4 6'000100
+     42:     5 32'-----------------------0--1-----   ->     0 6'000001
+     43:     5 32'-----------------------1--------   ->     0 6'000001
+     44:     5 32'-----------------------0--0-----   ->     5 6'000001
+
+-------------------------------------
+
+3.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\state_q$2550' from module `\wire_itch_decoder'.
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+<suppressed ~7 debug messages>
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 402 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~539 debug messages>
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_itch_decoder.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 402 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$2514 ($dff) from module wire_itch_decoder (D = $procmux$1751_Y, Q = \side_valid_q, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$2723 ($sdff) from module wire_itch_decoder (D = $procmux$1749_Y, Q = \side_valid_q).
+Adding SRST signal on $procdff$2513 ($dff) from module wire_itch_decoder (D = $procmux$1778_Y, Q = \price_valid_q, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$2725 ($sdff) from module wire_itch_decoder (D = $procmux$1776_Y, Q = \price_valid_q).
+Adding SRST signal on $procdff$2512 ($dff) from module wire_itch_decoder (D = $procmux$1808_Y, Q = \quantity_valid_q, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$2727 ($sdff) from module wire_itch_decoder (D = $procmux$1806_Y, Q = \quantity_valid_q).
+Adding SRST signal on $procdff$2511 ($dff) from module wire_itch_decoder (D = $procmux$1835_Y, Q = \new_valid_q, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$2729 ($sdff) from module wire_itch_decoder (D = $procmux$1776_Y, Q = \new_valid_q).
+Adding SRST signal on $procdff$2510 ($dff) from module wire_itch_decoder (D = $procmux$1860_Y, Q = \old_valid_q, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$2731 ($sdff) from module wire_itch_decoder (D = $procmux$1858_Y, Q = \old_valid_q).
+Adding SRST signal on $procdff$2509 ($dff) from module wire_itch_decoder (D = $procmux$1884_Y, Q = \side_q, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$2733 ($sdff) from module wire_itch_decoder (D = $procmux$1882_Y, Q = \side_q).
+Adding SRST signal on $procdff$2508 ($dff) from module wire_itch_decoder (D = $procmux$1911_Y, Q = \price_q, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$2735 ($sdff) from module wire_itch_decoder (D = $procmux$1909_Y, Q = \price_q).
+Adding SRST signal on $procdff$2507 ($dff) from module wire_itch_decoder (D = $procmux$1941_Y, Q = \quantity_q, rval = 0).
+Adding EN signal on $auto$ff.cc:337:slice$2737 ($sdff) from module wire_itch_decoder (D = $procmux$1939_Y, Q = \quantity_q).
+Adding SRST signal on $procdff$2506 ($dff) from module wire_itch_decoder (D = $procmux$1968_Y, Q = \new_ref_q, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$2739 ($sdff) from module wire_itch_decoder (D = $procmux$1966_Y, Q = \new_ref_q).
+Adding SRST signal on $procdff$2505 ($dff) from module wire_itch_decoder (D = $procmux$1993_Y, Q = \old_ref_q, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$2741 ($sdff) from module wire_itch_decoder (D = $procmux$1991_Y, Q = \old_ref_q).
+Adding SRST signal on $procdff$2504 ($dff) from module wire_itch_decoder (D = $procmux$2002_Y, Q = \stock_locate_q, rval = 16'0000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$2743 ($sdff) from module wire_itch_decoder (D = { $memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:81$165_DATA $memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:81$164_DATA }, Q = \stock_locate_q).
+Adding SRST signal on $procdff$2503 ($dff) from module wire_itch_decoder (D = $procmux$2011_Y, Q = \timestamp_q, rval = 48'000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$2745 ($sdff) from module wire_itch_decoder (D = { $memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:91$163_DATA $memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:91$162_DATA $memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:91$161_DATA $memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:92$160_DATA $memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:92$159_DATA $memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:92$158_DATA }, Q = \timestamp_q).
+Adding SRST signal on $procdff$2502 ($dff) from module wire_itch_decoder (D = $procmux$2020_Y, Q = \mold_sequence_q, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$2747 ($sdff) from module wire_itch_decoder (D = \message_sequence_q, Q = \mold_sequence_q).
+Adding SRST signal on $procdff$2501 ($dff) from module wire_itch_decoder (D = $procmux$2029_Y, Q = \source_type_q, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$2749 ($sdff) from module wire_itch_decoder (D = $memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:197$157_DATA, Q = \source_type_q).
+Adding SRST signal on $procdff$2500 ($dff) from module wire_itch_decoder (D = $procmux$2060_Y, Q = \event_kind_q, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$2751 ($sdff) from module wire_itch_decoder (D = $procmux$2052_Y, Q = \event_kind_q).
+Adding SRST signal on $procdff$2499 ($dff) from module wire_itch_decoder (D = $procmux$2090_Y, Q = \reject_pending_q, rval = 1'0).
+Adding SRST signal on $procdff$2498 ($dff) from module wire_itch_decoder (D = $procmux$2184_Y, Q = \reject_code_q, rval = 3'000).
+Adding EN signal on $auto$ff.cc:337:slice$2766 ($sdff) from module wire_itch_decoder (D = $procmux$2184_Y, Q = \reject_code_q).
+Adding EN signal on $procdff$2497 ($dff) from module wire_itch_decoder (D = \cfg_expected_stock_symbol, Q = \expected_symbol_q).
+Adding EN signal on $procdff$2496 ($dff) from module wire_itch_decoder (D = \cfg_symbol_check_enable, Q = \symbol_enable_q).
+Adding EN signal on $procdff$2495 ($dff) from module wire_itch_decoder (D = \cfg_tracked_stock_locate, Q = \tracked_locate_q).
+Adding SRST signal on $procdff$2494 ($dff) from module wire_itch_decoder (D = $procmux$2272_Y, Q = \message_sequence_q, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$2795 ($sdff) from module wire_itch_decoder (D = \message_sequence, Q = \message_sequence_q).
+Adding SRST signal on $procdff$2493 ($dff) from module wire_itch_decoder (D = $procmux$2285_Y, Q = \declared_length_q, rval = 16'0000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$2799 ($sdff) from module wire_itch_decoder (D = \message_length, Q = \declared_length_q).
+Adding SRST signal on $procdff$2492 ($dff) from module wire_itch_decoder (D = $procmux$2301_Y, Q = \byte_index_q, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:337:slice$2803 ($sdff) from module wire_itch_decoder (D = $procmux$2301_Y, Q = \byte_index_q).
+Adding SRST signal on $procdff$2490 ($dff) from module wire_itch_decoder (D = $procmux$2419_Y, Q = \recovery_required, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$2815 ($sdff) from module wire_itch_decoder (D = $procmux$2419_Y, Q = \recovery_required).
+
+3.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 45 unused cells and 54 unused wires.
+<suppressed ~46 debug messages>
+
+3.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+<suppressed ~4 debug messages>
+
+3.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~471 debug messages>
+
+3.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_itch_decoder.
+Performed a total of 0 changes.
+
+3.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 391 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 379 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+<suppressed ~36 debug messages>
+Removed a total of 12 cells.
+
+3.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 0 unused cells and 11 unused wires.
+<suppressed ~1 debug messages>
+
+3.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+
+3.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~471 debug messages>
+
+3.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_itch_decoder.
+Performed a total of 0 changes.
+
+3.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 379 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+
+3.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+
+3.8.23. Finished fast OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:84$339 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:84$338 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:84$337 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:84$336 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:84$335 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:84$334 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:84$333 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:84$332 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:87$331 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:87$330 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:87$329 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:87$328 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:88$327 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:88$326 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:88$325 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:88$324 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:87$323 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:87$322 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:87$321 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:87$320 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:88$319 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:88$318 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:88$317 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:88$316 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:217$260 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:84$254 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:81$184 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:81$183 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:91$163 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:91$162 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:91$161 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:92$160 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:92$159 (bytes_q).
+Removed top 26 address bits (of 32) from memory read port wire_itch_decoder.$memrd$\bytes_q$rtl/arch_a/wire_itch_decoder.sv:92$158 (bytes_q).
+Removed top 1 bits (of 2) from port B of cell wire_itch_decoder.$auto$simple.cc:194:make_patterns_logic$2828 ($ne).
+Removed top 1 bits (of 2) from port B of cell wire_itch_decoder.$auto$simple.cc:194:make_patterns_logic$2822 ($ne).
+Removed top 1 bits (of 2) from port B of cell wire_itch_decoder.$auto$simple.cc:194:make_patterns_logic$2820 ($ne).
+Removed top 1 bits (of 2) from port B of cell wire_itch_decoder.$auto$simple.cc:194:make_patterns_logic$2812 ($ne).
+Removed top 2 bits (of 3) from port B of cell wire_itch_decoder.$auto$simple.cc:194:make_patterns_logic$2787 ($ne).
+Removed top 2 bits (of 6) from port B of cell wire_itch_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$2719 ($eq).
+Removed top 4 bits (of 5) from port B of cell wire_itch_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$2711 ($eq).
+Removed top 3 bits (of 4) from port B of cell wire_itch_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$2692 ($eq).
+Removed top 1 bits (of 4) from port B of cell wire_itch_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$2680 ($eq).
+Removed top 2 bits (of 3) from port B of cell wire_itch_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$2667 ($eq).
+Removed top 2 bits (of 4) from port B of cell wire_itch_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$2639 ($eq).
+Removed top 3 bits (of 7) from port B of cell wire_itch_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$2635 ($eq).
+Removed top 8 bits (of 12) from port B of cell wire_itch_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$2631 ($eq).
+Removed top 3 bits (of 5) from port B of cell wire_itch_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$2627 ($eq).
+Removed top 1 bits (of 2) from port B of cell wire_itch_decoder.$auto$fsm_map.cc:77:implement_pattern_cache$2571 ($eq).
+Removed top 26 bits (of 32) from port B of cell wire_itch_decoder.$lt$rtl/arch_a/wire_itch_decoder.sv:167$110 ($lt).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:169$115 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:169$116 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:169$118 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:170$120 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:170$122 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:170$124 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:171$126 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:171$128 ($ne).
+Removed top 10 bits (of 16) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:176$132 ($ne).
+Removed top 10 bits (of 16) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:177$135 ($ne).
+Removed top 11 bits (of 16) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:178$138 ($ne).
+Removed top 11 bits (of 16) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:179$141 ($ne).
+Removed top 11 bits (of 16) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:180$144 ($ne).
+Removed top 10 bits (of 16) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:181$147 ($ne).
+Removed top 10 bits (of 16) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:182$150 ($ne).
+Removed top 10 bits (of 16) from port A of cell wire_itch_decoder.$add$rtl/arch_a/wire_itch_decoder.sv:190$153 ($add).
+Removed top 15 bits (of 16) from port B of cell wire_itch_decoder.$add$rtl/arch_a/wire_itch_decoder.sv:190$153 ($add).
+Removed top 9 bits (of 16) from port Y of cell wire_itch_decoder.$add$rtl/arch_a/wire_itch_decoder.sv:190$153 ($add).
+Removed top 9 bits (of 16) from port A of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:190$154 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$eq$rtl/arch_a/wire_itch_decoder.sv:204$167 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$eq$rtl/arch_a/wire_itch_decoder.sv:206$201 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$eq$rtl/arch_a/wire_itch_decoder.sv:206$203 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:209$234 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$ne$rtl/arch_a/wire_itch_decoder.sv:209$236 ($ne).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$eq$rtl/arch_a/wire_itch_decoder.sv:213$259 ($eq).
+Removed top 10 bits (of 16) from mux cell wire_itch_decoder.$procmux$366 ($pmux).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$1789_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$1790_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$1791_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$1792_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$1847_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$2098_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$2103_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$2108_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$2113_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$2118_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$2123_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$2128_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_itch_decoder.$procmux$2128_CMP1 ($eq).
+Removed top 9 bits (of 16) from wire wire_itch_decoder.$add$rtl/arch_a/wire_itch_decoder.sv:190$153_Y.
+Removed top 10 bits (of 16) from wire wire_itch_decoder.required_length$func$rtl/arch_a/wire_itch_decoder.sv:112$1.$result.
+
+3.10. Executing PEEPOPT pass (run peephole optimizers).
+
+3.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+3.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module wire_itch_decoder:
+  creating $macc model for $add$rtl/arch_a/wire_itch_decoder.sv:194$156 ($add).
+  creating $macc model for $add$rtl/arch_a/wire_itch_decoder.sv:190$153 ($add).
+  creating $alu model for $macc $add$rtl/arch_a/wire_itch_decoder.sv:190$153.
+  creating $alu model for $macc $add$rtl/arch_a/wire_itch_decoder.sv:194$156.
+  creating $alu model for $lt$rtl/arch_a/wire_itch_decoder.sv:167$110 ($lt): new $alu
+  creating $alu cell for $lt$rtl/arch_a/wire_itch_decoder.sv:167$110: $auto$alumacc.cc:576:replace_alu$2838
+  creating $alu cell for $add$rtl/arch_a/wire_itch_decoder.sv:194$156: $auto$alumacc.cc:576:replace_alu$2843
+  creating $alu cell for $add$rtl/arch_a/wire_itch_decoder.sv:190$153: $auto$alumacc.cc:576:replace_alu$2846
+  created 3 $alu and 0 $macc cells.
+
+3.13. Executing SHARE pass (SAT-based resource sharing).
+
+3.14. Executing OPT pass (performing simple optimizations).
+
+3.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+<suppressed ~3 debug messages>
+
+3.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 380 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~471 debug messages>
+
+3.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_itch_decoder.
+Performed a total of 0 changes.
+
+3.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 380 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
+
+3.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+
+3.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~471 debug messages>
+
+3.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_itch_decoder.
+Performed a total of 0 changes.
+
+3.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 379 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+
+3.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+
+3.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+3.15. Executing MEMORY pass.
+
+3.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+3.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+3.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing wire_itch_decoder.bytes_q write port 0.
+
+3.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+3.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\bytes_q'[0] in module `\wire_itch_decoder': merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\bytes_q'[1] in module `\wire_itch_decoder': merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\bytes_q'[2] in module `\wire_itch_decoder': merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\bytes_q'[3] in module `\wire_itch_decoder': merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\bytes_q'[4] in module `\wire_itch_decoder': merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\bytes_q'[5] in module `\wire_itch_decoder': merging output FF to cell.
+    Write port 0: don't care on collision.
+Checking read port `\bytes_q'[6] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[7] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[8] in module `\wire_itch_decoder': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port `\bytes_q'[9] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[10] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[11] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[12] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[13] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[14] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[15] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[16] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[17] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[18] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[19] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[20] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[21] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[22] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[23] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[24] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[25] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[26] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[27] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[28] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[29] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[30] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[31] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[32] in module `\wire_itch_decoder': no output FF found.
+Checking read port `\bytes_q'[33] in module `\wire_itch_decoder': no output FF found.
+Checking read port address `\bytes_q'[6] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[7] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[8] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[9] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[10] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[11] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[12] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[13] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[14] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[15] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[16] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[17] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[18] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[19] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[20] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[21] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[22] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[23] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[24] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[25] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[26] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[27] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[28] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[29] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[30] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[31] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[32] in module `\wire_itch_decoder': no address FF found.
+Checking read port address `\bytes_q'[33] in module `\wire_itch_decoder': no address FF found.
+
+3.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 1 unused cells and 54 unused wires.
+<suppressed ~2 debug messages>
+
+3.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory wire_itch_decoder.bytes_q by address:
+  Merging ports 1, 2 (address 6'001001).
+  Merging ports 3, 4 (address 6'000111).
+  Merging ports 3, 5 (address 6'000110).
+  Merging ports 7, 9 (address 6'000001).
+  Merging ports 8, 30 (address 6'100011).
+  Merging ports 8, 31 (address 6'100010).
+  Merging ports 8, 32 (address 6'100000).
+  Merging ports 10, 25 (address 6'010010).
+  Merging ports 11, 12 (address 6'010001).
+  Merging ports 13, 14 (address 6'001111).
+  Merging ports 13, 15 (address 6'001110).
+  Merging ports 13, 16 (address 6'001100).
+  Merging ports 13, 17 (address 6'001100).
+  Merging ports 18, 29 (address 6'011010).
+  Merging ports 19, 20 (address 6'011001).
+  Merging ports 21, 22 (address 6'010111).
+  Merging ports 21, 23 (address 6'010110).
+  Merging ports 21, 24 (address 6'010100).
+  Merging ports 26, 33 (address 6'011110).
+  Merging ports 27, 28 (address 6'011101).
+Consolidating read ports of memory wire_itch_decoder.bytes_q by address:
+  Merging ports 0, 1 (address 6'001010).
+  Merging ports 3, 4 (address 6'000010).
+  Merging ports 3, 8 (address 6'000000).
+  Merging ports 3, 9 (address 6'000000).
+  Merging ports 3, 10 (address 6'000000).
+  Merging ports 3, 11 (address 6'000000).
+  Merging ports 3, 12 (address 6'000000).
+  Merging ports 3, 13 (address 6'000000).
+  Merging ports 6, 7 (address 6'010010).
+Consolidating read ports of memory wire_itch_decoder.bytes_q by address:
+  Merging ports 2, 3 (address 6'000000).
+Consolidating read ports of memory wire_itch_decoder.bytes_q by address:
+
+3.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+3.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 0 unused cells and 38 unused wires.
+<suppressed ~1 debug messages>
+
+3.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+
+3.17. Executing OPT pass (performing simple optimizations).
+
+3.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+<suppressed ~54 debug messages>
+
+3.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 312 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 2 unused cells and 36 unused wires.
+<suppressed ~3 debug messages>
+
+3.17.5. Finished fast OPT passes.
+
+3.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \bytes_q in module \wire_itch_decoder:
+  created 64 $dff cells and 0 static cells of width 8.
+Extracted data FF from read port 0 of wire_itch_decoder.bytes_q: $\bytes_q$rdreg[0]
+Extracted data FF from read port 1 of wire_itch_decoder.bytes_q: $\bytes_q$rdreg[1]
+  read interface: 2 $dff and 45 $mux cells.
+  write interface: 64 write mux blocks.
+
+3.19. Executing OPT pass (performing simple optimizations).
+
+3.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+<suppressed ~65 debug messages>
+
+3.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 613 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~509 debug messages>
+
+3.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_itch_decoder.
+    New ctrl vector for $pmux cell $procmux$2419: \state_q [3]
+    Consolidated identical input bits for $pmux cell $procmux$366:
+      Old ports: A=6'000000, B=42'101100100011010011010111100100011111101000, Y=\required_length$func$rtl/arch_a/wire_itch_decoder.sv:112$1.$result
+      New ports: A=5'00000, B=35'10110100010100101011100100111110100, Y={ \required_length$func$rtl/arch_a/wire_itch_decoder.sv:112$1.$result [5:2] \required_length$func$rtl/arch_a/wire_itch_decoder.sv:112$1.$result [0] }
+      New connections: \required_length$func$rtl/arch_a/wire_itch_decoder.sv:112$1.$result [1] = \required_length$func$rtl/arch_a/wire_itch_decoder.sv:112$1.$result [0]
+    Consolidated identical input bits for $mux cell $procmux$2174:
+      Old ports: A=3'011, B=3'100, Y=$procmux$2174_Y
+      New ports: A=2'01, B=2'10, Y={ $procmux$2174_Y [2] $procmux$2174_Y [0] }
+      New connections: $procmux$2174_Y [1] = $procmux$2174_Y [0]
+  Optimizing cells in module \wire_itch_decoder.
+Performed a total of 3 changes.
+
+3.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 613 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.19.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $pmux $procmux$2426 in front of them:
+        $procmux$2424
+        $procmux$2430
+        $procmux$2435
+        $procmux$2440
+        $procmux$2445
+        $procmux$2450
+        $procmux$2455
+
+3.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 136 unused cells and 331 unused wires.
+<suppressed ~166 debug messages>
+
+3.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+<suppressed ~1 debug messages>
+
+3.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~453 debug messages>
+
+3.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_itch_decoder.
+    New ctrl vector for $pmux cell $procmux$2426: $auto$opt_reduce.cc:137:opt_pmux$3740
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:131:opt_pmux$3739: { $procmux$2128_CMP $procmux$2123_CMP $procmux$2118_CMP $procmux$2113_CMP $procmux$2108_CMP $procmux$2103_CMP $procmux$2098_CMP }
+  Optimizing cells in module \wire_itch_decoder.
+Performed a total of 2 changes.
+
+3.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 473 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.19.14. Executing OPT_SHARE pass.
+
+3.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\bytes_q[0]$2993 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[0]).
+Adding EN signal on $memory\bytes_q[1]$2995 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[1]).
+Adding EN signal on $memory\bytes_q[2]$2997 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[2]).
+Adding EN signal on $memory\bytes_q[4]$3001 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[4]).
+Adding EN signal on $memory\bytes_q[5]$3003 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[5]).
+Adding EN signal on $memory\bytes_q[6]$3005 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[6]).
+Adding EN signal on $memory\bytes_q[7]$3007 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[7]).
+Adding EN signal on $memory\bytes_q[8]$3009 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[8]).
+Adding EN signal on $memory\bytes_q[9]$3011 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[9]).
+Adding EN signal on $memory\bytes_q[10]$3013 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[10]).
+Adding EN signal on $memory\bytes_q[11]$3015 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[11]).
+Adding EN signal on $memory\bytes_q[12]$3017 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[12]).
+Adding EN signal on $memory\bytes_q[13]$3019 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[13]).
+Adding EN signal on $memory\bytes_q[14]$3021 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[14]).
+Adding EN signal on $memory\bytes_q[15]$3023 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[15]).
+Adding EN signal on $memory\bytes_q[16]$3025 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[16]).
+Adding EN signal on $memory\bytes_q[17]$3027 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[17]).
+Adding EN signal on $memory\bytes_q[18]$3029 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[18]).
+Adding EN signal on $memory\bytes_q[19]$3031 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[19]).
+Adding EN signal on $memory\bytes_q[20]$3033 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[20]).
+Adding EN signal on $memory\bytes_q[21]$3035 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[21]).
+Adding EN signal on $memory\bytes_q[22]$3037 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[22]).
+Adding EN signal on $memory\bytes_q[23]$3039 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[23]).
+Adding EN signal on $memory\bytes_q[24]$3041 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[24]).
+Adding EN signal on $memory\bytes_q[25]$3043 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[25]).
+Adding EN signal on $memory\bytes_q[26]$3045 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[26]).
+Adding EN signal on $memory\bytes_q[27]$3047 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[27]).
+Adding EN signal on $memory\bytes_q[28]$3049 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[28]).
+Adding EN signal on $memory\bytes_q[29]$3051 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[29]).
+Adding EN signal on $memory\bytes_q[30]$3053 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[30]).
+Adding EN signal on $memory\bytes_q[31]$3055 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[31]).
+Adding EN signal on $memory\bytes_q[32]$3057 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[32]).
+Adding EN signal on $memory\bytes_q[33]$3059 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[33]).
+Adding EN signal on $memory\bytes_q[34]$3061 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[34]).
+Adding EN signal on $memory\bytes_q[35]$3063 ($dff) from module wire_itch_decoder (D = \in_data, Q = \bytes_q[35]).
+
+3.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 35 unused cells and 35 unused wires.
+<suppressed ~36 debug messages>
+
+3.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+
+3.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_itch_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~383 debug messages>
+
+3.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_itch_decoder.
+Performed a total of 0 changes.
+
+3.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 438 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Removed a total of 0 cells.
+
+3.19.22. Executing OPT_SHARE pass.
+
+3.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+
+3.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+
+3.19.26. Finished fast OPT passes. (There is nothing left to do.)
+
+3.20. Executing TECHMAP pass (map to technology primitives).
+
+3.20.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+3.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$f28fc3f2e267d7716249e826e8c90c34ca9542c1\_90_alu for cells of type $alu.
+Using template $paramod$32efbfac1c4dc57230cf86180788fdfd12e3b511\_90_alu for cells of type $alu.
+Using template $paramod$740b056ede97228d3eae64ea2fdc81f0a33e0fe7\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000110 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000111 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000111 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~953 debug messages>
+
+3.21. Executing OPT pass (performing simple optimizations).
+
+3.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+<suppressed ~1098 debug messages>
+
+3.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 3409 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 3130 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 3010 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 2940 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 2929 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+<suppressed ~1440 debug messages>
+Removed a total of 480 cells.
+
+3.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 31 unused cells and 639 unused wires.
+<suppressed ~33 debug messages>
+
+3.21.5. Finished fast OPT passes.
+
+3.22. Executing ABC pass (technology mapping using ABC).
+
+3.22.1. Summary of detected clock domains:
+  6 cells in clk=\clk, en={ }, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$2582
+  69 cells in clk=\clk, en=$auto$simple.cc:210:make_patterns_logic$2833, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$2582
+  19 cells in clk=\clk, en=$memory\bytes_q$wren[35][0][0]$y$3557, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[34][0][0]$y$3551, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[33][0][0]$y$3545, arst={ }, srst={ }
+  27 cells in clk=\clk, en=$memory\bytes_q$wren[32][0][0]$y$3539, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[31][0][0]$y$3527, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[30][0][0]$y$3521, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[29][0][0]$y$3515, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[28][0][0]$y$3509, arst={ }, srst={ }
+  27 cells in clk=\clk, en=$memory\bytes_q$wren[27][0][0]$y$3503, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[26][0][0]$y$3497, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[25][0][0]$y$3491, arst={ }, srst={ }
+  25 cells in clk=\clk, en=$memory\bytes_q$wren[24][0][0]$y$3485, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[23][0][0]$y$3477, arst={ }, srst={ }
+  34 cells in clk=\clk, en=$memory\bytes_q$wren[22][0][0]$y$3471, arst={ }, srst={ }
+  34 cells in clk=\clk, en=$memory\bytes_q$wren[21][0][0]$y$3465, arst={ }, srst={ }
+  34 cells in clk=\clk, en=$memory\bytes_q$wren[20][0][0]$y$3459, arst={ }, srst={ }
+  47 cells in clk=\clk, en=$memory\bytes_q$wren[19][0][0]$y$3453, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[18][0][0]$y$3447, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[17][0][0]$y$3441, arst={ }, srst={ }
+  27 cells in clk=\clk, en=$memory\bytes_q$wren[16][0][0]$y$3435, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[15][0][0]$y$3423, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[14][0][0]$y$3417, arst={ }, srst={ }
+  26 cells in clk=\clk, en=$memory\bytes_q$wren[13][0][0]$y$3411, arst={ }, srst={ }
+  27 cells in clk=\clk, en=$memory\bytes_q$wren[12][0][0]$y$3405, arst={ }, srst={ }
+  40 cells in clk=\clk, en=$memory\bytes_q$wren[11][0][0]$y$3399, arst={ }, srst={ }
+  10 cells in clk=\clk, en=$memory\bytes_q$wren[10][0][0]$y$3393, arst={ }, srst={ }
+  10 cells in clk=\clk, en=$memory\bytes_q$wren[9][0][0]$y$3387, arst={ }, srst={ }
+  10 cells in clk=\clk, en=$memory\bytes_q$wren[8][0][0]$y$3381, arst={ }, srst={ }
+  10 cells in clk=\clk, en=$memory\bytes_q$wren[7][0][0]$y$3371, arst={ }, srst={ }
+  11 cells in clk=\clk, en=$memory\bytes_q$wren[6][0][0]$y$3363, arst={ }, srst={ }
+  10 cells in clk=\clk, en=$memory\bytes_q$wren[5][0][0]$y$3353, arst={ }, srst={ }
+  19 cells in clk=\clk, en=$memory\bytes_q$wren[2][0][0]$y$3325, arst={ }, srst={ }
+  17 cells in clk=\clk, en=$memory\bytes_q$wren[1][0][0]$y$3313, arst={ }, srst={ }
+  27 cells in clk=\clk, en=$memory\bytes_q$wren[0][0][0]$y$3303, arst={ }, srst={ }
+  52 cells in clk=\clk, en=$auto$simple.cc:210:make_patterns_logic$2813, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$2582
+  142 cells in clk=\clk, en=$auto$simple.cc:210:make_patterns_logic$2797, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$2582
+  147 cells in clk=\clk, en=$auto$fsm_map.cc:74:implement_pattern_cache$2582, arst={ }, srst={ }
+  146 cells in clk=\clk, en=$auto$simple.cc:210:make_patterns_logic$2790, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$2582
+  29 cells in clk=\clk, en=$auto$simple.cc:210:make_patterns_logic$2763, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$2582
+  338 cells in clk=\clk, en={ }, arst={ }, srst={ }
+  1140 cells in clk=\clk, en=\state_q [2], arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$2582
+
+3.22.2. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$2582
+
+3.22.3. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $auto$simple.cc:210:make_patterns_logic$2833, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$2582
+
+3.22.4. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[35][0][0]$y$3557
+
+3.22.5. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[34][0][0]$y$3551
+
+3.22.6. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[33][0][0]$y$3545
+
+3.22.7. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[32][0][0]$y$3539
+
+3.22.8. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[31][0][0]$y$3527
+
+3.22.9. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[30][0][0]$y$3521
+
+3.22.10. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[29][0][0]$y$3515
+
+3.22.11. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[28][0][0]$y$3509
+
+3.22.12. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[27][0][0]$y$3503
+
+3.22.13. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[26][0][0]$y$3497
+
+3.22.14. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[25][0][0]$y$3491
+
+3.22.15. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[24][0][0]$y$3485
+
+3.22.16. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[23][0][0]$y$3477
+
+3.22.17. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[22][0][0]$y$3471
+
+3.22.18. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[21][0][0]$y$3465
+
+3.22.19. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[20][0][0]$y$3459
+
+3.22.20. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[19][0][0]$y$3453
+
+3.22.21. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[18][0][0]$y$3447
+
+3.22.22. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[17][0][0]$y$3441
+
+3.22.23. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[16][0][0]$y$3435
+
+3.22.24. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[15][0][0]$y$3423
+
+3.22.25. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[14][0][0]$y$3417
+
+3.22.26. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[13][0][0]$y$3411
+
+3.22.27. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[12][0][0]$y$3405
+
+3.22.28. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[11][0][0]$y$3399
+
+3.22.28.1. Executed ABC.
+Extracted 5 gates and 12 wires to a netlist network with 6 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.28.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:                OR cells:        1
+ABC RESULTS:        internal signals:        4
+ABC RESULTS:           input signals:        6
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+3.22.29. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[10][0][0]$y$3393
+
+3.22.30. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[9][0][0]$y$3387
+
+3.22.31. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[8][0][0]$y$3381
+
+3.22.32. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[7][0][0]$y$3371
+
+3.22.32.1. Executed ABC.
+Extracted 68 gates and 111 wires to a netlist network with 41 inputs and 13 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.32.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       23
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:              NAND cells:       14
+ABC RESULTS:               NOR cells:        6
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:        9
+ABC RESULTS:             ORNOT cells:        5
+ABC RESULTS:        internal signals:       57
+ABC RESULTS:           input signals:       41
+ABC RESULTS:          output signals:       13
+Removing temp directory.
+
+3.22.32.1. Executed ABC.
+Extracted 11 gates and 25 wires to a netlist network with 13 inputs and 10 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.32.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:        9
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       10
+Removing temp directory.
+
+3.22.32.1. Executed ABC.
+Extracted 18 gates and 32 wires to a netlist network with 13 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.32.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:       16
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.32.1. Executed ABC.
+Extracted 18 gates and 32 wires to a netlist network with 13 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.32.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:       16
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.32.1. Executed ABC.
+Extracted 19 gates and 34 wires to a netlist network with 14 inputs and 18 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.32.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        3
+ABC RESULTS:            ANDNOT cells:       16
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:       18
+Removing temp directory.
+
+3.22.32.1. Executed ABC.
+Extracted 18 gates and 39 wires to a netlist network with 20 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.32.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:               XOR cells:        8
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       20
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.32.1. Executed ABC.
+Extracted 18 gates and 38 wires to a netlist network with 20 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.32.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:               XOR cells:        8
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       20
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.32.1. Executed ABC.
+Extracted 18 gates and 38 wires to a netlist network with 20 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.32.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:               XOR cells:        8
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       20
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.32.1. Executed ABC.
+Extracted 18 gates and 38 wires to a netlist network with 20 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.32.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:               XOR cells:        8
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       20
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.32.1. Executed ABC.
+Extracted 19 gates and 39 wires to a netlist network with 20 inputs and 18 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.32.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:               XOR cells:        8
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       20
+ABC RESULTS:          output signals:       18
+Removing temp directory.
+
+3.22.33. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[6][0][0]$y$3363
+
+3.22.34. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[5][0][0]$y$3353
+
+3.22.35. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[2][0][0]$y$3325
+
+3.22.36. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[1][0][0]$y$3313
+
+3.22.37. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $memory\bytes_q$wren[0][0][0]$y$3303
+
+3.22.38. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $auto$simple.cc:210:make_patterns_logic$2813, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$2582
+
+3.22.39. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $auto$simple.cc:210:make_patterns_logic$2797, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$2582
+
+3.22.39.1. Executed ABC.
+Extracted 18 gates and 39 wires to a netlist network with 20 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.39.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:               XOR cells:        8
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       20
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.39.1. Executed ABC.
+Extracted 18 gates and 39 wires to a netlist network with 20 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.39.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:               XOR cells:        8
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       20
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.39.1. Executed ABC.
+Extracted 17 gates and 37 wires to a netlist network with 19 inputs and 16 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.39.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:               XOR cells:        7
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       19
+ABC RESULTS:          output signals:       16
+Removing temp directory.
+
+3.22.39.1. Executed ABC.
+Extracted 18 gates and 32 wires to a netlist network with 13 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.39.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:            ANDNOT cells:       16
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.39.1. Executed ABC.
+Extracted 26 gates and 41 wires to a netlist network with 14 inputs and 25 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.39.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:            ANDNOT cells:       16
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:       25
+Removing temp directory.
+
+3.22.40. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $auto$fsm_map.cc:74:implement_pattern_cache$2582
+
+3.22.41. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $auto$simple.cc:210:make_patterns_logic$2790, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$2582
+
+3.22.42. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $auto$simple.cc:210:make_patterns_logic$2763, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$2582
+
+3.22.43. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk
+
+3.22.44. Extracting gate netlist of module `\wire_itch_decoder' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by \state_q [2], synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$2582
+
+3.22.44.1. Executed ABC.
+Extracted 26 gates and 41 wires to a netlist network with 14 inputs and 25 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:            ANDNOT cells:       16
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:       25
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 26 gates and 41 wires to a netlist network with 14 inputs and 25 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:            ANDNOT cells:       16
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:       25
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 39 gates and 60 wires to a netlist network with 20 inputs and 31 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       20
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:               NOR cells:        3
+ABC RESULTS:               NOT cells:        4
+ABC RESULTS:                OR cells:        5
+ABC RESULTS:             ORNOT cells:        3
+ABC RESULTS:        internal signals:        9
+ABC RESULTS:           input signals:       20
+ABC RESULTS:          output signals:       31
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 18 gates and 32 wires to a netlist network with 13 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 18 gates and 32 wires to a netlist network with 13 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 19 gates and 34 wires to a netlist network with 14 inputs and 18 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       11
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:       18
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 18 gates and 32 wires to a netlist network with 13 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 18 gates and 32 wires to a netlist network with 13 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 18 gates and 32 wires to a netlist network with 13 inputs and 17 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       17
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 19 gates and 34 wires to a netlist network with 14 inputs and 18 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       11
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:        internal signals:        2
+ABC RESULTS:           input signals:       14
+ABC RESULTS:          output signals:       18
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 32 gates and 57 wires to a netlist network with 24 inputs and 22 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       18
+ABC RESULTS:            ANDNOT cells:        2
+ABC RESULTS:              NAND cells:        3
+ABC RESULTS:               NOR cells:        4
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:        internal signals:       11
+ABC RESULTS:           input signals:       24
+ABC RESULTS:          output signals:       22
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 2 gates and 5 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 2 gates and 5 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 2 gates and 5 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 2 gates and 5 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 3 gates and 7 wires to a netlist network with 4 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        3
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        4
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 2 gates and 5 wires to a netlist network with 3 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 11 gates and 31 wires to a netlist network with 20 inputs and 10 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        3
+ABC RESULTS:               XOR cells:        8
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       20
+ABC RESULTS:          output signals:       10
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 9 gates and 26 wires to a netlist network with 17 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:               XOR cells:        7
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       17
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 19 gates and 32 wires to a netlist network with 13 inputs and 14 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        4
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        3
+ABC RESULTS:             ORNOT cells:        6
+ABC RESULTS:        internal signals:        5
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       14
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 46 gates and 60 wires to a netlist network with 13 inputs and 36 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       18
+ABC RESULTS:            ANDNOT cells:        7
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOR cells:        3
+ABC RESULTS:               NOT cells:        4
+ABC RESULTS:                OR cells:        4
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        3
+ABC RESULTS:        internal signals:       11
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:       36
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 62 gates and 102 wires to a netlist network with 39 inputs and 43 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        9
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:              NAND cells:        7
+ABC RESULTS:               NOR cells:        3
+ABC RESULTS:               NOT cells:       12
+ABC RESULTS:                OR cells:       10
+ABC RESULTS:             ORNOT cells:        5
+ABC RESULTS:              XNOR cells:        4
+ABC RESULTS:               XOR cells:        8
+ABC RESULTS:        internal signals:       20
+ABC RESULTS:           input signals:       39
+ABC RESULTS:          output signals:       43
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 66 gates and 134 wires to a netlist network with 68 inputs and 2 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       31
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOR cells:       31
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:       64
+ABC RESULTS:           input signals:       68
+ABC RESULTS:          output signals:        2
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 143 gates and 205 wires to a netlist network with 61 inputs and 28 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       28
+ABC RESULTS:            ANDNOT cells:       11
+ABC RESULTS:              NAND cells:       32
+ABC RESULTS:               NOR cells:       12
+ABC RESULTS:               NOT cells:        5
+ABC RESULTS:                OR cells:       17
+ABC RESULTS:             ORNOT cells:        7
+ABC RESULTS:        internal signals:      116
+ABC RESULTS:           input signals:       61
+ABC RESULTS:          output signals:       28
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 26 gates and 44 wires to a netlist network with 16 inputs and 8 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        8
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:               NOR cells:        2
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:        7
+ABC RESULTS:        internal signals:       20
+ABC RESULTS:           input signals:       16
+ABC RESULTS:          output signals:        8
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 332 gates and 432 wires to a netlist network with 100 inputs and 39 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       57
+ABC RESULTS:            ANDNOT cells:       21
+ABC RESULTS:               MUX cells:        3
+ABC RESULTS:              NAND cells:       36
+ABC RESULTS:               NOR cells:       30
+ABC RESULTS:               NOT cells:       10
+ABC RESULTS:                OR cells:       30
+ABC RESULTS:             ORNOT cells:       12
+ABC RESULTS:        internal signals:      293
+ABC RESULTS:           input signals:      100
+ABC RESULTS:          output signals:       39
+Removing temp directory.
+
+3.22.44.1. Executed ABC.
+Extracted 807 gates and 1189 wires to a netlist network with 381 inputs and 201 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.22.44.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:      201
+ABC RESULTS:            ANDNOT cells:       69
+ABC RESULTS:              NAND cells:      292
+ABC RESULTS:               NOR cells:       10
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:       35
+ABC RESULTS:             ORNOT cells:       98
+ABC RESULTS:        internal signals:      607
+ABC RESULTS:           input signals:      381
+ABC RESULTS:          output signals:      201
+Removing temp directory.
+Removing global temp directory.
+
+3.23. Executing OPT pass (performing simple optimizations).
+
+3.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_itch_decoder.
+<suppressed ~2 debug messages>
+
+3.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_itch_decoder'.
+Computing hashes of 2606 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+Computing hashes of 2579 cells of `\wire_itch_decoder'.
+Finding duplicate cells in `\wire_itch_decoder'.
+<suppressed ~81 debug messages>
+Removed a total of 27 cells.
+
+3.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+3.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_itch_decoder..
+Removed 0 unused cells and 2005 unused wires.
+<suppressed ~2 debug messages>
+
+3.23.5. Finished fast OPT passes.
+
+3.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `wire_itch_decoder'. Setting top module to wire_itch_decoder.
+
+3.24.1. Analyzing design hierarchy..
+Top module:  \wire_itch_decoder
+
+3.24.2. Analyzing design hierarchy..
+Top module:  \wire_itch_decoder
+Removed 0 unused modules.
+
+3.25. Printing statistics.
+
+=== wire_itch_decoder ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     1880 wires
+     3146 wire bits
+      102 public wires
+     1336 public wire bits
+       38 ports
+      525 port bits
+     2579 cells
+      338   $_ANDNOT_
+      565   $_AND_
+      353   $_DFFE_PP_
+        6   $_DFF_P_
+        3   $_MUX_
+      387   $_NAND_
+      105   $_NOR_
+       40   $_NOT_
+      137   $_ORNOT_
+      122   $_OR_
+      426   $_SDFFE_PP0P_
+        1   $_SDFF_PP0_
+        6   $_XNOR_
+       90   $_XOR_
+
+3.26. Executing CHECK pass (checking for obvious problems).
+Checking module wire_itch_decoder...
+Found and reported 0 problems.
+
+4. Executing CHECK pass (checking for obvious problems).
+Checking module wire_itch_decoder...
+Found and reported 0 problems.
+
+End of script. Logfile hash: 4e58045ff6, time: 0.52s, user: 0.30s, system: 0.07s, MEM: 51.69 MB peak
+Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+Time spent: 86% 1x abc (1 sec), 2% 25x opt_expr (0 sec), ...

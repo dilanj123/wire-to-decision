@@ -1,0 +1,12 @@
+[options]
+mode bmc
+depth 48
+[engines]
+smtbmc yices
+[script]
+read_verilog -formal -sv wire_itch_decoder.sv itch_fixed_case.sv
+chparam -set CASE 0 itch_fixed_case
+prep -top itch_fixed_case
+[files]
+../../rtl/arch_a/wire_itch_decoder.sv
+itch_fixed_case.sv

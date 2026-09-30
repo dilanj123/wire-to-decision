@@ -1,0 +1,11 @@
+WIRE-021 environment
+Repository starting HEAD: 656f16a144b7f18a957686f8d1849b3ad0643e53
+Branch: main
+SBY: 0.69
+Formal engine: smtbmc yices
+Yices: 2.7.0
+Verilator: 5.053 devel rev v5.052-119-g014c9820d
+Yosys: 0.69+154 (git sha1 30d62572e-dirty)
+cocotb: 2.1.0.dev0+41564633
+Python regression: 71/71 PASS
+No P&R was run.
