@@ -1,0 +1,4 @@
+  4810.01ns INFO     cocotb.regression                  running test_mold_message_framer.test_python_mold_framing_crosscheck (10/10)
+  6220.01ns INFO     cocotb.regression                  test_mold_message_framer.test_python_mold_framing_crosscheck passed
+                                                        ** test_mold_message_framer.test_python_mold_framing_crosscheck                        PASS        1410.00           0.01     182310.45  **
+                                                        ** TESTS=10 PASS=10 FAIL=0 SKIP=0                                                                  6220.01           0.05     134199.28  **

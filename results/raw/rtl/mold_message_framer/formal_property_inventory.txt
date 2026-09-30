@@ -1,0 +1,35 @@
+WIRE-020 formal property inventory
+==================================
+Tooling: SymbiYosys 0.69, smtbmc yices, Yices 2.7.0.
+All framer assertions/reference observations use the public module interface only; no DUT-private state is read.
+
+Job                                      Mode / bound   Scope and result
+wire_mold_message_framer_vectors        BMC depth 24   Fixed normal one-message vector: sequence/length metadata, payload byte order, final boundary, structural success. PASS.
+wire_mold_message_framer_case1          BMC depth 24   Fixed first-byte-only length field ending physically: MESSAGE_LENGTH_TRUNCATED, failed result, no metadata/output. PASS.
+wire_mold_message_framer_case2          BMC depth 24   Fixed declared length 3 with two payload bytes: MESSAGE_TRUNCATED, no successful out_last, failed result. PASS.
+wire_mold_message_framer_case3          BMC depth 24   Fixed exact count plus extra byte: complete message remains transferred, TRAILING_BYTES, failed result. PASS.
+wire_mold_message_framer_case4          BMC depth 24   Fixed packet count 2 with one complete physical block: MESSAGE_LENGTH_TRUNCATED. PASS.
+wire_mold_message_framer_case5          BMC depth 24   WIRE-019 body_empty with positive count: MESSAGE_LENGTH_TRUNCATED and failed result. PASS.
+wire_mold_message_framer_zero           BMC depth 24   Fixed zero-length structural message: empty metadata boundary and successful packet result. PASS.
+wire_mold_message_framer_wrap           BMC depth 24   Three zero-length messages at base sequence FFFE: metadata annotations FFFE, FFFF, 0; modulo-2^64 wrap exercised. PASS.
+wire_mold_message_framer_late_suffix    BMC depth 32   Fixed three-message case; first two complete boundaries remain, third length 5 has only two physical bytes; no third out_last, MESSAGE_TRUNCATED and failed result. PASS.
+wire_mold_message_framer_safety         BMC depth 20   Public-port stall safety for metadata, payload, packet result and rejection under arbitrary ready stalls. PASS.
+wire_mold_message_framer_rearm          BMC depth 12   Fixed partial length then explicit rearm; pending outputs clear and packet metadata is ready again. PASS.
+
+Covers (reachability only, not proof):
+wire_mold_message_framer_valid_cover    cover depth 24  Normal final output boundary and structural success reached. PASS.
+wire_mold_message_framer_zero_cover     cover depth 24  Zero-length message metadata reached. PASS.
+wire_mold_message_framer_late_cover     cover depth 32  Late-suffix rejection after at least two payload transfers reached. PASS.
+
+Assumptions:
+- Synchronous active-high reset initializes the harness.
+- Fixed-vector jobs prescribe packet metadata and byte values and advance their source index only on public ready/valid transfer.
+- Safety BMC assumes upstream input byte/data/last and packet metadata remain stable when valid and not ready.
+- Safety BMC leaves message_ready, out_ready, packet_result_ready, and reject_ready unconstrained; properties are masked across reset/rearm.
+- No data-byte values or DUT classification/output values are assumed.
+
+Strength/limits:
+- All assertion jobs are bounded BMC, not induction/unbounded proofs.
+- Error/content correspondence jobs are fixed-vector checks. The formal cases do not exhaust all 16-bit message lengths or all 16-bit message counts.
+- Random/directed cocotb supplies wider behavioral coverage; Python mold.py cross-check covers representative success and error vectors.
+- A first generic safety run failed because the harness demanded stall stability across a legal rearm that cancels pending state. The property was corrected to mask reset/rearm, then rerun and PASS at depth 20. No RTL counterexample was involved.

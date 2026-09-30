@@ -1,0 +1,55 @@
+SBY 22:44:57 [wire_mold_message_framer_late_cover] Removing directory '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/wire_mold_message_framer_late_cover'.
+SBY 22:44:57 [wire_mold_message_framer_late_cover] Copy '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/../../rtl/arch_a/wire_mold_message_framer.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/wire_mold_message_framer_late_cover/src/wire_mold_message_framer.sv'.
+SBY 22:44:57 [wire_mold_message_framer_late_cover] Copy '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/wire_mold_message_framer_vectors.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/wire_mold_message_framer_late_cover/src/wire_mold_message_framer_vectors.sv'.
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: smtbmc yices
+SBY 22:44:57 [wire_mold_message_framer_late_cover] base: starting process "cd wire_mold_message_framer_late_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 22:44:57 [wire_mold_message_framer_late_cover] base: Warning: Wire mold_framer_vector.\clk is used but has no driver.
+SBY 22:44:57 [wire_mold_message_framer_late_cover] base: finished (returncode=0)
+SBY 22:44:57 [wire_mold_message_framer_late_cover] prep: starting process "cd wire_mold_message_framer_late_cover/model; yosys -ql design_prep.log design_prep.ys"
+SBY 22:44:57 [wire_mold_message_framer_late_cover] prep: Warning: Wire mold_framer_vector.\clk is used but has no driver.
+SBY 22:44:57 [wire_mold_message_framer_late_cover] prep: finished (returncode=0)
+SBY 22:44:57 [wire_mold_message_framer_late_cover] smt2: starting process "cd wire_mold_message_framer_late_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 22:44:57 [wire_mold_message_framer_late_cover] smt2: finished (returncode=0)
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: starting process "cd wire_mold_message_framer_late_cover; yosys-smtbmc -s yices --presat --unroll -c --noprogress -t 32  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Solver: yices
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Reached cover statement in step 0 at mold_framer_vector: wire_mold_message_framer_vectors.sv:121.52-121.71 (_witness_.check_cover_wire_mold_message_framer_vectors_sv_121_267)
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 5..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 6..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 7..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 8..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 9..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 10..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 11..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 12..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 13..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 14..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 15..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 16..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 17..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Checking cover reachability in step 18..
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Reached cover statement in step 18 at mold_framer_vector: wire_mold_message_framer_vectors.sv:122.24-122.64 (_witness_.check_cover_wire_mold_message_framer_vectors_sv_122_268)
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: ##   0:00:00  Status: passed
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: finished (returncode=0)
+SBY 22:44:57 [wire_mold_message_framer_late_cover] engine_0: Status returned by engine: pass
+SBY 22:44:57 [wire_mold_message_framer_late_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 22:44:57 [wire_mold_message_framer_late_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 22:44:57 [wire_mold_message_framer_late_cover] summary: engine_0 (smtbmc yices) returned pass
+SBY 22:44:57 [wire_mold_message_framer_late_cover] summary: cover trace: wire_mold_message_framer_late_cover/engine_0/trace0.vcd
+SBY 22:44:57 [wire_mold_message_framer_late_cover] summary:   reached cover statement mold_framer_vector._witness_.check_cover_wire_mold_message_framer_vectors_sv_121_267 at wire_mold_message_framer_vectors.sv:121.52-121.71
+SBY 22:44:57 [wire_mold_message_framer_late_cover] summary: cover trace: wire_mold_message_framer_late_cover/engine_0/trace1.vcd
+SBY 22:44:57 [wire_mold_message_framer_late_cover] summary:   reached cover statement mold_framer_vector._witness_.check_cover_wire_mold_message_framer_vectors_sv_122_268 at wire_mold_message_framer_vectors.sv:122.24-122.64 step 18
+SBY 22:44:57 [wire_mold_message_framer_late_cover] DONE (PASS, rc=0)

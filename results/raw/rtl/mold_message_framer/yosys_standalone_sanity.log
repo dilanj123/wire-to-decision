@@ -1,0 +1,1894 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+
+-- Running command `read_verilog -sv rtl/arch_a/wire_mold_message_framer.sv; hierarchy -top wire_mold_message_framer; proc; check; synth -top wire_mold_message_framer; check' --
+
+1. Executing Verilog-2005 frontend: rtl/arch_a/wire_mold_message_framer.sv
+Parsing SystemVerilog input from `rtl/arch_a/wire_mold_message_framer.sv' to AST representation.
+Generating RTLIL representation for module `\wire_mold_message_framer'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \wire_mold_message_framer
+
+2.2. Analyzing design hierarchy..
+Top module:  \wire_mold_message_framer
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 13 switch rules as full_case in process $proc$rtl/arch_a/wire_mold_message_framer.sv:112$30 in module wire_mold_message_framer.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~26 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+     1/16: $0\result_pending_q[0:0]
+     2/16: $0\reject_pending_q[0:0]
+     3/16: $0\reject_code_q[1:0]
+     4/16: $0\payload_last_q[0:0]
+     5/16: $0\payload_valid_q[0:0]
+     6/16: $0\payload_data_q[7:0]
+     7/16: $0\header_ended_q[0:0]
+     8/16: $0\message_empty_q[0:0]
+     9/16: $0\payload_remaining_q[15:0]
+    10/16: $0\message_length_q[15:0]
+    11/16: $0\length_hi_q[7:0]
+    12/16: $0\messages_done_q[15:0]
+    13/16: $0\packet_count_q[15:0]
+    14/16: $0\packet_sequence_q[63:0]
+    15/16: $0\payload_action_q[2:0]
+    16/16: $0\state_q[3:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\wire_mold_message_framer.\state_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$369' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\payload_action_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$370' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\packet_sequence_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$371' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\packet_count_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$372' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\messages_done_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$373' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\length_hi_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$374' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\message_length_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$375' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\payload_remaining_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$376' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\message_empty_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$377' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\header_ended_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$378' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\payload_data_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$379' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\payload_valid_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$380' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\payload_last_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$381' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\reject_code_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$382' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\reject_pending_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$383' with positive edge clock.
+Creating register for signal `\wire_mold_message_framer.\result_pending_q' using process `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+  created $dff cell `$procdff$384' with positive edge clock.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 26 empty switches in `\wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+Removing empty process `wire_mold_message_framer.$proc$rtl/arch_a/wire_mold_message_framer.sv:112$30'.
+Cleaned up 26 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+<suppressed ~3 debug messages>
+
+4. Executing CHECK pass (checking for obvious problems).
+Checking module wire_mold_message_framer...
+Found and reported 0 problems.
+
+5. Executing SYNTH pass.
+
+5.1. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1.1. Analyzing design hierarchy..
+Top module:  \wire_mold_message_framer
+
+5.1.2. Analyzing design hierarchy..
+Top module:  \wire_mold_message_framer
+Removed 0 unused modules.
+
+5.2. Executing PROC pass (convert processes to netlists).
+
+5.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+5.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+5.2.4. Executing PROC_INIT pass (extract init attributes).
+
+5.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+5.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+5.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.4. Executing CHECK pass (checking for obvious problems).
+Checking module wire_mold_message_framer...
+Found and reported 0 problems.
+
+5.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+Removed 0 unused cells and 131 unused wires.
+<suppressed ~1 debug messages>
+
+5.6. Executing OPT pass (performing simple optimizations).
+
+5.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 212 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 177 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+<suppressed ~105 debug messages>
+Removed a total of 35 cells.
+
+5.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~801 debug messages>
+
+5.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_mold_message_framer.
+    New ctrl vector for $pmux cell $procmux$312: { $auto$opt_reduce.cc:137:opt_pmux$386 $procmux$315_CMP $procmux$316_CMP }
+    New ctrl vector for $pmux cell $procmux$95: $auto$opt_reduce.cc:137:opt_pmux$388
+    New ctrl vector for $pmux cell $procmux$49: $auto$opt_reduce.cc:137:opt_pmux$390
+  Optimizing cells in module \wire_mold_message_framer.
+Performed a total of 3 changes.
+
+5.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 180 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 176 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+5.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+Removed 0 unused cells and 39 unused wires.
+<suppressed ~1 debug messages>
+
+5.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+<suppressed ~1 debug messages>
+
+5.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~591 debug messages>
+
+5.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_mold_message_framer.
+    New ctrl vector for $pmux cell $procmux$123: $auto$opt_reduce.cc:137:opt_pmux$392
+    New ctrl vector for $pmux cell $procmux$77: $auto$opt_reduce.cc:137:opt_pmux$394
+  Optimizing cells in module \wire_mold_message_framer.
+Performed a total of 2 changes.
+
+5.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 177 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 176 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+5.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+5.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.6.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.6.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~687 debug messages>
+
+5.6.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_mold_message_framer.
+Performed a total of 0 changes.
+
+5.6.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 176 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Removed a total of 0 cells.
+
+5.6.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.6.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+
+5.6.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.6.23. Finished fast OPT passes. (There is nothing left to do.)
+
+5.7. Executing FSM pass (extract and optimize FSM).
+
+5.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking wire_mold_message_framer.reject_code_q as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+Found FSM state register wire_mold_message_framer.payload_action_q.
+Found FSM state register wire_mold_message_framer.state_q.
+
+5.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\payload_action_q' from module `\wire_mold_message_framer'.
+  found $dff cell for state register: $procdff$370
+  root of input selection tree: $0\payload_action_q[2:0]
+  found reset state: 3'000 (guessed from mux tree)
+  found ctrl input: $logic_or$rtl/arch_a/wire_mold_message_framer.sv:113$31_Y
+  found ctrl input: \input_fire
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:93$14_Y
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:223$36_Y
+  found ctrl input: \in_last
+  found state code: 3'100
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:162$33_Y
+  found state code: 3'000
+  found state code: 3'011
+  found state code: 3'010
+  found state code: 3'001
+  found ctrl output: $procmux$140_CMP
+  found ctrl output: $procmux$141_CMP
+  found ctrl output: $procmux$315_CMP
+  found ctrl output: $procmux$316_CMP
+  ctrl inputs: { $eq$rtl/arch_a/wire_mold_message_framer.sv:223$36_Y $eq$rtl/arch_a/wire_mold_message_framer.sv:162$33_Y $logic_or$rtl/arch_a/wire_mold_message_framer.sv:113$31_Y $eq$rtl/arch_a/wire_mold_message_framer.sv:93$14_Y \input_fire \in_last }
+  ctrl outputs: { $procmux$316_CMP $procmux$315_CMP $procmux$141_CMP $procmux$140_CMP $0\payload_action_q[2:0] }
+  transition:      3'000 6'--0-0- ->      3'000 7'1000000
+  transition:      3'000 6'--001- ->      3'000 7'1000000
+  transition:      3'000 6'0-0110 ->      3'000 7'1000000
+  transition:      3'000 6'0-0111 ->      3'100 7'1000100
+  transition:      3'000 6'100110 ->      3'000 7'1000000
+  transition:      3'000 6'110110 ->      3'011 7'1000011
+  transition:      3'000 6'100111 ->      3'010 7'1000010
+  transition:      3'000 6'110111 ->      3'001 7'1000001
+  transition:      3'000 6'--1--- ->      3'000 7'1000000
+  transition:      3'100 6'--0-0- ->      3'100 7'0001100
+  transition:      3'100 6'--001- ->      3'100 7'0001100
+  transition:      3'100 6'0-0110 ->      3'100 7'0001100
+  transition:      3'100 6'0-0111 ->      3'100 7'0001100
+  transition:      3'100 6'100110 ->      3'000 7'0001000
+  transition:      3'100 6'110110 ->      3'011 7'0001011
+  transition:      3'100 6'100111 ->      3'010 7'0001010
+  transition:      3'100 6'110111 ->      3'001 7'0001001
+  transition:      3'100 6'--1--- ->      3'000 7'0001000
+  transition:      3'010 6'--0-0- ->      3'010 7'0010010
+  transition:      3'010 6'--001- ->      3'010 7'0010010
+  transition:      3'010 6'0-0110 ->      3'010 7'0010010
+  transition:      3'010 6'0-0111 ->      3'100 7'0010100
+  transition:      3'010 6'100110 ->      3'000 7'0010000
+  transition:      3'010 6'110110 ->      3'011 7'0010011
+  transition:      3'010 6'100111 ->      3'010 7'0010010
+  transition:      3'010 6'110111 ->      3'001 7'0010001
+  transition:      3'010 6'--1--- ->      3'000 7'0010000
+  transition:      3'001 6'--0-0- ->      3'001 7'0100001
+  transition:      3'001 6'--001- ->      3'001 7'0100001
+  transition:      3'001 6'0-0110 ->      3'001 7'0100001
+  transition:      3'001 6'0-0111 ->      3'100 7'0100100
+  transition:      3'001 6'100110 ->      3'000 7'0100000
+  transition:      3'001 6'110110 ->      3'011 7'0100011
+  transition:      3'001 6'100111 ->      3'010 7'0100010
+  transition:      3'001 6'110111 ->      3'001 7'0100001
+  transition:      3'001 6'--1--- ->      3'000 7'0100000
+  transition:      3'011 6'--0-0- ->      3'011 7'0000011
+  transition:      3'011 6'--001- ->      3'011 7'0000011
+  transition:      3'011 6'0-0110 ->      3'011 7'0000011
+  transition:      3'011 6'0-0111 ->      3'100 7'0000100
+  transition:      3'011 6'100110 ->      3'000 7'0000000
+  transition:      3'011 6'110110 ->      3'011 7'0000011
+  transition:      3'011 6'100111 ->      3'010 7'0000010
+  transition:      3'011 6'110111 ->      3'001 7'0000001
+  transition:      3'011 6'--1--- ->      3'000 7'0000000
+Extracting FSM `\state_q' from module `\wire_mold_message_framer'.
+  found $dff cell for state register: $procdff$369
+  root of input selection tree: $0\state_q[3:0]
+  found reset state: 4'0000 (guessed from mux tree)
+  found ctrl input: $logic_or$rtl/arch_a/wire_mold_message_framer.sv:113$31_Y
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:106$24_Y
+  found ctrl input: $logic_and$rtl/arch_a/wire_mold_message_framer.sv:260$41_Y
+  found ctrl input: \input_fire
+  found ctrl input: \packet_fire
+  found ctrl input: \message_fire
+  found ctrl input: \output_fire
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:134$32_Y
+  found ctrl input: $procmux$316_CMP
+  found ctrl input: $procmux$315_CMP
+  found ctrl input: $auto$opt_reduce.cc:137:opt_pmux$386
+  found state code: 4'0110
+  found state code: 4'0001
+  found state code: 4'0111
+  found state code: 4'1000
+  found ctrl input: \message_empty_q
+  found ctrl input: \header_ended_q
+  found state code: 4'0100
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:162$33_Y
+  found ctrl input: \packet_body_empty
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:92$12_Y
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:93$14_Y
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:91$10_Y
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:90$9_Y
+  found ctrl input: \in_last
+  found ctrl input: $eq$rtl/arch_a/wire_mold_message_framer.sv:223$36_Y
+  found state code: 4'0101
+  found state code: 4'0011
+  found state code: 4'0010
+  found state code: 4'0000
+  found ctrl input: $logic_and$rtl/arch_a/wire_mold_message_framer.sv:268$47_Y
+  found state code: 4'1001
+  found ctrl output: \packet_ready
+  found ctrl output: \message_valid
+  found ctrl output: $eq$rtl/arch_a/wire_mold_message_framer.sv:134$32_Y
+  found ctrl output: \packet_result_success
+  found ctrl output: $eq$rtl/arch_a/wire_mold_message_framer.sv:106$24_Y
+  found ctrl output: $eq$rtl/arch_a/wire_mold_message_framer.sv:92$12_Y
+  found ctrl output: $eq$rtl/arch_a/wire_mold_message_framer.sv:93$14_Y
+  found ctrl output: $eq$rtl/arch_a/wire_mold_message_framer.sv:91$10_Y
+  found ctrl output: $eq$rtl/arch_a/wire_mold_message_framer.sv:90$9_Y
+  ctrl inputs: { $procmux$316_CMP $procmux$315_CMP $logic_and$rtl/arch_a/wire_mold_message_framer.sv:268$47_Y $logic_and$rtl/arch_a/wire_mold_message_framer.sv:260$41_Y $eq$rtl/arch_a/wire_mold_message_framer.sv:223$36_Y $eq$rtl/arch_a/wire_mold_message_framer.sv:162$33_Y $logic_or$rtl/arch_a/wire_mold_message_framer.sv:113$31_Y \output_fire \message_fire \input_fire \packet_fire \header_ended_q \message_empty_q \in_last \packet_body_empty $auto$opt_reduce.cc:137:opt_pmux$386 }
+  ctrl outputs: { $eq$rtl/arch_a/wire_mold_message_framer.sv:134$32_Y $0\state_q[3:0] $eq$rtl/arch_a/wire_mold_message_framer.sv:106$24_Y $eq$rtl/arch_a/wire_mold_message_framer.sv:93$14_Y $eq$rtl/arch_a/wire_mold_message_framer.sv:92$12_Y $eq$rtl/arch_a/wire_mold_message_framer.sv:91$10_Y $eq$rtl/arch_a/wire_mold_message_framer.sv:90$9_Y \packet_result_success \message_valid \packet_ready }
+  transition:     4'0000 16'---0--00000----- ->     4'0000 13'0000000000001
+  transition:     4'0000 16'---0--01000----- ->     4'0000 13'0000000000001
+  transition:     4'0000 16'---0--0-10000--- ->     4'0100 13'0010000000001
+  transition:     4'0000 16'---0--0-10010--- ->     4'1000 13'0100000000001
+  transition:     4'0000 16'---0-00-10001--- ->     4'0001 13'0000100000001
+  transition:     4'0000 16'---0-10-10001--- ->     4'0110 13'0011000000001
+  transition:     4'0000 16'---0-00-10011--- ->     4'1000 13'0100000000001
+  transition:     4'0000 16'---0-10-10011--- ->     4'0111 13'0011100000001
+  transition:     4'0000 16'---0--0--01---0- ->     4'0001 13'0000100000001
+  transition:     4'0000 16'---0--0--01---1- ->     4'1000 13'0100000000001
+  transition:     4'0000 16'---0--00010----- ->     4'0000 13'0000000000001
+  transition:     4'0000 16'---0--01010----- ->     4'0000 13'0000000000001
+  transition:     4'0000 16'---0--0-11000--- ->     4'0100 13'0010000000001
+  transition:     4'0000 16'---0--0-11010--- ->     4'1000 13'0100000000001
+  transition:     4'0000 16'---0-00-11001--- ->     4'0001 13'0000100000001
+  transition:     4'0000 16'---0-10-11001--- ->     4'0110 13'0011000000001
+  transition:     4'0000 16'---0-00-11011--- ->     4'1000 13'0100000000001
+  transition:     4'0000 16'---0-10-11011--- ->     4'0111 13'0011100000001
+  transition:     4'0000 16'---0--0--11---0- ->     4'0001 13'0000100000001
+  transition:     4'0000 16'---0--0--11---1- ->     4'1000 13'0100000000001
+  transition:     4'0000 16'---1--0--------- ->     4'0000 13'0000000000001
+  transition:     4'0000 16'------1--------- ->     4'0000 13'0000000000001
+  transition:     4'1000 16'--00--00000----- ->     4'1000 13'0100010000000
+  transition:     4'1000 16'--00--01000----- ->     4'1000 13'0100010000000
+  transition:     4'1000 16'--00--0-10000--- ->     4'0100 13'0010010000000
+  transition:     4'1000 16'--00--0-10010--- ->     4'1000 13'0100010000000
+  transition:     4'1000 16'--00-00-10001--- ->     4'0001 13'0000110000000
+  transition:     4'1000 16'--00-10-10001--- ->     4'0110 13'0011010000000
+  transition:     4'1000 16'--00-00-10011--- ->     4'1000 13'0100010000000
+  transition:     4'1000 16'--00-10-10011--- ->     4'0111 13'0011110000000
+  transition:     4'1000 16'--00--0--01---0- ->     4'0001 13'0000110000000
+  transition:     4'1000 16'--00--0--01---1- ->     4'1000 13'0100010000000
+  transition:     4'1000 16'--00--00010----- ->     4'1000 13'0100010000000
+  transition:     4'1000 16'--00--01010----- ->     4'1000 13'0100010000000
+  transition:     4'1000 16'--00--0-11000--- ->     4'0100 13'0010010000000
+  transition:     4'1000 16'--00--0-11010--- ->     4'1000 13'0100010000000
+  transition:     4'1000 16'--00-00-11001--- ->     4'0001 13'0000110000000
+  transition:     4'1000 16'--00-10-11001--- ->     4'0110 13'0011010000000
+  transition:     4'1000 16'--00-00-11011--- ->     4'1000 13'0100010000000
+  transition:     4'1000 16'--00-10-11011--- ->     4'0111 13'0011110000000
+  transition:     4'1000 16'--00--0--11---0- ->     4'0001 13'0000110000000
+  transition:     4'1000 16'--00--0--11---1- ->     4'1000 13'0100010000000
+  transition:     4'1000 16'--01--0--------- ->     4'0000 13'0000010000000
+  transition:     4'1000 16'--1---0--------- ->     4'1001 13'0100110000000
+  transition:     4'1000 16'------1--------- ->     4'0000 13'0000010000000
+  transition:     4'0100 16'---0--00000----- ->     4'0100 13'0010001000000
+  transition:     4'0100 16'---0--01000----- ->     4'0100 13'0010001000000
+  transition:     4'0100 16'---0--0-10000--- ->     4'0100 13'0010001000000
+  transition:     4'0100 16'---0--0-10010--- ->     4'1000 13'0100001000000
+  transition:     4'0100 16'---0-00-10001--- ->     4'0001 13'0000101000000
+  transition:     4'0100 16'---0-10-10001--- ->     4'0110 13'0011001000000
+  transition:     4'0100 16'---0-00-10011--- ->     4'1000 13'0100001000000
+  transition:     4'0100 16'---0-10-10011--- ->     4'0111 13'0011101000000
+  transition:     4'0100 16'---0--0--01---0- ->     4'0001 13'0000101000000
+  transition:     4'0100 16'---0--0--01---1- ->     4'1000 13'0100001000000
+  transition:     4'0100 16'---00-00010--0-- ->     4'0100 13'0010001000000
+  transition:     4'0100 16'---00-01010--0-- ->     4'0100 13'0010001000000
+  transition:     4'0100 16'---00-0-110000-- ->     4'0100 13'0010001000000
+  transition:     4'0100 16'---00-0-110100-- ->     4'1000 13'0100001000000
+  transition:     4'0100 16'---0000-110010-- ->     4'0001 13'0000101000000
+  transition:     4'0100 16'---0010-110010-- ->     4'0110 13'0011001000000
+  transition:     4'0100 16'---0000-110110-- ->     4'1000 13'0100001000000
+  transition:     4'0100 16'---0010-110110-- ->     4'0111 13'0011101000000
+  transition:     4'0100 16'---00-0--11--00- ->     4'0001 13'0000101000000
+  transition:     4'0100 16'---00-0--11--01- ->     4'1000 13'0100001000000
+  transition:     4'0100 16'---00-0--1---1-- ->     4'0101 13'0010101000000
+  transition:     4'0100 16'---01-0--1------ ->     4'0101 13'0010101000000
+  transition:     4'0100 16'---1--0--------- ->     4'0000 13'0000001000000
+  transition:     4'0100 16'------1--------- ->     4'0000 13'0000001000000
+  transition:     4'0010 16'---0--00000----- ->     4'0010 13'0001000010000
+  transition:     4'0010 16'---0--01000----- ->     4'0010 13'0001000010000
+  transition:     4'0010 16'---0--0-10000--- ->     4'0100 13'0010000010000
+  transition:     4'0010 16'---0--0-10010--- ->     4'1000 13'0100000010000
+  transition:     4'0010 16'---0-00-10001--- ->     4'0001 13'0000100010000
+  transition:     4'0010 16'---0-10-10001--- ->     4'0110 13'0011000010000
+  transition:     4'0010 16'---0-00-10011--- ->     4'1000 13'0100000010000
+  transition:     4'0010 16'---0-10-10011--- ->     4'0111 13'0011100010000
+  transition:     4'0010 16'---0--0--01---0- ->     4'0001 13'0000100010000
+  transition:     4'0010 16'---0--0--01---1- ->     4'1000 13'0100000010000
+  transition:     4'0010 16'---0--0--1------ ->     4'0011 13'0001100010000
+  transition:     4'0010 16'---1--0--------- ->     4'0000 13'0000000010000
+  transition:     4'0010 16'------1--------- ->     4'0000 13'0000000010000
+  transition:     4'0110 16'---0--00000----- ->     4'0110 13'0011000100000
+  transition:     4'0110 16'---0--01000----- ->     4'0110 13'0011000100000
+  transition:     4'0110 16'---0--0-10000--- ->     4'0100 13'0010000100000
+  transition:     4'0110 16'---0--0-10010--- ->     4'1000 13'0100000100000
+  transition:     4'0110 16'---0-00-10001--- ->     4'0001 13'0000100100000
+  transition:     4'0110 16'---0-10-10001--- ->     4'0110 13'0011000100000
+  transition:     4'0110 16'---0-00-10011--- ->     4'1000 13'0100000100000
+  transition:     4'0110 16'---0-10-10011--- ->     4'0111 13'0011100100000
+  transition:     4'0110 16'---0--0--01---0- ->     4'0001 13'0000100100000
+  transition:     4'0110 16'---0--0--01---1- ->     4'1000 13'0100000100000
+  transition:     4'0110 16'---0--00010--0-- ->     4'0110 13'0011000100000
+  transition:     4'0110 16'---0--01010--0-- ->     4'0110 13'0011000100000
+  transition:     4'0110 16'---0--0-110000-- ->     4'0100 13'0010000100000
+  transition:     4'0110 16'---0--0-110100-- ->     4'1000 13'0100000100000
+  transition:     4'0110 16'---0-00-110010-- ->     4'0001 13'0000100100000
+  transition:     4'0110 16'---0-10-110010-- ->     4'0110 13'0011000100000
+  transition:     4'0110 16'---0-00-110110-- ->     4'1000 13'0100000100000
+  transition:     4'0110 16'---0-10-110110-- ->     4'0111 13'0011100100000
+  transition:     4'0110 16'---0--0--11--00- ->     4'0001 13'0000100100000
+  transition:     4'0110 16'---0--0--11--01- ->     4'1000 13'0100000100000
+  transition:     4'0110 16'---0--0--1---1-- ->     4'1000 13'0100000100000
+  transition:     4'0110 16'---1--0--------- ->     4'0000 13'0000000100000
+  transition:     4'0110 16'------1--------- ->     4'0000 13'0000000100000
+  transition:     4'0001 16'---0--00000----- ->     4'0001 13'0000100001000
+  transition:     4'0001 16'---0--01000----- ->     4'0001 13'0000100001000
+  transition:     4'0001 16'---0--0-10000--- ->     4'0100 13'0010000001000
+  transition:     4'0001 16'---0--0-10010--- ->     4'1000 13'0100000001000
+  transition:     4'0001 16'---0-00-10001--- ->     4'0001 13'0000100001000
+  transition:     4'0001 16'---0-10-10001--- ->     4'0110 13'0011000001000
+  transition:     4'0001 16'---0-00-10011--- ->     4'1000 13'0100000001000
+  transition:     4'0001 16'---0-10-10011--- ->     4'0111 13'0011100001000
+  transition:     4'0001 16'---0--0--01---0- ->     4'0001 13'0000100001000
+  transition:     4'0001 16'---0--0--01---1- ->     4'1000 13'0100000001000
+  transition:     4'0001 16'---0--0--1---0-- ->     4'0010 13'0001000001000
+  transition:     4'0001 16'---0--0--1---1-- ->     4'1000 13'0100000001000
+  transition:     4'0001 16'---1--0--------- ->     4'0000 13'0000000001000
+  transition:     4'0001 16'------1--------- ->     4'0000 13'0000000001000
+  transition:     4'1001 16'---0--00000----- ->     4'1001 13'0100100000000
+  transition:     4'1001 16'---0--01000----- ->     4'1001 13'0100100000000
+  transition:     4'1001 16'---0--0-10000--- ->     4'0100 13'0010000000000
+  transition:     4'1001 16'---0--0-10010--- ->     4'1000 13'0100000000000
+  transition:     4'1001 16'---0-00-10001--- ->     4'0001 13'0000100000000
+  transition:     4'1001 16'---0-10-10001--- ->     4'0110 13'0011000000000
+  transition:     4'1001 16'---0-00-10011--- ->     4'1000 13'0100000000000
+  transition:     4'1001 16'---0-10-10011--- ->     4'0111 13'0011100000000
+  transition:     4'1001 16'---0--0--01---0- ->     4'0001 13'0000100000000
+  transition:     4'1001 16'---0--0--01---1- ->     4'1000 13'0100000000000
+  transition:     4'1001 16'---0--00010----- ->     4'1001 13'0100100000000
+  transition:     4'1001 16'---0--01010----- ->     4'1001 13'0100100000000
+  transition:     4'1001 16'---0--0-11000--- ->     4'0100 13'0010000000000
+  transition:     4'1001 16'---0--0-11010--- ->     4'1000 13'0100000000000
+  transition:     4'1001 16'---0-00-11001--- ->     4'0001 13'0000100000000
+  transition:     4'1001 16'---0-10-11001--- ->     4'0110 13'0011000000000
+  transition:     4'1001 16'---0-00-11011--- ->     4'1000 13'0100000000000
+  transition:     4'1001 16'---0-10-11011--- ->     4'0111 13'0011100000000
+  transition:     4'1001 16'---0--0--11---0- ->     4'0001 13'0000100000000
+  transition:     4'1001 16'---0--0--11---1- ->     4'1000 13'0100000000000
+  transition:     4'1001 16'---1--0--------- ->     4'0000 13'0000000000000
+  transition:     4'1001 16'------1--------- ->     4'0000 13'0000000000000
+  transition:     4'0101 16'---0--00000----- ->     4'0101 13'1010100000000
+  transition:     4'0101 16'00-0--01000----0 ->     4'0110 13'1011000000000
+  transition:     4'0101 16'---0--01000----1 ->     4'1000 13'1100000000000
+  transition:     4'0101 16'-1-0--01000----- ->     4'0111 13'1011100000000
+  transition:     4'0101 16'1--0--01000----- ->     4'0001 13'1000100000000
+  transition:     4'0101 16'---0--0-10000--- ->     4'0100 13'1010000000000
+  transition:     4'0101 16'---0--0-10010--- ->     4'1000 13'1100000000000
+  transition:     4'0101 16'---0-00-10001--- ->     4'0001 13'1000100000000
+  transition:     4'0101 16'---0-10-10001--- ->     4'0110 13'1011000000000
+  transition:     4'0101 16'---0-00-10011--- ->     4'1000 13'1100000000000
+  transition:     4'0101 16'---0-10-10011--- ->     4'0111 13'1011100000000
+  transition:     4'0101 16'---0--0--01---0- ->     4'0001 13'1000100000000
+  transition:     4'0101 16'---0--0--01---1- ->     4'1000 13'1100000000000
+  transition:     4'0101 16'---0--00010----- ->     4'0101 13'1010100000000
+  transition:     4'0101 16'00-0--01010----0 ->     4'0110 13'1011000000000
+  transition:     4'0101 16'---0--01010----1 ->     4'1000 13'1100000000000
+  transition:     4'0101 16'-1-0--01010----- ->     4'0111 13'1011100000000
+  transition:     4'0101 16'1--0--01010----- ->     4'0001 13'1000100000000
+  transition:     4'0101 16'---0--0-11000--- ->     4'0100 13'1010000000000
+  transition:     4'0101 16'---0--0-11010--- ->     4'1000 13'1100000000000
+  transition:     4'0101 16'---0-00-11001--- ->     4'0001 13'1000100000000
+  transition:     4'0101 16'---0-10-11001--- ->     4'0110 13'1011000000000
+  transition:     4'0101 16'---0-00-11011--- ->     4'1000 13'1100000000000
+  transition:     4'0101 16'---0-10-11011--- ->     4'0111 13'1011100000000
+  transition:     4'0101 16'---0--0--11---0- ->     4'0001 13'1000100000000
+  transition:     4'0101 16'---0--0--11---1- ->     4'1000 13'1100000000000
+  transition:     4'0101 16'---1--0--------- ->     4'0000 13'1000000000000
+  transition:     4'0101 16'------1--------- ->     4'0000 13'1000000000000
+  transition:     4'0011 16'---0--00000----- ->     4'0011 13'0001100000010
+  transition:     4'0011 16'---0--01000----- ->     4'0011 13'0001100000010
+  transition:     4'0011 16'---0--0-10000--- ->     4'0100 13'0010000000010
+  transition:     4'0011 16'---0--0-10010--- ->     4'1000 13'0100000000010
+  transition:     4'0011 16'---0-00-10001--- ->     4'0001 13'0000100000010
+  transition:     4'0011 16'---0-10-10001--- ->     4'0110 13'0011000000010
+  transition:     4'0011 16'---0-00-10011--- ->     4'1000 13'0100000000010
+  transition:     4'0011 16'---0-10-10011--- ->     4'0111 13'0011100000010
+  transition:     4'0011 16'---0--0--01---0- ->     4'0001 13'0000100000010
+  transition:     4'0011 16'---0--0--01---1- ->     4'1000 13'0100000000010
+  transition:     4'0011 16'---0--00010----- ->     4'0011 13'0001100000010
+  transition:     4'0011 16'---0--01010----- ->     4'0011 13'0001100000010
+  transition:     4'0011 16'---0--0-11000--- ->     4'0100 13'0010000000010
+  transition:     4'0011 16'---0--0-11010--- ->     4'1000 13'0100000000010
+  transition:     4'0011 16'---0-00-11001--- ->     4'0001 13'0000100000010
+  transition:     4'0011 16'---0-10-11001--- ->     4'0110 13'0011000000010
+  transition:     4'0011 16'---0-00-11011--- ->     4'1000 13'0100000000010
+  transition:     4'0011 16'---0-10-11011--- ->     4'0111 13'0011100000010
+  transition:     4'0011 16'---0--0--11---0- ->     4'0001 13'0000100000010
+  transition:     4'0011 16'---0--0--11---1- ->     4'1000 13'0100000000010
+  transition:     4'0011 16'---1--0--------- ->     4'0000 13'0000000000010
+  transition:     4'0011 16'------1--------- ->     4'0000 13'0000000000010
+  transition:     4'0111 16'---0--00000----- ->     4'0111 13'0011100000100
+  transition:     4'0111 16'---0--01000----- ->     4'0111 13'0011100000100
+  transition:     4'0111 16'---0--0-10000--- ->     4'0100 13'0010000000100
+  transition:     4'0111 16'---0--0-10010--- ->     4'1000 13'0100000000100
+  transition:     4'0111 16'---0-00-10001--- ->     4'0001 13'0000100000100
+  transition:     4'0111 16'---0-10-10001--- ->     4'0110 13'0011000000100
+  transition:     4'0111 16'---0-00-10011--- ->     4'1000 13'0100000000100
+  transition:     4'0111 16'---0-10-10011--- ->     4'0111 13'0011100000100
+  transition:     4'0111 16'---0--0--01---0- ->     4'0001 13'0000100000100
+  transition:     4'0111 16'---0--0--01---1- ->     4'1000 13'0100000000100
+  transition:     4'0111 16'---0--00010----- ->     4'0111 13'0011100000100
+  transition:     4'0111 16'---0--01010----- ->     4'0111 13'0011100000100
+  transition:     4'0111 16'---0--0-11000--- ->     4'0100 13'0010000000100
+  transition:     4'0111 16'---0--0-11010--- ->     4'1000 13'0100000000100
+  transition:     4'0111 16'---0-00-11001--- ->     4'0001 13'0000100000100
+  transition:     4'0111 16'---0-10-11001--- ->     4'0110 13'0011000000100
+  transition:     4'0111 16'---0-00-11011--- ->     4'1000 13'0100000000100
+  transition:     4'0111 16'---0-10-11011--- ->     4'0111 13'0011100000100
+  transition:     4'0111 16'---0--0--11---0- ->     4'0001 13'0000100000100
+  transition:     4'0111 16'---0--0--11---1- ->     4'1000 13'0100000000100
+  transition:     4'0111 16'---1--0--------- ->     4'0000 13'0000000000100
+  transition:     4'0111 16'------1--------- ->     4'0000 13'0000000000100
+
+5.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\state_q$401' from module `\wire_mold_message_framer'.
+  Merging pattern 16'---0--00000----- and 16'---0--00010----- from group (0 0 13'0000000000001).
+  Merging pattern 16'---0--01000----- and 16'---0--01010----- from group (0 0 13'0000000000001).
+  Merging pattern 16'---0--00010----- and 16'---0--00000----- from group (0 0 13'0000000000001).
+  Merging pattern 16'---0--01010----- and 16'---0--01000----- from group (0 0 13'0000000000001).
+  Merging pattern 16'---0--000-0----- and 16'---0--010-0----- from group (0 0 13'0000000000001).
+  Merging pattern 16'---0--010-0----- and 16'---0--000-0----- from group (0 0 13'0000000000001).
+  Merging pattern 16'---0--0--01---1- and 16'---0--0--11---1- from group (0 1 13'0100000000001).
+  Merging pattern 16'---0--0--11---1- and 16'---0--0--01---1- from group (0 1 13'0100000000001).
+  Merging pattern 16'---0--0-10010--- and 16'---0--0-11010--- from group (0 1 13'0100000000001).
+  Merging pattern 16'---0--0-11010--- and 16'---0--0-10010--- from group (0 1 13'0100000000001).
+  Merging pattern 16'---0-00-10011--- and 16'---0-00-11011--- from group (0 1 13'0100000000001).
+  Merging pattern 16'---0-00-11011--- and 16'---0-00-10011--- from group (0 1 13'0100000000001).
+  Merging pattern 16'---0--0-10000--- and 16'---0--0-11000--- from group (0 2 13'0010000000001).
+  Merging pattern 16'---0--0-11000--- and 16'---0--0-10000--- from group (0 2 13'0010000000001).
+  Merging pattern 16'---0-10-10001--- and 16'---0-10-11001--- from group (0 4 13'0011000000001).
+  Merging pattern 16'---0-10-11001--- and 16'---0-10-10001--- from group (0 4 13'0011000000001).
+  Merging pattern 16'---0--0--01---0- and 16'---0--0--11---0- from group (0 5 13'0000100000001).
+  Merging pattern 16'---0--0--11---0- and 16'---0--0--01---0- from group (0 5 13'0000100000001).
+  Merging pattern 16'---0-00-10001--- and 16'---0-00-11001--- from group (0 5 13'0000100000001).
+  Merging pattern 16'---0-00-11001--- and 16'---0-00-10001--- from group (0 5 13'0000100000001).
+  Merging pattern 16'---0-10-10011--- and 16'---0-10-11011--- from group (0 9 13'0011100000001).
+  Merging pattern 16'---0-10-11011--- and 16'---0-10-10011--- from group (0 9 13'0011100000001).
+  Merging pattern 16'--00--0--01---1- and 16'--00--0--11---1- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00--0--11---1- and 16'--00--0--01---1- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00--0-10010--- and 16'--00--0-11010--- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00--0-11010--- and 16'--00--0-10010--- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00-00-10011--- and 16'--00-00-11011--- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00-00-11011--- and 16'--00-00-10011--- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00--00000----- and 16'--00--00010----- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00--01000----- and 16'--00--01010----- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00--00010----- and 16'--00--00000----- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00--01010----- and 16'--00--01000----- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00--000-0----- and 16'--00--010-0----- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00--010-0----- and 16'--00--000-0----- from group (1 1 13'0100010000000).
+  Merging pattern 16'--00--0-10000--- and 16'--00--0-11000--- from group (1 2 13'0010010000000).
+  Merging pattern 16'--00--0-11000--- and 16'--00--0-10000--- from group (1 2 13'0010010000000).
+  Merging pattern 16'--00-10-10001--- and 16'--00-10-11001--- from group (1 4 13'0011010000000).
+  Merging pattern 16'--00-10-11001--- and 16'--00-10-10001--- from group (1 4 13'0011010000000).
+  Merging pattern 16'--00--0--01---0- and 16'--00--0--11---0- from group (1 5 13'0000110000000).
+  Merging pattern 16'--00--0--11---0- and 16'--00--0--01---0- from group (1 5 13'0000110000000).
+  Merging pattern 16'--00-00-10001--- and 16'--00-00-11001--- from group (1 5 13'0000110000000).
+  Merging pattern 16'--00-00-11001--- and 16'--00-00-10001--- from group (1 5 13'0000110000000).
+  Merging pattern 16'--00-10-10011--- and 16'--00-10-11011--- from group (1 9 13'0011110000000).
+  Merging pattern 16'--00-10-11011--- and 16'--00-10-10011--- from group (1 9 13'0011110000000).
+  Merging pattern 16'---00-00010--0-- and 16'---00-01010--0-- from group (2 2 13'0010001000000).
+  Merging pattern 16'---00-01010--0-- and 16'---00-00010--0-- from group (2 2 13'0010001000000).
+  Merging pattern 16'---0--00000----- and 16'---0--01000----- from group (2 2 13'0010001000000).
+  Merging pattern 16'---0--01000----- and 16'---0--00000----- from group (2 2 13'0010001000000).
+  Merging pattern 16'---0--00000----- and 16'---0--01000----- from group (3 3 13'0001000010000).
+  Merging pattern 16'---0--01000----- and 16'---0--00000----- from group (3 3 13'0001000010000).
+  Merging pattern 16'---0--00010--0-- and 16'---0--01010--0-- from group (4 4 13'0011000100000).
+  Merging pattern 16'---0--01010--0-- and 16'---0--00010--0-- from group (4 4 13'0011000100000).
+  Merging pattern 16'---0--00000----- and 16'---0--01000----- from group (4 4 13'0011000100000).
+  Merging pattern 16'---0--01000----- and 16'---0--00000----- from group (4 4 13'0011000100000).
+  Merging pattern 16'---0--00000----- and 16'---0--01000----- from group (5 5 13'0000100001000).
+  Merging pattern 16'---0--01000----- and 16'---0--00000----- from group (5 5 13'0000100001000).
+  Merging pattern 16'---0--0--01---1- and 16'---0--0--11---1- from group (6 1 13'0100000000000).
+  Merging pattern 16'---0--0--11---1- and 16'---0--0--01---1- from group (6 1 13'0100000000000).
+  Merging pattern 16'---0--0-10010--- and 16'---0--0-11010--- from group (6 1 13'0100000000000).
+  Merging pattern 16'---0--0-11010--- and 16'---0--0-10010--- from group (6 1 13'0100000000000).
+  Merging pattern 16'---0-00-10011--- and 16'---0-00-11011--- from group (6 1 13'0100000000000).
+  Merging pattern 16'---0-00-11011--- and 16'---0-00-10011--- from group (6 1 13'0100000000000).
+  Merging pattern 16'---0--0-10000--- and 16'---0--0-11000--- from group (6 2 13'0010000000000).
+  Merging pattern 16'---0--0-11000--- and 16'---0--0-10000--- from group (6 2 13'0010000000000).
+  Merging pattern 16'---0-10-10001--- and 16'---0-10-11001--- from group (6 4 13'0011000000000).
+  Merging pattern 16'---0-10-11001--- and 16'---0-10-10001--- from group (6 4 13'0011000000000).
+  Merging pattern 16'---0--0--01---0- and 16'---0--0--11---0- from group (6 5 13'0000100000000).
+  Merging pattern 16'---0--0--11---0- and 16'---0--0--01---0- from group (6 5 13'0000100000000).
+  Merging pattern 16'---0-00-10001--- and 16'---0-00-11001--- from group (6 5 13'0000100000000).
+  Merging pattern 16'---0-00-11001--- and 16'---0-00-10001--- from group (6 5 13'0000100000000).
+  Merging pattern 16'---0--00000----- and 16'---0--00010----- from group (6 6 13'0100100000000).
+  Merging pattern 16'---0--01000----- and 16'---0--01010----- from group (6 6 13'0100100000000).
+  Merging pattern 16'---0--00010----- and 16'---0--00000----- from group (6 6 13'0100100000000).
+  Merging pattern 16'---0--01010----- and 16'---0--01000----- from group (6 6 13'0100100000000).
+  Merging pattern 16'---0--000-0----- and 16'---0--010-0----- from group (6 6 13'0100100000000).
+  Merging pattern 16'---0--010-0----- and 16'---0--000-0----- from group (6 6 13'0100100000000).
+  Merging pattern 16'---0-10-10011--- and 16'---0-10-11011--- from group (6 9 13'0011100000000).
+  Merging pattern 16'---0-10-11011--- and 16'---0-10-10011--- from group (6 9 13'0011100000000).
+  Merging pattern 16'---0--01000----1 and 16'---0--01010----1 from group (7 1 13'1100000000000).
+  Merging pattern 16'---0--01010----1 and 16'---0--01000----1 from group (7 1 13'1100000000000).
+  Merging pattern 16'---0--0--01---1- and 16'---0--0--11---1- from group (7 1 13'1100000000000).
+  Merging pattern 16'---0--0--11---1- and 16'---0--0--01---1- from group (7 1 13'1100000000000).
+  Merging pattern 16'---0--0-10010--- and 16'---0--0-11010--- from group (7 1 13'1100000000000).
+  Merging pattern 16'---0--0-11010--- and 16'---0--0-10010--- from group (7 1 13'1100000000000).
+  Merging pattern 16'---0-00-10011--- and 16'---0-00-11011--- from group (7 1 13'1100000000000).
+  Merging pattern 16'---0-00-11011--- and 16'---0-00-10011--- from group (7 1 13'1100000000000).
+  Merging pattern 16'---0--0-10000--- and 16'---0--0-11000--- from group (7 2 13'1010000000000).
+  Merging pattern 16'---0--0-11000--- and 16'---0--0-10000--- from group (7 2 13'1010000000000).
+  Merging pattern 16'00-0--01000----0 and 16'00-0--01010----0 from group (7 4 13'1011000000000).
+  Merging pattern 16'00-0--01010----0 and 16'00-0--01000----0 from group (7 4 13'1011000000000).
+  Merging pattern 16'---0-10-10001--- and 16'---0-10-11001--- from group (7 4 13'1011000000000).
+  Merging pattern 16'---0-10-11001--- and 16'---0-10-10001--- from group (7 4 13'1011000000000).
+  Merging pattern 16'---0--0--01---0- and 16'---0--0--11---0- from group (7 5 13'1000100000000).
+  Merging pattern 16'---0--0--11---0- and 16'---0--0--01---0- from group (7 5 13'1000100000000).
+  Merging pattern 16'---0-00-10001--- and 16'---0-00-11001--- from group (7 5 13'1000100000000).
+  Merging pattern 16'---0-00-11001--- and 16'---0-00-10001--- from group (7 5 13'1000100000000).
+  Merging pattern 16'1--0--01000----- and 16'1--0--01010----- from group (7 5 13'1000100000000).
+  Merging pattern 16'1--0--01010----- and 16'1--0--01000----- from group (7 5 13'1000100000000).
+  Merging pattern 16'---0--00000----- and 16'---0--00010----- from group (7 7 13'1010100000000).
+  Merging pattern 16'---0--00010----- and 16'---0--00000----- from group (7 7 13'1010100000000).
+  Merging pattern 16'---0-10-10011--- and 16'---0-10-11011--- from group (7 9 13'1011100000000).
+  Merging pattern 16'---0-10-11011--- and 16'---0-10-10011--- from group (7 9 13'1011100000000).
+  Merging pattern 16'-1-0--01000----- and 16'-1-0--01010----- from group (7 9 13'1011100000000).
+  Merging pattern 16'-1-0--01010----- and 16'-1-0--01000----- from group (7 9 13'1011100000000).
+  Merging pattern 16'---0--0--01---1- and 16'---0--0--11---1- from group (8 1 13'0100000000010).
+  Merging pattern 16'---0--0--11---1- and 16'---0--0--01---1- from group (8 1 13'0100000000010).
+  Merging pattern 16'---0--0-10010--- and 16'---0--0-11010--- from group (8 1 13'0100000000010).
+  Merging pattern 16'---0--0-11010--- and 16'---0--0-10010--- from group (8 1 13'0100000000010).
+  Merging pattern 16'---0-00-10011--- and 16'---0-00-11011--- from group (8 1 13'0100000000010).
+  Merging pattern 16'---0-00-11011--- and 16'---0-00-10011--- from group (8 1 13'0100000000010).
+  Merging pattern 16'---0--0-10000--- and 16'---0--0-11000--- from group (8 2 13'0010000000010).
+  Merging pattern 16'---0--0-11000--- and 16'---0--0-10000--- from group (8 2 13'0010000000010).
+  Merging pattern 16'---0-10-10001--- and 16'---0-10-11001--- from group (8 4 13'0011000000010).
+  Merging pattern 16'---0-10-11001--- and 16'---0-10-10001--- from group (8 4 13'0011000000010).
+  Merging pattern 16'---0--0--01---0- and 16'---0--0--11---0- from group (8 5 13'0000100000010).
+  Merging pattern 16'---0--0--11---0- and 16'---0--0--01---0- from group (8 5 13'0000100000010).
+  Merging pattern 16'---0-00-10001--- and 16'---0-00-11001--- from group (8 5 13'0000100000010).
+  Merging pattern 16'---0-00-11001--- and 16'---0-00-10001--- from group (8 5 13'0000100000010).
+  Merging pattern 16'---0--00000----- and 16'---0--00010----- from group (8 8 13'0001100000010).
+  Merging pattern 16'---0--01000----- and 16'---0--01010----- from group (8 8 13'0001100000010).
+  Merging pattern 16'---0--00010----- and 16'---0--00000----- from group (8 8 13'0001100000010).
+  Merging pattern 16'---0--01010----- and 16'---0--01000----- from group (8 8 13'0001100000010).
+  Merging pattern 16'---0--000-0----- and 16'---0--010-0----- from group (8 8 13'0001100000010).
+  Merging pattern 16'---0--010-0----- and 16'---0--000-0----- from group (8 8 13'0001100000010).
+  Merging pattern 16'---0-10-10011--- and 16'---0-10-11011--- from group (8 9 13'0011100000010).
+  Merging pattern 16'---0-10-11011--- and 16'---0-10-10011--- from group (8 9 13'0011100000010).
+  Merging pattern 16'---0--0--01---1- and 16'---0--0--11---1- from group (9 1 13'0100000000100).
+  Merging pattern 16'---0--0--11---1- and 16'---0--0--01---1- from group (9 1 13'0100000000100).
+  Merging pattern 16'---0--0-10010--- and 16'---0--0-11010--- from group (9 1 13'0100000000100).
+  Merging pattern 16'---0--0-11010--- and 16'---0--0-10010--- from group (9 1 13'0100000000100).
+  Merging pattern 16'---0-00-10011--- and 16'---0-00-11011--- from group (9 1 13'0100000000100).
+  Merging pattern 16'---0-00-11011--- and 16'---0-00-10011--- from group (9 1 13'0100000000100).
+  Merging pattern 16'---0--0-10000--- and 16'---0--0-11000--- from group (9 2 13'0010000000100).
+  Merging pattern 16'---0--0-11000--- and 16'---0--0-10000--- from group (9 2 13'0010000000100).
+  Merging pattern 16'---0-10-10001--- and 16'---0-10-11001--- from group (9 4 13'0011000000100).
+  Merging pattern 16'---0-10-11001--- and 16'---0-10-10001--- from group (9 4 13'0011000000100).
+  Merging pattern 16'---0--0--01---0- and 16'---0--0--11---0- from group (9 5 13'0000100000100).
+  Merging pattern 16'---0--0--11---0- and 16'---0--0--01---0- from group (9 5 13'0000100000100).
+  Merging pattern 16'---0-00-10001--- and 16'---0-00-11001--- from group (9 5 13'0000100000100).
+  Merging pattern 16'---0-00-11001--- and 16'---0-00-10001--- from group (9 5 13'0000100000100).
+  Merging pattern 16'---0-10-10011--- and 16'---0-10-11011--- from group (9 9 13'0011100000100).
+  Merging pattern 16'---0-10-11011--- and 16'---0-10-10011--- from group (9 9 13'0011100000100).
+  Merging pattern 16'---0--00000----- and 16'---0--00010----- from group (9 9 13'0011100000100).
+  Merging pattern 16'---0--01000----- and 16'---0--01010----- from group (9 9 13'0011100000100).
+  Merging pattern 16'---0--00010----- and 16'---0--00000----- from group (9 9 13'0011100000100).
+  Merging pattern 16'---0--01010----- and 16'---0--01000----- from group (9 9 13'0011100000100).
+  Merging pattern 16'---0--000-0----- and 16'---0--010-0----- from group (9 9 13'0011100000100).
+  Merging pattern 16'---0--010-0----- and 16'---0--000-0----- from group (9 9 13'0011100000100).
+Optimizing FSM `$fsm$\payload_action_q$395' from module `\wire_mold_message_framer'.
+  Merging pattern 6'0-0110 and 6'0-0111 from group (1 1 7'0001100).
+  Merging pattern 6'0-0111 and 6'0-0110 from group (1 1 7'0001100).
+
+5.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+Removed 44 unused cells and 44 unused wires.
+<suppressed ~45 debug messages>
+
+5.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\payload_action_q$395' from module `\wire_mold_message_framer'.
+  Removing unused output signal $0\payload_action_q[2:0] [0].
+  Removing unused output signal $0\payload_action_q[2:0] [1].
+  Removing unused output signal $0\payload_action_q[2:0] [2].
+Optimizing FSM `$fsm$\state_q$401' from module `\wire_mold_message_framer'.
+  Removing unused output signal $0\state_q[3:0] [0].
+  Removing unused output signal $0\state_q[3:0] [1].
+  Removing unused output signal $0\state_q[3:0] [2].
+  Removing unused output signal $0\state_q[3:0] [3].
+
+5.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\payload_action_q$395' from module `\wire_mold_message_framer' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> ----1
+  100 -> ---1-
+  010 -> --1--
+  001 -> -1---
+  011 -> 1----
+Recoding FSM `$fsm$\state_q$401' from module `\wire_mold_message_framer' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  0000 -> ---------1
+  1000 -> --------1-
+  0100 -> -------1--
+  0010 -> ------1---
+  0110 -> -----1----
+  0001 -> ----1-----
+  1001 -> ---1------
+  0101 -> --1-------
+  0011 -> -1--------
+  0111 -> 1---------
+
+5.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\payload_action_q$395' from module `wire_mold_message_framer':
+-------------------------------------
+
+  Information on FSM $fsm$\payload_action_q$395 (\payload_action_q):
+
+  Number of input signals:    6
+  Number of output signals:   4
+  Number of state bits:       5
+
+  Input signals:
+    0: \in_last
+    1: \input_fire
+    2: $eq$rtl/arch_a/wire_mold_message_framer.sv:93$14_Y
+    3: $logic_or$rtl/arch_a/wire_mold_message_framer.sv:113$31_Y
+    4: $eq$rtl/arch_a/wire_mold_message_framer.sv:162$33_Y
+    5: $eq$rtl/arch_a/wire_mold_message_framer.sv:223$36_Y
+
+  Output signals:
+    0: $procmux$140_CMP
+    1: $procmux$141_CMP
+    2: $procmux$315_CMP
+    3: $procmux$316_CMP
+
+  State encoding:
+    0:    5'----1  <RESET STATE>
+    1:    5'---1-
+    2:    5'--1--
+    3:    5'-1---
+    4:    5'1----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 6'100110   ->     0 4'1000
+      1:     0 6'0-0110   ->     0 4'1000
+      2:     0 6'--0-0-   ->     0 4'1000
+      3:     0 6'--001-   ->     0 4'1000
+      4:     0 6'--1---   ->     0 4'1000
+      5:     0 6'0-0111   ->     1 4'1000
+      6:     0 6'100111   ->     2 4'1000
+      7:     0 6'110111   ->     3 4'1000
+      8:     0 6'110110   ->     4 4'1000
+      9:     1 6'100110   ->     0 4'0001
+     10:     1 6'--1---   ->     0 4'0001
+     11:     1 6'--0-0-   ->     1 4'0001
+     12:     1 6'--001-   ->     1 4'0001
+     13:     1 6'0-011-   ->     1 4'0001
+     14:     1 6'100111   ->     2 4'0001
+     15:     1 6'110111   ->     3 4'0001
+     16:     1 6'110110   ->     4 4'0001
+     17:     2 6'100110   ->     0 4'0010
+     18:     2 6'--1---   ->     0 4'0010
+     19:     2 6'0-0111   ->     1 4'0010
+     20:     2 6'0-0110   ->     2 4'0010
+     21:     2 6'100111   ->     2 4'0010
+     22:     2 6'--0-0-   ->     2 4'0010
+     23:     2 6'--001-   ->     2 4'0010
+     24:     2 6'110111   ->     3 4'0010
+     25:     2 6'110110   ->     4 4'0010
+     26:     3 6'100110   ->     0 4'0100
+     27:     3 6'--1---   ->     0 4'0100
+     28:     3 6'0-0111   ->     1 4'0100
+     29:     3 6'100111   ->     2 4'0100
+     30:     3 6'0-0110   ->     3 4'0100
+     31:     3 6'110111   ->     3 4'0100
+     32:     3 6'--0-0-   ->     3 4'0100
+     33:     3 6'--001-   ->     3 4'0100
+     34:     3 6'110110   ->     4 4'0100
+     35:     4 6'100110   ->     0 4'0000
+     36:     4 6'--1---   ->     0 4'0000
+     37:     4 6'0-0111   ->     1 4'0000
+     38:     4 6'100111   ->     2 4'0000
+     39:     4 6'110111   ->     3 4'0000
+     40:     4 6'110110   ->     4 4'0000
+     41:     4 6'0-0110   ->     4 4'0000
+     42:     4 6'--0-0-   ->     4 4'0000
+     43:     4 6'--001-   ->     4 4'0000
+
+-------------------------------------
+
+FSM `$fsm$\state_q$401' from module `wire_mold_message_framer':
+-------------------------------------
+
+  Information on FSM $fsm$\state_q$401 (\state_q):
+
+  Number of input signals:   16
+  Number of output signals:   9
+  Number of state bits:      10
+
+  Input signals:
+    0: $auto$opt_reduce.cc:137:opt_pmux$386
+    1: \packet_body_empty
+    2: \in_last
+    3: \message_empty_q
+    4: \header_ended_q
+    5: \packet_fire
+    6: \input_fire
+    7: \message_fire
+    8: \output_fire
+    9: $logic_or$rtl/arch_a/wire_mold_message_framer.sv:113$31_Y
+   10: $eq$rtl/arch_a/wire_mold_message_framer.sv:162$33_Y
+   11: $eq$rtl/arch_a/wire_mold_message_framer.sv:223$36_Y
+   12: $logic_and$rtl/arch_a/wire_mold_message_framer.sv:260$41_Y
+   13: $logic_and$rtl/arch_a/wire_mold_message_framer.sv:268$47_Y
+   14: $procmux$315_CMP
+   15: $procmux$316_CMP
+
+  Output signals:
+    0: \packet_ready
+    1: \message_valid
+    2: \packet_result_success
+    3: $eq$rtl/arch_a/wire_mold_message_framer.sv:90$9_Y
+    4: $eq$rtl/arch_a/wire_mold_message_framer.sv:91$10_Y
+    5: $eq$rtl/arch_a/wire_mold_message_framer.sv:92$12_Y
+    6: $eq$rtl/arch_a/wire_mold_message_framer.sv:93$14_Y
+    7: $eq$rtl/arch_a/wire_mold_message_framer.sv:106$24_Y
+    8: $eq$rtl/arch_a/wire_mold_message_framer.sv:134$32_Y
+
+  State encoding:
+    0: 10'---------1  <RESET STATE>
+    1: 10'--------1-
+    2: 10'-------1--
+    3: 10'------1---
+    4: 10'-----1----
+    5: 10'----1-----
+    6: 10'---1------
+    7: 10'--1-------
+    8: 10'-1--------
+    9: 10'1---------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 16'---0--0-0-0-----   ->     0 9'000000001
+      1:     0 16'---1--0---------   ->     0 9'000000001
+      2:     0 16'------1---------   ->     0 9'000000001
+      3:     0 16'---0--0---1---1-   ->     1 9'000000001
+      4:     0 16'---0--0-1-010---   ->     1 9'000000001
+      5:     0 16'---0-00-1-011---   ->     1 9'000000001
+      6:     0 16'---0--0-1-000---   ->     2 9'000000001
+      7:     0 16'---0-10-1-001---   ->     4 9'000000001
+      8:     0 16'---0--0---1---0-   ->     5 9'000000001
+      9:     0 16'---0-00-1-001---   ->     5 9'000000001
+     10:     0 16'---0-10-1-011---   ->     9 9'000000001
+     11:     1 16'--01--0---------   ->     0 9'010000000
+     12:     1 16'------1---------   ->     0 9'010000000
+     13:     1 16'--00--0---1---1-   ->     1 9'010000000
+     14:     1 16'--00--0-1-010---   ->     1 9'010000000
+     15:     1 16'--00-00-1-011---   ->     1 9'010000000
+     16:     1 16'--00--0-0-0-----   ->     1 9'010000000
+     17:     1 16'--00--0-1-000---   ->     2 9'010000000
+     18:     1 16'--00-10-1-001---   ->     4 9'010000000
+     19:     1 16'--00--0---1---0-   ->     5 9'010000000
+     20:     1 16'--00-00-1-001---   ->     5 9'010000000
+     21:     1 16'--1---0---------   ->     6 9'010000000
+     22:     1 16'--00-10-1-011---   ->     9 9'010000000
+     23:     2 16'---1--0---------   ->     0 9'001000000
+     24:     2 16'------1---------   ->     0 9'001000000
+     25:     2 16'---00-0--11--01-   ->     1 9'001000000
+     26:     2 16'---0--0--01---1-   ->     1 9'001000000
+     27:     2 16'---00-0-110100--   ->     1 9'001000000
+     28:     2 16'---0000-110110--   ->     1 9'001000000
+     29:     2 16'---0--0-10010---   ->     1 9'001000000
+     30:     2 16'---0-00-10011---   ->     1 9'001000000
+     31:     2 16'---00-0-110000--   ->     2 9'001000000
+     32:     2 16'---00-0-010--0--   ->     2 9'001000000
+     33:     2 16'---0--0-10000---   ->     2 9'001000000
+     34:     2 16'---0--0-000-----   ->     2 9'001000000
+     35:     2 16'---0010-110010--   ->     4 9'001000000
+     36:     2 16'---0-10-10001---   ->     4 9'001000000
+     37:     2 16'---00-0--11--00-   ->     5 9'001000000
+     38:     2 16'---0--0--01---0-   ->     5 9'001000000
+     39:     2 16'---0000-110010--   ->     5 9'001000000
+     40:     2 16'---0-00-10001---   ->     5 9'001000000
+     41:     2 16'---00-0--1---1--   ->     7 9'001000000
+     42:     2 16'---01-0--1------   ->     7 9'001000000
+     43:     2 16'---0010-110110--   ->     9 9'001000000
+     44:     2 16'---0-10-10011---   ->     9 9'001000000
+     45:     3 16'---1--0---------   ->     0 9'000010000
+     46:     3 16'------1---------   ->     0 9'000010000
+     47:     3 16'---0--0--01---1-   ->     1 9'000010000
+     48:     3 16'---0--0-10010---   ->     1 9'000010000
+     49:     3 16'---0-00-10011---   ->     1 9'000010000
+     50:     3 16'---0--0-10000---   ->     2 9'000010000
+     51:     3 16'---0--0-000-----   ->     3 9'000010000
+     52:     3 16'---0-10-10001---   ->     4 9'000010000
+     53:     3 16'---0--0--01---0-   ->     5 9'000010000
+     54:     3 16'---0-00-10001---   ->     5 9'000010000
+     55:     3 16'---0--0--1------   ->     8 9'000010000
+     56:     3 16'---0-10-10011---   ->     9 9'000010000
+     57:     4 16'---1--0---------   ->     0 9'000100000
+     58:     4 16'------1---------   ->     0 9'000100000
+     59:     4 16'---0--0--11--01-   ->     1 9'000100000
+     60:     4 16'---0--0--01---1-   ->     1 9'000100000
+     61:     4 16'---0--0-110100--   ->     1 9'000100000
+     62:     4 16'---0-00-110110--   ->     1 9'000100000
+     63:     4 16'---0--0--1---1--   ->     1 9'000100000
+     64:     4 16'---0--0-10010---   ->     1 9'000100000
+     65:     4 16'---0-00-10011---   ->     1 9'000100000
+     66:     4 16'---0--0-110000--   ->     2 9'000100000
+     67:     4 16'---0--0-10000---   ->     2 9'000100000
+     68:     4 16'---0-10-110010--   ->     4 9'000100000
+     69:     4 16'---0--0-010--0--   ->     4 9'000100000
+     70:     4 16'---0-10-10001---   ->     4 9'000100000
+     71:     4 16'---0--0-000-----   ->     4 9'000100000
+     72:     4 16'---0--0--11--00-   ->     5 9'000100000
+     73:     4 16'---0--0--01---0-   ->     5 9'000100000
+     74:     4 16'---0-00-110010--   ->     5 9'000100000
+     75:     4 16'---0-00-10001---   ->     5 9'000100000
+     76:     4 16'---0-10-110110--   ->     9 9'000100000
+     77:     4 16'---0-10-10011---   ->     9 9'000100000
+     78:     5 16'---1--0---------   ->     0 9'000001000
+     79:     5 16'------1---------   ->     0 9'000001000
+     80:     5 16'---0--0--01---1-   ->     1 9'000001000
+     81:     5 16'---0--0--1---1--   ->     1 9'000001000
+     82:     5 16'---0--0-10010---   ->     1 9'000001000
+     83:     5 16'---0-00-10011---   ->     1 9'000001000
+     84:     5 16'---0--0-10000---   ->     2 9'000001000
+     85:     5 16'---0--0--1---0--   ->     3 9'000001000
+     86:     5 16'---0-10-10001---   ->     4 9'000001000
+     87:     5 16'---0--0--01---0-   ->     5 9'000001000
+     88:     5 16'---0-00-10001---   ->     5 9'000001000
+     89:     5 16'---0--0-000-----   ->     5 9'000001000
+     90:     5 16'---0-10-10011---   ->     9 9'000001000
+     91:     6 16'---1--0---------   ->     0 9'000000000
+     92:     6 16'------1---------   ->     0 9'000000000
+     93:     6 16'---0--0---1---1-   ->     1 9'000000000
+     94:     6 16'---0--0-1-010---   ->     1 9'000000000
+     95:     6 16'---0-00-1-011---   ->     1 9'000000000
+     96:     6 16'---0--0-1-000---   ->     2 9'000000000
+     97:     6 16'---0-10-1-001---   ->     4 9'000000000
+     98:     6 16'---0--0---1---0-   ->     5 9'000000000
+     99:     6 16'---0-00-1-001---   ->     5 9'000000000
+    100:     6 16'---0--0-0-0-----   ->     6 9'000000000
+    101:     6 16'---0-10-1-011---   ->     9 9'000000000
+    102:     7 16'---1--0---------   ->     0 9'100000000
+    103:     7 16'------1---------   ->     0 9'100000000
+    104:     7 16'---0--010-0----1   ->     1 9'100000000
+    105:     7 16'---0--0---1---1-   ->     1 9'100000000
+    106:     7 16'---0--0-1-010---   ->     1 9'100000000
+    107:     7 16'---0-00-1-011---   ->     1 9'100000000
+    108:     7 16'---0--0-1-000---   ->     2 9'100000000
+    109:     7 16'00-0--010-0----0   ->     4 9'100000000
+    110:     7 16'---0-10-1-001---   ->     4 9'100000000
+    111:     7 16'---0--0---1---0-   ->     5 9'100000000
+    112:     7 16'---0-00-1-001---   ->     5 9'100000000
+    113:     7 16'1--0--010-0-----   ->     5 9'100000000
+    114:     7 16'---0--000-0-----   ->     7 9'100000000
+    115:     7 16'---0-10-1-011---   ->     9 9'100000000
+    116:     7 16'-1-0--010-0-----   ->     9 9'100000000
+    117:     8 16'---1--0---------   ->     0 9'000000010
+    118:     8 16'------1---------   ->     0 9'000000010
+    119:     8 16'---0--0---1---1-   ->     1 9'000000010
+    120:     8 16'---0--0-1-010---   ->     1 9'000000010
+    121:     8 16'---0-00-1-011---   ->     1 9'000000010
+    122:     8 16'---0--0-1-000---   ->     2 9'000000010
+    123:     8 16'---0-10-1-001---   ->     4 9'000000010
+    124:     8 16'---0--0---1---0-   ->     5 9'000000010
+    125:     8 16'---0-00-1-001---   ->     5 9'000000010
+    126:     8 16'---0--0-0-0-----   ->     8 9'000000010
+    127:     8 16'---0-10-1-011---   ->     9 9'000000010
+    128:     9 16'---1--0---------   ->     0 9'000000100
+    129:     9 16'------1---------   ->     0 9'000000100
+    130:     9 16'---0--0---1---1-   ->     1 9'000000100
+    131:     9 16'---0--0-1-010---   ->     1 9'000000100
+    132:     9 16'---0-00-1-011---   ->     1 9'000000100
+    133:     9 16'---0--0-1-000---   ->     2 9'000000100
+    134:     9 16'---0-10-1-001---   ->     4 9'000000100
+    135:     9 16'---0--0---1---0-   ->     5 9'000000100
+    136:     9 16'---0-00-1-001---   ->     5 9'000000100
+    137:     9 16'---0-10-1-011---   ->     9 9'000000100
+    138:     9 16'---0--0-0-0-----   ->     9 9'000000100
+
+-------------------------------------
+
+5.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\payload_action_q$395' from module `\wire_mold_message_framer'.
+Mapping FSM `$fsm$\state_q$401' from module `\wire_mold_message_framer'.
+
+5.8. Executing OPT pass (performing simple optimizations).
+
+5.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+<suppressed ~17 debug messages>
+
+5.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 329 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 297 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+<suppressed ~96 debug messages>
+Removed a total of 32 cells.
+
+5.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~508 debug messages>
+
+5.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_mold_message_framer.
+Performed a total of 0 changes.
+
+5.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 297 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Removed a total of 0 cells.
+
+5.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$383 ($dff) from module wire_mold_message_framer (D = $procmux$133_Y, Q = \reject_pending_q, rval = 1'0).
+Adding SRST signal on $procdff$384 ($dff) from module wire_mold_message_framer (D = $procmux$89_Y, Q = \result_pending_q, rval = 1'0).
+Adding SRST signal on $procdff$382 ($dff) from module wire_mold_message_framer (D = $procmux$173_Y, Q = \reject_code_q, rval = 2'00).
+Adding SRST signal on $procdff$381 ($dff) from module wire_mold_message_framer (D = $procmux$186_Y, Q = \payload_last_q, rval = 1'0).
+Adding SRST signal on $procdff$380 ($dff) from module wire_mold_message_framer (D = $procmux$196_Y, Q = \payload_valid_q, rval = 1'0).
+Adding SRST signal on $procdff$371 ($dff) from module wire_mold_message_framer (D = $procmux$284_Y, Q = \packet_sequence_q, rval = 64'0000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$804 ($sdff) from module wire_mold_message_framer (D = \packet_sequence, Q = \packet_sequence_q).
+Adding SRST signal on $procdff$372 ($dff) from module wire_mold_message_framer (D = $procmux$279_Y, Q = \packet_count_q, rval = 16'0000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$806 ($sdff) from module wire_mold_message_framer (D = \packet_message_count, Q = \packet_count_q).
+Adding SRST signal on $procdff$373 ($dff) from module wire_mold_message_framer (D = $procmux$274_Y, Q = \messages_done_q, rval = 16'0000000000000000).
+Adding SRST signal on $procdff$374 ($dff) from module wire_mold_message_framer (D = $procmux$256_Y, Q = \length_hi_q, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$809 ($sdff) from module wire_mold_message_framer (D = \in_data, Q = \length_hi_q).
+Adding SRST signal on $procdff$375 ($dff) from module wire_mold_message_framer (D = $procmux$243_Y, Q = \message_length_q, rval = 16'0000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$815 ($sdff) from module wire_mold_message_framer (D = { \length_hi_q \in_data }, Q = \message_length_q).
+Adding SRST signal on $procdff$376 ($dff) from module wire_mold_message_framer (D = $procmux$234_Y, Q = \payload_remaining_q, rval = 16'0000000000000000).
+Adding EN signal on $auto$ff.cc:337:slice$819 ($sdff) from module wire_mold_message_framer (D = $procmux$231_Y, Q = \payload_remaining_q).
+Adding SRST signal on $procdff$377 ($dff) from module wire_mold_message_framer (D = $procmux$222_Y, Q = \message_empty_q, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$827 ($sdff) from module wire_mold_message_framer (D = $eq$rtl/arch_a/wire_mold_message_framer.sv:216$35_Y, Q = \message_empty_q).
+Adding SRST signal on $procdff$378 ($dff) from module wire_mold_message_framer (D = $procmux$213_Y, Q = \header_ended_q, rval = 1'0).
+Adding EN signal on $auto$ff.cc:337:slice$831 ($sdff) from module wire_mold_message_framer (D = \in_last, Q = \header_ended_q).
+Adding SRST signal on $procdff$379 ($dff) from module wire_mold_message_framer (D = $procmux$204_Y, Q = \payload_data_q, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:337:slice$835 ($sdff) from module wire_mold_message_framer (D = \in_data, Q = \payload_data_q).
+
+5.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+Removed 28 unused cells and 78 unused wires.
+<suppressed ~29 debug messages>
+
+5.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+<suppressed ~1 debug messages>
+
+5.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~473 debug messages>
+
+5.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_mold_message_framer.
+Performed a total of 0 changes.
+
+5.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 278 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 276 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+5.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+5.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~473 debug messages>
+
+5.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_mold_message_framer.
+Performed a total of 0 changes.
+
+5.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 276 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Removed a total of 0 cells.
+
+5.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+
+5.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.8.23. Finished fast OPT passes. (There is nothing left to do.)
+
+5.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$785 ($eq).
+Removed top 2 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$781 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$775 ($eq).
+Removed top 1 bits (of 9) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$771 ($eq).
+Removed top 2 bits (of 10) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$767 ($eq).
+Removed top 2 bits (of 3) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$762 ($eq).
+Removed top 1 bits (of 4) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$753 ($eq).
+Removed top 3 bits (of 5) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$745 ($eq).
+Removed top 3 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$721 ($eq).
+Removed top 4 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$717 ($eq).
+Removed top 3 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$711 ($eq).
+Removed top 3 bits (of 9) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$707 ($eq).
+Removed top 4 bits (of 10) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$703 ($eq).
+Removed top 2 bits (of 4) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$697 ($eq).
+Removed top 3 bits (of 5) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$693 ($eq).
+Removed top 3 bits (of 5) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$687 ($eq).
+Removed top 2 bits (of 6) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$683 ($eq).
+Removed top 3 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$679 ($eq).
+Removed top 1 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$668 ($eq).
+Removed top 2 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$664 ($eq).
+Removed top 1 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$658 ($eq).
+Removed top 3 bits (of 6) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$654 ($eq).
+Removed top 1 bits (of 9) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$650 ($eq).
+Removed top 2 bits (of 10) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$646 ($eq).
+Removed top 4 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$642 ($eq).
+Removed top 2 bits (of 4) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$633 ($eq).
+Removed top 2 bits (of 6) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$622 ($eq).
+Removed top 3 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$618 ($eq).
+Removed top 2 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$612 ($eq).
+Removed top 4 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$608 ($eq).
+Removed top 2 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$604 ($eq).
+Removed top 3 bits (of 9) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$600 ($eq).
+Removed top 3 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$589 ($eq).
+Removed top 4 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$585 ($eq).
+Removed top 3 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$579 ($eq).
+Removed top 2 bits (of 6) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$573 ($eq).
+Removed top 3 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$569 ($eq).
+Removed top 2 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$563 ($eq).
+Removed top 2 bits (of 4) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$557 ($eq).
+Removed top 3 bits (of 9) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$553 ($eq).
+Removed top 4 bits (of 10) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$549 ($eq).
+Removed top 2 bits (of 8) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$545 ($eq).
+Removed top 3 bits (of 9) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$541 ($eq).
+Removed top 2 bits (of 4) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$535 ($eq).
+Removed top 3 bits (of 5) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$531 ($eq).
+Removed top 3 bits (of 5) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$525 ($eq).
+Removed top 2 bits (of 6) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$521 ($eq).
+Removed top 3 bits (of 7) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$517 ($eq).
+Removed top 2 bits (of 6) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$513 ($eq).
+Removed top 1 bits (of 3) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$502 ($eq).
+Removed top 2 bits (of 3) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$489 ($eq).
+Removed top 2 bits (of 5) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$481 ($eq).
+Removed top 2 bits (of 4) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$444 ($eq).
+Removed top 2 bits (of 5) from port B of cell wire_mold_message_framer.$auto$fsm_map.cc:77:implement_pattern_cache$434 ($eq).
+Removed top 15 bits (of 16) from port B of cell wire_mold_message_framer.$add$rtl/arch_a/wire_mold_message_framer.sv:86$7 ($add).
+Removed top 48 bits (of 64) from port B of cell wire_mold_message_framer.$add$rtl/arch_a/wire_mold_message_framer.sv:97$20 ($add).
+Removed top 15 bits (of 16) from port B of cell wire_mold_message_framer.$eq$rtl/arch_a/wire_mold_message_framer.sv:223$36 ($eq).
+Removed top 15 bits (of 16) from port B of cell wire_mold_message_framer.$sub$rtl/arch_a/wire_mold_message_framer.sv:239$39 ($sub).
+
+5.10. Executing PEEPOPT pass (run peephole optimizers).
+
+5.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+
+5.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module wire_mold_message_framer:
+  creating $macc model for $sub$rtl/arch_a/wire_mold_message_framer.sv:239$39 ($sub).
+  creating $macc model for $add$rtl/arch_a/wire_mold_message_framer.sv:97$20 ($add).
+  creating $macc model for $add$rtl/arch_a/wire_mold_message_framer.sv:86$7 ($add).
+  creating $alu model for $macc $add$rtl/arch_a/wire_mold_message_framer.sv:86$7.
+  creating $alu model for $macc $add$rtl/arch_a/wire_mold_message_framer.sv:97$20.
+  creating $alu model for $macc $sub$rtl/arch_a/wire_mold_message_framer.sv:239$39.
+  creating $alu model for $eq$rtl/arch_a/wire_mold_message_framer.sv:223$36 ($eq): merged with $sub$rtl/arch_a/wire_mold_message_framer.sv:239$39.
+  creating $alu cell for $sub$rtl/arch_a/wire_mold_message_framer.sv:239$39, $eq$rtl/arch_a/wire_mold_message_framer.sv:223$36: $auto$alumacc.cc:576:replace_alu$839
+  creating $alu cell for $add$rtl/arch_a/wire_mold_message_framer.sv:97$20: $auto$alumacc.cc:576:replace_alu$844
+  creating $alu cell for $add$rtl/arch_a/wire_mold_message_framer.sv:86$7: $auto$alumacc.cc:576:replace_alu$847
+  created 3 $alu and 0 $macc cells.
+
+5.13. Executing SHARE pass (SAT-based resource sharing).
+
+5.14. Executing OPT pass (performing simple optimizations).
+
+5.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 276 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Removed a total of 0 cells.
+
+5.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~473 debug messages>
+
+5.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_mold_message_framer.
+Performed a total of 0 changes.
+
+5.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 276 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Removed a total of 0 cells.
+
+5.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+5.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~473 debug messages>
+
+5.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_mold_message_framer.
+Performed a total of 0 changes.
+
+5.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 276 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Removed a total of 0 cells.
+
+5.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+
+5.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+5.15. Executing MEMORY pass.
+
+5.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+5.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+5.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+5.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+5.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+5.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+
+5.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+5.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+5.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+
+5.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+5.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+
+5.17. Executing OPT pass (performing simple optimizations).
+
+5.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+<suppressed ~12 debug messages>
+
+5.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 274 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Removed a total of 0 cells.
+
+5.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+5.17.5. Finished fast OPT passes.
+
+5.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+5.19. Executing OPT pass (performing simple optimizations).
+
+5.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 274 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Removed a total of 0 cells.
+
+5.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \wire_mold_message_framer..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~278 debug messages>
+
+5.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \wire_mold_message_framer.
+Performed a total of 0 changes.
+
+5.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 274 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Removed a total of 0 cells.
+
+5.19.6. Executing OPT_SHARE pass.
+
+5.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+
+5.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+
+5.19.10. Finished fast OPT passes. (There is nothing left to do.)
+
+5.20. Executing TECHMAP pass (map to technology primitives).
+
+5.20.1. Executing Verilog-2005 frontend: /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+5.20.2. Continuing TECHMAP pass.
+Using template $paramod$2af30114e9bd4ccb04dad757b3f0a8f6bf0615b0\_90_alu for cells of type $alu.
+Using template $paramod$3f3f2584f4e9c2748e07f9b6a631d8767aa63e85\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$a1665ef28c749ebcdbe9aecd466e644647b56463\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $pmux.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000001000000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000001000000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1137 debug messages>
+
+5.21. Executing OPT pass (performing simple optimizations).
+
+5.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+<suppressed ~1175 debug messages>
+
+5.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 1645 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 1433 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 1343 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 1304 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 1300 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+<suppressed ~1035 debug messages>
+Removed a total of 345 cells.
+
+5.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+Removed 106 unused cells and 710 unused wires.
+<suppressed ~107 debug messages>
+
+5.21.5. Finished fast OPT passes.
+
+5.22. Executing ABC pass (technology mapping using ABC).
+
+5.22.1. Summary of detected clock domains:
+  9 cells in clk=\clk, en=$auto$simple.cc:210:make_patterns_logic$837, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$430
+  113 cells in clk=\clk, en=$auto$simple.cc:210:make_patterns_logic$825, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$430
+  81 cells in clk=\clk, en=$auto$simple.cc:210:make_patterns_logic$817, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$430
+  15 cells in clk=\clk, en=$auto$simple.cc:210:make_patterns_logic$813, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$430
+  311 cells in clk=\clk, en=\packet_fire, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$430
+  181 cells in clk=\clk, en={ }, arst={ }, srst=$auto$fsm_map.cc:74:implement_pattern_cache$430
+  484 cells in clk=\clk, en={ }, arst={ }, srst={ }
+
+5.22.2. Extracting gate netlist of module `\wire_mold_message_framer' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $auto$simple.cc:210:make_patterns_logic$837, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$430
+
+5.22.3. Extracting gate netlist of module `\wire_mold_message_framer' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $auto$simple.cc:210:make_patterns_logic$825, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$430
+
+5.22.4. Extracting gate netlist of module `\wire_mold_message_framer' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $auto$simple.cc:210:make_patterns_logic$817, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$430
+
+5.22.5. Extracting gate netlist of module `\wire_mold_message_framer' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by $auto$simple.cc:210:make_patterns_logic$813, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$430
+
+5.22.6. Extracting gate netlist of module `\wire_mold_message_framer' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, enabled by \packet_fire, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$430
+
+5.22.7. Extracting gate netlist of module `\wire_mold_message_framer' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk, synchronously reset by $auto$fsm_map.cc:74:implement_pattern_cache$430
+
+5.22.8. Extracting gate netlist of module `\wire_mold_message_framer' to `<abc-temp-dir>/input.blif'..
+Found matching posedge clock domain: \clk
+
+5.22.8.1. Executed ABC.
+Extracted 1 gates and 3 wires to a netlist network with 2 inputs and 1 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.8.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:        internal signals:        0
+ABC RESULTS:           input signals:        2
+ABC RESULTS:          output signals:        1
+Removing temp directory.
+
+5.22.8.1. Executed ABC.
+Extracted 97 gates and 137 wires to a netlist network with 40 inputs and 29 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.8.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        4
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:               MUX cells:       15
+ABC RESULTS:              NAND cells:        4
+ABC RESULTS:               NOR cells:        6
+ABC RESULTS:               NOT cells:        8
+ABC RESULTS:                OR cells:        6
+ABC RESULTS:             ORNOT cells:        7
+ABC RESULTS:              XNOR cells:       14
+ABC RESULTS:        internal signals:       68
+ABC RESULTS:           input signals:       40
+ABC RESULTS:          output signals:       29
+Removing temp directory.
+
+5.22.8.1. Executed ABC.
+Extracted 63 gates and 133 wires to a netlist network with 68 inputs and 29 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.8.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       12
+ABC RESULTS:            ANDNOT cells:        1
+ABC RESULTS:               MUX cells:       15
+ABC RESULTS:              NAND cells:        5
+ABC RESULTS:               NOR cells:       14
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        5
+ABC RESULTS:             ORNOT cells:        2
+ABC RESULTS:        internal signals:       36
+ABC RESULTS:           input signals:       68
+ABC RESULTS:          output signals:       29
+Removing temp directory.
+
+5.22.8.1. Executed ABC.
+Extracted 7 gates and 20 wires to a netlist network with 13 inputs and 6 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.8.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:        1
+ABC RESULTS:                OR cells:        4
+ABC RESULTS:               XOR cells:        1
+ABC RESULTS:        internal signals:        1
+ABC RESULTS:           input signals:       13
+ABC RESULTS:          output signals:        6
+Removing temp directory.
+
+5.22.8.1. Executed ABC.
+Extracted 231 gates and 344 wires to a netlist network with 113 inputs and 80 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.8.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       62
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:                OR cells:       15
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:       78
+ABC RESULTS:        internal signals:      151
+ABC RESULTS:           input signals:      113
+ABC RESULTS:          output signals:       80
+Removing temp directory.
+
+5.22.8.1. Executed ABC.
+Extracted 159 gates and 277 wires to a netlist network with 117 inputs and 107 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.8.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       47
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:               MUX cells:       40
+ABC RESULTS:              NAND cells:        7
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               NOT cells:        5
+ABC RESULTS:                OR cells:        9
+ABC RESULTS:             ORNOT cells:        2
+ABC RESULTS:              XNOR cells:        1
+ABC RESULTS:               XOR cells:       30
+ABC RESULTS:        internal signals:       53
+ABC RESULTS:           input signals:      117
+ABC RESULTS:          output signals:      107
+Removing temp directory.
+
+5.22.8.1. Executed ABC.
+Extracted 470 gates and 559 wires to a netlist network with 87 inputs and 70 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.8.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       54
+ABC RESULTS:            ANDNOT cells:       35
+ABC RESULTS:               MUX cells:       18
+ABC RESULTS:              NAND cells:       61
+ABC RESULTS:               NOR cells:       10
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:       23
+ABC RESULTS:             ORNOT cells:        3
+ABC RESULTS:        internal signals:      402
+ABC RESULTS:           input signals:       87
+ABC RESULTS:          output signals:       70
+Removing temp directory.
+Removing global temp directory.
+
+5.23. Executing OPT pass (performing simple optimizations).
+
+5.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_message_framer.
+<suppressed ~1 debug messages>
+
+5.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\wire_mold_message_framer'.
+Computing hashes of 804 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+Computing hashes of 803 cells of `\wire_mold_message_framer'.
+Finding duplicate cells in `\wire_mold_message_framer'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+5.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \wire_mold_message_framer..
+Removed 0 unused cells and 1118 unused wires.
+<suppressed ~1 debug messages>
+
+5.23.5. Finished fast OPT passes.
+
+5.24. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `wire_mold_message_framer'. Setting top module to wire_mold_message_framer.
+
+5.24.1. Analyzing design hierarchy..
+Top module:  \wire_mold_message_framer
+
+5.24.2. Analyzing design hierarchy..
+Top module:  \wire_mold_message_framer
+Removed 0 unused modules.
+
+5.25. Printing statistics.
+
+=== wire_mold_message_framer ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      565 wires
+     1121 wire bits
+       51 public wires
+      388 public wire bits
+       28 ports
+      199 port bits
+      803 cells
+       42   $_ANDNOT_
+      180   $_AND_
+       14   $_DFF_P_
+       89   $_MUX_
+       78   $_NAND_
+       31   $_NOR_
+       16   $_NOT_
+       14   $_ORNOT_
+       62   $_OR_
+      130   $_SDFFE_PP0P_
+       22   $_SDFF_PP0_
+       16   $_XNOR_
+      109   $_XOR_
+
+5.26. Executing CHECK pass (checking for obvious problems).
+Checking module wire_mold_message_framer...
+Found and reported 0 problems.
+
+6. Executing CHECK pass (checking for obvious problems).
+Checking module wire_mold_message_framer...
+Found and reported 0 problems.
+
+End of script. Logfile hash: cb15756355, time: 0.72s, user: 0.13s, system: 0.03s, MEM: 28.73 MB peak
+Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+Time spent: 71% 1x abc (0 sec), 5% 23x opt_expr (0 sec), ...

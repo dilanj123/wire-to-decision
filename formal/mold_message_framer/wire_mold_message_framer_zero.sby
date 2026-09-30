@@ -1,0 +1,12 @@
+[options]
+mode bmc
+depth 24
+[engines]
+smtbmc yices
+[script]
+read_verilog -formal -sv wire_mold_message_framer.sv wire_mold_message_framer_vectors.sv
+chparam -set CASE 6 mold_framer_vector
+prep -top mold_framer_vector
+[files]
+../../rtl/arch_a/wire_mold_message_framer.sv
+wire_mold_message_framer_vectors.sv

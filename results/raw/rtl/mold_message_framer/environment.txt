@@ -1,0 +1,14 @@
+Task: WIRE-020 MoldUDP64 message-block framing
+Repository: /Users/Dilan/Projects/wire-to-decision
+Starting HEAD: c75abb81bd67e7d28ecefaad8e390a70ba53fbce
+Branch: main
+OSS CAD Suite: /Users/Dilan/eda/wire-to-decision/oss-cad-suite
+Verilator: 5.053 devel rev v5.052-119-g014c9820d
+Yosys: 0.69+154 (git sha1 30d62572e-dirty)
+SymbiYosys: 0.69
+Yices: 2.7.0 (revision 8a8af407a3f6c74bdfe2058e75331de948499d07)
+cocotb: 2.1.0.dev0+41564633
+Python runtime: 3.11.6 (qualified OSS CAD Suite)
+Formal engine: smtbmc yices
+Formal mode: fixed-vector BMC/cover and public-port safety BMC
+Application P&R: NOT RUN
