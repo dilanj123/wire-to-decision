@@ -1,0 +1,168 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+
+-- Running command `read_verilog -sv rtl/arch_a/wire_mold_header_seq.sv; hierarchy -top wire_mold_header_seq; proc; check; stat' --
+
+1. Executing Verilog-2005 frontend: rtl/arch_a/wire_mold_header_seq.sv
+Parsing SystemVerilog input from `rtl/arch_a/wire_mold_header_seq.sv' to AST representation.
+Generating RTLIL representation for module `\wire_mold_header_seq'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \wire_mold_header_seq
+
+2.2. Analyzing design hierarchy..
+Top module:  \wire_mold_header_seq
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 15 switch rules as full_case in process $proc$rtl/arch_a/wire_mold_header_seq.sv:111$26 in module wire_mold_header_seq.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~21 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+     1/27: $5$lookahead\header_q$25[151:0]$41
+     2/27: $5$bitselwrite$pos$rtl/arch_a/wire_mold_header_seq.sv:180$1[31:0]$40
+     3/27: $4$lookahead\header_q$25[151:0]$39
+     4/27: $4$bitselwrite$pos$rtl/arch_a/wire_mold_header_seq.sv:180$1[31:0]$38
+     5/27: $3$lookahead\header_q$25[151:0]$36
+     6/27: $3$bitselwrite$pos$rtl/arch_a/wire_mold_header_seq.sv:180$1[31:0]$35
+     7/27: $2$lookahead\header_q$25[151:0]$34
+     8/27: $2$bitselwrite$pos$rtl/arch_a/wire_mold_header_seq.sv:180$1[31:0]$33
+     9/27: $1$lookahead\header_q$25[151:0]$31
+    10/27: $1$bitselwrite$pos$rtl/arch_a/wire_mold_header_seq.sv:180$1[31:0]$30
+    11/27: $0\recovery_required_q[0:0]
+    12/27: $0\controller_valid_q[0:0]
+    13/27: $0\pending_fatal_q[0:0]
+    14/27: $0\pending_code_q[2:0]
+    15/27: $0\reject_fatal_q[0:0]
+    16/27: $0\reject_code_q[2:0]
+    17/27: $0\body_last_q[0:0]
+    18/27: $0\body_valid_q[0:0]
+    19/27: $0\body_data_q[7:0]
+    20/27: $0\packet_valid_q[0:0]
+    21/27: $0\packet_empty_q[0:0]
+    22/27: $0\packet_count_q[15:0]
+    23/27: $0\packet_sequence_q[63:0]
+    24/27: $0\expected_sequence_q[63:0]
+    25/27: $0\active_session_q[79:0]
+    26/27: $0\header_index_q[4:0]
+    27/27: $0\state_q[2:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\wire_mold_header_seq.\state_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$629' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\header_index_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$630' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\header_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$631' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\active_session_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$632' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\expected_sequence_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$633' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\packet_sequence_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$634' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\packet_count_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$635' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\packet_empty_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$636' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\packet_valid_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$637' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\body_data_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$638' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\body_valid_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$639' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\body_last_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$640' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\reject_code_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$641' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\reject_fatal_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$642' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\pending_code_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$643' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\pending_fatal_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$644' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\controller_valid_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$645' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.\recovery_required_q' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$646' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.$bitselwrite$pos$rtl/arch_a/wire_mold_header_seq.sv:180$1' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$647' with positive edge clock.
+Creating register for signal `\wire_mold_header_seq.$lookahead\header_q$25' using process `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+  created $dff cell `$procdff$648' with positive edge clock.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 21 empty switches in `\wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+Removing empty process `wire_mold_header_seq.$proc$rtl/arch_a/wire_mold_header_seq.sv:111$26'.
+Cleaned up 21 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module wire_mold_header_seq.
+<suppressed ~20 debug messages>
+
+4. Executing CHECK pass (checking for obvious problems).
+Checking module wire_mold_header_seq...
+Found and reported 0 problems.
+
+5. Printing statistics.
+
+=== wire_mold_header_seq ===
+
+        +----------Local Count, excluding submodules.
+        |
+      496 wires
+     7930 wire bits
+       55 public wires
+     1058 public wire bits
+       28 ports
+      327 port bits
+      269 cells
+        3   $add
+        1   $and
+       20   $dff
+       13   $eq
+       11   $logic_and
+       22   $logic_not
+        4   $logic_or
+        1   $lt
+        1   $mul
+      176   $mux
+        4   $ne
+        2   $neg
+        1   $not
+        1   $or
+        5   $pmux
+        2   $shift
+        2   $sub
+
+End of script. Logfile hash: f4edaeb78c, time: 0.03s, user: 0.03s, system: 0.02s, MEM: 20.94 MB peak
+Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+Time spent: 32% 1x check (0 sec), 31% 2x read_verilog (0 sec), ...

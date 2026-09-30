@@ -48,7 +48,6 @@ module mold_safety;
         end
         if (past_valid && !$past(rst) && !$past(rearm) && $past(recovery_required)) begin
             assert(recovery_required);
-            assert(!in_ready);
             assert(!packet_valid);
             assert(!out_valid);
             assert(!packet_result_ready);

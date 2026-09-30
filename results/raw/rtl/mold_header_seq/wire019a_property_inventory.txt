@@ -1,0 +1,31 @@
+WIRE-019A immediate fail-closed property inventory
+
+Tools: SBY 0.69, smtbmc yices, Yices 2.7.0.
+References use public DUT ports only. DUT-private state: NO.
+Assumptions: synchronous reset initialization; upstream in_valid/data/last
+stable while in_valid && !in_ready. Targeted fixed-vector jobs hold explicit
+session/sequence vectors and drive a trailing byte. No downstream path is
+allowed to emit metadata, body, or result during malformed-packet drain.
+
+General safety BMC: wire_mold_header_seq.sby, depth 36, PASS.
+Checks output/rejection/metadata stability, recovery output blocking, and
+successful/failed deferred sequence commit. Input ready is intentionally not
+required low in recovery because S_DROP drains the current malformed packet.
+
+Cover job: wire_mold_header_seq_cover.sby, depth 40, PASS.
+
+Immediate fail-closed fixed-vector checks, each depth 28, PASS:
+- session mismatch with trailing packet bytes: controller_valid=0,
+  recovery_required=1 immediately after the completed header; in_ready=1 for
+  drain; packet_valid/out_valid/packet_result_ready=0; sequence unchanged.
+- sequence mismatch with trailing packet bytes: same control/drain properties.
+- heartbeat with trailing bytes: same properties; terminal code TRAILING_BYTES.
+- EOS with trailing bytes: same properties; terminal code TRAILING_BYTES.
+
+Other WIRE-019 fixed-vector jobs rerun and PASS: normal packet/deferred commit
+depth 40; heartbeat, EOS, session/sequence classification, body-empty, and
+trailing precedence depth 28; sequence wrap depth 40; header truncation depth
+16. Cover results are reachability only, not proof.
+
+Simulation: standalone cocotb 14/14 PASS, composition 2/2 PASS. Seeds 1, 7,
+19 retained. Python regression 71/71 PASS. Verilator and Yosys sanity PASS.

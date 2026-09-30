@@ -1,0 +1,100 @@
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] Removing directory '/tmp/wire019a_formal/wire_eth_parser_reference'.
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] Copy '/Users/Dilan/Projects/wire-to-decision/formal/eth_parser/../../rtl/arch_a/wire_eth_parser.sv' to '/tmp/wire019a_formal/wire_eth_parser_reference/src/wire_eth_parser.sv'.
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] Copy '/Users/Dilan/Projects/wire-to-decision/formal/eth_parser/wire_eth_parser_reference.sv' to '/tmp/wire019a_formal/wire_eth_parser_reference/src/wire_eth_parser_reference.sv'.
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: smtbmc yices
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] base: starting process "cd /tmp/wire019a_formal/wire_eth_parser_reference/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] base: finished (returncode=0)
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] prep: starting process "cd /tmp/wire019a_formal/wire_eth_parser_reference/model; yosys -ql design_prep.log design_prep.ys"
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] prep: finished (returncode=0)
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] smt2: starting process "cd /tmp/wire019a_formal/wire_eth_parser_reference/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] smt2: finished (returncode=0)
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: starting process "cd /tmp/wire019a_formal/wire_eth_parser_reference; yosys-smtbmc -s yices --presat --unroll --noprogress -t 40  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Solver: yices
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 21:51:00 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 21:51:01 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY 21:51:01 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY 21:51:01 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY 21:51:01 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY 21:51:01 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY 21:51:01 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY 21:51:01 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY 21:51:01 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY 21:51:01 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:01  Checking assumptions in step 20..
+SBY 21:51:01 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:01  Checking assertions in step 20..
+SBY 21:51:02 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:01  Checking assumptions in step 21..
+SBY 21:51:02 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:01  Checking assertions in step 21..
+SBY 21:51:02 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:01  Checking assumptions in step 22..
+SBY 21:51:02 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:01  Checking assertions in step 22..
+SBY 21:51:03 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:02  Checking assumptions in step 23..
+SBY 21:51:03 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:02  Checking assertions in step 23..
+SBY 21:51:03 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:03  Checking assumptions in step 24..
+SBY 21:51:03 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:03  Checking assertions in step 24..
+SBY 21:51:04 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:04  Checking assumptions in step 25..
+SBY 21:51:04 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:04  Checking assertions in step 25..
+SBY 21:51:05 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:04  Checking assumptions in step 26..
+SBY 21:51:05 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:04  Checking assertions in step 26..
+SBY 21:51:06 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:06  Checking assumptions in step 27..
+SBY 21:51:06 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:06  Checking assertions in step 27..
+SBY 21:51:07 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:06  Checking assumptions in step 28..
+SBY 21:51:07 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:06  Checking assertions in step 28..
+SBY 21:51:08 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:07  Checking assumptions in step 29..
+SBY 21:51:08 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:07  Checking assertions in step 29..
+SBY 21:51:09 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:08  Checking assumptions in step 30..
+SBY 21:51:09 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:08  Checking assertions in step 30..
+SBY 21:51:10 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:10  Checking assumptions in step 31..
+SBY 21:51:10 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:10  Checking assertions in step 31..
+SBY 21:51:12 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:11  Checking assumptions in step 32..
+SBY 21:51:12 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:11  Checking assertions in step 32..
+SBY 21:51:13 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:12  Checking assumptions in step 33..
+SBY 21:51:13 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:12  Checking assertions in step 33..
+SBY 21:51:15 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:14  Checking assumptions in step 34..
+SBY 21:51:15 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:14  Checking assertions in step 34..
+SBY 21:51:16 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:15  Checking assumptions in step 35..
+SBY 21:51:16 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:15  Checking assertions in step 35..
+SBY 21:51:18 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:17  Checking assumptions in step 36..
+SBY 21:51:18 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:17  Checking assertions in step 36..
+SBY 21:51:20 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:19  Checking assumptions in step 37..
+SBY 21:51:20 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:19  Checking assertions in step 37..
+SBY 21:51:22 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:21  Checking assumptions in step 38..
+SBY 21:51:22 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:21  Checking assertions in step 38..
+SBY 21:51:25 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:24  Checking assumptions in step 39..
+SBY 21:51:25 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:24  Checking assertions in step 39..
+SBY 21:51:28 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: ##   0:00:27  Status: passed
+SBY 21:51:28 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: finished (returncode=0)
+SBY 21:51:28 [/tmp/wire019a_formal/wire_eth_parser_reference] engine_0: Status returned by engine: pass
+SBY 21:51:28 [/tmp/wire019a_formal/wire_eth_parser_reference] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:27 (27)
+SBY 21:51:28 [/tmp/wire019a_formal/wire_eth_parser_reference] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:27 (27)
+SBY 21:51:28 [/tmp/wire019a_formal/wire_eth_parser_reference] summary: engine_0 (smtbmc yices) returned pass
+SBY 21:51:28 [/tmp/wire019a_formal/wire_eth_parser_reference] summary: engine_0 did not produce any traces
+SBY 21:51:28 [/tmp/wire019a_formal/wire_eth_parser_reference] DONE (PASS, rc=0)

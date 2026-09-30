@@ -22,7 +22,7 @@ Metadata, raw-body output, and rejection tuples remain stable under their respec
 
 ## F. Cocotb simulation
 
-Standalone: Verilator 5.053, cocotb 2.1.0.dev0+41564633; 8/8 tests passed. The directed suite covers normal/deferred commit, body-empty failure/re-arm, heartbeat/wrap, heartbeat/EOS trailing precedence, EOS recovery, session/sequence priority, header/rejection stall, and metadata/body stalls. The composition suite passed 2/2: normal six-stage body forwarding/commit plus heartbeat, and Mold-local session error.
+Standalone: Verilator 5.053, cocotb 2.1.0.dev0+41564633; the initial committed suite contained 9 tests and passed 9/9 at WIRE-019. WIRE-019A added five tests; the current suite passes 14/14. It covers normal/deferred commit, body-empty failure/re-arm, heartbeat/wrap, trailing precedence, EOS recovery, session/sequence priority, truncation/reject stall, metadata/body stalls, deterministic random opaque bodies (seeds 1, 7, 19), immediate fail-closed on all four fatal drain paths, and re-arm during drain. The composition suite passes 2/2.
 
 ## G. Python cross-check and regressions
 
@@ -65,3 +65,13 @@ Still unproven: Mold message-block length/count parsing, late malformed suffix/n
 ## L. WIRE-019 conclusion
 
 PASS for the scoped MoldUDP64 header/session/sequence controller and its recorded bounded local properties. WIRE-020 remains the next task.
+
+## WIRE-019A immediate fail-closed addendum
+
+Independent review found that four fatal conditions entered `S_DROP` without immediately updating `controller_valid_q` and `recovery_required_q`: session mismatch with trailing data, sequence mismatch with trailing data, heartbeat trailing data, and EOS trailing data. Rejection and eventual recovery were already correct; the stage control outputs lagged detection until the physical packet ended. The production RTL now clears validity and asserts recovery in each detection branch while leaving `S_DROP` input-ready so the current malformed packet can drain. Metadata, body, and packet-result outputs remain inactive. Expected sequence is unchanged.
+
+The formal safety harness previously asserted that `in_ready` must be low whenever recovery is set. That assertion contradicted the required current-packet drain behavior. It now checks that metadata, body, and result paths remain blocked in recovery; the four fixed-vector jobs assert `in_ready` during drain alongside immediate invalid/recovery outputs. This is a correction to the property scope. It does not change normal traffic assumptions.
+
+WIRE-019A simulation: standalone 14/14 and six-stage composition 2/2 PASS. Formal: safety BMC depth 36 PASS; cover depth 40 PASS; session mismatch with trailing bytes and sequence mismatch with trailing bytes pass fixed-vector BMC at depth 28; heartbeat trailing and EOS trailing pass fixed-vector BMC at depth 28. All references use public interfaces only (DUT-private state: NO), synchronous reset, and the WIRE-019 upstream ready/valid stability assumption. `in_ready` is allowed high only to drain the detected malformed packet. The WIRE-019 session/sequence/heartbeat/EOS/wrap/deferred-commit jobs were rerun and pass.
+
+WIRE-019A changed no sequence-commit behavior. Expected sequence still advances only on successful downstream packet-result handshake. Reset/re-arm still discards pending state and loads the configured session/sequence.

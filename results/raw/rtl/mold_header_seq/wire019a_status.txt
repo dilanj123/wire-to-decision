@@ -1,0 +1,32 @@
+WIRE-019A status summary
+
+Starting HEAD: a97ca0a0c23f04e41a0dd198363779f370d2256e
+Starting branch: main; clean; local main == origin/main
+Gate-0 peeled: 06f5643a940ac2c6fcfab0e377169b48ce700107
+
+RTL standalone cocotb: 14/14 PASS
+Six-stage composition cocotb: 2/2 PASS
+Random seeds retained: 1, 7, 19
+Python unit regression: 71/71 PASS
+Verilator standalone and composition lint: PASS
+Yosys standalone and composition sanity: PASS
+
+WIRE-019A formal: SBY 0.69, smtbmc yices, Yices 2.7.0.
+Safety BMC depth 36 PASS; cover depth 40 PASS.
+Session mismatch drain, sequence mismatch drain, heartbeat trailing drain,
+and EOS trailing drain: each fixed-vector BMC depth 28 PASS.
+DUT-private state used: NO.
+
+Prior cocotb regression results:
+WIRE-014 6/6; WIRE-015 standalone 5/5 and integration 1/1;
+WIRE-016 standalone 4/4 and composition 1/1;
+WIRE-017 standalone 5/5 and composition 3/3;
+WIRE-018 standalone 5/5 and composition 3/3.
+
+Prior formal regression jobs for gearbox, ingress buffer, Ethernet,
+decomposed IPv4, and UDP passed. The known monolithic IPv4 public-interface
+reference was rerun and stopped after its historical solver-bound behavior
+past step 22; this is neither a property failure nor a PASS. The decomposed
+IPv4 jobs passed.
+
+No P&R or application performance run.

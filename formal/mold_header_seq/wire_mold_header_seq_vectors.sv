@@ -7,9 +7,9 @@ module mold_vector #(
     wire rearm = 0;
     wire [79:0] cfg_active_session = 80'h4142434445464748494a;
     wire [63:0] cfg_expected_sequence = (CASE == 5) ? 64'hfffffffffffffffe : 64'd100;
-    wire in_valid = (step >= 1) && (step <= ((CASE == 0 || CASE == 5) ? 22 : ((CASE == 6 || CASE == 7) ? 21 : ((CASE == 8) ? 3 : 20))));
+    wire in_valid = (step >= 1) && (step <= ((CASE == 0 || CASE == 5 || CASE == 3 || CASE == 4) ? 22 : ((CASE == 6 || CASE == 7) ? 21 : ((CASE == 8) ? 3 : 20))));
     wire [7:0] in_data = byte_at(step);
-    wire in_last = (CASE == 0 || CASE == 5) ? (step == 22) : ((CASE == 6 || CASE == 7) ? (step == 21) : ((CASE == 8) ? (step == 3) : (step == 20)));
+    wire in_last = (CASE == 0 || CASE == 5 || CASE == 3 || CASE == 4) ? (step == 22) : ((CASE == 6 || CASE == 7) ? (step == 21) : ((CASE == 8) ? (step == 3) : (step == 20)));
     wire packet_ready = 1;
     wire out_ready = 1;
     wire packet_result_valid = (CASE == 0 || CASE == 5) && (step >= 23);
@@ -95,6 +95,15 @@ module mold_vector #(
         if ((CASE == 3 || CASE == 4) && step >= 21) begin
             if (reject_valid) assert(reject_code == ((CASE == 3) ? 3'd1 : 3'd2));
             assert(recovery_required || reject_valid);
+        end
+        if ((CASE == 3 || CASE == 4 || CASE == 6 || CASE == 7) && step == 21) begin
+            assert(!controller_valid);
+            assert(recovery_required);
+            assert(!packet_valid);
+            assert(!out_valid);
+            assert(!packet_result_ready);
+            assert(in_ready);
+            assert(current_expected_sequence == ((CASE == 4) ? 64'd999 : 64'd100));
         end
         if ((CASE == 6 || CASE == 7) && step >= 22) begin
             if (reject_valid) assert(reject_code == 3'd3);

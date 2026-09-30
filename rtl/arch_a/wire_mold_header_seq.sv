@@ -194,6 +194,8 @@ module wire_mold_header_seq (
                                     recovery_required_q <= 1'b1;
                                 end else begin
                                     state_q <= S_DROP;
+                                    controller_valid_q <= 1'b0;
+                                    recovery_required_q <= 1'b1;
                                 end
                             end else if (candidate_sequence != expected_sequence_q) begin
                                 pending_code_q <= MOLD_SEQUENCE_ERROR;
@@ -206,6 +208,8 @@ module wire_mold_header_seq (
                                     recovery_required_q <= 1'b1;
                                 end else begin
                                     state_q <= S_DROP;
+                                    controller_valid_q <= 1'b0;
+                                    recovery_required_q <= 1'b1;
                                 end
                             end else if (candidate_count == 16'h0000) begin
                                 if (in_last) begin
@@ -214,6 +218,8 @@ module wire_mold_header_seq (
                                     pending_code_q <= MOLD_TRAILING_BYTES;
                                     pending_fatal_q <= 1'b1;
                                     state_q <= S_DROP;
+                                    controller_valid_q <= 1'b0;
+                                    recovery_required_q <= 1'b1;
                                 end
                             end else if (candidate_count == 16'hffff) begin
                                 if (in_last) begin
@@ -226,6 +232,8 @@ module wire_mold_header_seq (
                                     pending_code_q <= MOLD_TRAILING_BYTES;
                                     pending_fatal_q <= 1'b1;
                                     state_q <= S_DROP;
+                                    controller_valid_q <= 1'b0;
+                                    recovery_required_q <= 1'b1;
                                 end
                             end else begin
                                 packet_sequence_q <= candidate_sequence;

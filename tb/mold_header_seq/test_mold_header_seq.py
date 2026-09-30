@@ -259,3 +259,61 @@ async def test_deterministic_random_opaque_bodies(dut):
             await tb.result(True)
             expected = (expected + count) & ((1 << 64) - 1)
         assert int(dut.current_expected_sequence.value) == expected
+
+
+async def check_fail_closed_during_drain(dut, session, sequence, count, expected_code):
+    tb = MoldTB(dut)
+    await tb.start()
+    await tb.send(mold(session, sequence, count), final_last=False)
+    assert int(dut.controller_valid.value) == 0
+    assert int(dut.recovery_required.value) == 1
+    assert int(dut.in_ready.value) == 1
+    assert int(dut.packet_valid.value) == 0
+    assert int(dut.out_valid.value) == 0
+    assert int(dut.packet_result_ready.value) == 0
+    assert int(dut.current_expected_sequence.value) == 100
+    await tb.send(b"drain")
+    await tb.wait_cycles(2)
+    assert tb.rejects == [(1, expected_code)]
+    assert int(dut.current_expected_sequence.value) == 100
+    assert int(dut.controller_valid.value) == 0
+    assert int(dut.recovery_required.value) == 1
+
+
+@cocotb.test()
+async def test_session_mismatch_fails_closed_before_drain(dut):
+    await check_fail_closed_during_drain(dut, OTHER_SESSION, 100, 1, 1)
+
+
+@cocotb.test()
+async def test_sequence_mismatch_fails_closed_before_drain(dut):
+    await check_fail_closed_during_drain(dut, SESSION, 999, 1, 2)
+
+
+@cocotb.test()
+async def test_heartbeat_trailing_fails_closed_before_drain(dut):
+    await check_fail_closed_during_drain(dut, SESSION, 100, 0, 3)
+
+
+@cocotb.test()
+async def test_eos_trailing_fails_closed_before_drain(dut):
+    await check_fail_closed_during_drain(dut, SESSION, 100, 0xFFFF, 3)
+
+
+@cocotb.test()
+async def test_rearm_discards_malformed_packet_during_drain(dut):
+    tb = MoldTB(dut)
+    await tb.start()
+    await tb.send(mold(OTHER_SESSION, 100, 1), final_last=False)
+    assert int(dut.recovery_required.value) == 1
+    assert int(dut.in_ready.value) == 1
+    await FallingEdge(dut.clk)
+    dut.cfg_active_session.value = int.from_bytes(OTHER_SESSION, "big")
+    dut.cfg_expected_sequence.value = 700
+    await tb.rearm_now()
+    assert int(dut.controller_valid.value) == 1
+    assert int(dut.recovery_required.value) == 0
+    await tb.send(mold(OTHER_SESSION, 700, 1, b"R"))
+    await tb.wait_cycles(2)
+    assert tb.packets == [(700, 1, 0)]
+    assert tb.rejects == []
