@@ -120,7 +120,7 @@ Gearbox local formal: closed under documented assumptions for ordering, accepted
 
 Application RTL functional evidence: WIRE-014..021 stage/composition evidence plus WIRE-022 complete external-ingress-to-normalized-event RTL simulation; named local/integration formal checks are bounded or fixed-vector as individually recorded. No complete parser formal proof is claimed.
 
-Formal application evidence: none
+Formal parser evidence: named stage-local and top-level safety properties checked with documented bounded/fixed-vector scopes; no complete parser proof or application-level formal proof is claimed.
 
 Application synthesis/P&R evidence: none
 
@@ -163,7 +163,7 @@ None recorded.
 
 ## Current bottleneck
 
-SystemVerilog implementation and cross-layer hardware verification remain.
+Phase 3 bounded order-state/aggregate RTL and deterministic decision implementation remain; application-level timing/P&R and later verification gates are also open.
 
 ## Next task
 
