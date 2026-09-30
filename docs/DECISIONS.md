@@ -141,3 +141,13 @@
 - Rationale: Python advances sequence only after complete successful message-block parsing. Deferring the commit prevents a malformed future WIRE-020 suffix from corrupting the sequence epoch.
 - Consequences: Partial/pending Mold packets are discarded by reset or explicit re-arm. The stage exposes local `controller_valid` and `recovery_required`; it does not implement message blocks, ITCH, book state, or a global error arbiter.
 - Status: ADOPTED
+
+## WIRE-D016 — Freeze Mold complete-message boundary and structural packet result
+
+- Date: 2026-09-30
+- Source: WIRE-020 Architecture-A MoldUDP64 message-block framer
+- Context: The future ITCH decoder requires an explicit, trustworthy boundary for each Mold message, while WIRE-019 sequence state must commit only after complete structural parsing of the packet.
+- Decision: Expose per-message metadata before its payload. A nonempty message is structurally complete only when its final declared payload byte transfers with `out_last=1`; a zero-length message completes at its metadata handshake with `message_empty=1`. Exactly `packet_message_count` blocks must consume the physical Mold body exactly before `packet_result_success=1`.
+- Decision: A future ITCH decoder must not produce a mutation event until the corresponding complete-message boundary exists. An incomplete current message never receives that boundary. Structural packet success depends only on Mold message-block framing, not ITCH semantics.
+- Consequences: Earlier complete messages remain visible when a later suffix is malformed; no rollback transaction exists. Missing/partial length fields report `MESSAGE_LENGTH_TRUNCATED`, insufficient payload reports `MESSAGE_TRUNCATED`, and bytes after the declared count report `TRAILING_BYTES`. Zero-length structural messages are permitted and left for the future ITCH layer to reject semantically if required.
+- Status: ADOPTED
