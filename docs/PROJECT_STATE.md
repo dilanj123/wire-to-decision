@@ -2,11 +2,12 @@
 
 ## Phase
 
-Phase 2 — COMPLETE: Architecture-A parser integration and normalized-event boundary
-
-Next: Phase 3 — bounded order state and deterministic decision
+Phase 3 — ACTIVE: bounded order state and deterministic decision
 
 Phase 1: COMPLETE — 71-test Python end-to-end oracle baseline
+
+Phase 2: COMPLETE — Architecture-A parser boundary through normalized events
+
 
 ## Gate
 
@@ -18,7 +19,7 @@ Gate 0 — CLOSED; WIRE-000 through WIRE-007 complete
 
 ## Architecture
 
-Architecture-A parser boundary is implemented and RTL-simulated from the common two-beat ingress buffer through Ethernet II, IPv4, UDP, MoldUDP64 header/sequence control, message-block framing, and ITCH normalized events. WIRE-022 composes these stages in a production-style top and adds parser-wide fatal recovery/rearm and external-frame drain gating. Order state and decisions remain unimplemented.
+Architecture-A parser boundary is implemented and RTL-simulated from the common two-beat ingress buffer through Ethernet II, IPv4, UDP, MoldUDP64 header/sequence control, message-block framing, and ITCH normalized events. WIRE-022 composes these stages in a production-style top and adds parser-wide fatal recovery/rearm and external-frame drain gating. WIRE-023 adds the bounded order store, checked aggregates, successful-mutation commit boundary, and parser-fatal integration. Deterministic decision logic remains unimplemented.
 
 Baseline candidate:
 
@@ -32,7 +33,13 @@ Architecture B is not authorized.
 
 ## Application status
 
-Application RTL: Architecture-A parser boundary implemented; stage and full external-ingress simulation evidence recorded. This excludes order state, decisions, application P&R, and application timing evidence.
+Application RTL: Architecture-A parser boundary and WIRE-023 bounded order-state/aggregate block implemented and RTL-simulated. This excludes deterministic decisions, application P&R, and application timing evidence.
+
+Bounded order-state / aggregate RTL: WIRE-023 implemented and RTL-simulated; local fixed-vector and reduced-store formal checks are bounded under documented assumptions. The production default is 512 sets × 2 ways; the 1,024-entry capacity test is RTL-simulated.
+
+Parser→book integration: RTL-simulated for successful mutation sequences, complete-prefix retention after late Mold structural failure, ITCH semantic failure with independent Mold structural success, outer fatal before mutation, and explicit rearm.
+
+Deterministic decision RTL: not started (WIRE-024).
 
 MoldUDP64 header/sequence controller: RTL-simulated; fatal session/sequence and heartbeat/EOS trailing-byte conditions immediately clear stage validity and assert recovery while the current malformed packet drains; named header/control, deferred-commit, recovery, stall, and wrap properties checked under documented bounded/fixed-vector assumptions
 
@@ -118,7 +125,7 @@ Ingress-buffer local formal: reset-empty safety inductively checked; public-inte
 
 Gearbox local formal: closed under documented assumptions for ordering, accepted valid-byte conservation, exact last-marker behavior, stall stability, and refill safety; reference correspondence bounded-checked through depth 20
 
-Application RTL functional evidence: WIRE-014..021 stage/composition evidence plus WIRE-022 complete external-ingress-to-normalized-event RTL simulation; named local/integration formal checks are bounded or fixed-vector as individually recorded. No complete parser formal proof is claimed.
+Application RTL functional evidence: WIRE-014..022 parser stages/composition plus WIRE-023 order-book/aggregate and parser→book boundary simulation; named local formal checks are bounded or fixed-vector as individually recorded. No complete parser/book/decision formal proof is claimed.
 
 Formal parser evidence: named stage-local and top-level safety properties checked with documented bounded/fixed-vector scopes; no complete parser proof or application-level formal proof is claimed.
 
@@ -130,7 +137,7 @@ Python component regression: 71 tests passing
 
 ## Formal status
 
-WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. WIRE-016 Ethernet parser local safety is bounded-checked through depth 20 and public-interface correspondence through depth 40 under documented assumptions. WIRE-017 IPv4 local safety is bounded-checked through depth 20; WIRE-017A decomposed public-interface checks cover classification, checksum, payload, Total-Length boundary, padding, truncation and restart at recorded depths. The original monolithic correspondence job remains recorded as solver-bound after step 22. WIRE-018 UDP uses decomposed fixed-vector and bounded public-interface checks at recorded depths. WIRE-019/019A Mold header/sequence control uses public-interface safety BMC and fixed-vector header/control checks; immediate fail-closed behavior while draining session/sequence mismatch and heartbeat/EOS trailing bytes is checked at depth 28. Deferred-commit, recovery, stall, and wrap jobs are recorded at their bounded/fixed-vector depths; coverage is reported separately. WIRE-020 Mold message framing has fixed-vector public-interface BMC at depths 24/32, stall safety at depth 20, rearm at depth 12, and separate successful/zero-length/late-suffix covers. WIRE-021 ITCH uses fixed-vector public-interface BMC for each supported mapping and selected rejection/filter cases (depths 12–56), plus unconstrained-ready stall/recovery safety BMC depth 24. All WIRE-020/021 claims are bounded, not unbounded proofs.
+WIRE-014 gearbox local properties checked with SBY/Yices under documented legal-input assumptions. WIRE-015 ingress-buffer reset-empty safety is inductively checked and its independent public-interface queue correspondence is bounded-checked through depth 10. WIRE-016 Ethernet parser local safety is bounded-checked through depth 20 and public-interface correspondence through depth 40 under documented assumptions. WIRE-017 local safety is bounded-checked through depth 20; WIRE-017A decomposed public-interface checks cover classification, checksum, payload, Total-Length boundary, padding, truncation and restart at recorded depths. The original monolithic correspondence job remains solver-bound after step 22. WIRE-018 uses decomposed fixed-vector and bounded checks. WIRE-019/019A and WIRE-020/021 retain their named bounded/fixed-vector public-interface suites. WIRE-022 parser safety is BMC depth 20; its full-top late-suffix BMC remains solver-bound after step 69. WIRE-023 adds reduced two-set public-port BMCs (depths 12, 20 and 28) for commit/error/recovery/reset safety, hash vectors, duplicate/full-set behavior, successful mutation accounting, atomic full-destination replacement failure, unknown-reference failure, and upstream-fatal ordering. WIRE-023 formal results are bounded/fixed-vector checks, not proofs of all 512 sets or all event sequences.
 
 ## Synthesis / P&R status
 
@@ -160,11 +167,12 @@ None recorded.
 - WIRE-D016 Mold complete-message boundaries and structural packet-result semantics are recorded in `docs/DECISIONS.md` and WIRE-020 evidence.
 - WIRE-D017 ITCH normalized-event RTL encoding and complete-message commit boundary are recorded in `docs/DECISIONS.md` and WIRE-021 evidence.
 - WIRE-D018 parser-wide fatal recovery, current-frame drain, event-boundary no-rollback, and explicit rearm are recorded in `docs/DECISIONS.md` and WIRE-022 evidence.
+- WIRE-D019 bounded-book atomic mutation commit and parser-fatal ordering are recorded in `docs/DECISIONS.md` and WIRE-023 evidence.
 
 ## Current bottleneck
 
-Phase 3 bounded order-state/aggregate RTL and deterministic decision implementation remain; application-level timing/P&R and later verification gates are also open.
+Deterministic decision/risk-budget RTL and parser→book→decision integration remain; application-level timing/P&R and later verification gates are also open.
 
 ## Next task
 
-WIRE-023 — Bounded 512-set × 2-way order-state and aggregate RTL.
+WIRE-024 — deterministic decision/risk-budget RTL and complete single-clock functional MVP integration.

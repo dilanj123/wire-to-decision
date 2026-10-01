@@ -1,0 +1,46 @@
+SBY  0:56:45 [order_book_duplicate_vector] Removing directory '/Users/Dilan/Projects/wire-to-decision/formal/order_book/order_book_duplicate_vector'.
+SBY  0:56:45 [order_book_duplicate_vector] Copy '/Users/Dilan/Projects/wire-to-decision/formal/order_book/../../rtl/common/wire_order_book.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/order_book/order_book_duplicate_vector/src/wire_order_book.sv'.
+SBY  0:56:45 [order_book_duplicate_vector] Copy '/Users/Dilan/Projects/wire-to-decision/formal/order_book/order_book_duplicate_vector.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/order_book/order_book_duplicate_vector/src/order_book_duplicate_vector.sv'.
+SBY  0:56:45 [order_book_duplicate_vector] engine_0: smtbmc yices
+SBY  0:56:45 [order_book_duplicate_vector] base: starting process "cd order_book_duplicate_vector/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:56:45 [order_book_duplicate_vector] base: Warning: Wire order_book_duplicate_vector.\clk is used but has no driver.
+SBY  0:56:45 [order_book_duplicate_vector] base: finished (returncode=0)
+SBY  0:56:45 [order_book_duplicate_vector] prep: starting process "cd order_book_duplicate_vector/model; yosys -ql design_prep.log design_prep.ys"
+SBY  0:56:45 [order_book_duplicate_vector] prep: Warning: Wire order_book_duplicate_vector.\clk is used but has no driver.
+SBY  0:56:45 [order_book_duplicate_vector] prep: finished (returncode=0)
+SBY  0:56:45 [order_book_duplicate_vector] smt2: starting process "cd order_book_duplicate_vector/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:56:45 [order_book_duplicate_vector] smt2: finished (returncode=0)
+SBY  0:56:45 [order_book_duplicate_vector] engine_0: starting process "cd order_book_duplicate_vector; yosys-smtbmc -s yices --presat --unroll --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY  0:56:45 [order_book_duplicate_vector] engine_0: ##   0:00:00  Solver: yices
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: ##   0:00:00  Status: passed
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: finished (returncode=0)
+SBY  0:56:46 [order_book_duplicate_vector] engine_0: Status returned by engine: pass
+SBY  0:56:46 [order_book_duplicate_vector] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:56:46 [order_book_duplicate_vector] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:56:46 [order_book_duplicate_vector] summary: engine_0 (smtbmc yices) returned pass
+SBY  0:56:46 [order_book_duplicate_vector] summary: engine_0 did not produce any traces
+SBY  0:56:46 [order_book_duplicate_vector] DONE (PASS, rc=0)

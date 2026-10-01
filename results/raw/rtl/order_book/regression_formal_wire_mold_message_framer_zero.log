@@ -1,0 +1,70 @@
+SBY  0:55:30 [wire_mold_message_framer_zero] Removing directory '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/wire_mold_message_framer_zero'.
+SBY  0:55:30 [wire_mold_message_framer_zero] Copy '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/../../rtl/arch_a/wire_mold_message_framer.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/wire_mold_message_framer_zero/src/wire_mold_message_framer.sv'.
+SBY  0:55:30 [wire_mold_message_framer_zero] Copy '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/wire_mold_message_framer_vectors.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/mold_message_framer/wire_mold_message_framer_zero/src/wire_mold_message_framer_vectors.sv'.
+SBY  0:55:30 [wire_mold_message_framer_zero] engine_0: smtbmc yices
+SBY  0:55:30 [wire_mold_message_framer_zero] base: starting process "cd wire_mold_message_framer_zero/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:55:30 [wire_mold_message_framer_zero] base: Warning: Wire mold_framer_vector.\clk is used but has no driver.
+SBY  0:55:30 [wire_mold_message_framer_zero] base: finished (returncode=0)
+SBY  0:55:30 [wire_mold_message_framer_zero] prep: starting process "cd wire_mold_message_framer_zero/model; yosys -ql design_prep.log design_prep.ys"
+SBY  0:55:30 [wire_mold_message_framer_zero] prep: Warning: Wire mold_framer_vector.\clk is used but has no driver.
+SBY  0:55:30 [wire_mold_message_framer_zero] prep: finished (returncode=0)
+SBY  0:55:30 [wire_mold_message_framer_zero] smt2: starting process "cd wire_mold_message_framer_zero/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:55:31 [wire_mold_message_framer_zero] smt2: finished (returncode=0)
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: starting process "cd wire_mold_message_framer_zero; yosys-smtbmc -s yices --presat --unroll --noprogress -t 24  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Solver: yices
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 20..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 20..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 21..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 21..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 22..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 22..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assumptions in step 23..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Checking assertions in step 23..
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: ##   0:00:00  Status: passed
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: finished (returncode=0)
+SBY  0:55:31 [wire_mold_message_framer_zero] engine_0: Status returned by engine: pass
+SBY  0:55:31 [wire_mold_message_framer_zero] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:55:31 [wire_mold_message_framer_zero] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:55:31 [wire_mold_message_framer_zero] summary: engine_0 (smtbmc yices) returned pass
+SBY  0:55:31 [wire_mold_message_framer_zero] summary: engine_0 did not produce any traces
+SBY  0:55:31 [wire_mold_message_framer_zero] DONE (PASS, rc=0)

@@ -1,0 +1,35 @@
+WIRE-023 formal property inventory
+Engine/solver: SBY 0.69, smtbmc yices, Yices 2.7.0
+DUT-private state used: NO; only public event/control/status/commit/debug ports
+
+order_book_safety.sby — BMC depth 12, reduced NUM_SETS=2
+  PASS: commit tuple stable under commit stall
+  PASS: error tuple stable under error stall
+  PASS: recovery remains latched and new event ready stays low
+  PASS: upstream recovery blocks new event ready
+  PASS: reset/rearm restores valid empty book, zero totals, no pending commit/error
+  Assumption: reset asserted in initial state; source event tuple stable while valid and not ready
+  Consumer readiness otherwise unconstrained
+
+order_book_hash_vectors.sby — fixed-vector BMC depth 6, production NUM_SETS=512
+  PASS: public folded-index vectors 1, 0x200, 0x40000, 0x8000000000000000, 0xFFFFFFFFFFFFFFFF
+
+order_book_add_vector.sby — fixed-vector BMC depth 28, reduced NUM_SETS=2
+  PASS: ADD, EXECUTE, EXECUTE_WITH_PRICE, CANCEL, same-reference REPLACE, DELETE
+  PASS: public lookup values and exact post-operation bid aggregate
+  PASS: C leaves resting price unchanged; commit tuple matches sequence/timestamp/totals
+
+order_book_collision_vector.sby — fixed-vector BMC depth 20, reduced NUM_SETS=2
+  PASS: colliding third ADD fails without eviction
+  PASS: cross-set replacement into full destination fails atomically; source/destination entries and aggregates unchanged
+
+order_book_duplicate_vector.sby — fixed-vector BMC depth 12, reduced NUM_SETS=2
+  PASS: duplicate ADD produces duplicate error, no second commit, original quantity/aggregate preserved, quarantine blocks input
+
+order_book_unknown_vector.sby — fixed-vector BMC depth 8, reduced NUM_SETS=2
+  PASS: unknown EXECUTE produces no commit or aggregate mutation and latches recovery
+
+order_book_upstream_order.sby — fixed-vector BMC depth 10, reduced NUM_SETS=2
+  PASS: pre-fatal accepted ADD commits atomically after upstream fatal; stalled commit remains stable and no new event is accepted
+
+All results are bounded/fixed-vector checks, not unbounded proofs. Two-set results do not prove all production set indices. Covers were not separately run; no formal cover status is claimed. Full 1,024-entry capacity is RTL-simulation evidence.

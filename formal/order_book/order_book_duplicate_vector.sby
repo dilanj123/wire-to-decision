@@ -1,0 +1,11 @@
+[options]
+mode bmc
+depth 12
+[engines]
+smtbmc yices
+[script]
+read_verilog -formal -sv wire_order_book.sv order_book_duplicate_vector.sv
+prep -top order_book_duplicate_vector
+[files]
+../../rtl/common/wire_order_book.sv
+order_book_duplicate_vector.sv

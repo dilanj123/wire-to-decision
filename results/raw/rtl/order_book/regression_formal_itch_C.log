@@ -1,0 +1,118 @@
+SBY  0:54:47 [itch_C] Removing directory '/Users/Dilan/Projects/wire-to-decision/formal/itch_decoder/itch_C'.
+SBY  0:54:47 [itch_C] Copy '/Users/Dilan/Projects/wire-to-decision/formal/itch_decoder/../../rtl/arch_a/wire_itch_decoder.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/itch_decoder/itch_C/src/wire_itch_decoder.sv'.
+SBY  0:54:47 [itch_C] Copy '/Users/Dilan/Projects/wire-to-decision/formal/itch_decoder/itch_fixed_case.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/itch_decoder/itch_C/src/itch_fixed_case.sv'.
+SBY  0:54:47 [itch_C] engine_0: smtbmc yices
+SBY  0:54:47 [itch_C] base: starting process "cd itch_C/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:54:47 [itch_C] base: Warning: Wire itch_fixed_case.\clk is used but has no driver.
+SBY  0:54:47 [itch_C] base: finished (returncode=0)
+SBY  0:54:47 [itch_C] prep: starting process "cd itch_C/model; yosys -ql design_prep.log design_prep.ys"
+SBY  0:54:47 [itch_C] prep: Warning: Wire itch_fixed_case.\clk is used but has no driver.
+SBY  0:54:47 [itch_C] prep: finished (returncode=0)
+SBY  0:54:47 [itch_C] smt2: starting process "cd itch_C/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:54:47 [itch_C] smt2: finished (returncode=0)
+SBY  0:54:47 [itch_C] engine_0: starting process "cd itch_C; yosys-smtbmc -s yices --presat --unroll --noprogress -t 48  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Solver: yices
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY  0:54:47 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 16..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 16..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 17..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 17..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 18..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 18..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 19..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 19..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 20..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 20..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 21..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 21..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 22..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 22..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 23..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 23..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 24..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 24..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 25..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 25..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 26..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 26..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 27..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 27..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 28..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 28..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 29..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 29..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 30..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 30..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 31..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 31..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 32..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 32..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 33..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 33..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 34..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 34..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 35..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 35..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 36..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 36..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 37..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 37..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 38..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 38..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 39..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 39..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 40..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 40..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 41..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 41..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 42..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 42..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 43..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 43..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 44..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 44..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 45..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 45..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 46..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 46..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assumptions in step 47..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Checking assertions in step 47..
+SBY  0:54:48 [itch_C] engine_0: ##   0:00:00  Status: passed
+SBY  0:54:48 [itch_C] engine_0: finished (returncode=0)
+SBY  0:54:48 [itch_C] engine_0: Status returned by engine: pass
+SBY  0:54:48 [itch_C] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:54:48 [itch_C] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  0:54:48 [itch_C] summary: engine_0 (smtbmc yices) returned pass
+SBY  0:54:48 [itch_C] summary: engine_0 did not produce any traces
+SBY  0:54:48 [itch_C] DONE (PASS, rc=0)

@@ -1,0 +1,110 @@
+/Users/Dilan/Projects/wire-to-decision
+ecacb89d26ce7b12acdc011bbefd9cdf08265836
+ecacb89d26ce7b12acdc011bbefd9cdf08265836
+## main...origin/main
+?? formal/arch_a_parser/wire_arch_a_parser_safety/
+?? formal/eth_parser/wire_eth_parser_cover/
+?? formal/eth_parser/wire_eth_parser_prove/
+?? formal/eth_parser/wire_eth_parser_reference/
+?? formal/gearbox/wire_gearbox_cover/
+?? formal/gearbox/wire_gearbox_prove/
+?? formal/gearbox/wire_gearbox_reference_bmc/
+?? formal/ingress_buffer/wire_ingress_buffer_cover/
+?? formal/ingress_buffer/wire_ingress_buffer_prove/
+?? formal/ingress_buffer/wire_ingress_buffer_reference_bmc/
+?? formal/ipv4_parser/wire_ipv4_checksum_reference/
+?? formal/ipv4_parser/wire_ipv4_header_reference/
+?? formal/ipv4_parser/wire_ipv4_next_packet_reference/
+?? formal/ipv4_parser/wire_ipv4_padding_reference/
+?? formal/ipv4_parser/wire_ipv4_parser_cover/
+?? formal/ipv4_parser/wire_ipv4_parser_prove/
+?? formal/ipv4_parser/wire_ipv4_payload_reference/
+?? formal/ipv4_parser/wire_ipv4_truncation_reference/
+?? formal/itch_decoder/itch_A/
+?? formal/itch_decoder/itch_C/
+?? formal/itch_decoder/itch_D/
+?? formal/itch_decoder/itch_E/
+?? formal/itch_decoder/itch_F/
+?? formal/itch_decoder/itch_P/
+?? formal/itch_decoder/itch_U/
+?? formal/itch_decoder/itch_X/
+?? formal/itch_decoder/itch_empty/
+?? formal/itch_decoder/itch_length_edge/
+?? formal/itch_decoder/itch_locate_filter/
+?? formal/itch_decoder/itch_safety/
+?? formal/itch_decoder/itch_side/
+?? formal/itch_decoder/itch_symbol/
+?? formal/itch_decoder/itch_unknown/
+?? formal/mold_header_seq/wire_mold_header_seq/
+?? formal/mold_header_seq/wire_mold_header_seq_cover/
+?? formal/mold_header_seq/wire_mold_header_seq_empty_normal/
+?? formal/mold_header_seq/wire_mold_header_seq_eos/
+?? formal/mold_header_seq/wire_mold_header_seq_eos_trailing/
+?? formal/mold_header_seq/wire_mold_header_seq_heartbeat/
+?? formal/mold_header_seq/wire_mold_header_seq_heartbeat_trailing/
+?? formal/mold_header_seq/wire_mold_header_seq_sequence/
+?? formal/mold_header_seq/wire_mold_header_seq_session/
+?? formal/mold_header_seq/wire_mold_header_seq_truncated/
+?? formal/mold_header_seq/wire_mold_header_seq_vectors/
+?? formal/mold_header_seq/wire_mold_header_seq_wrap/
+?? formal/mold_message_framer/wire_mold_message_framer_case1/
+?? formal/mold_message_framer/wire_mold_message_framer_case2/
+?? formal/mold_message_framer/wire_mold_message_framer_case3/
+?? formal/mold_message_framer/wire_mold_message_framer_case4/
+?? formal/mold_message_framer/wire_mold_message_framer_case5/
+?? formal/mold_message_framer/wire_mold_message_framer_late_cover/
+?? formal/mold_message_framer/wire_mold_message_framer_late_suffix/
+?? formal/mold_message_framer/wire_mold_message_framer_rearm/
+?? formal/mold_message_framer/wire_mold_message_framer_safety/
+?? formal/mold_message_framer/wire_mold_message_framer_valid_cover/
+?? formal/mold_message_framer/wire_mold_message_framer_vectors/
+?? formal/mold_message_framer/wire_mold_message_framer_wrap/
+?? formal/mold_message_framer/wire_mold_message_framer_zero/
+?? formal/mold_message_framer/wire_mold_message_framer_zero_cover/
+?? formal/order_book/
+?? formal/udp_parser/wire_udp_parser_cover/
+?? formal/udp_parser/wire_udp_parser_header/
+?? formal/udp_parser/wire_udp_parser_header1/
+?? formal/udp_parser/wire_udp_parser_header2/
+?? formal/udp_parser/wire_udp_parser_header3/
+?? formal/udp_parser/wire_udp_parser_long/
+?? formal/udp_parser/wire_udp_parser_next_packet/
+?? formal/udp_parser/wire_udp_parser_payload/
+?? formal/udp_parser/wire_udp_parser_safety/
+?? formal/udp_parser/wire_udp_parser_short/
+?? results/raw/rtl/order_book/
+?? rtl/arch_a/wire_arch_a_parser_book_top.sv
+?? rtl/common/wire_order_book.sv
+?? tb/arch_a_parser/lib
+?? tb/arch_a_parser/results.xml
+?? tb/eth_parser/lib
+?? tb/eth_parser/results.xml
+?? tb/gearbox/lib
+?? tb/gearbox/results.xml
+?? tb/ingress_buffer/lib
+?? tb/ingress_buffer/results.xml
+?? tb/ipv4_parser/lib
+?? tb/ipv4_parser/results.xml
+?? tb/itch_decoder/lib
+?? tb/itch_decoder/results.xml
+?? tb/itch_decoder/sim_build_composition/
+?? tb/mold_header_seq/lib
+?? tb/mold_header_seq/results.xml
+?? tb/mold_message_framer/lib
+?? tb/mold_message_framer/results.xml
+?? tb/order_book/
+?? tb/parser_book/
+?? tb/udp_parser/lib
+?? tb/udp_parser/results.xml
+06f5643a940ac2c6fcfab0e377169b48ce700107
+Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+SBY v0.69
+Yices 2.7.0
+Copyright SRI International.
+Linked with GMP 6.3.0
+Copyright Free Software Foundation, Inc.
+Build date: 2026-09-19
+Platform: arm-apple-darwin25.5.0 (release)
+2.1.0.dev0+41564633
+Python 3.11.6

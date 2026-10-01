@@ -12,16 +12,18 @@ build/
 cmake-build-*/
 
 # Simulation
-sim_build/
+sim_build*/
 obj_dir/
 *.vcd
 *.fst
 *.wlf
+results.xml
 
 # Formal generated work
 formal/*/engine_*/
 formal/*/model/
 formal/*/src/
+formal/*/*/
 
 # FPGA generated outputs
 *.bit

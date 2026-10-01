@@ -1,0 +1,12 @@
+[options]
+mode bmc
+depth 12
+[engines]
+smtbmc yices
+[script]
+read_verilog -formal -sv wire_order_book.sv order_book_safety.sv
+chparam -set NUM_SETS 2 wire_order_book
+prep -top order_book_safety
+[files]
+../../rtl/common/wire_order_book.sv
+order_book_safety.sv

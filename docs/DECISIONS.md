@@ -174,3 +174,15 @@
 - Decision: Parser-wide rearm synchronously clears parser-stage transient and recovery state and captures the configured parser epoch. Rearm does not perform hidden protocol recovery.
 - Consequence: This defines parser/event-boundary behavior only. It does not implement or assert `book_valid`, order-state rollback, or decision suppression beyond the event interface.
 - Status: ADOPTED
+
+## WIRE-D019 — Freeze bounded-book mutation commit and upstream-fatal ordering
+
+- Date: 2026-10-01
+- Source: WIRE-023 bounded order-state RTL and parser-to-book integration
+- Context: The first RTL order-state block must align the accepted normalized-event boundary with atomic aggregate/store mutation and the parser-wide recovery epoch frozen by WIRE-D018.
+- Decision: The order-state block accepts at most one normalized mutation transaction at a time. A successful mutation becomes architecturally committed only when the bounded store and corresponding bid/ask aggregate update are applied atomically. A ready/valid mutation-commit transaction carries the triggering Mold sequence, ITCH timestamp, and resulting aggregate totals.
+- Decision: Failed mutations do not produce a successful commit transaction. The first local error is retained through quarantine until reset/rearm.
+- Decision: If upstream parser recovery is already asserted, no new event may handshake. If a normalized event handshook before a later parser fatal condition became known, that already-accepted mutation may finish atomically and its successful commit remains observable; afterward the book becomes invalid/recovery-required and accepts no later event.
+- Decision: Synchronous reset or explicit rearm establishes an empty store, zero aggregates, valid book state, and a cleared recovery/error epoch. Rearm is explicit control, not hidden protocol recovery.
+- Consequences: This defines a stage-local mutation-commit/control boundary, not deterministic decisions, rollback, or global application formal closure. A committed complete-prefix event is not rolled back by a later parser fatal condition.
+- Status: ADOPTED
