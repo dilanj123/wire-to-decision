@@ -57,7 +57,12 @@ module wire_arch_a_functional_top #(
     output logic event_valid_observed,
     output logic event_ready_observed,
     output logic [2:0] event_kind_observed,
-    output logic [63:0] event_mold_sequence_observed
+    output logic [63:0] event_mold_sequence_observed,
+    output logic commit_valid_observed,
+    output logic commit_ready_observed,
+    output logic [63:0] commit_mold_sequence_observed,
+    output logic [47:0] commit_bid_total_observed,
+    output logic [47:0] commit_ask_total_observed
 );
     logic commit_valid, commit_ready;
     logic [63:0] commit_mold_sequence;
@@ -109,4 +114,10 @@ module wire_arch_a_functional_top #(
         .decision_signed_imbalance(decision_signed_imbalance),
         .previous_imbalance(previous_imbalance),
         .remaining_budget(remaining_budget), .decision_count(decision_count));
+
+    assign commit_valid_observed = commit_valid;
+    assign commit_ready_observed = commit_ready;
+    assign commit_mold_sequence_observed = commit_mold_sequence;
+    assign commit_bid_total_observed = commit_bid_total;
+    assign commit_ask_total_observed = commit_ask_total;
 endmodule

@@ -1,0 +1,24 @@
+WIRE-025 formal property inventory
+==================================
+
+Campaign: 79 discovered SBY jobs executed; all returned PASS. Cover jobs are reachability results, not assertions of universal correctness. Per-job raw logs and generated SBY artifacts remain under results/raw/wire025/formal/ and the relevant formal/<suite>/ directories.
+
+New targeted decision checks:
+
+1. formal/decision_engine/decision_reference.sby
+   BMC depth 16; SBY 0.69, smtbmc yices, Yices 2.7.0.
+   Public decision-engine interface. Initial synchronous reset assumed. Arbitrary commit/config/enable/readiness values; source commit tuple held stable while commit_valid is stalled. Independent reference checks 49-bit imbalance, threshold crossings, previous-imbalance updates, decision tuple, budget/count conservation, and stalled output stability/no repeated credit consumption. Bounded check, not induction.
+
+2. formal/decision_engine/prefix_recovery.sby
+   Fixed-vector BMC depth 8; two-set reduced wire_order_book instance; SBY 0.69, smtbmc yices, Yices 2.7.0.
+   Fixed ADD is accepted and committed; decision output is held not-ready; later upstream recovery is asserted. Public outputs assert prior decision remains stable, aggregates/count/budget remain unchanged, book invalidates, and no further event/commit is accepted. No DUT-private state is referenced. This is a fixed schedule/reduced set check, not a proof for all 512 sets or arbitrary sequences.
+
+3. formal/decision_engine/early_fatal.sby
+   Fixed-schedule BMC depth 5; two-set reduced wire_order_book instance; SBY 0.69, smtbmc yices, Yices 2.7.0.
+   Synchronous reset initialization assumed; upstream fatal asserted before a pending ADD can handshake. Public outputs assert invalid/recovery, event_ready low, no commit/decision, unchanged aggregates and budget. No DUT-private state is referenced. Fixed-vector/reduced check only.
+
+All previously established local SBY jobs were rerun by scripts/run_wire025_regression.sh without weakening their job-specific assumptions. The following two jobs were intentionally excluded from the PASS count and remain solver-bound historical results, not PASS:
+- formal/ipv4_parser/wire_ipv4_parser_reference.sby
+- formal/arch_a_parser/wire_arch_a_parser_late_suffix.sby
+
+No complete parser/book/decision formal proof is claimed.

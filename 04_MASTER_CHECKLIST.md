@@ -15,21 +15,21 @@ This is a gate checklist, not a duplicate of the master plan. Future items remai
 
 ## Functional baseline gate
 
-Phase 2 — Architecture-A parser boundary: COMPLETE (WIRE-022, EVID-022). Phase 3 — bounded order state and deterministic decision: COMPLETE (WIRE-023/WIRE-024, EVID-023/EVID-024). Phase 4 — deep functional verification/formal regression is next.
+Phase 2 — Architecture-A parser boundary: COMPLETE (WIRE-022, EVID-022). Phase 3 — bounded order state and deterministic decision: COMPLETE (WIRE-023/WIRE-024, EVID-023/EVID-024). Phase 4 — focused functional verification and bounded formal regression: COMPLETE (WIRE-025, EVID-025). Phase 5 implementation/measurement is next.
 
 - [x] Independent Python model — WIRE-013 end-to-end oracle unit-tested
 - [x] Architecture-A 64-to-8 gearbox primitive — WIRE-014 RTL simulation and local formal checks
 - [x] Architecture A parser — WIRE-022 external-ingress-to-normalized-event boundary RTL-simulated; named bounded integration/local formal evidence indexed
 - [x] Bounded order state and decision — WIRE-023 bounded book/aggregates and WIRE-024 deterministic decision/full single-clock MVP RTL-simulated; named formal checks are bounded as indexed
-- [ ] Functional regression
+- [x] Functional regression — WIRE-025 relevant Cocotb suites and Python 71/71 passed
 
 ## Verification gate
 
-- [ ] Directed protocol/state tests
-- [ ] Randomized valid and malformed traffic
-- [ ] Backpressure tests
-- [ ] Formal targets checked under documented assumptions
-- [ ] Processed evidence indexed
+- [x] Directed protocol/state tests
+- [x] Randomized valid and malformed traffic
+- [x] Backpressure tests
+- [x] Formal targets checked under documented assumptions (bounded/fixed scopes; historical monolithic jobs remain solver-bound)
+- [x] Processed evidence indexed
 
 ## Architecture-A implementation gate
 

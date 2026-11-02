@@ -86,6 +86,8 @@ module prefix_recovery;
             assert(!event_ready);
             assert(!commit_valid);
             assert(decision_valid);
+            assert(remaining_budget == 32'd1);
+            assert(decision_count == 32'd1);
         end
     end
 endmodule

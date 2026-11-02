@@ -1,0 +1,33 @@
+SBY 22:58:08 [early_fatal] Removing directory '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/early_fatal'.
+SBY 22:58:08 [early_fatal] Copy '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/../../rtl/common/wire_order_book.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/early_fatal/src/wire_order_book.sv'.
+SBY 22:58:08 [early_fatal] Copy '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/../../rtl/common/wire_decision_engine.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/early_fatal/src/wire_decision_engine.sv'.
+SBY 22:58:08 [early_fatal] Copy '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/early_fatal.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/early_fatal/src/early_fatal.sv'.
+SBY 22:58:08 [early_fatal] engine_0: smtbmc yices
+SBY 22:58:08 [early_fatal] base: starting process "cd early_fatal/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 22:58:08 [early_fatal] base: Warning: Wire early_fatal.\clk is used but has no driver.
+SBY 22:58:08 [early_fatal] base: finished (returncode=0)
+SBY 22:58:08 [early_fatal] prep: starting process "cd early_fatal/model; yosys -ql design_prep.log design_prep.ys"
+SBY 22:58:08 [early_fatal] prep: Warning: Wire early_fatal.\clk is used but has no driver.
+SBY 22:58:09 [early_fatal] prep: finished (returncode=0)
+SBY 22:58:09 [early_fatal] smt2: starting process "cd early_fatal/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 22:58:09 [early_fatal] smt2: finished (returncode=0)
+SBY 22:58:09 [early_fatal] engine_0: starting process "cd early_fatal; yosys-smtbmc -s yices --presat --unroll --noprogress -t 5  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Solver: yices
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 22:58:09 [early_fatal] engine_0: ##   0:00:00  Status: passed
+SBY 22:58:09 [early_fatal] engine_0: finished (returncode=0)
+SBY 22:58:09 [early_fatal] engine_0: Status returned by engine: pass
+SBY 22:58:09 [early_fatal] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 22:58:09 [early_fatal] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 22:58:09 [early_fatal] summary: engine_0 (smtbmc yices) returned pass
+SBY 22:58:09 [early_fatal] summary: engine_0 did not produce any traces
+SBY 22:58:09 [early_fatal] DONE (PASS, rc=0)

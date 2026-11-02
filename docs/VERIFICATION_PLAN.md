@@ -24,7 +24,7 @@ Separate order-state scoreboard tests cover insert, duplicate, partial/full exec
 
 ### Decision
 
-Separate decision scoreboard tests cover positive and negative crossings, no repeated decision while beyond threshold, cross-back and recross, enable suppression, budget exhaustion/decrement, invalid-book suppression, mutation-only evaluation, payload stability, and budget safety.
+Separate decision scoreboard tests cover positive and negative crossings, no repeated decision while beyond threshold, cross-back and recross, enable suppression, budget exhaustion/decrement, mutation-only evaluation, payload stability, and budget safety. Book-invalid behavior is verified at the commit boundary: an invalid/quarantined book cannot accept a later mutation or produce a new commit/decision. A decision already created from a valid successful prior commit remains a legitimate pending output after later invalidation and is not cancelled by current `book_valid=0`; it is not a new post-recovery decision.
 
 ### Error/recovery
 

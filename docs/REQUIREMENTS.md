@@ -73,7 +73,7 @@ External protocol facts are sourced through `docs/SPEC_SOURCES.md` and the WIRE-
 - REQ-DEC-002 [SPECIFIED]: `imbalance` SHALL be a signed difference `signed(bid_total) - signed(ask_total)` with sufficient width for the full difference.
 - REQ-DEC-003 [SPECIFIED]: A BUY event SHALL occur only when the valid armed state, decision enable, nonzero budget, `previous_imbalance < +THRESHOLD`, and `current_imbalance >= +THRESHOLD` all hold after a qualifying mutation.
 - REQ-DEC-004 [SPECIFIED]: A SELL event SHALL occur only when the valid armed state, decision enable, nonzero budget, `previous_imbalance > -THRESHOLD`, and `current_imbalance <= -THRESHOLD` all hold after a qualifying mutation.
-- REQ-DEC-005 [SPECIFIED]: A decision event SHALL consume one budget credit; `decision_count` SHALL never exceed `initial_budget`; no decision shall be emitted when book invalid, decision disabled, or budget is zero.
+- REQ-DEC-005 [SPECIFIED]: A newly eligible mutation/decision SHALL require a successful mutation commit originating from a valid, armed book epoch, decision enabled at commit evaluation, and nonzero budget. A mutation event SHALL NOT be accepted from an already invalid/quarantined book, and no post-recovery mutation may create a commit or decision. A decision already created from a successful prior-epoch commit remains a valid pending output after a later fatal condition until handshake or explicit reset/rearm; it is not a new decision generated after recovery. Each decision SHALL consume one budget credit at creation; `decision_count` SHALL never exceed `initial_budget`; no decision is created when decision is disabled or budget is zero.
 - REQ-DEC-006 [SPECIFIED]: Non-mutating messages SHALL not create a new crossing evaluation unless a later authoritative requirement explicitly changes this rule.
 - REQ-DEC-007 [PROJECT RESTRICTION]: The decision is a deterministic synthetic engineering function, not a production trading strategy.
 
@@ -84,6 +84,8 @@ External protocol facts are sourced through `docs/SPEC_SOURCES.md` and the WIRE-
 - REQ-ERR-003 [SPECIFIED]: Recovery SHALL require explicit external re-arm/reset with known session, expected sequence, empty/known order state, budget, and configuration; no hidden automatic live recovery is permitted.
 - REQ-ERR-004 [PROJECT RESTRICTION]: If complete earlier Mold messages have already committed before a malformed later suffix is detected, those updates are not rolled back; the book is then invalidated and future decisions are suppressed.
 - REQ-ERR-005 [PROJECT DECISION]: `P` may be consumed without mutation. Any unclassified or unsupported message type SHALL cause profile rejection, invalidate the book, require re-arm, and produce no mutation from that message. This avoids silently skipping unknown semantics.
+
+Decision suppression on invalidation applies to creation of new decisions: no new mutation commit or decision may originate from an invalid/quarantined book. A decision already created from a successful mutation commit while the book was valid remains a legitimate pending output until handshake or explicit reset/rearm. It is not a new post-recovery decision, and later fatal recovery does not retroactively cancel it. This preserves the prior-commit/no-rollback boundary in WIRE-D018 through WIRE-D020.
 
 ## Latency and throughput
 

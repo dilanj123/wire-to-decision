@@ -1,0 +1,16 @@
+[options]
+mode bmc
+depth 5
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv wire_order_book.sv wire_decision_engine.sv early_fatal.sv
+chparam -set NUM_SETS 2 wire_order_book
+prep -top early_fatal
+
+[files]
+../../rtl/common/wire_order_book.sv
+../../rtl/common/wire_decision_engine.sv
+early_fatal.sv

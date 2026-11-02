@@ -61,10 +61,10 @@ def itch(kind, *, ref=0x1122334455667788, qty=10, price=0x12345678,
     return bytes(data)
 
 
-def mold(messages, sequence=BASE_SEQ, *, body=None, count=None):
+def mold(messages, sequence=BASE_SEQ, *, body=None, count=None, session=SESSION):
     body = (b"".join(len(m).to_bytes(2, "big") + m for m in messages)
             if body is None else body)
-    return SESSION + sequence.to_bytes(8, "big") + \
+    return session + sequence.to_bytes(8, "big") + \
         (len(messages) if count is None else count).to_bytes(2, "big") + body
 
 
@@ -105,7 +105,9 @@ class Bench:
     def __init__(self, dut):
         self.d = dut
         self.decisions = []
+        self.commits = []
         self.accepted_beats = 0
+        self.rx_stall_cycles = 0
         self.config = None
 
     async def setup(self, *, seq=BASE_SEQ, threshold=10, budget=20,
@@ -132,7 +134,9 @@ class Bench:
         d.rst.value = 0
         d.rearm.value = 0
         self.decisions.clear()
+        self.commits.clear()
         self.accepted_beats = 0
+        self.rx_stall_cycles = 0
 
     def sample_decision(self):
         d = self.d
@@ -150,6 +154,8 @@ class Bench:
         stream = beats(data)
         index = 0
         held = None
+        prev_rx_stall = None
+        prev_decision_stall = None
         for cycle in range(max_cycles):
             await FallingEdge(d.clk)
             if held is None and index < len(stream):
@@ -158,9 +164,27 @@ class Bench:
                 d.rx_valid.value = 1
             d.decision_ready.value = 0 if hold_decision else int((cycle + stall_seed) % 5 != 2)
             await Timer(1, unit="ns")
+            rx_tuple = (int(d.rx_valid.value), int(d.rx_data.value),
+                        int(d.rx_keep.value), int(d.rx_last.value))
+            decision_tuple = self.sample_decision()
+            if prev_rx_stall is not None:
+                assert rx_tuple == prev_rx_stall, "external input changed while stalled"
+            if prev_decision_stall is not None:
+                assert int(d.decision_valid.value) == 1
+                assert decision_tuple == prev_decision_stall, "decision changed while stalled"
             rx_fire = int(d.rx_valid.value) and int(d.rx_ready.value)
+            if int(d.rx_valid.value) and not int(d.rx_ready.value):
+                self.rx_stall_cycles += 1
             if int(d.decision_valid.value) and int(d.decision_ready.value):
                 self.decisions.append(self.sample_decision())
+            if int(d.commit_valid_observed.value) and int(d.commit_ready_observed.value):
+                self.commits.append((int(d.commit_mold_sequence_observed.value),
+                                     int(d.commit_bid_total_observed.value),
+                                     int(d.commit_ask_total_observed.value),
+                                     int(d.parser_recovery_required.value)))
+            prev_rx_stall = rx_tuple if int(d.rx_valid.value) and not int(d.rx_ready.value) else None
+            prev_decision_stall = (decision_tuple if int(d.decision_valid.value) and
+                                   not int(d.decision_ready.value) else None)
             await RisingEdge(d.clk)
             if rx_fire:
                 index += 1
@@ -178,8 +202,19 @@ class Bench:
             await FallingEdge(d.clk)
             d.decision_ready.value = 0 if hold_decision else int(cycle % 5 != 1)
             await Timer(1, unit="ns")
+            decision_tuple = self.sample_decision()
+            if prev_decision_stall is not None:
+                assert int(d.decision_valid.value) == 1
+                assert decision_tuple == prev_decision_stall, "decision changed during drain stall"
             if int(d.decision_valid.value) and int(d.decision_ready.value):
                 self.decisions.append(self.sample_decision())
+            if int(d.commit_valid_observed.value) and int(d.commit_ready_observed.value):
+                self.commits.append((int(d.commit_mold_sequence_observed.value),
+                                     int(d.commit_bid_total_observed.value),
+                                     int(d.commit_ask_total_observed.value),
+                                     int(d.parser_recovery_required.value)))
+            prev_decision_stall = (decision_tuple if int(d.decision_valid.value) and
+                                   not int(d.decision_ready.value) else None)
             await RisingEdge(d.clk)
         await FallingEdge(d.clk)
         d.decision_ready.value = 0 if hold_decision else 1
@@ -370,6 +405,8 @@ async def test_late_mold_suffix_retains_prefix_decision_and_state(dut):
     assert expected.quarantined and len(expected.decisions) == 1
     await b.send_frame(malformed, stall_seed=1)
     assert b.decisions == oracle_decisions(expected)
+    assert [item[0] for item in b.commits] == [BASE_SEQ, BASE_SEQ + 1]
+    assert all(recovery == 0 for _, _, _, recovery in b.commits)
     assert int(dut.bid_total.value) == 10
     assert int(dut.book_valid.value) == 0 and int(dut.parser_recovery_required.value) == 1
     assert int(dut.current_expected_sequence.value) == BASE_SEQ
@@ -438,6 +475,172 @@ async def test_stalled_prefix_decision_survives_later_itch_recovery(dut):
         await RisingEdge(dut.clk)
         await Timer(1, unit="ns")
         assert int(dut.decision_valid.value) == 0
+
+
+@cocotb.test()
+async def test_long_valid_multiframe_mutation_stream_against_oracle(dut):
+    clock(dut)
+    b = Bench(dut)
+    await b.setup(threshold=6, budget=8)
+    oracle = ReferenceOracle(b.config)
+    buy_ref, sell_ref = 0x8101, 0x8202
+    replacement_ref = 0x8877665544332211 + 6
+    messages = [
+        itch("A", ref=buy_ref, qty=10, price=100, side=b"B", salt=1),
+        itch("F", ref=sell_ref, qty=8, price=101, side=b"S", salt=2),
+        itch("E", ref=buy_ref, qty=3, salt=3),
+        itch("C", ref=sell_ref, qty=2, salt=4),
+        itch("X", ref=buy_ref, qty=2, salt=5),
+        itch("U", ref=sell_ref, qty=9, price=120, salt=6),
+        itch("D", ref=buy_ref, salt=7),
+    ]
+    expected_decisions = []
+    for index, message in enumerate(messages):
+        packet = frame(mold([message], BASE_SEQ + index))
+        expected_decisions.extend(oracle_decisions(oracle.process_frame(packet)))
+        await b.send_frame(packet, stall_seed=index + 1)
+
+    assert b.decisions == expected_decisions == [
+        (0, BASE_SEQ, 0x010203040501, 10),
+        (1, BASE_SEQ + 6, 0x010203040507, -9),
+    ]
+    assert len(b.commits) == 7
+    assert [row[0] for row in b.commits] == [BASE_SEQ + i for i in range(7)]
+    assert (int(dut.bid_total.value), int(dut.ask_total.value)) == (
+        oracle.book.bid_total, oracle.book.ask_total) == (0, 9)
+    assert int(dut.current_expected_sequence.value) == BASE_SEQ + 7
+    assert int(dut.remaining_budget.value) == oracle.decision_model.current_budget == 6
+    assert int(dut.decision_count.value) == oracle.decision_model.decision_count == 2
+    dut.debug_reference.value = replacement_ref
+    await Timer(1, unit="ns")
+    assert int(dut.debug_found.value) == 1
+    assert int(dut.debug_price.value) == 120
+    assert int(dut.debug_remaining_quantity.value) == 9
+    assert int(dut.debug_side.value) == 1
+    assert b.rx_stall_cycles > 0, "long stream did not exercise external ingress backpressure"
+
+
+@cocotb.test()
+async def test_mixed_outer_mold_book_failures_and_rearm(dut):
+    clock(dut)
+    b = Bench(dut)
+
+    # A nonfatal filter is followed by usable traffic in the same epoch.
+    await b.setup(threshold=100, budget=10)
+    first = frame(mold([itch("A", ref=0x9101, qty=4, price=20)]))
+    await b.send_frame(first)
+    nonfatal = frame(mold([itch("A", ref=0x9102, locate=LOC + 1)], BASE_SEQ + 1))
+    await b.send_frame(nonfatal)
+    assert int(dut.parser_recovery_required.value) == 0
+    assert (int(dut.bid_total.value), int(dut.ask_total.value)) == (4, 0)
+
+    fatal_cases = [
+        frame(mold([itch("A")], session=b"BADSESSION")),
+        frame(mold([itch("A")], BASE_SEQ + 1)),
+        frame(mold([], body=b"\x00", count=1)),
+        frame(mold([itch("A", ref=0x9103, qty=20)]), bad_ip_checksum=True),
+        frame(mold([itch("Z")])),
+        frame(mold([itch("A", ref=1, qty=4), itch("A", ref=1, qty=8)])),
+        frame(mold([itch("A", ref=1), itch("A", ref=0x200),
+                    itch("A", ref=0x40000)])),
+    ]
+    for index, packet in enumerate(fatal_cases):
+        await b.setup(seq=BASE_SEQ, threshold=100, budget=10, rearm=True)
+        model = ReferenceOracle(b.config)
+        expected = model.process_frame(packet)
+        assert expected.quarantined
+        await b.send_frame(packet, stall_seed=index + 1)
+        if index < 5:
+            assert int(dut.parser_recovery_required.value) == 1
+        else:
+            # Duplicate/collision are book state-integrity errors, distinct
+            # from parser-stage recovery, but both quarantine the functional path.
+            assert int(dut.parser_recovery_required.value) == 0
+        assert int(dut.book_recovery_required.value) == 1
+        assert int(dut.book_valid.value) == 0
+        assert not b.commits or all(row[3] == 0 for row in b.commits)
+        # Explicit rearm establishes a clean, usable configuration epoch.
+        await b.setup(seq=BASE_SEQ + 20, threshold=100, budget=2, rearm=True)
+        clean = frame(mold([itch("A", ref=0xA000 + index, qty=2)], BASE_SEQ + 20))
+        clean_expected = ReferenceOracle(b.config).process_frame(clean)
+        await b.send_frame(clean)
+        assert b.decisions == oracle_decisions(clean_expected) == []
+        assert int(dut.book_valid.value) == 1
+        assert int(dut.parser_recovery_required.value) == 0
+        assert int(dut.bid_total.value) == 2
+
+
+@cocotb.test()
+async def test_suffix_ordering_commit_before_and_fatal_before_commit(dut):
+    clock(dut)
+    b = Bench(dut)
+
+    # First ordering: two message commits handshake before malformed suffix recovery.
+    await b.setup(threshold=5, budget=4)
+    good = itch("A", ref=0xB001, qty=8, price=100)
+    later = itch("E", ref=0xB001, qty=1)
+    body = (len(good).to_bytes(2, "big") + good +
+            len(later).to_bytes(2, "big") + later + b"\x00\x05\xAA")
+    packet = frame(mold([], body=body, count=3))
+    await b.send_frame(packet, stall_seed=7)
+    assert [item[0] for item in b.commits] == [BASE_SEQ, BASE_SEQ + 1]
+    assert all(item[3] == 0 for item in b.commits)
+    assert b.decisions == [(0, BASE_SEQ, 0x010203040500, 8)]
+    assert int(dut.bid_total.value) == 7
+    assert int(dut.book_valid.value) == 0
+    assert int(dut.parser_recovery_required.value) == 1
+
+    # Second ordering: the final-byte-truncated next length makes recovery
+    # visible before the complete first ITCH message reaches book commit.
+    await b.setup(threshold=5, budget=4, rearm=True)
+    one = itch("A", ref=0xB101, qty=8, price=100)
+    too_early = frame(mold([], body=len(one).to_bytes(2, "big") + one + b"\x00",
+                           count=2))
+    model = ReferenceOracle(b.config)
+    expected = model.process_frame(too_early)
+    assert expected.quarantined and len(expected.decisions) == 1
+    await b.send_frame(too_early)
+    assert int(dut.parser_recovery_required.value) == 1
+    assert b.commits == [] and b.decisions == []
+    assert (int(dut.bid_total.value), int(dut.ask_total.value)) == (0, 0)
+
+
+@cocotb.test()
+async def test_single_edge_rearm_discards_pending_decision_epoch(dut):
+    clock(dut)
+    b = Bench(dut)
+    await b.setup(threshold=3, budget=2)
+    old_packet = frame(mold([itch("A", ref=0xC001, qty=5, price=50)]))
+    await b.send_frame(old_packet, hold_decision=True)
+    assert int(dut.decision_valid.value) == 1
+    old_decision = b.sample_decision()
+
+    new_seq, new_threshold, new_budget = BASE_SEQ + 100, 4, 3
+    await FallingEdge(dut.clk)
+    dut.cfg_expected_sequence.value = new_seq
+    dut.cfg_decision_threshold.value = new_threshold
+    dut.cfg_initial_budget.value = new_budget
+    dut.rearm.value = 1
+    await RisingEdge(dut.clk)
+    await Timer(1, unit="ns")
+    assert int(dut.decision_valid.value) == 0
+    assert int(dut.previous_imbalance.value) == 0
+    assert int(dut.remaining_budget.value) == new_budget
+    assert int(dut.decision_count.value) == 0
+    assert int(dut.bid_total.value) == 0
+    assert int(dut.book_valid.value) == 1
+    assert int(dut.parser_recovery_required.value) == 0
+    await FallingEdge(dut.clk)
+    dut.rearm.value = 0
+
+    b.config = config(new_seq, threshold=new_threshold, budget=new_budget)
+    b.decisions.clear()
+    b.commits.clear()
+    new_packet = frame(mold([itch("A", ref=0xC002, qty=4, price=60)], new_seq))
+    await b.send_frame(new_packet)
+    assert b.decisions == [(0, new_seq, 0x010203040500, 4)]
+    assert b.sample_decision() != old_decision
+    assert int(dut.current_expected_sequence.value) == new_seq + 1
 
 
 @cocotb.test()

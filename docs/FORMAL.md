@@ -43,11 +43,12 @@ Use reduced/local abstractions when full-scale proof is impractical:
 
 ### Decision logic
 
-- Decision implies `book_valid` and `decision_enable`.
-- Decision implies pre-event budget is nonzero.
+- A new decision creation is attributable to exactly one successful book-commit transaction from the valid book epoch; no mutation/event accepted after book recovery may create a commit or decision.
+- A decision created before later invalidation may remain pending and stable until handshake or explicit rearm/reset; current `book_valid=0` does not cancel that already-created transaction.
+- Decision creation implies `decision_enable` sampled on the commit evaluation and pre-event budget is nonzero.
 - Decision count never exceeds initial budget.
 - BUY/SELL occurs only on the specified crossing.
-- No decision occurs without a qualifying mutation/crossing.
+- No new decision occurs without a qualifying successful commit/crossing. No post-recovery work may create one.
 
 ### Future async FIFO
 
