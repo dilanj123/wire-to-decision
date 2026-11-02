@@ -1,0 +1,436 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_gearbox COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_gearbox_64to8 TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658511
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_gearbox.test_all_legal_final_keep_masks (1/6)
+   756.00ns INFO     cocotb.regression                  test_gearbox.test_all_legal_final_keep_masks passed
+   756.00ns INFO     cocotb.regression                  running test_gearbox.test_multibeat_and_back_to_back_frames (2/6)
+  1012.00ns INFO     cocotb.regression                  test_gearbox.test_multibeat_and_back_to_back_frames passed
+  1012.00ns INFO     cocotb.regression                  running test_gearbox.test_output_backpressure_and_input_pressure (3/6)
+  1728.00ns INFO     cocotb.regression                  test_gearbox.test_output_backpressure_and_input_pressure passed
+  1728.00ns INFO     cocotb.regression                  running test_gearbox.test_same_cycle_retire_refill (4/6)
+  1934.00ns INFO     cocotb.regression                  test_gearbox.test_same_cycle_retire_refill passed
+  1934.00ns INFO     cocotb.regression                  running test_gearbox.test_reset_idle_stalled_and_partial (5/6)
+  2110.00ns INFO     cocotb.regression                  test_gearbox.test_reset_idle_stalled_and_partial passed
+  2110.00ns INFO     cocotb.regression                  running test_gearbox.test_fixed_random_legal_frames (6/6)
+  4776.01ns INFO     cocotb.regression                  test_gearbox.test_fixed_random_legal_frames passed
+  4776.01ns INFO     cocotb.regression                  ******************************************************************************************************************
+                                                        ** TEST                                                      STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ******************************************************************************************************************
+                                                        ** test_gearbox.test_all_legal_final_keep_masks               PASS         756.00           0.00     323395.60  **
+                                                        ** test_gearbox.test_multibeat_and_back_to_back_frames        PASS         256.00           0.00     278532.25  **
+                                                        ** test_gearbox.test_output_backpressure_and_input_pressure   PASS         716.00           0.00     273483.44  **
+                                                        ** test_gearbox.test_same_cycle_retire_refill                 PASS         206.00           0.00     294789.02  **
+                                                        ** test_gearbox.test_reset_idle_stalled_and_partial           PASS         176.00           0.00     386086.56  **
+                                                        ** test_gearbox.test_fixed_random_legal_frames                PASS        2666.00           0.01     267243.79  **
+                                                        ******************************************************************************************************************
+                                                        ** TESTS=6 PASS=6 FAIL=0 SKIP=0                                           4776.01           0.02     223984.09  **
+                                                        ******************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile.integration results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_buffer_gearbox COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_buffer_gearbox_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658513
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_buffer_gearbox.test_buffer_to_gearbox_stream_and_backpressure (1/1)
+   420.00ns INFO     cocotb.regression                  test_buffer_gearbox.test_buffer_to_gearbox_stream_and_backpressure passed
+   420.00ns INFO     cocotb.regression                  ****************************************************************************************************************************
+                                                        ** TEST                                                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ****************************************************************************************************************************
+                                                        ** test_buffer_gearbox.test_buffer_to_gearbox_stream_and_backpressure   PASS         420.00           0.00     247035.15  **
+                                                        ****************************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                                      420.00           0.00      91227.74  **
+                                                        ****************************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile.composition results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_eth_composition COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_buffer_gearbox_eth_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658515
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_eth_composition.test_buffer_gearbox_eth_composition (1/1)
+   725.00ns INFO     cocotb.regression                  test_eth_composition.test_buffer_gearbox_eth_composition passed
+   725.00ns INFO     cocotb.regression                  ******************************************************************************************************************
+                                                        ** TEST                                                      STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ******************************************************************************************************************
+                                                        ** test_eth_composition.test_buffer_gearbox_eth_composition   PASS         725.00           0.00     203934.71  **
+                                                        ******************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                            725.00           0.01     105868.83  **
+                                                        ******************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile.composition results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_ipv4_composition COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_buffer_gearbox_eth_ipv4_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658517
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_ipv4_composition.test_buffer_gearbox_eth_ipv4_accepted_and_padding (1/3)
+   605.00ns INFO     cocotb.regression                  test_ipv4_composition.test_buffer_gearbox_eth_ipv4_accepted_and_padding passed
+   605.00ns INFO     cocotb.regression                  running test_ipv4_composition.test_composition_filters_and_fatals (2/3)
+  2960.00ns INFO     cocotb.regression                  test_ipv4_composition.test_composition_filters_and_fatals passed
+  2960.00ns INFO     cocotb.regression                  running test_ipv4_composition.test_composition_random_frames (3/3)
+  9395.00ns INFO     cocotb.regression                  test_ipv4_composition.test_composition_random_frames passed
+  9395.00ns INFO     cocotb.regression                  *********************************************************************************************************************************
+                                                        ** TEST                                                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************************
+                                                        ** test_ipv4_composition.test_buffer_gearbox_eth_ipv4_accepted_and_padding   PASS         605.00           0.00     198945.82  **
+                                                        ** test_ipv4_composition.test_composition_filters_and_fatals                 PASS        2355.00           0.01     247453.11  **
+                                                        ** test_ipv4_composition.test_composition_random_frames                      PASS        6435.00           0.03     255648.50  **
+                                                        *********************************************************************************************************************************
+                                                        ** TESTS=3 PASS=3 FAIL=0 SKIP=0                                                          9395.00           0.04     224706.86  **
+                                                        *********************************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile.composition results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_udp_composition COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_buffer_gearbox_eth_ipv4_udp_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658519
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_udp_composition.test_five_stage_valid_path (1/3)
+     0.00ns WARNING  py.warnings                        /Users/Dilan/Projects/wire-to-decision/tb/udp_parser/test_udp_composition.py:120: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+                                                          cocotb.start_soon(Clock(dut.clk, 10, units="ns").start())
+   675.00ns INFO     cocotb.regression                  test_udp_composition.test_five_stage_valid_path passed
+   675.00ns INFO     cocotb.regression                  running test_udp_composition.test_udp_invalid_paths_are_localized (2/3)
+   675.00ns WARNING  py.warnings                        /Users/Dilan/Projects/wire-to-decision/tb/udp_parser/test_udp_composition.py:130: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+                                                          cocotb.start_soon(Clock(dut.clk, 10, units="ns").start())
+  2950.00ns INFO     cocotb.regression                  test_udp_composition.test_udp_invalid_paths_are_localized passed
+  2950.00ns INFO     cocotb.regression                  running test_udp_composition.test_five_stage_random_valid_frames (3/3)
+  2950.00ns WARNING  py.warnings                        /Users/Dilan/Projects/wire-to-decision/tb/udp_parser/test_udp_composition.py:149: DeprecationWarning: The 'units' argument has been renamed to 'unit'.
+                                                          cocotb.start_soon(Clock(dut.clk, 10, units="ns").start())
+ 17535.00ns INFO     cocotb.regression                  test_udp_composition.test_five_stage_random_valid_frames passed
+ 17535.00ns INFO     cocotb.regression                  *******************************************************************************************************************
+                                                        ** TEST                                                       STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************************************
+                                                        ** test_udp_composition.test_five_stage_valid_path             PASS         675.00           0.00     193636.22  **
+                                                        ** test_udp_composition.test_udp_invalid_paths_are_localized   PASS        2275.00           0.01     278933.66  **
+                                                        ** test_udp_composition.test_five_stage_random_valid_frames    PASS       14585.00           0.05     267331.16  **
+                                                        *******************************************************************************************************************
+                                                        ** TESTS=3 PASS=3 FAIL=0 SKIP=0                                           17535.00           0.07     252931.36  **
+                                                        *******************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile.composition results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_mold_composition COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_buffer_gearbox_eth_ipv4_udp_mold_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658521
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_mold_composition.test_six_stage_normal_and_heartbeat (1/2)
+  1350.00ns INFO     cocotb.regression                  test_mold_composition.test_six_stage_normal_and_heartbeat passed
+  1350.00ns INFO     cocotb.regression                  running test_mold_composition.test_six_stage_mold_errors_are_local (2/2)
+  2090.00ns INFO     cocotb.regression                  test_mold_composition.test_six_stage_mold_errors_are_local passed
+  2090.00ns INFO     cocotb.regression                  ********************************************************************************************************************
+                                                        ** TEST                                                        STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ********************************************************************************************************************
+                                                        ** test_mold_composition.test_six_stage_normal_and_heartbeat    PASS        1350.00           0.01     236758.25  **
+                                                        ** test_mold_composition.test_six_stage_mold_errors_are_local   PASS         740.00           0.00     275304.68  **
+                                                        ********************************************************************************************************************
+                                                        ** TESTS=2 PASS=2 FAIL=0 SKIP=0                                             2090.00           0.01     181425.13  **
+                                                        ********************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile.composition results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_mold_framer_composition COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_buffer_gearbox_eth_ipv4_udp_mold_framer_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658523
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_mold_framer_composition.test_seven_stage_valid_packet_sequence_commit (1/2)
+   940.00ns INFO     cocotb.regression                  test_mold_framer_composition.test_seven_stage_valid_packet_sequence_commit passed
+   940.00ns INFO     cocotb.regression                  running test_mold_framer_composition.test_late_malformed_suffix_retains_complete_prefix (2/2)
+  1900.00ns INFO     cocotb.regression                  test_mold_framer_composition.test_late_malformed_suffix_retains_complete_prefix passed
+  1900.00ns INFO     cocotb.regression                  *****************************************************************************************************************************************
+                                                        ** TEST                                                                             STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************************************************
+                                                        ** test_mold_framer_composition.test_seven_stage_valid_packet_sequence_commit        PASS         940.00           0.00     234416.18  **
+                                                        ** test_mold_framer_composition.test_late_malformed_suffix_retains_complete_prefix   PASS         960.00           0.00     260802.63  **
+                                                        *****************************************************************************************************************************************
+                                                        ** TESTS=2 PASS=2 FAIL=0 SKIP=0                                                                  1900.00           0.01     168574.31  **
+                                                        *****************************************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile.composition results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_mold_itch_composition COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_mold_itch_top TOPLEVEL_LANG=verilog \
+         sim_build_composition/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658525
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_mold_itch_composition.test_valid_multimessage_p_filter_and_locate_filter (1/2)
+  2060.00ns INFO     cocotb.regression                  test_mold_itch_composition.test_valid_multimessage_p_filter_and_locate_filter passed
+  2060.00ns INFO     cocotb.regression                  running test_mold_itch_composition.test_itch_failure_does_not_change_structural_mold_success (2/2)
+  3410.00ns INFO     cocotb.regression                  test_mold_itch_composition.test_itch_failure_does_not_change_structural_mold_success passed
+  3410.00ns INFO     cocotb.regression                  **********************************************************************************************************************************************
+                                                        ** TEST                                                                                  STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************************************************************
+                                                        ** test_mold_itch_composition.test_valid_multimessage_p_filter_and_locate_filter          PASS        2060.00           0.01     155919.27  **
+                                                        ** test_mold_itch_composition.test_itch_failure_does_not_change_structural_mold_success   PASS        1350.00           0.01     129480.47  **
+                                                        **********************************************************************************************************************************************
+                                                        ** TESTS=2 PASS=2 FAIL=0 SKIP=0                                                                       3410.00           0.03     123945.62  **
+                                                        **********************************************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_arch_a_parser COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_a_parser_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658527
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_full_ingress_all_mutation_mappings_and_python_crosscheck (1/6)
+ 13090.00ns INFO     cocotb.regression                  test_arch_a_parser.test_full_ingress_all_mutation_mappings_and_python_crosscheck passed
+ 13090.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_filters_heartbeat_multi_message_and_reuse (2/6)
+ 24030.00ns INFO     cocotb.regression                  test_arch_a_parser.test_filters_heartbeat_multi_message_and_reuse passed
+ 24030.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_late_structural_suffix_and_itch_quarantine (3/6)
+ 30540.00ns INFO     cocotb.regression                  test_arch_a_parser.test_late_structural_suffix_and_itch_quarantine passed
+ 30540.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_semantic_and_outer_fatal_recovery_rearm (4/6)
+ 42030.00ns INFO     cocotb.regression                  test_arch_a_parser.test_semantic_and_outer_fatal_recovery_rearm passed
+ 42030.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_mold_header_eos_and_trailing_recovery (5/6)
+ 46250.00ns INFO     cocotb.regression                  test_arch_a_parser.test_mold_header_eos_and_trailing_recovery passed
+ 46250.00ns INFO     cocotb.regression                  running test_arch_a_parser.test_random_replayable_frames_and_fail_closed_rearm (6/6)
+WIRE022_VECTOR seed=1 messages=4 malformed=wrong_length frame_hex=0201020304050a0b0c0d0e0f08004510005545674000401108c5c0000221c6336407beef12340041000057324454455354303031102030405060708400010023412345ab0101020304050111223344556677014210203041414c504820202020506070
+WIRE022_VECTOR seed=7 messages=4 malformed=wrong_length frame_hex=0201020304050a0b0c0d0e0f08004510005545674000401108c5c0000221c6336407beef12340041000057324454455354303031102030405060708400010023412345ab0701020304050711223344556677074210203047414c504820202020506070
+WIRE022_VECTOR seed=19 messages=4 malformed=wrong_length frame_hex=0201020304050a0b0c0d0e0f08004510005545674000401108c5c0000221c6336407beef12340041000057324454455354303031102030405060708400010023412345ab1301020304051311223344556677134210203053414c504820202020506070
+WIRE022_VECTOR seed=42 messages=4 malformed=wrong_length frame_hex=0201020304050a0b0c0d0e0f08004510005545674000401108c5c0000221c6336407beef12340041000057324454455354303031102030405060708400010023412345ab2a01020304052a112233445566772a421020306a414c504820202020506070
+WIRE022_VECTOR seed=97 messages=4 malformed=wrong_length frame_hex=0201020304050a0b0c0d0e0f08004510005545674000401108c5c0000221c6336407beef12340041000057324454455354303031102030405060708400010023412345ab61010203040561112233445566776142102030a1414c504820202020506070
+ 92160.01ns INFO     cocotb.regression                  test_arch_a_parser.test_random_replayable_frames_and_fail_closed_rearm passed
+ 92160.01ns INFO     cocotb.regression                  ******************************************************************************************************************************************
+                                                        ** TEST                                                                              STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ******************************************************************************************************************************************
+                                                        ** test_arch_a_parser.test_full_ingress_all_mutation_mappings_and_python_crosscheck   PASS       13090.00           0.05     283504.28  **
+                                                        ** test_arch_a_parser.test_filters_heartbeat_multi_message_and_reuse                  PASS       10940.00           0.04     312098.69  **
+                                                        ** test_arch_a_parser.test_late_structural_suffix_and_itch_quarantine                 PASS        6510.00           0.02     307349.38  **
+                                                        ** test_arch_a_parser.test_semantic_and_outer_fatal_recovery_rearm                    PASS       11490.00           0.04     313702.54  **
+                                                        ** test_arch_a_parser.test_mold_header_eos_and_trailing_recovery                      PASS        4220.00           0.01     308679.01  **
+                                                        ** test_arch_a_parser.test_random_replayable_frames_and_fail_closed_rearm             PASS       45910.00           0.15     316125.89  **
+                                                        ******************************************************************************************************************************************
+                                                        ** TESTS=6 PASS=6 FAIL=0 SKIP=0                                                                  92160.01           0.31     301984.95  **
+                                                        ******************************************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_order_book COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_order_book TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658529
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_order_book.test_hash_vectors_way_allocation_collision_and_no_eviction (1/9)
+   136.00ns INFO     cocotb.regression                  test_order_book.test_hash_vectors_way_allocation_collision_and_no_eviction passed
+   136.00ns INFO     cocotb.regression                  running test_order_book.test_full_512_by_2_capacity_and_48_bit_bound (2/9)
+ 30892.00ns INFO     cocotb.regression                  test_order_book.test_full_512_by_2_capacity_and_48_bit_bound passed
+ 30892.00ns INFO     cocotb.regression                  running test_order_book.test_add_duplicates_buy_sell_and_contract_quarantine (3/9)
+ 31053.00ns INFO     cocotb.regression                  test_order_book.test_add_duplicates_buy_sell_and_contract_quarantine passed
+ 31053.00ns INFO     cocotb.regression                  running test_order_book.test_execute_c_price_cancel_delete_and_errors (4/9)
+ 31444.00ns INFO     cocotb.regression                  test_order_book.test_execute_c_price_cancel_delete_and_errors passed
+ 31444.00ns INFO     cocotb.regression                  running test_order_book.test_replace_same_cross_set_same_reference_and_inherited_side (5/9)
+ 31630.00ns INFO     cocotb.regression                  test_order_book.test_replace_same_cross_set_same_reference_and_inherited_side passed
+ 31630.00ns INFO     cocotb.regression                  running test_order_book.test_replace_conflict_and_full_destination_are_atomic (6/9)
+ 31976.01ns INFO     cocotb.regression                  test_order_book.test_replace_conflict_and_full_destination_are_atomic passed
+ 31976.01ns INFO     cocotb.regression                  running test_order_book.test_commit_stall_and_upstream_fatal_ordering (7/9)
+ 32071.01ns INFO     cocotb.regression                  test_order_book.test_commit_stall_and_upstream_fatal_ordering passed
+ 32071.01ns INFO     cocotb.regression                  running test_order_book.test_bad_contract_zero_and_upstream_idle_quarantine (8/9)
+ 32156.01ns INFO     cocotb.regression                  test_order_book.test_bad_contract_zero_and_upstream_idle_quarantine passed
+ 32156.01ns INFO     cocotb.regression                  running test_order_book.test_deterministic_randomized_model_sequences (9/9)
+ 39757.01ns INFO     cocotb.regression                  test_order_book.test_deterministic_randomized_model_sequences passed
+ 39757.01ns INFO     cocotb.regression                  ***************************************************************************************************************************************
+                                                        ** TEST                                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***************************************************************************************************************************************
+                                                        ** test_order_book.test_hash_vectors_way_allocation_collision_and_no_eviction      PASS         136.00           0.00      86075.95  **
+                                                        ** test_order_book.test_full_512_by_2_capacity_and_48_bit_bound                    PASS       30756.00           0.11     283850.27  **
+                                                        ** test_order_book.test_add_duplicates_buy_sell_and_contract_quarantine            PASS         161.00           0.00     245736.15  **
+                                                        ** test_order_book.test_execute_c_price_cancel_delete_and_errors                   PASS         391.00           0.00     261183.77  **
+                                                        ** test_order_book.test_replace_same_cross_set_same_reference_and_inherited_side   PASS         186.00           0.00     239086.90  **
+                                                        ** test_order_book.test_replace_conflict_and_full_destination_are_atomic           PASS         346.00           0.00     273971.91  **
+                                                        ** test_order_book.test_commit_stall_and_upstream_fatal_ordering                   PASS          95.00           0.00     181612.98  **
+                                                        ** test_order_book.test_bad_contract_zero_and_upstream_idle_quarantine             PASS          85.00           0.00     209345.77  **
+                                                        ** test_order_book.test_deterministic_randomized_model_sequences                   PASS        7601.00           0.03     225362.49  **
+                                                        ***************************************************************************************************************************************
+                                                        ** TESTS=9 PASS=9 FAIL=0 SKIP=0                                                               39757.01           0.16     250674.94  **
+                                                        ***************************************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_parser_book COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_a_parser_book_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658531
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_parser_book.test_valid_parser_to_book_mutation_sequence_against_oracle (1/4)
+  3206.00ns INFO     cocotb.regression                  test_parser_book.test_valid_parser_to_book_mutation_sequence_against_oracle passed
+  3206.00ns INFO     cocotb.regression                  running test_parser_book.test_late_structural_suffix_commits_only_complete_prefix (2/4)
+  7476.00ns INFO     cocotb.regression                  test_parser_book.test_late_structural_suffix_commits_only_complete_prefix passed
+  7476.00ns INFO     cocotb.regression                  running test_parser_book.test_structural_success_with_itch_failure_preserves_sequence_commit (3/4)
+  9662.00ns INFO     cocotb.regression                  test_parser_book.test_structural_success_with_itch_failure_preserves_sequence_commit passed
+  9662.00ns INFO     cocotb.regression                  running test_parser_book.test_outer_fatal_before_event_invalidates_empty_book_and_rearms (4/4)
+ 13252.00ns INFO     cocotb.regression                  test_parser_book.test_outer_fatal_before_event_invalidates_empty_book_and_rearms passed
+ 13252.00ns INFO     cocotb.regression                  **********************************************************************************************************************************************
+                                                        ** TEST                                                                                  STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **********************************************************************************************************************************************
+                                                        ** test_parser_book.test_valid_parser_to_book_mutation_sequence_against_oracle            PASS        3206.00           0.01     263025.95  **
+                                                        ** test_parser_book.test_late_structural_suffix_commits_only_complete_prefix              PASS        4270.00           0.01     322580.66  **
+                                                        ** test_parser_book.test_structural_success_with_itch_failure_preserves_sequence_commit   PASS        2186.00           0.01     355336.53  **
+                                                        ** test_parser_book.test_outer_fatal_before_event_invalidates_empty_book_and_rearms       PASS        3590.00           0.01     373924.14  **
+                                                        **********************************************************************************************************************************************
+                                                        ** TESTS=4 PASS=4 FAIL=0 SKIP=0                                                                      13252.00           0.05     286647.36  **
+                                                        **********************************************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_decision_engine COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_decision_engine TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658532
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_decision_engine.test_buy_sell_exact_boundaries_and_no_repeat (1/7)
+   271.00ns INFO     cocotb.regression                  test_decision_engine.test_buy_sell_exact_boundaries_and_no_repeat passed
+   271.00ns INFO     cocotb.regression                  running test_decision_engine.test_threshold_zero_enable_and_previous_trajectory (2/7)
+   472.00ns INFO     cocotb.regression                  test_decision_engine.test_threshold_zero_enable_and_previous_trajectory passed
+   472.00ns INFO     cocotb.regression                  running test_decision_engine.test_budget_zero_one_and_multi_credit (3/7)
+   693.00ns INFO     cocotb.regression                  test_decision_engine.test_budget_zero_one_and_multi_credit passed
+   693.00ns INFO     cocotb.regression                  running test_decision_engine.test_maximum_imbalance_and_threshold (4/7)
+   779.00ns INFO     cocotb.regression                  test_decision_engine.test_maximum_imbalance_and_threshold passed
+   779.00ns INFO     cocotb.regression                  running test_decision_engine.test_decision_stability_and_rearm_discards_pending (5/7)
+   885.00ns INFO     cocotb.regression                  test_decision_engine.test_decision_stability_and_rearm_discards_pending passed
+   885.00ns INFO     cocotb.regression                  running test_decision_engine.test_rearm_captures_threshold_and_initial_budget (6/7)
+   971.00ns INFO     cocotb.regression                  test_decision_engine.test_rearm_captures_threshold_and_initial_budget passed
+   971.00ns INFO     cocotb.regression                  running test_decision_engine.test_random_commit_trajectories_seed_1_7_19_42_97 (7/7)
+  9797.01ns INFO     cocotb.regression                  test_decision_engine.test_random_commit_trajectories_seed_1_7_19_42_97 passed
+  9797.01ns INFO     cocotb.regression                  *********************************************************************************************************************************
+                                                        ** TEST                                                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *********************************************************************************************************************************
+                                                        ** test_decision_engine.test_buy_sell_exact_boundaries_and_no_repeat         PASS         271.00           0.00     105323.98  **
+                                                        ** test_decision_engine.test_threshold_zero_enable_and_previous_trajectory   PASS         201.00           0.00     268745.65  **
+                                                        ** test_decision_engine.test_budget_zero_one_and_multi_credit                PASS         221.00           0.00     129533.42  **
+                                                        ** test_decision_engine.test_maximum_imbalance_and_threshold                 PASS          86.00           0.00      68303.38  **
+                                                        ** test_decision_engine.test_decision_stability_and_rearm_discards_pending   PASS         106.00           0.00     143835.72  **
+                                                        ** test_decision_engine.test_rearm_captures_threshold_and_initial_budget     PASS          86.00           0.00     157172.18  **
+                                                        ** test_decision_engine.test_random_commit_trajectories_seed_1_7_19_42_97    PASS        8826.00           0.03     300336.91  **
+                                                        *********************************************************************************************************************************
+                                                        ** TESTS=7 PASS=7 FAIL=0 SKIP=0                                                          9797.01           0.05     217415.99  **
+                                                        *********************************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_functional_mvp COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_a_functional_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658534
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_functional_mvp.test_full_chain_buy_sell_and_oracle (1/10)
+  9720.00ns INFO     cocotb.regression                  test_functional_mvp.test_full_chain_buy_sell_and_oracle passed
+  9720.00ns INFO     cocotb.regression                  running test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat (2/10)
+ 43310.00ns INFO     cocotb.regression                  test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat passed
+ 43310.00ns INFO     cocotb.regression                  running test_functional_mvp.test_all_mutation_message_types_through_full_parser (3/10)
+ 49780.00ns INFO     cocotb.regression                  test_functional_mvp.test_all_mutation_message_types_through_full_parser passed
+ 49780.00ns INFO     cocotb.regression                  running test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion (4/10)
+ 83770.00ns INFO     cocotb.regression                  test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion passed
+ 83770.00ns INFO     cocotb.regression                  running test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm (5/10)
+122470.00ns INFO     cocotb.regression                  test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm passed
+122470.00ns INFO     cocotb.regression                  running test_functional_mvp.test_book_failure_produces_no_decision_and_rearm (6/10)
+137060.01ns INFO     cocotb.regression                  test_functional_mvp.test_book_failure_produces_no_decision_and_rearm passed
+137060.01ns INFO     cocotb.regression                  running test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state (7/10)
+142356.01ns INFO     cocotb.regression                  test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state passed
+142356.01ns INFO     cocotb.regression                  running test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence (8/10)
+147746.01ns INFO     cocotb.regression                  test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence passed
+147746.01ns INFO     cocotb.regression                  running test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery (9/10)
+153037.01ns INFO     cocotb.regression                  test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery passed
+153037.01ns INFO     cocotb.regression                  running test_functional_mvp.test_random_full_frame_seed_set (10/10)
+188527.01ns INFO     cocotb.regression                  test_functional_mvp.test_random_full_frame_seed_set passed
+188527.01ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                        ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************************************************************
+                                                        ** test_functional_mvp.test_full_chain_buy_sell_and_oracle                                       PASS        9720.00           0.02     437131.53  **
+                                                        ** test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat                           PASS       33590.00           0.08     434721.36  **
+                                                        ** test_functional_mvp.test_all_mutation_message_types_through_full_parser                       PASS        6470.00           0.01     440137.97  **
+                                                        ** test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion                  PASS       33990.00           0.07     486998.38  **
+                                                        ** test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm                      PASS       38700.00           0.08     476530.31  **
+                                                        ** test_functional_mvp.test_book_failure_produces_no_decision_and_rearm                          PASS       14590.00           0.03     492823.63  **
+                                                        ** test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state                   PASS        5296.00           0.01     446744.58  **
+                                                        ** test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence   PASS        5390.00           0.01     475852.97  **
+                                                        ** test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery                 PASS        5291.00           0.01     431634.62  **
+                                                        ** test_functional_mvp.test_random_full_frame_seed_set                                           PASS       35490.00           0.08     433244.41  **
+                                                        *****************************************************************************************************************************************************
+                                                        ** TESTS=10 PASS=10 FAIL=0 SKIP=0                                                                          188527.01           0.42     447956.78  **
+                                                        *****************************************************************************************************************************************************
+- :0: Verilog $finish
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_ingress_buffer COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_ingress_buffer TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793658536
+     0.00ns ERROR    gpi                                VPI: Couldn't find root handle wire_ingress_buffer
+     0.00ns ERROR    gpi                                VPI: Toplevel instances: wire_ingress_buffer != wire_buffer_gearbox_top...
+     0.00ns ERROR    gpi                                No root handle found
+Traceback (most recent call last):
+  File "/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/pygpi/entry.py", line 44, in load_entry
+    entry_func(argv)
+  File "/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/_init.py", line 88, in init_package_from_simulation
+    _setup_root_handle()
+  File "/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/_init.py", line 264, in _setup_root_handle
+    raise RuntimeError(f"Can not find root handle {root_name!r}")
+RuntimeError: Can not find root handle 'wire_ingress_buffer'
+- :0: Verilog $finish
+make[1]: *** [results.xml] Error 1
+make: *** [sim] Error 2

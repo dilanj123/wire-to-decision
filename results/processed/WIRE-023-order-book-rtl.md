@@ -61,7 +61,7 @@ Prior formal suites through WIRE-022 were rerun from their established source ro
 
 - REQ-BOOK-001..008: bounded architecture, event mutation semantics, no eviction, aggregates and local integrity failures are RTL-simulated; named properties are bounded/fixed-vector checked at the scopes above.
 - REQ-ERR-001..004: book local invalid/recovery and parser fatal ordering are simulated/formally checked within fixed/reduced local scope. Prior committed events are retained; no rollback is implemented.
-- REQ-DEC-001: decision behavior is not implemented or verified.
+- REQ-DEC-001: unsigned 48-bit `bid_total` / `ask_total` aggregate representation is implemented and RTL-simulated by WIRE-023. REQ-DEC-002..006 decision behavior remained unimplemented at WIRE-023 and is addressed by WIRE-024.
 
 Classification: bounded store/aggregates `RTL-SIMULATED`; named local properties `FORMALLY CHECKED UNDER DOCUMENTED ASSUMPTIONS` at bounded/fixed/reduced scopes; parser→book `RTL-SIMULATED`; Yosys `SYNTHESISED COMPONENT SANITY`.
 

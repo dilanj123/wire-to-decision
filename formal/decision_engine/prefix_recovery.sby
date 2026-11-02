@@ -1,0 +1,16 @@
+[options]
+mode bmc
+depth 8
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv wire_order_book.sv wire_decision_engine.sv prefix_recovery.sv
+chparam -set NUM_SETS 2 wire_order_book
+prep -top prefix_recovery
+
+[files]
+../../rtl/common/wire_order_book.sv
+../../rtl/common/wire_decision_engine.sv
+prefix_recovery.sv

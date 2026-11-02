@@ -1,0 +1,14 @@
+[options]
+mode bmc
+depth 16
+
+[engines]
+smtbmc yices
+
+[script]
+read_verilog -formal -sv wire_decision_engine.sv decision_reference.sv
+prep -top decision_reference
+
+[files]
+../../rtl/common/wire_decision_engine.sv
+decision_reference.sv

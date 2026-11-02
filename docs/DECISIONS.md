@@ -186,3 +186,17 @@
 - Decision: Synchronous reset or explicit rearm establishes an empty store, zero aggregates, valid book state, and a cleared recovery/error epoch. Rearm is explicit control, not hidden protocol recovery.
 - Consequences: This defines a stage-local mutation-commit/control boundary, not deterministic decisions, rollback, or global application formal closure. A committed complete-prefix event is not rolled back by a later parser fatal condition.
 - Status: ADOPTED
+
+## WIRE-D020 — Freeze deterministic decision commit, configuration and pending-prefix semantics
+
+- Date: 2026-11-02
+- Source: WIRE-024 deterministic decision engine and functional-MVP integration
+- Context: The decision engine must evaluate only successful atomic book commits, preserve the Python WIRE-D010 crossing trajectory, and retain already-generated prefix decisions across later parser/book recovery.
+- Decision: Each `commit_valid && commit_ready` transaction is one crossing evaluation using its post-mutation unsigned 48-bit bid/ask totals. No non-mutating message or failed book mutation reaches this boundary. The resulting imbalance is exactly the signed 49-bit difference of zero-extended totals.
+- Decision: `cfg_decision_threshold[47:0]` and `cfg_initial_budget[31:0]` are captured on synchronous reset/rearm. `decision_enable` is sampled live on each commit handshake. Rearm sets previous imbalance and decision count to zero, reloads the initial budget, and discards pending old-epoch decision output.
+- Decision: After every successful commit, previous imbalance advances to the current imbalance even when decisions are disabled, budget is zero, or no crossing occurs. Disabled crossings are not replayed after re-enable.
+- Decision: BUY is `previous < +T && current >= +T`; SELL is `previous > -T && current <= -T`. Action encoding is BUY=0, SELL=1. A decision copies Mold sequence, ITCH timestamp and current signed imbalance from its triggering commit.
+- Decision: One credit is consumed and `decision_count` increments atomically when a crossing creates a decision transaction, not when the consumer later accepts it. A stalled decision owns that credit and is held stable. The engine accepts no later commit while the decision output is pending.
+- Decision: A decision from an earlier successful commit is not retroactively masked or cancelled by later parser/book recovery. Reset/rearm may discard it as part of establishing a new explicit epoch. WIRE-D019 prevents new successful commits after recovery.
+- Consequences: This freezes a deterministic synthetic decision boundary, not a production trading strategy, timing target, or rollback mechanism. `decision_count <= initial_budget` and `remaining_budget + decision_count == initial_budget` hold within the configured epoch.
+- Status: ADOPTED

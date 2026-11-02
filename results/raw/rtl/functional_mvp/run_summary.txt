@@ -1,0 +1,27 @@
+WIRE-024 final verification summary
+Repository: /Users/Dilan/Projects/wire-to-decision
+Toolchain: OSS CAD Suite 2026-09-27; Verilator 5.053; Yosys 0.69+154; Cocotb 2.1.0.dev0+41564633; Python 3.11.6; SBY 0.69; Yices 2.7.0.
+
+Decision standalone: cd tb/decision_engine && make clean && make SIM=verilator — exit 0, 7/7.
+Full functional top: cd tb/functional_mvp && make clean && make SIM=verilator — exit 0, 10/10.
+Python: PYTHONPATH=model/python python3 -m unittest discover -s model/python/tests -v — exit 0, 71/71.
+Decision formal: cd formal/decision_engine && sby -f decision_reference.sby — PASS, BMC depth 16.
+Prefix recovery formal: cd formal/decision_engine && sby -f prefix_recovery.sby — PASS, fixed-vector/reduced NUM_SETS=2 BMC depth 8.
+WIRE-023 formal regression: all seven configured WIRE-023 SBY jobs rerun, PASS; see order_book_formal_regression.txt.
+Verilator strict standalone and full functional top lint/build — exit 0, no meaningful warnings.
+Yosys standalone and full functional top hierarchy/process/opt/check/stat — exit 0, 0 check problems.
+
+Clean legacy cocotb rerun: parser_regression_clean.log, process exit 0. Suite totals in execution order:
+WIRE-014 gearbox 6/6;
+WIRE-015 ingress buffer 5/5 + buffer/gearbox composition 1/1;
+WIRE-016 Ethernet 4/4 + composition 1/1;
+WIRE-017 IPv4 5/5 + composition 3/3;
+WIRE-018 UDP 5/5 + composition 3/3;
+WIRE-019/019A Mold header/sequence 14/14 + composition 2/2;
+WIRE-020 Mold framer 10/10 + composition 2/2;
+WIRE-021 ITCH 6/6 + composition 2/2;
+WIRE-022 full parser 6/6;
+WIRE-023 order book 9/9 + parser/book 4/4.
+
+Development history retained: parser_regression.log contains an initial stale Verilator build-top mismatch during suite switching; the clean rerun above cleans each simulation build and completed successfully. random_failure_investigation.log retains the first overly-early malformed-suffix randomized vector failure; the vector was revised to place two complete prefix messages before a truncated third message, then the final 10/10 suite passed. Neither development failure was hidden or treated as a final regression result.
+No P&R was run; no application timing/latency/throughput claim is made.

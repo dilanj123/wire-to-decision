@@ -1,0 +1,28 @@
+WIRE-024 formal inventory
+
+Toolchain: SBY v0.69; smtbmc yices; Yices 2.7.0.
+DUT-private state used by the decision-reference job: NO.
+DUT-private state used by prefix-recovery composition assertions: NO; assertions use public book/decision ports and status.
+
+1. decision_reference.sby — BMC depth 16, PASS.
+   Public interface is checked against an independent shadow transaction model.
+   Covers signed 49-bit arithmetic over symbolic 48-bit bid/ask totals, threshold
+   crossings, metadata, previous-imbalance update, enable/budget suppression,
+   credit/count conservation, decision stability, reset/rearm capture, and no
+   spontaneous decision. Environment assumptions: reset asserted initially;
+   a stalled upstream commit holds valid and its transaction tuple stable.
+   decision_ready and commit values are otherwise symbolic; configuration may
+   vary at reset/rearm capture points. Bounded, not inductive.
+
+2. prefix_recovery.sby — fixed-vector/reduced-model BMC depth 8, PASS.
+   NUM_SETS=2 order-book instance. Fixed BUY ADD of quantity 5 with threshold 5
+   creates one stalled BUY decision. A later public upstream-recovery assertion
+   quarantines the book; the prior decision remains valid and stable, and no
+   new event or commit is accepted. Fixed inputs: sequence 0x1234, timestamp
+   0xABCDEF012345, budget 2, reference 1. Initial reset is assumed via the
+   harness phase. Readiness values are fixed as necessary for this scenario.
+   This is not a proof of all book entries, arbitrary event sequences, or the
+   complete parser top.
+
+Covers: standalone randomized cocotb seeds 1,7,19,42,97; integration random
+seeds 1,7,19,42,97. The formal SBY jobs are assertion BMCs, not cover jobs.

@@ -1,0 +1,9 @@
+WIRE-023 formal regression rerun during WIRE-024
+Command family: source qualified OSS CAD Suite environment; cd formal/order_book;
+for each *.sby: sby -f <job>.sby
+Result: all seven PASS markers verified after the rerun.
+Jobs: order_book_safety; order_book_hash_vectors; order_book_add_vector;
+order_book_collision_vector; order_book_duplicate_vector;
+order_book_unknown_vector; order_book_upstream_order.
+These retain their configured bounded/fixed-vector scopes from WIRE-023.
+No WIRE-023 RTL was changed.
