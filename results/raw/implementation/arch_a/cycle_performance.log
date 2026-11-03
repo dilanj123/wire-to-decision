@@ -1,0 +1,27 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_functional_mvp COCOTB_TESTCASE= COCOTB_TEST_FILTER=wire026_cycle_performance_workloads COCOTB_TOPLEVEL=wire_arch_a_functional_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793661955
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_functional_mvp.wire026_cycle_performance_workloads (1/1)
+                                                            Cycle counts from accepted byte/event handshakes; simulation only.
+  1216.00ns WARNING  py.warnings                        /Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py:148: DeprecationWarning: `int(handle)` casts have been deprecated. Use `int(handle.value)` instead.
+                                                          value = int(signal)
+  1220.00ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=single_ADD_BUY bytes=100 cycles=114 L1=37 L2=[5] L3=[113] event_ii=[] decision_ii=[] bytes_per_cycle=0.877193 rx_stall_cycles=71 decisions=[(113, (0, 1161981756646125696, 1108152157441, 10))]
+  2700.00ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=multi_message bytes=133 cycles=146 L1=37 L2=[5] L3=[113] event_ii=[35] decision_ii=[] bytes_per_cycle=0.910959 rx_stall_cycles=101 decisions=[(113, (0, 1161981756646125696, 1108152157442, 10))]
+  9690.00ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=stateful_frames_A_F_E_C_X_U_D bytes=668 cycles=697 L1=37 L2=[5, 5, 5] L3=[113, 129, 127] event_ii=[107, 98, 103, 90, 102, 86] decision_ii=[107, 393] bytes_per_cycle=0.958393 rx_stall_cycles=583 decisions=[(113, (0, 1161981756646125696, 1108152157450, 10)), (220, (1, 1161981756646125697, 1108152157451, -10)), (613, (0, 1161981756646125701, 1108152157455, 15))]
+  9690.00ns INFO     cocotb.regression                  test_functional_mvp.wire026_cycle_performance_workloads passed
+  9690.00ns INFO     cocotb.regression                  *****************************************************************************************************************
+                                                        ** TEST                                                     STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************************
+                                                        ** test_functional_mvp.wire026_cycle_performance_workloads   PASS        9690.00           0.03     321480.14  **
+                                                        *****************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                          9690.00           0.05     204569.30  **
+                                                        *****************************************************************************************************************
+- :0: Verilog $finish

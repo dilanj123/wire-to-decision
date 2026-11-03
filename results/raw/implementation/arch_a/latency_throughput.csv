@@ -1,0 +1,4 @@
+workload,accepted_bytes,elapsed_cycles,L1_cycles,L2_cycles,L3_cycles,event_initiation_intervals,decision_initiation_intervals,accepted_bytes_per_cycle,natural_rx_stall_cycles
+single_ADD_BUY,100,114,37,5,113,NA,NA,0.877193,71
+two_message_Mold_packet,133,146,37,5,113,35,NA,0.910959,101
+stateful_frames_A_F_E_C_X_U_D,668,697,37,5,113|129|127,107|98|103|90|102|86,107|393,0.958393,583

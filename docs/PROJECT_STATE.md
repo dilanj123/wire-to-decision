@@ -4,6 +4,8 @@
 
 Phase 4 — COMPLETE: focused single-clock functional regression, targeted formal strengthening, and checklist closure recorded by WIRE-025/EVID-025.
 
+Phase 5 — COMPLETE for the implementation/measurement campaign (WIRE-026/WIRE-026A). The full-capacity design places and routes on all five frozen seeds after the order-store EBR mapping refinement. All seeds miss 156.25 MHz (routed Fmax 42.70–45.45 MHz); timing closure is not achieved.
+
 Phase 1: COMPLETE — 71-test Python end-to-end oracle baseline
 
 Phase 2: COMPLETE — Architecture-A parser boundary through normalized events
@@ -35,7 +37,7 @@ Architecture B is not authorized.
 
 ## Application status
 
-Application RTL: Architecture-A parser boundary, WIRE-023 bounded order-state/aggregate block, and WIRE-024 deterministic decision/functional top implemented and RTL-simulated. WIRE-025 closes the focused Phase-4 functional regression campaign. This excludes application P&R and application timing evidence.
+Application RTL: Architecture-A parser boundary, WIRE-023 bounded order-state/aggregate block, and WIRE-024 deterministic decision/functional top are implemented and RTL-simulated. WIRE-025 closes the focused Phase-4 functional regression campaign. WIRE-026/WIRE-026A provide full-capacity ECP5 synthesis and five-seed place/route evidence plus updated functional-top cycle measurements. All seeds route but miss the 156.25 MHz objective; the critical path is the EBR-based order-store read/compare/aggregate/write path. No timing-closure or physical-operation claim is made.
 
 Bounded order-state / aggregate RTL: WIRE-023 implemented and RTL-simulated; local fixed-vector and reduced-store formal checks are bounded under documented assumptions. The production default is 512 sets × 2 ways; the 1,024-entry capacity test is RTL-simulated.
 
@@ -180,8 +182,8 @@ None recorded.
 
 ## Current bottleneck
 
-Phase 4 is complete for the focused regression and bounded local formal campaign. Application synthesis/P&R, timing, latency, throughput, CDC/RDC, C++ integration, and physical operation remain open.
+WIRE-026A changed the order store to synchronous packed-row access, allowing the production 512 × 2 data table to infer 16 EBRs. The full design uses 8,904 nextpnr combinational cells, 3,586 FFs and routes on all five seeds. Routed Fmax is 42.70–45.45 MHz against 156.25 MHz; the critical path is through book EBR read/update logic. Simulation workloads accept 0.86–0.96 external bytes/cycle. Architecture B remains unauthorized; the parser-versus-book cycle contribution needs isolation before selecting another architecture. See `results/processed/WIRE-026-arch-a-implementation.md`.
 
 ## Next task
 
-WIRE-026 — ECP5 Architecture-A implementation and measurement.
+WIRE-027 — isolate parser and book service-cycle contributions and investigate the measured EBR-backed order-store timing path; then reassess whether parser serialization warrants an alternate architecture. Architecture B remains unauthorized.

@@ -1,0 +1,6 @@
+source /Users/Dilan/eda/wire-to-decision/oss-cad-suite/environment
+gzip -dc results/raw/implementation/arch_a/wire_arch_a_benchmark_026a.json.gz > results/raw/implementation/arch_a/wire_arch_a_benchmark_026a.json
+for seed in 1 7 19 42 97:
+  nextpnr-ecp5 --85k --package CABGA381 --speed 8 --freq 156.25 --seed "$seed" --lpf-allow-unconstrained --timing-allow-fail --json results/raw/implementation/arch_a/wire_arch_a_benchmark_026a.json --report "results/raw/implementation/arch_a/seed_${seed}_026a_report.json"
+
+Archived synthesis netlist: wire_arch_a_benchmark_026a.json.gz (gzip of the exact JSON used for all five P&R runs). Recreate the uncompressed input with: gzip -dc wire_arch_a_benchmark_026a.json.gz > wire_arch_a_benchmark_026a.json

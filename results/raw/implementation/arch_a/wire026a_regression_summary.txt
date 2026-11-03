@@ -1,0 +1,21 @@
+WIRE-026A regression result summary
+
+Cocotb (WIRE-014 through WIRE-024 plus WIRE-026 measurement test): 110/110 PASS
+WIRE-014 gearbox: 6/6
+WIRE-015 ingress: 5/5; composition: 1/1
+WIRE-016 Ethernet: 4/4; composition: 1/1
+WIRE-017 IPv4: 5/5; composition: 3/3
+WIRE-018 UDP: 5/5; composition: 3/3
+WIRE-019/019A Mold header: 14/14; composition: 2/2
+WIRE-020 Mold framer: 10/10; composition: 2/2
+WIRE-021 ITCH: 6/6; composition: 2/2
+WIRE-022 full parser: 6/6
+WIRE-023 order book: 9/9; parser-book: 4/4
+WIRE-024 decision engine: 7/7; functional top plus WIRE-026 measurement: 15/15
+Benchmark wrapper tuple equivalence: 1/1
+Python unittest discovery: 71/71
+Verilator full benchmark hierarchy lint: PASS, no warnings
+
+Formal: all established jobs before the old-cycle order-book vector passed in the full driver run; the updated seven order-book SBY jobs were then rerun individually and all PASS. See wire025_regression_rerun/formal/, wire025_regression_rerun/order_book_formal/, wire026a_formal_*.log, and the order_book job .sby files for exact scopes/depths. Initial stale-cycle vector failures and traces are retained separately and are not semantic RTL counterexamples.
+
+The run_wire025_regression.sh driver stopped at its first original-cycle order-book assertion before the vector was rescheduled for the synchronous RAM latency. All order-book jobs were subsequently rerun with the updated timing and passed. Tracked historical results/raw/wire025 logs were copied under wire025_regression_rerun/ and then restored unchanged.

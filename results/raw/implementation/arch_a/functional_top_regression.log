@@ -1,0 +1,69 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_functional_mvp COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_a_functional_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793662370
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_functional_mvp.test_full_chain_buy_sell_and_oracle (1/15)
+  9720.00ns INFO     cocotb.regression                  test_functional_mvp.test_full_chain_buy_sell_and_oracle passed
+  9720.00ns INFO     cocotb.regression                  running test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat (2/15)
+ 43310.00ns INFO     cocotb.regression                  test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat passed
+ 43310.00ns INFO     cocotb.regression                  running test_functional_mvp.test_all_mutation_message_types_through_full_parser (3/15)
+ 49780.00ns INFO     cocotb.regression                  test_functional_mvp.test_all_mutation_message_types_through_full_parser passed
+ 49780.00ns INFO     cocotb.regression                  running test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion (4/15)
+ 83770.00ns INFO     cocotb.regression                  test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion passed
+ 83770.00ns INFO     cocotb.regression                  running test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm (5/15)
+122470.00ns INFO     cocotb.regression                  test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm passed
+122470.00ns INFO     cocotb.regression                  running test_functional_mvp.test_book_failure_produces_no_decision_and_rearm (6/15)
+137060.01ns INFO     cocotb.regression                  test_functional_mvp.test_book_failure_produces_no_decision_and_rearm passed
+137060.01ns INFO     cocotb.regression                  running test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state (7/15)
+142356.01ns INFO     cocotb.regression                  test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state passed
+142356.01ns INFO     cocotb.regression                  running test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence (8/15)
+147746.01ns INFO     cocotb.regression                  test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence passed
+147746.01ns INFO     cocotb.regression                  running test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery (9/15)
+153037.01ns INFO     cocotb.regression                  test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery passed
+153037.01ns INFO     cocotb.regression                  running test_functional_mvp.test_long_valid_multiframe_mutation_stream_against_oracle (10/15)
+186568.01ns INFO     cocotb.regression                  test_functional_mvp.test_long_valid_multiframe_mutation_stream_against_oracle passed
+186568.01ns INFO     cocotb.regression                  running test_functional_mvp.test_mixed_outer_mold_book_failures_and_rearm (11/15)
+264908.01ns INFO     cocotb.regression                  test_functional_mvp.test_mixed_outer_mold_book_failures_and_rearm passed
+264908.01ns INFO     cocotb.regression                  running test_functional_mvp.test_suffix_ordering_commit_before_and_fatal_before_commit (12/15)
+274988.01ns INFO     cocotb.regression                  test_functional_mvp.test_suffix_ordering_commit_before_and_fatal_before_commit passed
+274988.01ns INFO     cocotb.regression                  running test_functional_mvp.test_single_edge_rearm_discards_pending_decision_epoch (13/15)
+284728.01ns INFO     cocotb.regression                  test_functional_mvp.test_single_edge_rearm_discards_pending_decision_epoch passed
+284728.01ns INFO     cocotb.regression                  running test_functional_mvp.test_random_full_frame_seed_set (14/15)
+345108.01ns INFO     cocotb.regression                  test_functional_mvp.test_random_full_frame_seed_set passed
+345108.01ns INFO     cocotb.regression                  running test_functional_mvp.wire026_cycle_performance_workloads (15/15)
+                                                            Cycle counts from accepted byte/event handshakes; simulation only.
+346324.01ns WARNING  py.warnings                        /Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py:148: DeprecationWarning: `int(handle)` casts have been deprecated. Use `int(handle.value)` instead.
+                                                          value = int(signal)
+346328.01ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=single_ADD_BUY bytes=100 cycles=114 L1=37 L2=[5] L3=[113] event_ii=[] decision_ii=[] bytes_per_cycle=0.877193 rx_stall_cycles=71 decisions=[(113, (0, 1161981756646125696, 1108152157441, 10))]
+347808.01ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=multi_message bytes=133 cycles=146 L1=37 L2=[5] L3=[113] event_ii=[35] decision_ii=[] bytes_per_cycle=0.910959 rx_stall_cycles=101 decisions=[(113, (0, 1161981756646125696, 1108152157442, 10))]
+354798.01ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=stateful_frames_A_F_E_C_X_U_D bytes=668 cycles=697 L1=37 L2=[5, 5, 5] L3=[113, 129, 127] event_ii=[107, 98, 103, 90, 102, 86] decision_ii=[107, 393] bytes_per_cycle=0.958393 rx_stall_cycles=583 decisions=[(113, (0, 1161981756646125696, 1108152157450, 10)), (220, (1, 1161981756646125697, 1108152157451, -10)), (613, (0, 1161981756646125701, 1108152157455, 15))]
+354798.01ns INFO     cocotb.regression                  test_functional_mvp.wire026_cycle_performance_workloads passed
+354798.01ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                        ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************************************************************
+                                                        ** test_functional_mvp.test_full_chain_buy_sell_and_oracle                                       PASS        9720.00           0.03     288215.33  **
+                                                        ** test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat                           PASS       33590.00           0.12     283156.28  **
+                                                        ** test_functional_mvp.test_all_mutation_message_types_through_full_parser                       PASS        6470.00           0.03     255851.52  **
+                                                        ** test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion                  PASS       33990.00           0.12     288618.18  **
+                                                        ** test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm                      PASS       38700.00           0.15     255218.24  **
+                                                        ** test_functional_mvp.test_book_failure_produces_no_decision_and_rearm                          PASS       14590.00           0.06     244951.05  **
+                                                        ** test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state                   PASS        5296.00           0.02     289794.44  **
+                                                        ** test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence   PASS        5390.00           0.02     299196.65  **
+                                                        ** test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery                 PASS        5291.00           0.02     270199.95  **
+                                                        ** test_functional_mvp.test_long_valid_multiframe_mutation_stream_against_oracle                 PASS       33531.00           0.12     285083.13  **
+                                                        ** test_functional_mvp.test_mixed_outer_mold_book_failures_and_rearm                             PASS       78340.00           0.27     288470.78  **
+                                                        ** test_functional_mvp.test_suffix_ordering_commit_before_and_fatal_before_commit                PASS       10080.00           0.04     272232.89  **
+                                                        ** test_functional_mvp.test_single_edge_rearm_discards_pending_decision_epoch                    PASS        9740.00           0.04     252659.54  **
+                                                        ** test_functional_mvp.test_random_full_frame_seed_set                                           PASS       60380.00           0.23     266182.14  **
+                                                        ** test_functional_mvp.wire026_cycle_performance_workloads                                       PASS        9690.00           0.03     283398.92  **
+                                                        *****************************************************************************************************************************************************
+                                                        ** TESTS=15 PASS=15 FAIL=0 SKIP=0                                                                          354798.01           1.31     271507.01  **
+                                                        *****************************************************************************************************************************************************
+- :0: Verilog $finish

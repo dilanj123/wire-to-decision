@@ -1,0 +1,4 @@
+workload,accepted_bytes,elapsed_cycles,L1_cycles,L2_cycles,L3_cycles,event_II_cycles,decision_II_cycles,accepted_bytes_per_cycle,rx_stall_cycles,nominal_156p25MHz_elapsed_ns_not_routed
+single_ADD_BUY,100,116,37,7,115,,,0.862069,71,742.4
+multi_message,133,146,37,7,115,35,,0.910959,101,934.4
+stateful_frames_A_F_E_C_X_U_D,668,697,37,"7,7,9","115,131,131","107,98,103,90,102,86","107,395",0.958393,583,4460.8

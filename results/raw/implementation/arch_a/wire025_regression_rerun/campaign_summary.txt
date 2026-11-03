@@ -1,0 +1,30 @@
+WIRE-025 campaign summary
+========================
+Cocotb suite results:
+wire014_gearbox: tests=6 pass=6 fail=0 skip=0
+wire015_buffer_gearbox: tests=1 pass=1 fail=0 skip=0
+wire015_ingress: tests=5 pass=5 fail=0 skip=0
+wire016_composition: tests=1 pass=1 fail=0 skip=0
+wire016_ethernet: tests=4 pass=4 fail=0 skip=0
+wire017_composition: tests=3 pass=3 fail=0 skip=0
+wire017_ipv4: tests=5 pass=5 fail=0 skip=0
+wire018_composition: tests=3 pass=3 fail=0 skip=0
+wire018_udp: tests=5 pass=5 fail=0 skip=0
+wire019_composition: tests=2 pass=2 fail=0 skip=0
+wire019_mold_header: tests=14 pass=14 fail=0 skip=0
+wire020_composition: tests=2 pass=2 fail=0 skip=0
+wire020_mold_framer: tests=10 pass=10 fail=0 skip=0
+wire021_composition: tests=2 pass=2 fail=0 skip=0
+wire021_itch: tests=6 pass=6 fail=0 skip=0
+wire022_full_parser: tests=6 pass=6 fail=0 skip=0
+wire023_order_book: tests=9 pass=9 fail=0 skip=0
+wire023_parser_book: tests=4 pass=4 fail=0 skip=0
+wire024_decision: tests=7 pass=7 fail=0 skip=0
+wire024_functional_mvp: tests=14 pass=14 fail=0 skip=0
+
+Formal results:
+jobs=79 PASS=79
+
+Known excluded historical jobs (not included in pass count):
+formal/ipv4_parser/wire_ipv4_parser_reference.sby — solver-bound historical monolithic reference.
+formal/arch_a_parser/wire_arch_a_parser_late_suffix.sby — solver-bound historical full-parser late-suffix BMC.

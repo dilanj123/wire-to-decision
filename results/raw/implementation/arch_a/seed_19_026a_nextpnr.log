@@ -1,0 +1,700 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:      8764/83640    10%
+Info:         logic LUTs:   7876/83640     9%
+Info:         carry LUTs:    792/83640     0%
+Info:           RAM LUTs:     64/10455     0%
+Info:          RAMW LUTs:     32/20910     0%
+
+Info:      Total DFFs:      3586/83640     4%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     1067 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0xd4f1587e
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:     113/    365    30%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:      16/    208     7%
+Info: 	          MULT18X18D:       0/    156     0%
+Info: 	              ALU54B:       0/     78     0%
+Info: 	             EHXPLLL:       0/      4     0%
+Info: 	             EXTREFB:       0/      2     0%
+Info: 	                DCUA:       0/      2     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    224     0%
+Info: 	            SIOLOGIC:       0/    141     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/     14     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:    3586/  83640     4%
+Info: 	        TRELLIS_COMB:    8904/  83640    10%
+Info: 	        TRELLIS_RAMW:      16/  10455     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 9209 cells, random placement wirelen = 974095.
+Info:     at initial placer iter 0, wirelen = 16240
+Info:     at initial placer iter 1, wirelen = 12469
+Info:     at initial placer iter 2, wirelen = 11838
+Info:     at initial placer iter 3, wirelen = 11511
+Info: Running main analytical placer, max placement attempts per cell = 19958562.
+Info:     at iteration #1, type ALL: wirelen solved = 11404, spread = 126801, legal = 132636; time = 0.21s
+Info:     at iteration #2, type ALL: wirelen solved = 18214, spread = 76840, legal = 81977; time = 0.20s
+Info:     at iteration #3, type ALL: wirelen solved = 23433, spread = 63298, legal = 69090; time = 0.19s
+Info:     at iteration #4, type ALL: wirelen solved = 26467, spread = 56438, legal = 62758; time = 0.18s
+Info:     at iteration #5, type ALL: wirelen solved = 27878, spread = 56523, legal = 63799; time = 0.21s
+Info:     at iteration #6, type ALL: wirelen solved = 28966, spread = 60698, legal = 65339; time = 0.24s
+Info:     at iteration #7, type ALL: wirelen solved = 30284, spread = 57891, legal = 63256; time = 0.20s
+Info:     at iteration #8, type ALL: wirelen solved = 31497, spread = 58972, legal = 62341; time = 0.20s
+Info:     at iteration #9, type ALL: wirelen solved = 32341, spread = 57968, legal = 61097; time = 0.17s
+Info:     at iteration #10, type ALL: wirelen solved = 32943, spread = 56841, legal = 60987; time = 0.17s
+Info:     at iteration #11, type ALL: wirelen solved = 33418, spread = 57416, legal = 61058; time = 0.19s
+Info:     at iteration #12, type ALL: wirelen solved = 33687, spread = 59785, legal = 64227; time = 0.18s
+Info:     at iteration #13, type ALL: wirelen solved = 35124, spread = 60639, legal = 64110; time = 0.19s
+Info:     at iteration #14, type ALL: wirelen solved = 35827, spread = 62077, legal = 65490; time = 0.17s
+Info:     at iteration #15, type ALL: wirelen solved = 36745, spread = 60335, legal = 64523; time = 0.16s
+Info: HeAP Placer Time: 4.26s
+Info:   of which solving equations: 3.12s
+Info:   of which spreading cells: 0.35s
+Info:   of which strict legalisation: 0.15s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 4100, wirelen = 60987
+Info:   at iteration #5: temp = 0.000000, timing cost = 3534, wirelen = 50223
+Info:   at iteration #10: temp = 0.000000, timing cost = 3369, wirelen = 48246
+Info:   at iteration #15: temp = 0.000000, timing cost = 3523, wirelen = 47093
+Info:   at iteration #20: temp = 0.000000, timing cost = 3430, wirelen = 46540
+Info:   at iteration #25: temp = 0.000000, timing cost = 3353, wirelen = 46342
+Info:   at iteration #30: temp = 0.000000, timing cost = 3348, wirelen = 46243
+Info:   at iteration #35: temp = 0.000000, timing cost = 3349, wirelen = 46198
+Info:   at iteration #36: temp = 0.000000, timing cost = 3346, wirelen = 46209 
+Info: SA placement time 14.89s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 35.68 MHz (FAIL at 156.25 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 17.21 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 16.13 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 22 endpoint(s)
+Info:          + represents [1,22) endpoint(s)
+Info: [-21628, -20255) |**********************************+
+Info: [-20255, -18882) |*********************************+
+Info: [-18882, -17509) |***+
+Info: [-17509, -16136) |***+
+Info: [-16136, -14763) |***+
+Info: [-14763, -13390) |+
+Info: [-13390, -12017) | 
+Info: [-12017, -10644) |*******+
+Info: [-10644,  -9271) |*****************************************+
+Info: [ -9271,  -7898) |+
+Info: [ -7898,  -6525) |+
+Info: [ -6525,  -5152) |***+
+Info: [ -5152,  -3779) |*****+
+Info: [ -3779,  -2406) |**************+
+Info: [ -2406,  -1033) |*******************+
+Info: [ -1033,    340) |******************+
+Info: [   340,   1713) |*************************+
+Info: [  1713,   3086) |*****************************+
+Info: [  3086,   4459) |************************************************************ 
+Info: [  4459,   5832) |**************************************************+
+Info: Checksum: 0x1081fdc3
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 41345 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |       77        922 |   77   922 |     40468|       0.31       0.31|
+Info:       2000 |      279       1720 |  202   798 |     39772|       0.14       0.46|
+Info:       3000 |      508       2491 |  229   771 |     39067|       0.16       0.62|
+Info:       4000 |      806       3193 |  298   702 |     38450|       0.17       0.78|
+Info:       5000 |     1054       3945 |  248   752 |     37808|       0.13       0.92|
+Info:       6000 |     1351       4648 |  297   703 |     37278|       0.15       1.07|
+Info:       7000 |     1677       5322 |  326   674 |     36777|       0.18       1.25|
+Info:       8000 |     1963       6036 |  286   714 |     36183|       0.14       1.39|
+Info:       9000 |     2275       6724 |  312   688 |     35645|       0.16       1.55|
+Info:      10000 |     2544       7455 |  269   731 |     35103|       0.19       1.74|
+Info:      11000 |     2862       8137 |  318   682 |     34568|       0.17       1.91|
+Info:      12000 |     3291       8708 |  429   571 |     34180|       0.21       2.12|
+Info:      13000 |     3696       9303 |  405   595 |     33806|       0.21       2.33|
+Info:      14000 |     3997      10002 |  301   699 |     33326|       0.15       2.48|
+Info:      15000 |     4306      10693 |  309   691 |     32865|       0.17       2.65|
+Info:      16000 |     4788      11211 |  482   518 |     32556|       0.20       2.85|
+Info:      17000 |     5059      11940 |  271   729 |     32324|       0.19       3.04|
+Info:      18000 |     5420      12579 |  361   639 |     31897|       0.22       3.27|
+Info:      19000 |     5799      13200 |  379   621 |     31484|       0.19       3.46|
+Info:      20000 |     6096      13903 |  297   703 |     31099|       0.17       3.64|
+Info:      21000 |     6407      14592 |  311   689 |     30729|       0.18       3.81|
+Info:      22000 |     6822      15177 |  415   585 |     30367|       0.22       4.04|
+Info:      23000 |     7229      15770 |  407   593 |     29975|       0.21       4.25|
+Info:      24000 |     7620      16379 |  391   609 |     29661|       0.21       4.46|
+Info:      25000 |     8020      16979 |  400   600 |     29405|       0.24       4.70|
+Info:      26000 |     8243      17756 |  223   777 |     29077|       0.17       4.86|
+Info:      27000 |     8590      18409 |  347   653 |     28621|       0.22       5.09|
+Info:      28000 |     8935      19064 |  345   655 |     28169|       0.18       5.27|
+Info:      29000 |     9314      19685 |  379   621 |     27806|       0.24       5.51|
+Info:      30000 |     9794      20205 |  480   520 |     27526|       0.23       5.74|
+Info:      31000 |    10210      20789 |  416   584 |     27186|       0.24       5.97|
+Info:      32000 |    10607      21392 |  397   603 |     26872|       0.24       6.21|
+Info:      33000 |    10954      22045 |  347   653 |     26642|       0.23       6.44|
+Info:      34000 |    11336      22663 |  382   618 |     26175|       0.22       6.67|
+Info:      35000 |    11580      23419 |  244   756 |     25641|       0.18       6.85|
+Info:      36000 |    11882      24056 |  302   637 |     25150|       0.20       7.05|
+Info:      37000 |    12251      24647 |  369   591 |     24605|       0.15       7.20|
+Info:      38000 |    12521      25356 |  270   709 |     24162|       0.16       7.36|
+Info:      39000 |    12854      25982 |  333   626 |     23644|       0.18       7.55|
+Info:      40000 |    13176      26640 |  322   658 |     23161|       0.39       7.93|
+Info:      41000 |    13489      27272 |  313   632 |     22589|       0.18       8.11|
+Info:      42000 |    13595      28154 |  106   882 |     22436|       0.15       8.26|
+Info:      43000 |    13747      28914 |  152   760 |     21667|       0.14       8.40|
+Info:      44000 |    13979      29587 |  232   673 |     20975|       0.16       8.56|
+Info:      45000 |    14237      30284 |  258   697 |     20304|       0.18       8.74|
+Info:      46000 |    14479      31032 |  242   748 |     19620|       0.21       8.95|
+Info:      47000 |    14744      31767 |  265   735 |     18973|       0.20       9.15|
+Info:      48000 |    14958      32524 |  214   757 |     18285|       0.18       9.34|
+Info:      49000 |    15217      33238 |  259   714 |     17760|       0.28       9.61|
+Info:      50000 |    15538      33888 |  321   650 |     17315|       0.31       9.92|
+Info:      51000 |    15810      34598 |  272   710 |     16782|       0.43      10.35|
+Info:      52000 |    16069      35310 |  259   712 |     16162|       0.26      10.61|
+Info:      53000 |    16305      35947 |  236   637 |     15494|       0.31      10.92|
+Info:      54000 |    16539      36645 |  234   698 |     14790|       1.37      12.28|
+Info:      55000 |    16724      37401 |  185   756 |     14005|       0.26      12.54|
+Info:      56000 |    16971      38124 |  247   723 |     13356|       0.29      12.83|
+Info:      57000 |    17285      38791 |  314   667 |     12950|       0.34      13.17|
+Info:      58000 |    17546      39516 |  261   725 |     12391|       0.34      13.52|
+Info:      59000 |    17747      40296 |  201   780 |     11678|       0.20      13.72|
+Info:      60000 |    18096      40934 |  349   638 |     11352|       0.37      14.09|
+Info:      61000 |    18300      41703 |  204   769 |     10608|       0.26      14.35|
+Info:      62000 |    18518      42450 |  218   747 |      9894|       0.30      14.65|
+Info:      63000 |    18686      43258 |  168   808 |      9087|       0.19      14.85|
+Info:      64000 |    18833      44061 |  147   803 |      8341|       0.20      15.05|
+Info:      65000 |    18909      44928 |   76   867 |      7441|       0.17      15.21|
+Info:      66000 |    19021      45794 |  112   866 |      6567|       0.18      15.40|
+Info:      67000 |    19160      46655 |  139   861 |      5760|       0.23      15.63|
+Info:      68000 |    19298      47476 |  138   821 |      4933|       0.34      15.97|
+Info:      69000 |    19497      48221 |  199   745 |      4189|       0.43      16.39|
+Info:      70000 |    19708      48952 |  211   731 |      3443|       0.50      16.90|
+Info:      71000 |    19919      49692 |  211   740 |      2920|       0.39      17.29|
+Info:      72000 |    20208      50344 |  289   652 |      2352|       0.68      17.97|
+Info:      73000 |    20438      51075 |  230   731 |      1850|       0.68      18.65|
+Info:      74000 |    20721      51741 |  283   666 |      1233|       0.68      19.32|
+Info:      75000 |    21104      52336 |  383   595 |       969|       1.67      20.99|
+Info:      76000 |    21449      52962 |  345   626 |       534|       1.33      22.33|
+Info:      77000 |    21817      53572 |  368   610 |       199|       3.31      25.64|
+Info:      77449 |    21972      53859 |  155   287 |         0|       2.14      27.78|
+Info: Routing complete.
+Info: Router1 time 27.78s
+Info: Checksum: 0x10c6cd50
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  4.26  4.26 Source core.parser_book.book.order_row_mem.0.1.DOB11
+Info:    routing  1.83  6.09 Net core.parser_book.book.primary_row_q[65] (17,46) -> (21,24)
+Info:                          Sink core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_Z_2_D_LUT4_Z_D_PFUMX_Z_C0_LUT4_Z.C
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  6.27 Source core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_Z_2_D_LUT4_Z_D_PFUMX_Z_C0_LUT4_Z.F
+Info:    routing  0.50  6.77 Net core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_Z_1_D_PFUMX_Z_C0_L6MUX21_SD_Z_PFUMX_Z_C0_LUT4_D_Z_LUT4_D_Z_LUT4_Z_1_D[2] (21,24) -> (22,24)
+Info:                          Sink core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_Z_1_D_PFUMX_Z_C0_L6MUX21_SD_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  6.96 Source core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_Z_1_D_PFUMX_Z_C0_L6MUX21_SD_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.63  7.59 Net core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_Z_1_D_PFUMX_Z_C0_L6MUX21_SD_Z[3] (22,24) -> (22,25)
+Info:                          Sink core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_Z_2_D_LUT4_Z_1_C_LUT4_D_Z_PFUMX_ALUT_Z_LUT4_Z_3.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  7.78 Source core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_Z_2_D_LUT4_Z_1_C_LUT4_D_Z_PFUMX_ALUT_Z_LUT4_Z_3.F
+Info:    routing  1.04  8.82 Net core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_Z_2_D_LUT4_Z_1_C_LUT4_D_Z_PFUMX_ALUT_Z[5] (22,25) -> (26,29)
+Info:                          Sink core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_Z_A_LUT4_D_Z_PFUMX_ALUT_Z_LUT4_D_Z_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  9.01 Source core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_Z_A_LUT4_D_Z_PFUMX_ALUT_Z_LUT4_D_Z_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.62  9.63 Net core.parser_book.book.primary_valid_q_LUT4_D_Z_PFUMX_BLUT_Z_LUT4_Z_A_LUT4_D_Z_PFUMX_ALUT_Z_LUT4_D_Z[4] (26,29) -> (26,30)
+Info:                          Sink core.parser_book.book.order_row_mem.1.2_DIA5_LUT4_Z_A_LUT4_D_Z_LUT4_D_Z_LUT4_Z_2_A_LUT4_Z.C
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  9.81 Source core.parser_book.book.order_row_mem.1.2_DIA5_LUT4_Z_A_LUT4_D_Z_LUT4_D_Z_LUT4_Z_2_A_LUT4_Z.F
+Info:    routing  0.93  10.74 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_S0_LUT4_Z_3_D_L6MUX21_Z_1_SD[4] (26,30) -> (33,31)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_S0_LUT4_Z_3_D_L6MUX21_Z_1_D0_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  10.94 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_S0_LUT4_Z_3_D_L6MUX21_Z_1_D0_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  10.94 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_S0_LUT4_Z_3_D_L6MUX21_Z_1_D0 (33,31) -> (33,31)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_S0_LUT4_Z_3_D_L6MUX21_Z_1_D1_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:141.34-141.36
+Info:      logic  0.18  11.11 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_S0_LUT4_Z_3_D_L6MUX21_Z_1_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.57  11.69 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_S0_LUT4_Z_3_D[3] (33,31) -> (30,29)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_S0_LUT4_Z_3.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  11.87 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_S0_LUT4_Z_3.F
+Info:    routing  0.76  12.63 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_S0[4] (30,29) -> (28,32)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_PFUMX_Z_2_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  12.83 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_PFUMX_Z_2_BLUT_LUT4_Z.OFX
+Info:    routing  0.91  13.74 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT[5] (28,32) -> (30,36)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_A0_LUT4_B_Z_PFUMX_Z_ALUT_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  13.92 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_A0_LUT4_B_Z_PFUMX_Z_ALUT_LUT4_Z.F
+Info:    routing  0.00  13.92 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_A0_LUT4_B_Z_PFUMX_Z_ALUT (30,36) -> (30,36)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_A0_LUT4_B_Z_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:133.22-133.24
+Info:      logic  0.13  14.04 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_LUT4_C_Z_CCU2C_S1_B1_CCU2C_A1_S0_CCU2C_S0_S1_CCU2C_S1_A0_LUT4_B_Z_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.76  14.80 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_B1_LUT4_Z_C_CCU2C_S1_CIN_CCU2C_COUT_S1[4] (30,36) -> (33,37)
+Info:                          Sink core.parser_book.book.side_q_LUT4_A_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_D.A
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.31  15.10 Source core.parser_book.book.side_q_LUT4_A_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_D.OFX
+Info:    routing  0.00  15.10 Net core.parser_book.book.side_q_LUT4_A_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_D_Z_PFUMX_BLUT_Z (33,37) -> (33,37)
+Info:                          Sink core.parser_book.book.side_q_LUT4_A_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_D_Z_PFUMX_BLUT_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:141.38-141.40
+Info:      logic  0.18  15.28 Source core.parser_book.book.side_q_LUT4_A_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_D_Z_PFUMX_BLUT_ALUT_LUT4_Z.OFX
+Info:    routing  0.90  16.18 Net core.parser_book.book.side_q_LUT4_A_Z_PFUMX_BLUT_Z_LUT4_D_Z_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D1_Z[2] (33,37) -> (28,39)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_A0_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  16.36 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_A0_LUT4_Z.F
+Info:    routing  0.84  17.21 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_A0 (28,39) -> (28,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN$CCU2_COMB0.A
+Info:      logic  0.35  17.56 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  17.56 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN$CCU2_FCI_INT (28,38) -> (28,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  17.56 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  17.56 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT (28,38) -> (28,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  17.62 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  17.62 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (28,38) -> (28,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  17.62 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  17.62 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (28,38) -> (29,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  17.67 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  17.67 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (29,38) -> (29,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  17.67 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  17.67 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (29,38) -> (29,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  17.73 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  17.73 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (29,38) -> (29,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  17.73 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  17.73 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (29,38) -> (29,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  17.79 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  17.79 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (29,38) -> (29,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  17.79 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  17.79 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (29,38) -> (29,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  17.84 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  17.84 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (29,38) -> (29,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  17.84 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  17.84 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (29,38) -> (30,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  17.90 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  17.90 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (30,38) -> (30,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  17.90 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  17.90 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (30,38) -> (30,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  17.95 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  17.95 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (30,38) -> (30,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  17.95 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  17.95 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (30,38) -> (30,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.01 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.01 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (30,38) -> (30,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.01 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.01 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (30,38) -> (30,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.07 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.07 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (30,38) -> (30,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.07 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.07 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (30,38) -> (31,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.12 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.12 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (31,38) -> (31,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.12 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.12 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (31,38) -> (31,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.18 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.18 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (31,38) -> (31,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.18 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.18 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (31,38) -> (31,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.23 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.23 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (31,38) -> (31,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.23 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.23 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (31,38) -> (31,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.29 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.29 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (31,38) -> (31,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.29 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.29 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (31,38) -> (32,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.35 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.35 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (32,38) -> (32,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.35 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.35 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (32,38) -> (32,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.40 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.40 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (32,38) -> (32,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.40 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.40 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (32,38) -> (32,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.46 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.46 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (32,38) -> (32,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.46 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.46 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (32,38) -> (32,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.51 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.51 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (32,38) -> (32,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.51 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.51 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (32,38) -> (33,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.57 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.57 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (33,38) -> (33,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.57 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.57 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (33,38) -> (33,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.63 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.63 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (33,38) -> (33,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.63 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.63 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (33,38) -> (33,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.68 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.68 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (33,38) -> (33,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.68 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.68 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (33,38) -> (33,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.74 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.74 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (33,38) -> (33,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.74 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.74 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (33,38) -> (34,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  18.79 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  18.79 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (34,38) -> (34,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  18.79 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  18.79 Net core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (34,38) -> (34,38)
+Info:                          Sink core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/common/wire_order_book.sv:294.35-294.114
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.33  19.12 Source core.parser_book.book.commit_ask_q_TRELLIS_FF_Q_DI_CCU2C_S0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.F
+Info:    routing  1.88  21.01 Net core.parser_book.book.book_valid_q_LUT4_B_Z[5] (34,38) -> (17,29)
+Info:                          Sink core.parser_book.book.order_row_mem.0.1_DIA15_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  21.19 Source core.parser_book.book.order_row_mem.0.1_DIA15_LUT4_Z.F
+Info:    routing  1.56  22.74 Net core.parser_book.book.order_row_mem.0.1_DIA15 (17,29) -> (17,46)
+Info:                          Sink core.parser_book.book.order_row_mem.0.1.DIA15
+Info:      setup  0.18  22.92 Source core.parser_book.book.order_row_mem.0.1.DIA15
+Info: 9.18 ns logic, 13.74 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source rearm$tr_io.O
+Info:    routing  4.79  4.79 Net rearm$TRELLIS_IO_IN (126,35) -> (15,35)
+Info:                          Sink rst_LUT4_C_1.D
+Info:                          Defined in:
+Info:                               rtl/arch_a/wire_arch_a_benchmark_top.sv:7.25-7.30
+Info:      logic  0.18  4.97 Source rst_LUT4_C_1.F
+Info:    routing  3.95  8.92 Net rst_LUT4_C_1_Z[1] (15,35) -> (61,8)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D_Z_LUT4_Z_1_C_LUT4_Z_B_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  9.10 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D_Z_LUT4_Z_1_C_LUT4_Z_B_LUT4_Z_D_LUT4_Z.F
+Info:    routing  0.47  9.56 Net core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D_Z_LUT4_Z_1_C_LUT4_Z_B_LUT4_Z_D[3] (61,8) -> (61,8)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D_Z_LUT4_Z_1_C_LUT4_Z_B_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  9.74 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D_Z_LUT4_Z_1_C_LUT4_Z_B_LUT4_Z.F
+Info:    routing  0.33  10.07 Net core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D_Z_LUT4_Z_1_C_LUT4_Z_A[1] (61,8) -> (61,8)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D_Z_LUT4_Z_1_C_LUT4_Z_B_LUT4_D.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  10.25 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D_Z_LUT4_Z_1_C_LUT4_Z_B_LUT4_D.F
+Info:    routing  0.54  10.79 Net core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D_Z_LUT4_Z_1_C_LUT4_Z_B_LUT4_D_Z[1] (61,8) -> (61,9)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_1_DI_LUT4_Z_B_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  10.97 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_1_DI_LUT4_Z_B_LUT4_Z.F
+Info:    routing  0.17  11.14 Net core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_1_DI_LUT4_Z_B[3] (61,9) -> (61,9)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  11.32 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_Z_D_LUT4_Z.F
+Info:    routing  0.47  11.78 Net core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_Z_D[3] (61,9) -> (61,9)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  11.96 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_Z.F
+Info:    routing  0.43  12.39 Net core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C[3] (61,9) -> (61,8)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_D.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  12.57 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_D.F
+Info:    routing  0.67  13.24 Net core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_D_Z[2] (61,8) -> (60,8)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_Z_D_LUT4_C_Z_LUT4_Z.C
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  13.42 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_Z_D_LUT4_C_Z_LUT4_Z.F
+Info:    routing  0.47  13.88 Net core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_Z_C_LUT4_Z_D_LUT4_C_Z[0] (60,8) -> (60,8)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D.C
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  14.06 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_3_DI_LUT4_Z_C_LUT4_D.F
+Info:    routing  0.55  14.61 Net core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_1_DI_LUT4_Z_B_LUT4_C_Z[3] (60,8) -> (60,7)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_1_DI_LUT4_Z_B_LUT4_C_Z_LUT4_B_Z_TRELLIS_FF_DI_Q_LUT4_A_Z_PFUMX_BLUT_Z_TRELLIS_FF_Q_1_DI_LUT4_Z.C
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  14.79 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_1_DI_LUT4_Z_B_LUT4_C_Z_LUT4_B_Z_TRELLIS_FF_DI_Q_LUT4_A_Z_PFUMX_BLUT_Z_TRELLIS_FF_Q_1_DI_LUT4_Z.F
+Info:    routing  0.12  14.91 Net core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_1_DI_LUT4_Z_B_LUT4_C_Z_LUT4_B_Z_TRELLIS_FF_DI_Q_LUT4_A_Z_PFUMX_BLUT_Z_TRELLIS_FF_Q_1_DI (60,7) -> (60,7)
+Info:                          Sink core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_1_DI_LUT4_Z_B_LUT4_C_Z_LUT4_B_Z_TRELLIS_FF_DI_Q_LUT4_A_Z_PFUMX_BLUT_Z_TRELLIS_FF_Q_1.DI
+Info:      setup  0.00  14.91 Source core.parser_book.parser.gearbox.count_q_TRELLIS_FF_Q_1_DI_LUT4_Z_B_LUT4_C_Z_LUT4_B_Z_TRELLIS_FF_DI_Q_LUT4_A_Z_PFUMX_BLUT_Z_TRELLIS_FF_Q_1.DI
+Info: 1.98 ns logic, 12.93 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.40  0.40 Source core.parser_book.parser.itch.state_q_TRELLIS_FF_Q_4.Q
+Info:    routing  0.71  1.11 Net core.parser_book.parser.itch.recovery_required_TRELLIS_FF_Q_CE_LUT4_Z_D_LUT4_D_Z[0] (43,39) -> (43,40)
+Info:                          Sink core.parser_book.parser.framer.payload_valid_q_TRELLIS_FF_Q_DI_LUT4_Z_C_LUT4_Z.B
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  1.28 Source core.parser_book.parser.framer.payload_valid_q_TRELLIS_FF_Q_DI_LUT4_Z_C_LUT4_Z.F
+Info:    routing  0.49  1.77 Net core.parser_book.parser.framer.payload_valid_q_TRELLIS_FF_Q_DI_LUT4_Z_C[2] (43,40) -> (43,40)
+Info:                          Sink core.parser_book.parser.mold.body_valid_q_TRELLIS_FF_Q_DI_LUT4_Z_C_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  1.95 Source core.parser_book.parser.mold.body_valid_q_TRELLIS_FF_Q_DI_LUT4_Z_C_LUT4_Z_D_LUT4_Z.F
+Info:    routing  0.63  2.59 Net core.parser_book.parser.mold.body_valid_q_TRELLIS_FF_Q_DI_LUT4_Z_C_LUT4_Z_D[3] (43,40) -> (46,40)
+Info:                          Sink core.parser_book.parser.mold.body_valid_q_TRELLIS_FF_Q_DI_LUT4_Z_C_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  2.77 Source core.parser_book.parser.mold.body_valid_q_TRELLIS_FF_Q_DI_LUT4_Z_C_LUT4_Z.F
+Info:    routing  0.69  3.45 Net core.parser_book.parser.mold.body_valid_q_TRELLIS_FF_Q_DI_LUT4_Z_C[3] (46,40) -> (47,39)
+Info:                          Sink core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  3.63 Source core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z.F
+Info:    routing  0.55  4.18 Net core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D[2] (47,39) -> (49,38)
+Info:                          Sink core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  4.36 Source core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z.F
+Info:    routing  1.24  5.61 Net core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D[1] (49,38) -> (53,30)
+Info:                          Sink core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  5.79 Source core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z.F
+Info:    routing  0.81  6.60 Net core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z_D[2] (53,30) -> (59,30)
+Info:                          Sink core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  6.78 Source core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D_LUT4_Z.F
+Info:    routing  0.47  7.24 Net core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z_D[1] (59,30) -> (59,30)
+Info:                          Sink core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  7.42 Source core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D_LUT4_Z.F
+Info:    routing  0.85  8.27 Net core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z_D[3] (59,30) -> (60,31)
+Info:                          Sink core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  8.45 Source core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_Z.F
+Info:    routing  0.83  9.28 Net core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D[3] (60,31) -> (60,25)
+Info:                          Sink core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_D.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  9.46 Source core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_D.F
+Info:    routing  0.03  9.50 Net core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_D_Z[3] (60,25) -> (60,25)
+Info:                          Sink core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_D_Z_LUT4_D.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  9.68 Source core.parser_book.parser.gearbox.last_q_LUT4_D_Z_LUT4_Z_1_D_LUT4_D_Z_LUT4_D.F
+Info:    routing  0.73  10.41 Net core.parser_book.parser.eth.state_q_TRELLIS_FF_Q_DI_LUT4_Z_D_LUT4_Z_B[1] (60,25) -> (60,23)
+Info:                          Sink rx_ready_LUT4_Z_D_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  10.59 Source rx_ready_LUT4_Z_D_LUT4_Z_D_LUT4_Z.F
+Info:    routing  0.55  11.13 Net rx_ready_LUT4_Z_D_LUT4_Z_D[2] (60,23) -> (59,23)
+Info:                          Sink rx_ready_LUT4_Z_D_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  11.31 Source rx_ready_LUT4_Z_D_LUT4_Z.F
+Info:    routing  1.11  12.43 Net rx_ready_LUT4_Z_D[3] (59,23) -> (48,23)
+Info:                          Sink rx_ready_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  12.60 Source rx_ready_LUT4_Z.F
+Info:    routing  2.51  15.11 Net rx_ready$TRELLIS_IO_OUT (48,23) -> (0,23)
+Info:                          Sink rx_ready$tr_io.I
+Info:                          Defined in:
+Info:                               rtl/arch_a/wire_arch_a_benchmark_top.sv:12.25-12.33
+Info: 2.91 ns logic, 12.20 ns routing
+
+Warning: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 43.63 MHz (FAIL at 156.25 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 14.91 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 15.11 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 21 endpoint(s)
+Info:          + represents [1,21) endpoint(s)
+Info: [-16522, -15411) |*******************************************************+
+Info: [-15411, -14300) |******************+
+Info: [-14300, -13189) |***+
+Info: [-13189, -12078) |**+
+Info: [-12078, -10967) |*+
+Info: [-10967,  -9856) |+
+Info: [ -9856,  -8745) |***+
+Info: [ -8745,  -7634) |****+
+Info: [ -7634,  -6523) |*******************************************+
+Info: [ -6523,  -5412) |*****+
+Info: [ -5412,  -4301) |**+
+Info: [ -4301,  -3190) |******+
+Info: [ -3190,  -2079) |*************+
+Info: [ -2079,   -968) |***********+
+Info: [  -968,    143) |***************+
+Info: [   143,   1254) |**********************+
+Info: [  1254,   2365) |*************************+
+Info: [  2365,   3476) |*************************+
+Info: [  3476,   4587) |******************************************************+
+Info: [  4587,   5698) |************************************************************ 
+1 warning, 0 errors
+
+Info: Program finished normally.

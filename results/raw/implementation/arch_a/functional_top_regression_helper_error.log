@@ -1,0 +1,265 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+rm -f results.xml
+COCOTB_TEST_MODULES=test_functional_mvp COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_a_functional_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793662363
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_functional_mvp.test_full_chain_buy_sell_and_oracle (1/15)
+    26.00ns WARNING  ..t_full_chain_buy_sell_and_oracle 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 243, in test_full_chain_buy_sell_and_oracle
+                                                            await b.send_frame(first, stall_seed=3)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+    26.00ns WARNING  cocotb.regression                  test_functional_mvp.test_full_chain_buy_sell_and_oracle failed
+    26.00ns INFO     cocotb.regression                  running test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat (2/15)
+    52.00ns WARNING  ..g_heartbeat_filter_and_no_repeat 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 264, in test_nonmutating_heartbeat_filter_and_no_repeat
+                                                            await b.send_frame(a)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+    52.00ns WARNING  cocotb.regression                  test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat failed
+    52.00ns INFO     cocotb.regression                  running test_functional_mvp.test_all_mutation_message_types_through_full_parser (3/15)
+    78.00ns WARNING  ..essage_types_through_full_parser 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 307, in test_all_mutation_message_types_through_full_parser
+                                                            await b.send_frame(packet, stall_seed=4)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+    78.00ns WARNING  cocotb.regression                  test_functional_mvp.test_all_mutation_message_types_through_full_parser failed
+    78.00ns INFO     cocotb.regression                  running test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion (4/15)
+   104.00ns WARNING  ..e_crossing_and_budget_exhaustion 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 321, in test_live_enable_no_stale_crossing_and_budget_exhaustion
+                                                            await b.send_frame(frame(mold([itch("A", ref=0x7301, qty=8, price=1)])))
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   104.00ns WARNING  cocotb.regression                  test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion failed
+   104.00ns INFO     cocotb.regression                  running test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm (5/15)
+   130.00ns WARNING  ..ailures_suppress_event_and_rearm 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 358, in test_itch_semantic_failures_suppress_event_and_rearm
+                                                            await b.send_frame(raw)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   130.00ns WARNING  cocotb.regression                  test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm failed
+   130.00ns INFO     cocotb.regression                  running test_functional_mvp.test_book_failure_produces_no_decision_and_rearm (6/15)
+   156.00ns WARNING  ..e_produces_no_decision_and_rearm 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 376, in test_book_failure_produces_no_decision_and_rearm
+                                                            await b.send_frame(first)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   156.00ns WARNING  cocotb.regression                  test_functional_mvp.test_book_failure_produces_no_decision_and_rearm failed
+   156.00ns INFO     cocotb.regression                  running test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state (7/15)
+   182.01ns WARNING  ..etains_prefix_decision_and_state 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 406, in test_late_mold_suffix_retains_prefix_decision_and_state
+                                                            await b.send_frame(malformed, stall_seed=1)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   182.01ns WARNING  cocotb.regression                  test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state failed
+   182.01ns INFO     cocotb.regression                  running test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence (8/15)
+   208.01ns WARNING  ..eps_prefix_and_advances_sequence 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 434, in test_structural_success_itch_failure_keeps_prefix_and_advances_sequence
+                                                            await b.send_frame(packet)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   208.01ns WARNING  cocotb.regression                  test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence failed
+   208.01ns INFO     cocotb.regression                  running test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery (9/15)
+   234.01ns WARNING  ..ion_survives_later_itch_recovery 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 454, in test_stalled_prefix_decision_survives_later_itch_recovery
+                                                            await b.send_frame(packet, hold_decision=True)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   234.01ns WARNING  cocotb.regression                  test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery failed
+   234.01ns INFO     cocotb.regression                  running test_functional_mvp.test_long_valid_multiframe_mutation_stream_against_oracle (10/15)
+   260.01ns WARNING  ..e_mutation_stream_against_oracle 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 501, in test_long_valid_multiframe_mutation_stream_against_oracle
+                                                            await b.send_frame(packet, stall_seed=index + 1)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   260.01ns WARNING  cocotb.regression                  test_functional_mvp.test_long_valid_multiframe_mutation_stream_against_oracle failed
+   260.01ns INFO     cocotb.regression                  running test_functional_mvp.test_mixed_outer_mold_book_failures_and_rearm (11/15)
+   286.01ns WARNING  ..ter_mold_book_failures_and_rearm 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 531, in test_mixed_outer_mold_book_failures_and_rearm
+                                                            await b.send_frame(first)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   286.01ns WARNING  cocotb.regression                  test_functional_mvp.test_mixed_outer_mold_book_failures_and_rearm failed
+   286.01ns INFO     cocotb.regression                  running test_functional_mvp.test_suffix_ordering_commit_before_and_fatal_before_commit (12/15)
+   312.01ns WARNING  ..t_before_and_fatal_before_commit 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 585, in test_suffix_ordering_commit_before_and_fatal_before_commit
+                                                            await b.send_frame(packet, stall_seed=7)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   312.01ns WARNING  cocotb.regression                  test_functional_mvp.test_suffix_ordering_commit_before_and_fatal_before_commit failed
+   312.01ns INFO     cocotb.regression                  running test_functional_mvp.test_single_edge_rearm_discards_pending_decision_epoch (13/15)
+   338.01ns WARNING  .._discards_pending_decision_epoch 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 614, in test_single_edge_rearm_discards_pending_decision_epoch
+                                                            await b.send_frame(old_packet, hold_decision=True)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   338.01ns WARNING  cocotb.regression                  test_functional_mvp.test_single_edge_rearm_discards_pending_decision_epoch failed
+   338.01ns INFO     cocotb.regression                  running test_functional_mvp.test_random_full_frame_seed_set (14/15)
+   364.01ns WARNING  .. test_random_full_frame_seed_set 'LogicArray' object has no attribute 'value'
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 665, in test_random_full_frame_seed_set
+                                                            await b.send_frame(packet, stall_seed=seed)
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 169, in send_frame
+                                                            decision_tuple = self.sample_decision()
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 144, in sample_decision
+                                                            int(d.decision_itch_timestamp.value), self.signed49(d.decision_signed_imbalance.value))
+                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/functional_mvp/test_functional_mvp.py", line 148, in signed49
+                                                            value = int(signal.value)
+                                                                        ^^^^^^^^^^^^
+                                                        AttributeError: 'LogicArray' object has no attribute 'value'
+   364.01ns WARNING  cocotb.regression                  test_functional_mvp.test_random_full_frame_seed_set failed
+   364.01ns INFO     cocotb.regression                  running test_functional_mvp.wire026_cycle_performance_workloads (15/15)
+                                                            Cycle counts from accepted byte/event handshakes; simulation only.
+  1584.01ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=single_ADD_BUY bytes=100 cycles=114 L1=37 L2=[5] L3=[113] event_ii=[] decision_ii=[] bytes_per_cycle=0.877193 rx_stall_cycles=71 decisions=[(113, (0, 1161981756646125696, 1108152157441, 10))]
+  3064.01ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=multi_message bytes=133 cycles=146 L1=37 L2=[5] L3=[113] event_ii=[35] decision_ii=[] bytes_per_cycle=0.910959 rx_stall_cycles=101 decisions=[(113, (0, 1161981756646125696, 1108152157442, 10))]
+ 10054.01ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=stateful_frames_A_F_E_C_X_U_D bytes=668 cycles=697 L1=37 L2=[5, 5, 5] L3=[113, 129, 127] event_ii=[107, 98, 103, 90, 102, 86] decision_ii=[107, 393] bytes_per_cycle=0.958393 rx_stall_cycles=583 decisions=[(113, (0, 1161981756646125696, 1108152157450, 10)), (220, (1, 1161981756646125697, 1108152157451, -10)), (613, (0, 1161981756646125701, 1108152157455, 15))]
+ 10054.01ns INFO     cocotb.regression                  test_functional_mvp.wire026_cycle_performance_workloads passed
+ 10054.01ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                        ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************************************************************
+                                                        ** test_functional_mvp.test_full_chain_buy_sell_and_oracle                                       FAIL          26.00           0.00      11030.94  **
+                                                        ** test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat                           FAIL          26.00           0.00      34718.85  **
+                                                        ** test_functional_mvp.test_all_mutation_message_types_through_full_parser                       FAIL          26.00           0.01       4173.44  **
+                                                        ** test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion                  FAIL          26.00           0.00      51904.76  **
+                                                        ** test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm                      FAIL          26.00           0.00      43919.41  **
+                                                        ** test_functional_mvp.test_book_failure_produces_no_decision_and_rearm                          FAIL          26.00           0.02       1423.32  **
+                                                        ** test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state                   FAIL          26.00           0.00      20281.18  **
+                                                        ** test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence   FAIL          26.00           0.00      35223.48  **
+                                                        ** test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery                 FAIL          26.00           0.00      41276.27  **
+                                                        ** test_functional_mvp.test_long_valid_multiframe_mutation_stream_against_oracle                 FAIL          26.00           0.00      40359.70  **
+                                                        ** test_functional_mvp.test_mixed_outer_mold_book_failures_and_rearm                             FAIL          26.00           0.00      72459.74  **
+                                                        ** test_functional_mvp.test_suffix_ordering_commit_before_and_fatal_before_commit                FAIL          26.00           0.00      67524.40  **
+                                                        ** test_functional_mvp.test_single_edge_rearm_discards_pending_decision_epoch                    FAIL          26.00           0.00      75416.25  **
+                                                        ** test_functional_mvp.test_random_full_frame_seed_set                                           FAIL          26.00           0.00      30478.45  **
+                                                        ** test_functional_mvp.wire026_cycle_performance_workloads                                       PASS        9690.00           0.09     102726.48  **
+                                                        *****************************************************************************************************************************************************
+                                                        ** TESTS=15 PASS=1 FAIL=14 SKIP=0                                                                           10054.01           0.16      61023.99  **
+                                                        *****************************************************************************************************************************************************
+- :0: Verilog $finish
+make[1]: *** [results.xml] Error 14
+make: *** [sim] Error 2

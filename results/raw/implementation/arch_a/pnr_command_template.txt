@@ -1,0 +1,2 @@
+source /Users/Dilan/eda/wire-to-decision/oss-cad-suite/environment
+nextpnr-ecp5 --85k --package CABGA381 --speed 8 --freq 156.25 --seed <SEED> --lpf-allow-unconstrained --timing-allow-fail --json results/raw/implementation/arch_a/wire_arch_a_benchmark.json --report results/raw/implementation/arch_a/seed_<SEED>_report.json
