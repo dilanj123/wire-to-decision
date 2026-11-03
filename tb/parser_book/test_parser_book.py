@@ -166,6 +166,7 @@ class Bench:
     async def lookup(self, ref):
         await FallingEdge(self.d.clk)
         self.d.debug_reference.value = ref
+        await RisingEdge(self.d.clk)
         await Timer(1, unit="ns")
         if not int(self.d.debug_found.value):
             return None

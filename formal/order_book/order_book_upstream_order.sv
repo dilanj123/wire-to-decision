@@ -1,6 +1,6 @@
 module order_book_upstream_order;
     (* gclk *) wire clk;
-    reg [3:0] cycle = 0;
+    reg [4:0] cycle = 0;
     always @(posedge clk) cycle <= cycle + 1'b1;
     wire rst = cycle == 0, rearm = 0;
     wire upstream_recovery_required = cycle >= 3;
@@ -26,17 +26,17 @@ module order_book_upstream_order;
     wire [8:0] debug_set_index;
     wire_order_book #(.NUM_SETS(2)) dut (.*);
     always @(posedge clk) begin
-        if (cycle == 4) begin
+        if (cycle == 6) begin
             assert(!event_ready && !book_valid && recovery_required);
             assert(commit_valid && commit_bid_total == 9 && bid_total == 9);
             assert(commit_mold_sequence == mold_sequence);
             assert(commit_itch_timestamp == itch_timestamp);
-            assert(debug_found && debug_remaining_quantity == 9);
         end
-        if (cycle > 4) begin
+        if (cycle == 7) assert(debug_found && debug_remaining_quantity == 9);
+        if (cycle > 6) begin
             assert(!event_ready && recovery_required);
             assert(commit_valid && commit_bid_total == 9 && bid_total == 9);
         end
-        cover(cycle == 4 && commit_valid && recovery_required);
+        cover(cycle == 6 && commit_valid && recovery_required);
     end
 endmodule

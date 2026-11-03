@@ -1,6 +1,6 @@
 [options]
 mode bmc
-depth 20
+depth 40
 [engines]
 smtbmc yices
 [script]

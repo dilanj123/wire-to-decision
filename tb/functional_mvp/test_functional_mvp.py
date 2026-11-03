@@ -511,7 +511,9 @@ async def test_long_valid_multiframe_mutation_stream_against_oracle(dut):
     assert int(dut.current_expected_sequence.value) == BASE_SEQ + 7
     assert int(dut.remaining_budget.value) == oracle.decision_model.current_budget == 6
     assert int(dut.decision_count.value) == oracle.decision_model.decision_count == 2
+    await FallingEdge(dut.clk)
     dut.debug_reference.value = replacement_ref
+    await RisingEdge(dut.clk)
     await Timer(1, unit="ns")
     assert int(dut.debug_found.value) == 1
     assert int(dut.debug_price.value) == 120
@@ -699,3 +701,133 @@ async def test_random_full_frame_seed_set(dut):
         assert (int(dut.bid_total.value), int(dut.ask_total.value)) == (
             oracle.book.bid_total, oracle.book.ask_total)
         assert int(dut.parser_recovery_required.value) == int(expected_bad.quarantined)
+
+@cocotb.test()
+async def wire026_cycle_performance_workloads(dut):
+    """Cycle counts from accepted byte/event handshakes; simulation only."""
+    clock(dut)
+    base = Bench(dut)
+    await base.setup(threshold=10, budget=20, enabled=True)
+
+    async def run(frames, expected_event_count, expected_decisions):
+        stream = []
+        frame_first = {}
+        frame_bytes = 0
+        for frame_seq, packet in frames:
+            packed = beats(packet)
+            frame_first[frame_seq] = len(stream)
+            stream.extend((frame_seq, beat) for beat in packed)
+            frame_bytes += len(packet)
+
+        dut.decision_ready.value = 1
+        idx = 0
+        held = None
+        cyc = 0
+        first_rx = {}
+        msg_first = {}
+        msg_last = {}
+        events = []
+        decisions = []
+        rx_stalls = 0
+        # Public top input/output plus named parser-stage stream boundary.
+        msg_valid = dut.parser_book.parser.msg_valid
+        msg_ready = dut.parser_book.parser.msg_ready
+        msg_last_sig = dut.parser_book.parser.msg_last
+        msg_seq = dut.parser_book.parser.message_sequence
+        meta_valid = dut.parser_book.parser.message_valid
+        meta_ready = dut.parser_book.parser.message_ready
+        active_msg_seq = None
+        for _ in range(20000):
+            await FallingEdge(dut.clk)
+            if held is None and idx < len(stream):
+                held = stream[idx]
+                _, (data, keep, last) = held
+                dut.rx_data.value, dut.rx_keep.value, dut.rx_last.value = data, keep, last
+                dut.rx_valid.value = 1
+            await Timer(1, unit="ns")
+            rx_fire = idx < len(stream) and int(dut.rx_valid.value) and int(dut.rx_ready.value)
+            if int(dut.rx_valid.value) and not int(dut.rx_ready.value):
+                rx_stalls += 1
+            if rx_fire:
+                seq = stream[idx][0]
+                first_rx.setdefault(seq, cyc)
+            if int(meta_valid.value) and int(meta_ready.value):
+                active_msg_seq = int(msg_seq.value)
+            if int(msg_valid.value) and int(msg_ready.value):
+                if active_msg_seq is None:
+                    raise AssertionError("ITCH payload byte accepted without message metadata")
+                msg_first.setdefault(active_msg_seq, cyc)
+                if int(msg_last_sig.value):
+                    msg_last[active_msg_seq] = cyc
+            if int(dut.event_valid_observed.value) and int(dut.event_ready_observed.value):
+                events.append((cyc, int(dut.event_mold_sequence_observed.value)))
+            if int(dut.decision_valid.value):
+                decisions.append((cyc, (int(dut.decision_action.value),
+                                        int(dut.decision_mold_sequence.value),
+                                        int(dut.decision_itch_timestamp.value),
+                                        Bench.signed49(dut.decision_signed_imbalance))))
+            await RisingEdge(dut.clk)
+            if rx_fire:
+                idx += 1
+                held = None
+                dut.rx_valid.value = 0
+            cyc += 1
+            if idx == len(stream) and len(decisions) >= len(expected_decisions) and len(events) >= expected_event_count:
+                break
+        else:
+            raise AssertionError(f"performance workload timed out: beats {idx}/{len(stream)}, decisions {len(decisions)}")
+        assert len(events) == expected_event_count, (events, expected_event_count)
+        assert [item[1] for item in decisions] == expected_decisions, decisions
+        elapsed = cyc - first_rx[frames[0][0]]
+        l1 = events[0][0] - msg_first[events[0][1]]
+        l2 = [(cycle - msg_last[decision[1]]) for cycle, decision in decisions]
+        l3 = [(cycle - first_rx[decision[1]]) for cycle, decision in decisions]
+        event_ii = [b[0] - a[0] for a, b in zip(events, events[1:])]
+        decision_ii = [b[0] - a[0] for a, b in zip(decisions, decisions[1:])]
+        # Count actual valid bytes from accepted beat keep masks.
+        accepted_bytes = sum(sum((int(beat[1]) >> lane) & 1 for lane in range(8))
+                             for _, beat in stream)
+        return {
+            "bytes": accepted_bytes, "cycles": elapsed, "L1": l1, "L2": l2,
+            "L3": l3, "event_ii": event_ii, "decision_ii": decision_ii,
+            "throughput_bytes_per_cycle": accepted_bytes / elapsed,
+            "rx_stall_cycles": rx_stalls, "events": events, "decisions": decisions,
+        }
+
+    workloads = []
+    # W1: one ADD, first threshold crossing.
+    await base.setup(threshold=10, budget=20, enabled=True, rearm=True)
+    workloads.append(("single_ADD_BUY", [(BASE_SEQ, frame(mold([itch("A", ref=0x1001, qty=10, price=100, salt=1)])) )], 1, [(0, BASE_SEQ, 0x010203040501, 10)]))
+    # W2: two complete messages in one Mold packet; only the ADD crosses.
+    await base.setup(threshold=10, budget=20, enabled=True, rearm=True)
+    workloads.append(("multi_message", [(BASE_SEQ, frame(mold([
+        itch("A", ref=0x1101, qty=10, price=101, salt=2),
+        itch("E", ref=0x1101, qty=1, salt=3)
+    ])))], 2, [(0, BASE_SEQ, 0x010203040502, 10)]))
+    # W3: repeated separate frames exercise A/F/E/C/X/U/D and three crossings.
+    await base.setup(threshold=10, budget=20, enabled=True, rearm=True)
+    specs = [
+        ("A", 0x2001, 10, 100, b"B"), ("F", 0x2002, 20, 101, b"S"),
+        ("E", 0x2002, 5, 0, b"B"), ("C", 0x2002, 5, 0, b"B"),
+        ("X", 0x2002, 5, 0, b"B"), ("U", 0x2001, 20, 105, b"B"),
+        ("D", 0x8877665544332211 + 5, 0, 0, b"B"),
+    ]
+    packets = []
+    for i, (kind, ref, qty, price, side) in enumerate(specs):
+        packets.append((BASE_SEQ + i, frame(mold([itch(kind, ref=ref, qty=qty, price=price,
+                                                       side=side, salt=10 + i)], BASE_SEQ + i))))
+    workloads.append(("stateful_frames_A_F_E_C_X_U_D", packets, 7, [
+        (0, BASE_SEQ, 0x01020304050A, 10),
+        (1, BASE_SEQ + 1, 0x01020304050B, -10),
+        (0, BASE_SEQ + 5, 0x01020304050F, 15),
+    ]))
+
+    for name, frame_list, event_count, expected_decision_tuples in workloads:
+        # Re-arm before each independent workload, loading the same known config.
+        if name != "single_ADD_BUY":
+            await base.setup(threshold=10, budget=20, enabled=True, rearm=True)
+        result = await run(frame_list, event_count, expected_decision_tuples)
+        dut._log.info("WIRE026_METRIC workload=%s bytes=%d cycles=%d L1=%d L2=%s L3=%s event_ii=%s decision_ii=%s bytes_per_cycle=%.6f rx_stall_cycles=%d decisions=%s",
+                      name, result["bytes"], result["cycles"], result["L1"], result["L2"], result["L3"],
+                      result["event_ii"], result["decision_ii"], result["throughput_bytes_per_cycle"],
+                      result["rx_stall_cycles"], result["decisions"])

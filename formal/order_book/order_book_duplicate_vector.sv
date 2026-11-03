@@ -1,9 +1,9 @@
 module order_book_duplicate_vector;
     (* gclk *) wire clk;
-    reg [3:0] cycle = 0;
+    reg [4:0] cycle = 0;
     always @(posedge clk) cycle <= cycle + 1'b1;
     wire rst = cycle == 0, rearm = 0, upstream_recovery_required = 0;
-    wire event_valid = (cycle == 2) || (cycle == 6);
+    wire event_valid = (cycle == 2) || (cycle == 10);
     wire [2:0] event_kind = 0;
     wire [7:0] source_type = 8'h41;
     wire [63:0] mold_sequence = cycle, old_order_reference = 0, new_order_reference = 64'h33;
@@ -25,13 +25,13 @@ module order_book_duplicate_vector;
     wire [8:0] debug_set_index;
     wire_order_book #(.NUM_SETS(2)) dut (.*);
     always @(posedge clk) begin
-        if (cycle == 8) begin
+        if (cycle == 13) begin
             assert(!book_valid && recovery_required);
             assert(error_valid && error_code == 4'd1 && !commit_valid);
-            assert(debug_found && debug_remaining_quantity == 5 && debug_price == 12);
             assert(bid_total == 0 && ask_total == 5);
         end
-        if (cycle > 8) assert(!event_ready && !commit_valid && error_valid);
-        cover(cycle == 8 && error_valid && debug_found);
+        if (cycle == 14) assert(debug_found && debug_remaining_quantity == 5 && debug_price == 12);
+        if (cycle > 13) assert(!event_ready && !commit_valid && error_valid);
+        cover(cycle == 14 && error_valid && debug_found);
     end
 endmodule

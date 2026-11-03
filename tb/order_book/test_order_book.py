@@ -163,6 +163,7 @@ class Bench:
         d = self.d
         await FallingEdge(d.clk)
         d.debug_reference.value = ref
+        await RisingEdge(d.clk)
         await Timer(1, unit="ns")
         if not int(d.debug_found.value):
             return None
@@ -313,12 +314,19 @@ async def test_commit_stall_and_upstream_fatal_ordering(dut):
     e = ev(ADD, new=0x900, qty=12, price=321, side=BUY, seq=0x1122334455667788, ts=0x123456789ABC)
     await b.accept(e)
     dut.upstream_recovery_required.value = 1
-    for _ in range(4):
+    for _ in range(20):
         await RisingEdge(dut.clk)
+        await Timer(1, unit="ns")
+        if int(dut.commit_valid.value):
+            break
+    else:
+        raise AssertionError("accepted mutation did not complete after upstream fatal")
+    for _ in range(4):
         await Timer(1, unit="ns")
         assert int(dut.commit_valid.value)
         assert (int(dut.commit_mold_sequence.value), int(dut.commit_itch_timestamp.value),
                 int(dut.commit_bid_total.value), int(dut.commit_ask_total.value)) == (e["seq"], e["ts"], 12, 0)
+        await RisingEdge(dut.clk)
     assert (await b.query(e["new"]))[:3] == (321, 12, BUY)
     assert int(dut.book_valid.value) == 0
     assert int(dut.recovery_required.value) == 1

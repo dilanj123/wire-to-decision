@@ -25,15 +25,16 @@ module order_book_unknown_vector;
     wire [8:0] debug_set_index;
     wire_order_book #(.NUM_SETS(2)) dut (.*);
     always @(posedge clk) begin
-        if (cycle == 4) begin
+        if (cycle == 5) begin
             assert(!commit_valid && error_valid && error_code == 4'd3);
             assert(!book_valid && recovery_required && !event_ready);
-            assert(bid_total == 0 && ask_total == 0 && !debug_found);
+            assert(bid_total == 0 && ask_total == 0);
         end
-        if (cycle > 4) begin
+        if (cycle == 6) assert(!debug_found);
+        if (cycle > 5) begin
             assert(!event_ready && !commit_valid);
-            assert(bid_total == 0 && ask_total == 0 && !debug_found);
+            assert(bid_total == 0 && ask_total == 0);
         end
-        cover(cycle == 4 && error_valid && recovery_required);
+        cover(cycle == 5 && error_valid && recovery_required);
     end
 endmodule
