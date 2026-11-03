@@ -1,0 +1,3 @@
+# Decompress once to a local temporary/reproducible netlist path before running all seeds:
+gzip -cd results/raw/implementation/wire027/wire_arch_a_benchmark_after.json.gz > /tmp/wire_arch_a_benchmark_after.json
+nextpnr-ecp5 --85k --package CABGA381 --speed 8 --freq 156.25 --seed <1|7|19|42|97> --lpf-allow-unconstrained --timing-allow-fail --json /tmp/wire_arch_a_benchmark_after.json --report results/raw/implementation/wire027/seed_<SEED>_after_report.json

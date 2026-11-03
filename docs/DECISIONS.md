@@ -9,7 +9,6 @@
 - Rationale: These controls are supported by the inspected RTL-to-Pixels workflow and strengthened by later repository references.
 - Status: ADOPTED
 
-
 ## WIRE-D011 — Freeze Phase-2 single-clock RTL reset convention
 
 - Date: 2026-09-28
@@ -200,3 +199,13 @@
 - Decision: A decision from an earlier successful commit is not retroactively masked or cancelled by later parser/book recovery. Reset/rearm may discard it as part of establishing a new explicit epoch. WIRE-D019 prevents new successful commits after recovery.
 - Consequences: This freezes a deterministic synthetic decision boundary, not a production trading strategy, timing target, or rollback mechanism. `decision_count <= initial_budget` and `remaining_budget + decision_count == initial_budget` hold within the configured epoch.
 - Status: ADOPTED
+
+## WIRE-027 — Architecture-A bottleneck result and Architecture-B experiment recommendation
+
+- Date: 2026-11-03
+- Source: WIRE-027 parser/book/decision service isolation and controlled order-book timing experiment
+- Context: WIRE-026A identified a book EBR read/update timing path but had not isolated cycles per parser event versus book service. An alternate parser is justified only by measured workload evidence.
+- Measurement: The seven-event parser workload produced mutation events at 86–107 cycle intervals (about 0.96 accepted input bytes/cycle). The production book service interval was 5 cycles/event (7 for cross-set replacement); direct decision creation took 1 cycle. Full-top workload cycle/byte rates remained consistent with WIRE-026A.
+- Timing: A registered validated write-plan experiment reduced Yosys LUT4 from 7,876 to 7,376 and improved five-seed median routed Fmax from 43.63 to 47.08 MHz. All seeds still miss 156.25 MHz. The critical path remains in the order-book EBR read/selected-entry/aggregate-update path.
+- Decision: **BUILD B is justified as a separate controlled native-64 parser experiment.** Keep the normalized-event boundary and shared order book/decision subsystem identical, use the same legal workload and frozen implementation target, and compare cycles/throughput. This recommendation does not implement B or authorize replacing the production Architecture-A path.
+- Status: FOLLOW-UP EXPERIMENT RECOMMENDED; Architecture B production implementation remains unauthorized.

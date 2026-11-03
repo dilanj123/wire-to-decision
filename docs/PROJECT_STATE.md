@@ -4,7 +4,7 @@
 
 Phase 4 — COMPLETE: focused single-clock functional regression, targeted formal strengthening, and checklist closure recorded by WIRE-025/EVID-025.
 
-Phase 5 — COMPLETE for the implementation/measurement campaign (WIRE-026/WIRE-026A). The full-capacity design places and routes on all five frozen seeds after the order-store EBR mapping refinement. All seeds miss 156.25 MHz (routed Fmax 42.70–45.45 MHz); timing closure is not achieved.
+Phase 5 — COMPLETE for Architecture-A implementation and bottleneck measurement (WIRE-026/WIRE-026A/WIRE-027). The full-capacity design places and routes on all five frozen seeds. The WIRE-027 write-plan experiment improves routed Fmax to 45.68–47.66 MHz, but all seeds still miss 156.25 MHz; timing closure is not achieved.
 
 Phase 1: COMPLETE — 71-test Python end-to-end oracle baseline
 
@@ -137,7 +137,7 @@ Application RTL functional evidence: WIRE-014..022 parser stages/composition, WI
 
 Formal parser evidence: named stage-local and top-level safety properties checked with documented bounded/fixed-vector scopes; no complete parser proof or application-level formal proof is claimed.
 
-Application synthesis/P&R evidence: none
+Application synthesis/P&R evidence: full-capacity ECP5 synthesis and five-seed placement/routing completed by WIRE-026/026A and repeated after the WIRE-027 order-book timing experiment. All five runs route; none meets the 156.25 MHz objective. No board pinout, timing closure, or physical operation is claimed.
 
 ## Regression status
 
@@ -151,13 +151,13 @@ WIRE-025 campaign: 109/109 Cocotb tests across WIRE-014..024 passed; 79 executed
 
 ## Synthesis / P&R status
 
-Application P&R/timing not run. Phase-4 lint/regression closure does not imply synthesis, placement, routing, timing, latency, or throughput evidence.
+Application P&R and cycle-based latency/throughput evidence exist from WIRE-026/026A/027. The five-seed implementation routes but misses the frozen clock objective. Cycle measurements are simulation evidence, not physical latency or throughput measurements.
 
 ## Latest evidence
 
 WIRE-004 native Apple Silicon open-source toolchain qualification completed in commit `89e2841` for the trivial smoke design. Canonical suite: OSS CAD Suite `2026-09-27`; details are in `results/processed/toolchain_smoke.md`. This is toolchain-smoke evidence only.
 
-WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target synthesis, placement, routing, and ecppack were validated using the trivial smoke design only in commit `c4ba1964049b6c104fbc80a1c8991a7476c51b16`. WIRE-006 created the authoritative specification package and consistency review in commit `a6ddb1f36ec945b8506e95a5c4935d1776806bbd`; WIRE-007 demonstrated clean-clone repository/toolchain reproducibility at candidate `e9123ea24a6a3314441bec3617cdb5da559cb775`. WIRE-008 through WIRE-013 provide Python-unit-tested component and end-to-end evidence. WIRE-014 through WIRE-021 provide limited primitive/stage RTL simulation and local formal evidence. WIRE-017A closed the named IPv4 correspondence set with decomposed bounded/fixed-vector checks; its original monolithic BMC remains solver-bound historical evidence. WIRE-022 composes the parser through normalized events and records parser-wide fatal recovery; its full-top late-suffix BMC remains solver-bound historical evidence while the end-to-end case passes cocotb. WIRE-023 adds bounded order state and aggregates. WIRE-024 adds the deterministic decision engine and full single-clock parser→book→decision RTL simulation, with named bounded formal checks and Yosys component sanity. WIRE-025 closes the focused Phase-4 campaign (see `results/processed/WIRE-025-functional-verification.md`); two historical monolithic BMCs remain solver-bound. Application P&R/timing, latency, throughput, CDC/RDC, C++ integration, and physical operation remain unproven.
+WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target smoke implementation was followed by full-capacity application synthesis and five-seed routing in WIRE-026/026A. WIRE-027 isolated parser/book/decision service cycles and repeated the same five-seed campaign after one order-book write-plan timing experiment. All five routes completed, with 45.68–47.66 MHz Fmax; timing closure remains unachieved. WIRE-025's 79-job formal campaign passed under its recorded bounded scopes; two historical monolithic jobs remain solver-bound. Cycle-based latency/throughput and routed implementation data exist, but physical operation, physical latency/throughput, CDC/RDC, and C++ integration remain unproven. See EVID-026/026A/027.
 
 ## Open bugs
 
@@ -165,7 +165,7 @@ None recorded.
 
 ## Open decisions
 
-- Architecture B remains unauthorized and undefined.
+- Architecture B remains unauthorized for implementation; WIRE-027 recommends a narrow native-64 parser experiment with the common event/book/decision boundary held fixed.
 - WIRE-001 process adoption details are recorded in `docs/DECISIONS.md`.
 - WIRE-002 external source authority and MVP protocol restrictions are recorded in `docs/DECISIONS.md`.
 - WIRE-003 originality and third-party provenance policy are recorded in `docs/DECISIONS.md`.
@@ -182,8 +182,8 @@ None recorded.
 
 ## Current bottleneck
 
-WIRE-026A changed the order store to synchronous packed-row access, allowing the production 512 × 2 data table to infer 16 EBRs. The full design uses 8,904 nextpnr combinational cells, 3,586 FFs and routes on all five seeds. Routed Fmax is 42.70–45.45 MHz against 156.25 MHz; the critical path is through book EBR read/update logic. Simulation workloads accept 0.86–0.96 external bytes/cycle. Architecture B remains unauthorized; the parser-versus-book cycle contribution needs isolation before selecting another architecture. See `results/processed/WIRE-026-arch-a-implementation.md`.
+WIRE-026A mapped the 512 × 2 store to 16 EBRs. WIRE-027's registered write-plan experiment changes full-top synthesis from 7,876 LUT4/3,586 FF to 7,376 LUT4/3,943 FF and improves five-seed median Fmax from 43.63 to 47.08 MHz. The clock path remains book EBR read→selected-entry/valid checks→aggregate/update→write-plan control. Separately measured cycles show parser event intervals of 86–107 cycles versus a 5-cycle ordinary book service interval and 1-cycle decision creation. The parser serialization limits cycles per mutation/frame; the book limits clock frequency. Evidence supports a narrow native-64 Architecture-B parser experiment, but B RTL remains unauthorized. See `results/processed/WIRE-027-bottleneck-experiment.md`.
 
 ## Next task
 
-WIRE-027 — isolate parser and book service-cycle contributions and investigate the measured EBR-backed order-store timing path; then reassess whether parser serialization warrants an alternate architecture. Architecture B remains unauthorized.
+WIRE-028 — run a narrow native-64 Architecture-B parser experiment against the same normalized-event boundary and shared book/decision subsystem. Architecture B is not implemented or authorized for production.

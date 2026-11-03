@@ -1,0 +1,6 @@
+seed,placement,routing,target_mhz,achieved_fmax_mhz,critical_delay_ns,slack_vs_6p4ns_ns,lut4_equiv,ff,ebr_dp16kd,distributed_ram_dpr16x4,nextpnr_io_cells_used,critical_path_start,critical_path_end
+1,PASS,PASS,156.25,47.21,21.180,-14.780,8404,3943,16,16,113,core.parser_book.book.order_row_mem.0.6:DOB13,core.parser_book.book.write_row_q_TRELLIS_FF_Q_177:CE
+7,PASS,PASS,156.25,47.66,20.982,-14.582,8404,3943,16,16,113,core.parser_book.book.order_row_mem.0.6:DOA4,core.parser_book.book.write_row_q_TRELLIS_FF_Q_203:CE
+19,PASS,PASS,156.25,45.68,21.891,-15.491,8404,3943,16,16,113,core.parser_book.book.order_row_mem.0.6:DOB6,core.parser_book.book.write_row_q_TRELLIS_FF_Q_184:CE
+42,PASS,PASS,156.25,47.08,21.240,-14.840,8404,3943,16,16,113,core.parser_book.book.order_row_mem.0.5:DOA16,core.parser_book.book.write_row_q_TRELLIS_FF_Q_207:CE
+97,PASS,PASS,156.25,46.51,21.500,-15.100,8404,3943,16,16,113,core.parser_book.book.order_row_mem.0.5:DOB4,core.parser_book.book.write_row_q_TRELLIS_FF_Q_200:CE

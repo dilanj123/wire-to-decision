@@ -71,6 +71,10 @@ module wire_order_book #(
     logic [1:0] order_valid_mem [0:NUM_SETS-1];
     logic [ROW_BITS-1:0] primary_row_q, secondary_row_q;
     logic [1:0] primary_valid_q, secondary_valid_q;
+    logic [ROW_BITS-1:0] write_row_q;
+    logic [1:0] write_valid_q;
+    logic [47:0] write_bid_total_q, write_ask_total_q;
+    logic write_old_way_q;
 
     logic [47:0] bid_total_q, ask_total_q;
     logic book_valid_q, recovery_q;
@@ -348,6 +352,11 @@ module wire_order_book #(
             secondary_row_q <= '0;
             primary_valid_q <= 2'b0;
             secondary_valid_q <= 2'b0;
+            write_row_q <= '0;
+            write_valid_q <= 2'b0;
+            write_bid_total_q <= 48'd0;
+            write_ask_total_q <= 48'd0;
+            write_old_way_q <= 1'b0;
             debug_row_q <= '0;
             debug_valid_q <= 2'b0;
             debug_reference_q <= 64'd0;
@@ -426,22 +435,30 @@ module wire_order_book #(
                         recovery_q <= 1'b1;
                         error_code_q <= eval_error_code;
                         error_valid_q <= 1'b1;
-                    end else if (event_kind_q == 3'd5 && replace_cross_set_q) begin
-                        // Validate both sets and arithmetic before touching either.
-                        state_q <= S_WRITE_OLD;
                     end else begin
-                        state_q <= S_WRITE_SINGLE;
+                        // Register the complete, validated write plan here.
+                        // The following write state no longer has a combinational
+                        // path from the EBR output through lookup/arithmetic.
+                        write_row_q <= replacement_row;
+                        write_valid_q <= replacement_valid;
+                        write_bid_total_q <= next_bid_total;
+                        write_ask_total_q <= next_ask_total;
+                        write_old_way_q <= old_way[0];
+                        if (event_kind_q == 3'd5 && replace_cross_set_q)
+                            state_q <= S_WRITE_OLD;
+                        else
+                            state_q <= S_WRITE_SINGLE;
                     end
                 end
                 S_WRITE_SINGLE: begin
-                    order_row_mem[primary_hash_q[SET_BITS-1:0]] <= replacement_row;
-                    order_valid_mem[primary_hash_q[SET_BITS-1:0]] <= replacement_valid;
-                    bid_total_q <= next_bid_total;
-                    ask_total_q <= next_ask_total;
+                    order_row_mem[primary_hash_q[SET_BITS-1:0]] <= write_row_q;
+                    order_valid_mem[primary_hash_q[SET_BITS-1:0]] <= write_valid_q;
+                    bid_total_q <= write_bid_total_q;
+                    ask_total_q <= write_ask_total_q;
                     commit_sequence_q <= event_sequence_q;
                     commit_timestamp_q <= event_timestamp_q;
-                    commit_bid_q <= next_bid_total;
-                    commit_ask_q <= next_ask_total;
+                    commit_bid_q <= write_bid_total_q;
+                    commit_ask_q <= write_ask_total_q;
                     commit_valid_q <= 1'b1;
                     state_q <= S_IDLE;
                     if (upstream_recovery_required) begin
@@ -454,18 +471,18 @@ module wire_order_book #(
                 S_WRITE_OLD: begin
                     // Hide diagnostics until both writes complete. No event,
                     // commit, or aggregate update is exposed at this stage.
-                    order_valid_mem[primary_hash_q[SET_BITS-1:0]][old_way] <= 1'b0;
+                    order_valid_mem[primary_hash_q[SET_BITS-1:0]][write_old_way_q] <= 1'b0;
                     state_q <= S_WRITE_NEW;
                 end
                 S_WRITE_NEW: begin
-                    order_row_mem[secondary_hash_q[SET_BITS-1:0]] <= replacement_row;
-                    order_valid_mem[secondary_hash_q[SET_BITS-1:0]] <= replacement_valid;
-                    bid_total_q <= next_bid_total;
-                    ask_total_q <= next_ask_total;
+                    order_row_mem[secondary_hash_q[SET_BITS-1:0]] <= write_row_q;
+                    order_valid_mem[secondary_hash_q[SET_BITS-1:0]] <= write_valid_q;
+                    bid_total_q <= write_bid_total_q;
+                    ask_total_q <= write_ask_total_q;
                     commit_sequence_q <= event_sequence_q;
                     commit_timestamp_q <= event_timestamp_q;
-                    commit_bid_q <= next_bid_total;
-                    commit_ask_q <= next_ask_total;
+                    commit_bid_q <= write_bid_total_q;
+                    commit_ask_q <= write_ask_total_q;
                     commit_valid_q <= 1'b1;
                     state_q <= S_IDLE;
                     if (upstream_recovery_required) begin

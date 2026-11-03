@@ -1,0 +1,20 @@
+category,item,baseline,experiment,units,notes
+route_seed,1,45.45,47.21,MHz Fmax,baseline delay 22.0 ns; experiment 21.180 ns; target 156.25 MHz; placement/routing PASS
+route_seed,7,44.84,47.66,MHz Fmax,baseline delay 22.304 ns; experiment 20.982 ns; target 156.25 MHz; placement/routing PASS
+route_seed,19,43.63,45.68,MHz Fmax,baseline delay 22.922 ns; experiment 21.891 ns; target 156.25 MHz; placement/routing PASS
+route_seed,42,42.81,47.08,MHz Fmax,baseline delay 23.361 ns; experiment 21.240 ns; target 156.25 MHz; placement/routing PASS
+route_seed,97,42.7,46.51,MHz Fmax,baseline delay 23.421 ns; experiment 21.500 ns; target 156.25 MHz; placement/routing PASS
+aggregate,Yosys LUT4,7876,7376,cells,synth_ecp5 full benchmark top
+aggregate,Yosys FF,3586,3943,cells,synth_ecp5 full benchmark top
+aggregate,DP16KD EBR,16,16,blocks,order-store inference preserved
+aggregate,distributed DPR16X4,16,16,cells,small residual distributed RAM
+aggregate,nextpnr combinational cells,8904,8404,cells,from route utilization; device limit 83640
+aggregate,median routed Fmax,43.63,47.08,MHz,five fixed seeds; every seed still misses target
+aggregate,book service interval,5,5,cycles/event,cross-set REPLACE interval 7 cycles in isolated workload
+aggregate,parser bytes/cycle,0.862-0.958,0.862-0.958,accepted bytes/cycle,same three no-stall-core workloads; full-top Cocotb
+aggregate,L1 single ADD,37,37,cycles,first ITCH byte accepted to normalized event valid
+aggregate,L2 single ADD,7,7,cycles,last ITCH byte accepted to decision valid
+aggregate,L3 single ADD,115,115,cycles,first accepted post-MAC beat to decision valid
+aggregate,full-top single ADD workload,116,116,cycles,100 accepted bytes; natural ingress backpressure
+aggregate,full-top multi-message workload,146,146,cycles,133 accepted bytes
+aggregate,full-top stateful workload,697,697,cycles,668 accepted bytes; same canonical workload
