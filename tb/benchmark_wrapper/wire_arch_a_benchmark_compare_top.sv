@@ -1,0 +1,68 @@
+// Simulation-only equivalence fixture. This top is never synthesized for P&R.
+module wire_arch_a_benchmark_compare_top (
+    input logic clk, rst, rearm,
+    input logic [63:0] wrap_rx_data,
+    input logic [7:0] wrap_rx_keep,
+    input logic wrap_rx_valid,
+    output logic wrap_rx_ready,
+    input logic wrap_rx_last,
+    output logic [31:0] readout_data,
+    output logic readout_valid,
+    input logic readout_ready,
+    output logic readout_last,
+    input logic [63:0] ref_rx_data,
+    input logic [7:0] ref_rx_keep,
+    input logic ref_rx_valid,
+    output logic ref_rx_ready,
+    input logic ref_rx_last,
+    output logic ref_decision_valid,
+    input logic ref_decision_ready,
+    output logic ref_decision_action,
+    output logic [63:0] ref_decision_sequence,
+    output logic [47:0] ref_decision_timestamp,
+    output logic signed [48:0] ref_decision_imbalance,
+    output logic ref_parser_recovery,
+    output logic [3:0] ref_recovery_stage,
+    output logic [5:0] ref_stage_reject,
+    output logic [5:0] ref_stage_reject_fatal,
+    output logic [16:0] ref_stage_reject_code
+);
+    wire_arch_a_benchmark_top wrapped (
+        .clk(clk), .rst(rst), .rearm(rearm),
+        .rx_data(wrap_rx_data), .rx_keep(wrap_rx_keep),
+        .rx_valid(wrap_rx_valid), .rx_ready(wrap_rx_ready), .rx_last(wrap_rx_last),
+        .readout_data(readout_data), .readout_valid(readout_valid),
+        .readout_ready(readout_ready), .readout_last(readout_last)
+    );
+
+    wire_arch_a_functional_top #(.BOOK_NUM_SETS(512)) reference (
+        .clk(clk), .rst(rst), .rearm(rearm),
+        .cfg_destination_ipv4(32'hC6336407),
+        .cfg_destination_udp_port(16'h1234),
+        .cfg_active_session(80'h57324454455354303031),
+        .cfg_expected_sequence(64'h1020304050607080),
+        .cfg_tracked_stock_locate(16'h2345), .cfg_symbol_check_enable(1'b1),
+        .cfg_expected_stock_symbol(64'h414C504820202020),
+        .cfg_decision_threshold(48'd10), .cfg_initial_budget(32'd20),
+        .decision_enable(1'b1),
+        .rx_data(ref_rx_data), .rx_keep(ref_rx_keep),
+        .rx_valid(ref_rx_valid), .rx_ready(ref_rx_ready), .rx_last(ref_rx_last),
+        .decision_valid(ref_decision_valid), .decision_ready(ref_decision_ready),
+        .decision_action(ref_decision_action),
+        .decision_mold_sequence(ref_decision_sequence),
+        .decision_itch_timestamp(ref_decision_timestamp),
+        .decision_signed_imbalance(ref_decision_imbalance),
+        .parser_valid(), .parser_recovery_required(ref_parser_recovery), .parser_recovery_stage(ref_recovery_stage),
+        .current_expected_sequence(), .book_valid(), .book_recovery_required(),
+        .bid_total(), .ask_total(), .previous_imbalance(), .remaining_budget(),
+        .decision_count(), .error_valid(), .error_ready(1'b1), .error_code(),
+        .stage_reject_observed(ref_stage_reject), .stage_reject_fatal(ref_stage_reject_fatal), .stage_reject_code(ref_stage_reject_code),
+        .debug_reference(64'd0), .debug_found(), .debug_price(),
+        .debug_remaining_quantity(), .debug_side(), .last_accepted_event_stock_locate(),
+        .debug_set_index(), .debug_way(), .event_valid_observed(),
+        .event_ready_observed(), .event_kind_observed(), .event_mold_sequence_observed(),
+        .commit_valid_observed(), .commit_ready_observed(),
+        .commit_mold_sequence_observed(), .commit_bid_total_observed(),
+        .commit_ask_total_observed()
+    );
+endmodule
