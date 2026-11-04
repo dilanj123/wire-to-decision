@@ -1,0 +1,6 @@
+architecture,workload,accepted_bytes,elapsed_cycles,accepted_bytes_per_cycle,event_II_cycles,decision_II_cycles,L1_cycles,L2_cycles,L3_cycles,Yosys_LUT4,FF,DP16KD,Fmax_seed1_mhz,Fmax_seed7_mhz,Fmax_seed19_mhz,Fmax_seed42_mhz,Fmax_seed97_mhz,status
+A,single_ADD_BUY,100,116,0.862069,,,37,7,115,7376,3943,16,47.21,47.66,45.68,47.08,46.51,measured WIRE-027 baseline
+A,two_message_packet,133,146,0.910959,35,,37,7,115,7376,3943,16,47.21,47.66,45.68,47.08,46.51,measured WIRE-027 baseline
+A,stateful_A_F_E_C_X_U_D,668,697,0.958393,"107,98,103,90,102,86","107,395",37,"7,7,9","115,131,131",7376,3943,16,47.21,47.66,45.68,47.08,46.51,measured WIRE-027 baseline
+B,supported_messages_and_lane_boundaries,,,,,,,,,,,,,,,,,functional simulation only; no benchmark counters captured
+B,production_size_synthesis,,,,,,,,,,,,,,,,,stopped during PROC_MEMWR; no fit/P&R/latency-throughput comparison

@@ -39,15 +39,17 @@ WIRE-026A resolves the initial LUT-RAM fit failure using synchronous packed-row 
 - [x] Five-seed ECP5 placement and routing completed
 - [x] Timing and resource reports recorded (all seeds miss 156.25 MHz)
 - [x] Latency cycles and accepted-byte throughput recorded
-- [x] Bottleneck conclusion recorded: BUILD B justified as a separate controlled parser experiment; production Architecture B remains unauthorized
+- [x] WIRE-027 bottleneck conclusion recorded; its BUILD B recommendation was evaluated by WIRE-028, which completed and rejected B for this baseline
 
 Timing closure at 156.25 MHz remains unachieved. No board pinout, physical timing, or physical throughput claim is made.
 
 ## Architecture experiment gate
 
-- [ ] Architecture B authorized from evidence
-- [ ] Identical experiment controls
-- [ ] A/B comparison and conclusion
+WIRE-028/028A/028B completed the controlled Architecture-B experiment. B passed the tested parser and parser→book→decision workloads, full-capacity synthesis and five-seed routing. The measured result rejects B for this project baseline: LUT4 cost is about 1.97× Architecture A, routed Fmax is lower, and derived byte throughput at each architecture's conservative routed-frequency estimate is lower. Architecture A remains the production baseline; B is not approved as a replacement.
+
+- [x] Architecture-B experiment correctness and integration evidence recorded
+- [x] Identical implementation controls and five-seed P&R recorded
+- [x] A/B measurements and evidence-based REJECT B conclusion recorded
 
 ## CDC gate
 

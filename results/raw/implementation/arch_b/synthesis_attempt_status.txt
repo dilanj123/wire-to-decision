@@ -1,0 +1,3 @@
+WIRE-028 production-size ECP5 synthesis attempt (original log retained)
+Command is recorded in the log preamble. Tool: Yosys 0.69+154 (git 30d62572e-dirty).
+The initial WIRE-028 report misidentified the active pass. Reinspection shows PROC_MEMWR completed. Yosys proceeded through process cleanup and mux optimization and had reached FSM_EXTRACT when the run was stopped after 7m37s. The log reports the old msg_q byte array replaced by registers, plus many mux/control nodes from the clocked eight-lane source-ordered state-transition process. The dynamic byte-array writes contribute to process complexity, but msg_q alone was not isolated as the only cause. No mapped netlist/resource statistics/fit result was produced.

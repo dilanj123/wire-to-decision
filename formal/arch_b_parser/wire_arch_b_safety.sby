@@ -1,0 +1,15 @@
+[options]
+mode bmc
+depth 12
+
+[engines]
+smtbmc yices
+
+[script]
+read -formal -sv wire_ingress_buffer.sv wire_arch_b_parser_top.sv wire_arch_b_safety.sv
+prep -top wire_arch_b_safety
+
+[files]
+rtl/common/wire_ingress_buffer.sv
+rtl/arch_b/wire_arch_b_parser_top.sv
+formal/arch_b_parser/wire_arch_b_safety.sv

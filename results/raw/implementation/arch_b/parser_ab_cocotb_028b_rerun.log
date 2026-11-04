@@ -1,0 +1,48 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb_tools/makefiles/simulators/Makefile.verilator:68: Using MODULE is deprecated, please use COCOTB_TEST_MODULES instead.
+rm -f results.xml
+COCOTB_TEST_MODULES=test_arch_b_parser COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_ab_parser_compare_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793826208
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_arch_b_parser.supported_messages_and_lane_boundaries (1/8)
+ 33390.00ns INFO     cocotb.regression                  test_arch_b_parser.supported_messages_and_lane_boundaries passed
+ 33390.00ns INFO     cocotb.regression                  running test_arch_b_parser.filters_partial_keep_and_rearm (2/8)
+188126.00ns INFO     cocotb.regression                  test_arch_b_parser.filters_partial_keep_and_rearm passed
+188126.00ns INFO     cocotb.regression                  running test_arch_b_parser.deterministic_lane_vectors (3/8)
+346216.00ns INFO     cocotb.regression                  test_arch_b_parser.deterministic_lane_vectors passed
+346216.00ns INFO     cocotb.regression                  running test_arch_b_parser.heartbeat_checksum_and_outer_filters (4/8)
+499976.00ns INFO     cocotb.regression                  test_arch_b_parser.heartbeat_checksum_and_outer_filters passed
+499976.00ns INFO     cocotb.regression                  running test_arch_b_parser.structural_truncation_and_rearm (5/8)
+561696.00ns INFO     cocotb.regression                  test_arch_b_parser.structural_truncation_and_rearm passed
+561696.00ns INFO     cocotb.regression                  running test_arch_b_parser.mold_control_and_outer_truncation (6/8)
+714616.01ns INFO     cocotb.regression                  test_arch_b_parser.mold_control_and_outer_truncation passed
+714616.01ns INFO     cocotb.regression                  running test_arch_b_parser.header_errors_semantic_drain_and_output_stall (7/8)
+837336.01ns INFO     cocotb.regression                  test_arch_b_parser.header_errors_semantic_drain_and_output_stall passed
+837336.01ns INFO     cocotb.regression                  running test_arch_b_parser.two_lane_progress_and_service_measurement (8/8)
+                                                            Check cursor progress and collect simple B parser service counters.
+838227.01ns INFO     ...wire_arch_ab_parser_compare_top WIRE028B_PARSER_METRIC workload=single_add bytes=100 B_event_intervals=[] B_first_frame_to_event=87 max_B_bytes_per_cycle=2 events=1 shared_ingress_stall_cycles=71
+839547.01ns INFO     ...wire_arch_ab_parser_compare_top WIRE028B_PARSER_METRIC workload=two_message bytes=142 B_event_intervals=[43] B_first_frame_to_event=87 max_B_bytes_per_cycle=2 events=2 shared_ingress_stall_cycles=108
+842477.01ns INFO     ...wire_arch_ab_parser_compare_top WIRE028B_PARSER_METRIC workload=stateful_types bytes=296 B_event_intervals=[43, 35, 41, 24, 43, 18] B_first_frame_to_event=87 max_B_bytes_per_cycle=2 events=7 shared_ingress_stall_cycles=249
+847487.01ns INFO     ...wire_arch_ab_parser_compare_top WIRE028B_PARSER_METRIC workload=repeated_frames bytes=500 B_event_intervals=[103, 103, 103, 103] B_first_frame_to_event=87 max_B_bytes_per_cycle=2 events=5 shared_ingress_stall_cycles=431
+847487.01ns INFO     cocotb.regression                  test_arch_b_parser.two_lane_progress_and_service_measurement passed
+847487.01ns INFO     cocotb.regression                  **************************************************************************************************************************
+                                                        ** TEST                                                              STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************************************************
+                                                        ** test_arch_b_parser.supported_messages_and_lane_boundaries          PASS       33390.00           0.13     255283.12  **
+                                                        ** test_arch_b_parser.filters_partial_keep_and_rearm                  PASS      154736.00           0.59     260934.91  **
+                                                        ** test_arch_b_parser.deterministic_lane_vectors                      PASS      158090.00           0.56     284049.39  **
+                                                        ** test_arch_b_parser.heartbeat_checksum_and_outer_filters            PASS      153760.00           0.54     284921.15  **
+                                                        ** test_arch_b_parser.structural_truncation_and_rearm                 PASS       61720.00           0.30     204894.11  **
+                                                        ** test_arch_b_parser.mold_control_and_outer_truncation               PASS      152920.00           0.51     302597.24  **
+                                                        ** test_arch_b_parser.header_errors_semantic_drain_and_output_stall   PASS      122720.00           0.43     287578.19  **
+                                                        ** test_arch_b_parser.two_lane_progress_and_service_measurement       PASS       10151.00           0.05     213602.81  **
+                                                        **************************************************************************************************************************
+                                                        ** TESTS=8 PASS=8 FAIL=0 SKIP=0                                                 847487.01           3.11     272440.79  **
+                                                        **************************************************************************************************************************
+- :0: Verilog $finish

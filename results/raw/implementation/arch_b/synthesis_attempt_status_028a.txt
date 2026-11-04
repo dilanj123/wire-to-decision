@@ -1,0 +1,14 @@
+WIRE-028A Yosys investigation, Yosys 0.69+154 (git 30d62572e-dirty)
+
+Original WIRE-028 benchmark synthesis:
+- `proc_memwr` did not hang: the pass completed and Yosys advanced through PROC_CLEAN/OPT into FSM_EXTRACT.
+- The source contains a clocked 8-lane ordered loop with blocking updates to parser state and several dynamically indexed byte arrays (`eth_q`, `ip_q`, `udp_q`, `mold_q`, `msg_q`). The old synthesis log reports `msg_q` replaced by a list of registers, then logs thousands of mux/control decisions before stopping in FSM_EXTRACT.
+- The evidence points to the entire unrolled procedural state-update chain, with dynamic array writes as contributors; it does not isolate `msg_q` as the sole cause.
+
+WIRE-028A change:
+- Replaced only `msg_q[0:43]` byte-array storage with a 352-bit packed register and a fixed case mapping from byte counter to constant byte slice.
+- Parser `proc` completes in 34.55 s (real), peak memory 669.59 MB; `stat` reports 69,214 `$mux`, 11,234 `$eq`, 3 `$memrd`, 3 `$memwr_v2`, and 146 memory bits in the parser hierarchy.
+- Parser-only `synth_ecp5` did not complete. It remained in FSM_EXTRACT for 461.10 s (real) and was stopped. No parser mapped resource result was produced.
+- Full production-size `synth_ecp5` and nextpnr were not run after the change because parser-only synthesis did not complete.
+
+No resource-fit inference is possible. This is synthesis scalability/non-completion, not a demonstrated FPGA capacity failure.

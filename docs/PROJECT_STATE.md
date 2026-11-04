@@ -33,7 +33,7 @@ Baseline candidate:
 → bounded order state
 → deterministic decision
 
-Architecture B is not authorized.
+WIRE-028's controlled Architecture-B experiment is complete. The two-byte-per-cycle experimental parser passed its documented functional checks, synthesized and routed for five seeds. The measured result rejects B for this project baseline; Architecture A remains the production implementation. B production replacement remains unauthorized.
 
 ## Application status
 
@@ -157,7 +157,7 @@ Application P&R and cycle-based latency/throughput evidence exist from WIRE-026/
 
 WIRE-004 native Apple Silicon open-source toolchain qualification completed in commit `89e2841` for the trivial smoke design. Canonical suite: OSS CAD Suite `2026-09-27`; details are in `results/processed/toolchain_smoke.md`. This is toolchain-smoke evidence only.
 
-WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. Exact-target smoke implementation was followed by full-capacity application synthesis and five-seed routing in WIRE-026/026A. WIRE-027 isolated parser/book/decision service cycles and repeated the same five-seed campaign after one order-book write-plan timing experiment. All five routes completed, with 45.68–47.66 MHz Fmax; timing closure remains unachieved. WIRE-025's 79-job formal campaign passed under its recorded bounded scopes; two historical monolithic jobs remain solver-bound. Cycle-based latency/throughput and routed implementation data exist, but physical operation, physical latency/throughput, CDC/RDC, and C++ integration remain unproven. See EVID-026/026A/027.
+WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. WIRE-026/026A/027 produced full-capacity Architecture-A synthesis and five-seed route evidence; WIRE-028B produced matched Architecture-B synthesis and five-seed route evidence. A routes at 45.68–47.66 MHz; B routes at 19.997–21.047 MHz. Neither meets the objective. WIRE-025's 79-job formal campaign passed under its recorded bounded scopes; two historical monolithic jobs remain solver-bound. Cycle-based latency/throughput and routed implementation estimates exist, but physical operation, physical latency/throughput, CDC/RDC, and C++ integration remain unproven. See EVID-026/026A/027/028B.
 
 ## Open bugs
 
@@ -165,7 +165,7 @@ None recorded.
 
 ## Open decisions
 
-- Architecture B remains unauthorized for implementation; WIRE-027 recommends a narrow native-64 parser experiment with the common event/book/decision boundary held fixed.
+- WIRE-028/028A/028B controlled A/B experiment is closed: REJECT B for this baseline; Architecture A remains production. Rationale and bounded evidence are in `docs/DECISIONS.md` and `EVID-028B`.
 - WIRE-001 process adoption details are recorded in `docs/DECISIONS.md`.
 - WIRE-002 external source authority and MVP protocol restrictions are recorded in `docs/DECISIONS.md`.
 - WIRE-003 originality and third-party provenance policy are recorded in `docs/DECISIONS.md`.
@@ -182,8 +182,8 @@ None recorded.
 
 ## Current bottleneck
 
-WIRE-026A mapped the 512 × 2 store to 16 EBRs. WIRE-027's registered write-plan experiment changes full-top synthesis from 7,876 LUT4/3,586 FF to 7,376 LUT4/3,943 FF and improves five-seed median Fmax from 43.63 to 47.08 MHz. The clock path remains book EBR read→selected-entry/valid checks→aggregate/update→write-plan control. Separately measured cycles show parser event intervals of 86–107 cycles versus a 5-cycle ordinary book service interval and 1-cycle decision creation. The parser serialization limits cycles per mutation/frame; the book limits clock frequency. Evidence supports a narrow native-64 Architecture-B parser experiment, but B RTL remains unauthorized. See `results/processed/WIRE-027-bottleneck-experiment.md`.
+WIRE-026A mapped the 512 × 2 store to 16 EBRs. WIRE-027's registered write-plan experiment reduced full-top LUT4 to 7,376 and improved five-seed Fmax to 45.68–47.66 MHz; the A critical path remained in the book EBR read/update logic. WIRE-027 measured parser service intervals of 86–107 cycles/event versus 5 cycles for ordinary book service and 1 cycle for decision creation. The completed WIRE-028 experiment tested a two-byte-per-cycle direct-beat parser against the same book/decision subsystem. B halves simulation cycles on matched workloads but routes at 19.997–21.047 MHz, with a critical path from ingress beat selection through parser control to `ip_index_q`; it uses 14,559 LUT4. The comparison rejects B for this baseline: its clock estimate and LUT cost outweigh the cycle reduction, yielding lower derived byte rate at each architecture's conservative minimum seed estimate. Neither architecture meets 156.25 MHz. See `results/processed/WIRE-027-bottleneck-experiment.md` and `results/processed/WIRE-028-architecture-ab-comparison.md`.
 
 ## Next task
 
-WIRE-028 — run a narrow native-64 Architecture-B parser experiment against the same normalized-event boundary and shared book/decision subsystem. Architecture B is not implemented or authorized for production.
+WIRE-029 — Minimal CDC/RDC extension. The Architecture-B experiment is complete and rejected for the current baseline; Architecture A remains production. Do not infer timing closure or physical throughput from the current routed/cycle evidence.

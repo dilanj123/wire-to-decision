@@ -1,0 +1,8 @@
+architecture,workload,accepted_bytes,elapsed_cycles,bytes_per_cycle,event_II_cycles,decision_II_cycles,L1_cycles,L2_cycles,L3_cycles,parser_max_bytes_per_cycle,ingress_stall_cycles,Yosys_LUT4,FF,DP16KD,DPR16X4,DSP,Fmax_min_seed_MHz,Fmax_seed_range_MHz,derived_MB_s_at_arch_min_Fmax,derived_MB_s_at_common_19MHz,notes
+A,single_ADD_BUY,100,116,0.862069,—,—,37,7,115,1,71,7376,3943,16,16,0,45.68,45.68-47.66,39.379,16.379,Same WIRE-027 full-top workload; frequency-derived values are not physical measurements
+B,single_ADD_BUY,100,58,1.724138,—,—,18,6,57,2,29,14559,3700,16,16,0,19.997,19.997-21.047,34.478,32.759,Same frame/configuration; L1 uses B byte-cursor observation
+A,two_message_A_E,133,146,0.910959,35,—,37,7,115,1,101,7376,3943,16,16,0,45.68,45.68-47.66,41.613,17.308,Same 133-byte complete frame and shared event/book/decision setup
+B,two_message_A_E,133,75,1.773333,17,—,18/16,6,57,2,41,14559,3700,16,16,0,19.997,19.997-21.047,35.461,33.693,Two normalized events; one decision; L1 per event and L3 per decision
+A,stateful_A_F_E_C_X_U_D,668,697,0.958393,107/98/103/90/102/86,107/395,37,7/7/9,115/131/131,1,583,7376,3943,16,16,0,45.68,45.68-47.66,43.779,18.209,Seven separate full Ethernet frames; WIRE-027 frozen workload
+B,stateful_A_F_E_C_X_U_D,668,350,1.908571,53/49/51/45/51/43,53/198,18/20/16/18/12/18/10,6/6/8,57/65/67,2,248,14559,3700,16,16,0,19.997,19.997-21.047,38.166,36.263,Same seven frame byte stream; seven events and three decisions
+B,repeated_five_ADD_frames,500,262,1.908397,51/51/51/51,not recorded,18/18/18/18/18,6,63,2,181,14559,3700,16,16,0,19.997,19.997-21.047,38.163,36.260,B-only repeat workload; no WIRE-027 A counterpart, not used for paired conclusion

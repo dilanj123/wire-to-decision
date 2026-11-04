@@ -209,3 +209,15 @@
 - Timing: A registered validated write-plan experiment reduced Yosys LUT4 from 7,876 to 7,376 and improved five-seed median routed Fmax from 43.63 to 47.08 MHz. All seeds still miss 156.25 MHz. The critical path remains in the order-book EBR read/selected-entry/aggregate-update path.
 - Decision: **BUILD B is justified as a separate controlled native-64 parser experiment.** Keep the normalized-event boundary and shared order book/decision subsystem identical, use the same legal workload and frozen implementation target, and compare cycles/throughput. This recommendation does not implement B or authorize replacing the production Architecture-A path.
 - Status: FOLLOW-UP EXPERIMENT RECOMMENDED; Architecture B production implementation remains unauthorized.
+
+
+## WIRE-028 — Controlled Architecture-B parser experiment status
+
+- Date: 2026-11-03
+- Source: WIRE-028 direct-beat parser experiment
+- Context: WIRE-027 recommended a native-64 parser experiment while retaining the shared book/decision subsystem and Architecture-A production baseline.
+- Decision: Architecture B was authorized only for this controlled experiment. WIRE-028B retained direct 64-bit input but processes at most two consecutive byte lanes per cycle. The final parser and full 512×2 book/decision benchmark synthesized; all five frozen-target seeds placed and routed.
+- Measurement: Matched workloads showed B at 1.724–1.909 accepted bytes/cycle versus A at 0.862–0.958, with about half the simulated cycles. B uses 14,559 LUT4 versus A's 7,376 and routes at 19.997–21.047 MHz versus A's 45.68–47.66 MHz. Both miss 156.25 MHz. At each architecture's conservative minimum routed-frequency estimate, B's derived byte rate is lower than A's for the matched workloads. B's critical path is ingress beat selection into parser control/index logic; A's is the order-book path.
+- Decision: **REJECT B for the current project baseline.** The measured cycle reduction does not justify the added parser complexity and nearly doubled LUT4 cost given the lower routed frequency and derived end-to-end rate. Architecture A remains the production implementation. This is a bounded experiment result, not proof that all possible B architectures are inferior.
+- Consequences: No production B replacement is authorized. This decision does not close timing, physical throughput, pinout validation, CDC/RDC or hardware operation. WIRE-029 minimal CDC/RDC extension is next; it is not started here.
+- Status: EXPERIMENT COMPLETE; B REJECTED FOR THIS BASELINE.

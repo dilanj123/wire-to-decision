@@ -1,0 +1,867 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:     15889/83640    18%
+Info:         logic LUTs:  14559/83640    17%
+Info:         carry LUTs:   1234/83640     1%
+Info:           RAM LUTs:     64/10455     0%
+Info:          RAMW LUTs:     32/20910     0%
+
+Info:      Total DFFs:      3700/83640     4%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     1659 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0xe2098ada
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:     113/    365    30%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:      16/    208     7%
+Info: 	          MULT18X18D:       0/    156     0%
+Info: 	              ALU54B:       0/     78     0%
+Info: 	             EHXPLLL:       0/      4     0%
+Info: 	             EXTREFB:       0/      2     0%
+Info: 	                DCUA:       0/      2     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    224     0%
+Info: 	            SIOLOGIC:       0/    141     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/     14     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:    3700/  83640     4%
+Info: 	        TRELLIS_COMB:   16089/  83640    19%
+Info: 	        TRELLIS_RAMW:      16/  10455     0%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 13687 cells, random placement wirelen = 1489091.
+Info:     at initial placer iter 0, wirelen = 16523
+Info:     at initial placer iter 1, wirelen = 13224
+Info:     at initial placer iter 2, wirelen = 12164
+Info:     at initial placer iter 3, wirelen = 11757
+Info: Running main analytical placer, max placement attempts per cell = 49675528.
+Info:     at iteration #1, type ALL: wirelen solved = 11637, spread = 228133, legal = 229377; time = 0.35s
+Info:     at iteration #2, type ALL: wirelen solved = 26419, spread = 125331, legal = 128617; time = 0.36s
+Info:     at iteration #3, type ALL: wirelen solved = 36039, spread = 109492, legal = 112418; time = 0.31s
+Info:     at iteration #4, type ALL: wirelen solved = 41171, spread = 99524, legal = 103008; time = 0.31s
+Info:     at iteration #5, type ALL: wirelen solved = 44164, spread = 97575, legal = 103205; time = 0.29s
+Info:     at iteration #6, type ALL: wirelen solved = 46738, spread = 96066, legal = 100393; time = 0.28s
+Info:     at iteration #7, type ALL: wirelen solved = 49114, spread = 92453, legal = 95708; time = 0.27s
+Info:     at iteration #8, type ALL: wirelen solved = 50903, spread = 91424, legal = 94707; time = 0.29s
+Info:     at iteration #9, type ALL: wirelen solved = 51877, spread = 89592, legal = 95345; time = 0.27s
+Info:     at iteration #10, type ALL: wirelen solved = 53083, spread = 88329, legal = 92199; time = 0.27s
+Info:     at iteration #11, type ALL: wirelen solved = 54624, spread = 88546, legal = 92023; time = 0.27s
+Info:     at iteration #12, type ALL: wirelen solved = 55446, spread = 87458, legal = 93412; time = 0.28s
+Info:     at iteration #13, type ALL: wirelen solved = 55754, spread = 88589, legal = 92484; time = 0.28s
+Info:     at iteration #14, type ALL: wirelen solved = 57751, spread = 84995, legal = 90370; time = 0.27s
+Info:     at iteration #15, type ALL: wirelen solved = 58107, spread = 83241, legal = 88524; time = 0.34s
+Info:     at iteration #16, type ALL: wirelen solved = 58327, spread = 82788, legal = 85913; time = 0.29s
+Info:     at iteration #17, type ALL: wirelen solved = 58171, spread = 80541, legal = 86373; time = 0.32s
+Info:     at iteration #18, type ALL: wirelen solved = 58656, spread = 80375, legal = 86004; time = 0.28s
+Info:     at iteration #19, type ALL: wirelen solved = 60198, spread = 86253, legal = 89932; time = 0.27s
+Info:     at iteration #20, type ALL: wirelen solved = 63947, spread = 85090, legal = 91393; time = 0.27s
+Info:     at iteration #21, type ALL: wirelen solved = 63533, spread = 84528, legal = 91650; time = 0.26s
+Info: HeAP Placer Time: 8.72s
+Info:   of which solving equations: 6.29s
+Info:   of which spreading cells: 0.90s
+Info:   of which strict legalisation: 0.23s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 8035, wirelen = 85913
+Info:   at iteration #5: temp = 0.000000, timing cost = 7007, wirelen = 75480
+Info:   at iteration #10: temp = 0.000000, timing cost = 6432, wirelen = 72808
+Info:   at iteration #15: temp = 0.000000, timing cost = 6329, wirelen = 70831
+Info:   at iteration #20: temp = 0.000000, timing cost = 6268, wirelen = 70112
+Info:   at iteration #25: temp = 0.000000, timing cost = 6284, wirelen = 69850
+Info:   at iteration #30: temp = 0.000000, timing cost = 6285, wirelen = 69745
+Info:   at iteration #34: temp = 0.000000, timing cost = 6290, wirelen = 69710 
+Info: SA placement time 31.14s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 17.51 MHz (FAIL at 156.25 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 16.65 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 12.47 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 29 endpoint(s)
+Info:          + represents [1,29) endpoint(s)
+Info: [-50704, -47877) |+
+Info: [-47877, -45050) | 
+Info: [-45050, -42223) |**+
+Info: [-42223, -39396) |*******+
+Info: [-39396, -36569) |**************+
+Info: [-36569, -33742) |***************+
+Info: [-33742, -30915) |*+
+Info: [-30915, -28088) | 
+Info: [-28088, -25261) | 
+Info: [-25261, -22434) |*+
+Info: [-22434, -19607) |*************+
+Info: [-19607, -16780) |*+
+Info: [-16780, -13953) |********+
+Info: [-13953, -11126) | 
+Info: [-11126,  -8299) |*+
+Info: [ -8299,  -5472) |******************+
+Info: [ -5472,  -2645) |************************************+
+Info: [ -2645,    182) |******************************************+
+Info: [   182,   3009) |******************************************************+
+Info: [  3009,   5836) |************************************************************ 
+Info: Checksum: 0x89c90807
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 69501 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |      107        892 |  107   892 |     68698|       0.50       0.50|
+Info:       2000 |      298       1701 |  191   809 |     68164|       0.12       0.63|
+Info:       3000 |      469       2530 |  171   829 |     67514|       0.12       0.75|
+Info:       4000 |      696       3303 |  227   773 |     66886|       0.12       0.86|
+Info:       5000 |      970       4029 |  274   726 |     66240|       0.12       0.98|
+Info:       6000 |     1155       4844 |  185   815 |     65484|       0.11       1.09|
+Info:       7000 |     1434       5565 |  279   721 |     64827|       0.12       1.21|
+Info:       8000 |     1640       6359 |  206   794 |     64420|       0.11       1.32|
+Info:       9000 |     1862       7137 |  222   778 |     63902|       0.12       1.44|
+Info:      10000 |     2112       7887 |  250   750 |     63289|       0.12       1.56|
+Info:      11000 |     2414       8585 |  302   698 |     62704|       0.14       1.71|
+Info:      12000 |     2713       9286 |  299   701 |     62087|       0.12       1.83|
+Info:      13000 |     2972      10027 |  259   741 |     61601|       0.13       1.96|
+Info:      14000 |     3312      10687 |  340   660 |     61164|       0.13       2.09|
+Info:      15000 |     3738      11261 |  426   574 |     60754|       0.13       2.23|
+Info:      16000 |     4048      11951 |  310   690 |     60206|       0.13       2.36|
+Info:      17000 |     4318      12681 |  270   730 |     59569|       0.12       2.48|
+Info:      18000 |     4629      13370 |  311   689 |     59108|       0.14       2.62|
+Info:      19000 |     4956      14043 |  327   673 |     58652|       0.14       2.76|
+Info:      20000 |     5347      14652 |  391   609 |     58133|       0.15       2.91|
+Info:      21000 |     5666      15333 |  319   681 |     57535|       0.14       3.05|
+Info:      22000 |     5906      16093 |  240   760 |     57022|       0.14       3.19|
+Info:      23000 |     6292      16707 |  386   614 |     56508|       0.15       3.34|
+Info:      24000 |     6643      17356 |  351   649 |     55997|       0.15       3.48|
+Info:      25000 |     7064      17935 |  421   579 |     55595|       0.16       3.64|
+Info:      26000 |     7516      18483 |  452   548 |     55182|       0.15       3.79|
+Info:      27000 |     7990      19009 |  474   526 |     54826|       0.16       3.95|
+Info:      28000 |     8349      19650 |  359   641 |     54384|       0.15       4.10|
+Info:      29000 |     8717      20282 |  368   632 |     53896|       0.15       4.25|
+Info:      30000 |     8954      21045 |  237   763 |     53161|       0.13       4.38|
+Info:      31000 |     9434      21565 |  480   520 |     52798|       0.16       4.54|
+Info:      32000 |     9909      22090 |  475   525 |     52396|       0.16       4.70|
+Info:      33000 |    10291      22708 |  382   618 |     52122|       0.15       4.85|
+Info:      34000 |    10782      23217 |  491   509 |     51784|       0.15       5.00|
+Info:      35000 |    11325      23674 |  543   457 |     51447|       0.15       5.16|
+Info:      36000 |    11792      24207 |  467   533 |     51089|       0.16       5.32|
+Info:      37000 |    12239      24760 |  447   553 |     50697|       0.16       5.47|
+Info:      38000 |    12695      25304 |  456   544 |     50272|       0.16       5.63|
+Info:      39000 |    13120      25879 |  425   575 |     49825|       0.16       5.79|
+Info:      40000 |    13495      26504 |  375   625 |     49389|       0.16       5.95|
+Info:      41000 |    13810      27189 |  315   685 |     48788|       0.14       6.09|
+Info:      42000 |    14055      27944 |  245   755 |     48099|       0.14       6.24|
+Info:      43000 |    14566      28433 |  511   489 |     47683|       0.16       6.40|
+Info:      44000 |    15172      28827 |  606   394 |     47486|       0.15       6.55|
+Info:      45000 |    15845      29154 |  673   327 |     47266|       0.16       6.71|
+Info:      46000 |    16505      29494 |  660   340 |     47041|       0.15       6.86|
+Info:      47000 |    17149      29850 |  644   356 |     46841|       0.17       7.03|
+Info:      48000 |    17891      30108 |  742   258 |     46713|       0.18       7.21|
+Info:      49000 |    18553      30446 |  662   338 |     46528|       0.17       7.38|
+Info:      50000 |    19274      30725 |  721   279 |     46359|       0.17       7.55|
+Info:      51000 |    20002      30997 |  728   272 |     46229|       0.18       7.73|
+Info:      52000 |    20721      31278 |  719   281 |     46052|       0.16       7.89|
+Info:      53000 |    21410      31589 |  689   311 |     45847|       0.16       8.05|
+Info:      54000 |    21981      32018 |  571   429 |     45531|       0.16       8.21|
+Info:      55000 |    22471      32528 |  490   510 |     45191|       0.16       8.38|
+Info:      56000 |    22848      33151 |  377   623 |     44678|       0.15       8.53|
+Info:      57000 |    23403      33596 |  555   445 |     44335|       0.17       8.70|
+Info:      58000 |    23947      34052 |  544   456 |     43937|       0.16       8.87|
+Info:      59000 |    24440      34559 |  493   507 |     43490|       0.16       9.02|
+Info:      60000 |    24737      35262 |  297   703 |     42867|       0.15       9.17|
+Info:      61000 |    24990      36009 |  253   747 |     42184|       0.14       9.32|
+Info:      62000 |    25256      36743 |  266   734 |     41521|       0.15       9.47|
+Info:      63000 |    25440      37378 |  184   635 |     40743|       0.11       9.58|
+Info:      64000 |    25801      37859 |  361   481 |     40128|       0.12       9.70|
+Info:      65000 |    26342      38245 |  541   386 |     39722|       0.14       9.84|
+Info:      66000 |    26832      38689 |  490   444 |     39255|       0.13       9.97|
+Info:      67000 |    27371      39071 |  539   382 |     38866|       0.14      10.11|
+Info:      68000 |    27933      39469 |  562   398 |     38499|       0.15      10.26|
+Info:      69000 |    28482      39886 |  549   417 |     38212|       0.17      10.44|
+Info:      70000 |    29028      40279 |  546   393 |     37832|       0.16      10.59|
+Info:      71000 |    29552      40711 |  524   432 |     37464|       0.16      10.76|
+Info:      72000 |    30033      41161 |  481   450 |     37001|       0.16      10.91|
+Info:      73000 |    30490      41648 |  457   487 |     36488|       0.15      11.06|
+Info:      74000 |    30721      42334 |  231   686 |     35795|       0.14      11.19|
+Info:      75000 |    30991      42999 |  270   665 |     35187|       0.15      11.34|
+Info:      76000 |    31288      43670 |  297   671 |     34532|       0.14      11.49|
+Info:      77000 |    31519      44377 |  231   707 |     33779|       0.12      11.61|
+Info:      78000 |    31734      45086 |  215   709 |     33026|       0.12      11.73|
+Info:      79000 |    31879      45870 |  145   784 |     32190|       0.12      11.86|
+Info:      80000 |    32007      46641 |  128   771 |     31357|       0.12      11.98|
+Info:      81000 |    32167      47335 |  160   694 |     30562|       0.12      12.10|
+Info:      82000 |    32371      48038 |  204   703 |     29819|       0.15      12.25|
+Info:      83000 |    32529      48875 |  158   837 |     28993|       0.16      12.41|
+Info:      84000 |    32660      49721 |  131   846 |     28134|       0.16      12.56|
+Info:      85000 |    32823      50529 |  163   808 |     27330|       0.17      12.73|
+Info:      86000 |    32950      51352 |  127   823 |     26523|       0.16      12.89|
+Info:      87000 |    33137      52116 |  187   764 |     25748|       0.15      13.04|
+Info:      88000 |    33334      52839 |  197   723 |     24951|       0.15      13.18|
+Info:      89000 |    33511      53644 |  177   805 |     24453|       0.18      13.36|
+Info:      90000 |    33680      54457 |  169   813 |     23638|       0.18      13.53|
+Info:      91000 |    33884      55203 |  204   746 |     22878|       0.18      13.72|
+Info:      92000 |    33992      56060 |  108   857 |     22001|       0.17      13.89|
+Info:      93000 |    34104      56938 |  112   878 |     21123|       0.15      14.04|
+Info:      94000 |    34237      57740 |  133   802 |     20279|       0.17      14.21|
+Info:      95000 |    34440      58522 |  203   782 |     19505|       0.18      14.38|
+Info:      96000 |    34597      59344 |  157   822 |     18698|       0.19      14.57|
+Info:      97000 |    34716      60187 |  119   843 |     17934|       0.19      14.76|
+Info:      98000 |    34818      61044 |  102   857 |     17071|       0.17      14.93|
+Info:      99000 |    34961      61898 |  143   854 |     16230|       0.19      15.12|
+Info:     100000 |    35096      62742 |  135   844 |     15382|       0.19      15.31|
+Info:     101000 |    35221      63500 |  125   758 |     14548|       0.19      15.50|
+Info:     102000 |    35338      64281 |  117   781 |     13731|       0.18      15.68|
+Info:     103000 |    35487      65097 |  149   816 |     12914|       0.25      15.93|
+Info:     104000 |    35663      65898 |  176   801 |     12148|       0.24      16.17|
+Info:     105000 |    35847      66691 |  184   793 |     11371|       0.24      16.41|
+Info:     106000 |    36028      67440 |  181   749 |     10647|       0.24      16.65|
+Info:     107000 |    36249      68181 |  221   741 |      9906|       0.24      16.89|
+Info:     108000 |    36503      68915 |  254   734 |      9236|       0.27      17.16|
+Info:     109000 |    36750      69660 |  247   745 |      8688|       0.33      17.49|
+Info:     110000 |    37018      70389 |  268   729 |      8053|       0.31      17.80|
+Info:     111000 |    37267      71139 |  249   750 |      7659|       0.33      18.13|
+Info:     112000 |    37535      71870 |  268   731 |      7078|       0.31      18.44|
+Info:     113000 |    37771      72618 |  236   748 |      6454|       0.25      18.70|
+Info:     114000 |    37903      73476 |  132   858 |      5637|       0.32      19.02|
+Info:     115000 |    38066      74250 |  163   774 |      4837|       0.41      19.43|
+Info:     116000 |    38182      75094 |  116   844 |      3989|       0.38      19.81|
+Info:     117000 |    38438      75812 |  256   718 |      3442|       0.50      20.31|
+Info:     118000 |    38555      76651 |  117   839 |      2594|       0.39      20.70|
+Info:     119000 |    38674      77482 |  119   831 |      1730|       0.37      21.07|
+Info:     120000 |    38805      78303 |  131   821 |       881|       0.41      21.48|
+Info:     121000 |    38985      79083 |  180   780 |       166|       1.13      22.61|
+Info:     121194 |    39010      79245 |   25   162 |         0|       0.26      22.88|
+Info: Routing complete.
+Info: Router1 time 22.88s
+Info: Checksum: 0x09c493fa
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.40  0.40 Source core.parser.ingress.read_ptr_q_LUT4_C_Z_TRELLIS_FF_DI.Q
+Info:    routing  0.48  0.87 Net core.parser.ingress.read_ptr_q_LUT4_C_Z_TRELLIS_FF_DI_Q[3] (98,16) -> (98,14)
+Info:                          Sink core.parser.ingress.data_q.0.0$DPRAM_COMB3.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  1.05 Source core.parser.ingress.data_q.0.0$DPRAM_COMB3.F
+Info:    routing  0.87  1.92 Net core.parser.ingress.data_q.0.0_DO_3[0] (98,14) -> (99,16)
+Info:                          Sink core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_D1_PFUMX_Z_BLUT_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.31  2.22 Source core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  2.22 Net core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_D1 (99,16) -> (99,16)
+Info:                          Sink core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.54-157.56
+Info:      logic  0.18  2.40 Source core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.00  2.40 Net core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z (99,16) -> (99,16)
+Info:                          Sink core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_L6MUX21_D0_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXA
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.66-157.68
+Info:      logic  0.18  2.58 Source core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_L6MUX21_D0_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.55  3.13 Net core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_L6MUX21_D0_Z[5] (99,16) -> (96,16)
+Info:                          Sink core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_L6MUX21_D0_Z_LUT4_B_Z_PFUMX_BLUT_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  3.32 Source core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_L6MUX21_D0_Z_LUT4_B_Z_PFUMX_BLUT_ALUT_LUT4_Z.OFX
+Info:    routing  1.10  4.42 Net core.parser.ingress.data_q.0.0_DO_3_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_L6MUX21_D0_Z_LUT4_B_Z_PFUMX_BLUT_Z_L6MUX21_D1_Z[4] (96,16) -> (92,27)
+Info:                          Sink core.parser.mold_q[10]_TRELLIS_FF_Q_4_DI_LUT4_Z_B_LUT4_Z_C_LUT4_Z_C_LUT4_Z_D_LUT4_D_2_Z_LUT4_Z.C
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  4.60 Source core.parser.mold_q[10]_TRELLIS_FF_Q_4_DI_LUT4_Z_B_LUT4_Z_C_LUT4_Z_C_LUT4_Z_D_LUT4_D_2_Z_LUT4_Z.F
+Info:    routing  1.32  5.91 Net core.parser.ip_q[18]_TRELLIS_FF_Q_3_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_1_C[4] (92,27) -> (89,13)
+Info:                          Sink core.parser.ip_q[12]_TRELLIS_FF_Q_3_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_C_LUT4_C_D_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  6.11 Source core.parser.ip_q[12]_TRELLIS_FF_Q_3_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_C_LUT4_C_D_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.69  6.79 Net core.parser.ip_q[12]_TRELLIS_FF_Q_3_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_C_LUT4_C_D[2] (89,13) -> (87,12)
+Info:                          Sink core.parser.ip_q[12]_TRELLIS_FF_Q_3_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_C_LUT4_C.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  6.97 Source core.parser.ip_q[12]_TRELLIS_FF_Q_3_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_C_LUT4_C.F
+Info:    routing  0.36  7.33 Net core.parser.ip_q[12]_TRELLIS_FF_Q_3_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_C_LUT4_C_Z[0] (87,12) -> (87,12)
+Info:                          Sink core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_C0_L6MUX21_Z_1_D1_PFUMX_Z_ALUT_LUT4_Z.A
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  7.51 Source core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_C0_L6MUX21_Z_1_D1_PFUMX_Z_ALUT_LUT4_Z.F
+Info:    routing  0.00  7.51 Net core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_C0_L6MUX21_Z_1_D1_PFUMX_Z_ALUT (87,12) -> (87,12)
+Info:                          Sink core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_C0_L6MUX21_Z_1_D1_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:141.30-141.32
+Info:      logic  0.13  7.63 Source core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_C0_L6MUX21_Z_1_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  7.63 Net core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_C0_L6MUX21_Z_1_D1 (87,12) -> (87,12)
+Info:                          Sink core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_C0_L6MUX21_Z_1_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:141.38-141.40
+Info:      logic  0.18  7.81 Source core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_C0_L6MUX21_Z_1_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.92  8.73 Net core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_C0[3] (87,12) -> (86,15)
+Info:                          Sink core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_C0_LUT4_B_Z_PFUMX_ALUT_Z_PFUMX_Z_1_ALUT_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  8.91 Source core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_C0_LUT4_B_Z_PFUMX_ALUT_Z_PFUMX_Z_1_ALUT_LUT4_Z.F
+Info:    routing  0.00  8.91 Net core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_C0_LUT4_B_Z_PFUMX_ALUT_Z_PFUMX_Z_1_ALUT (86,15) -> (86,15)
+Info:                          Sink core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_C0_LUT4_B_Z_PFUMX_ALUT_Z_PFUMX_Z_1_BLUT_LUT4_Z.F1
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:133.22-133.24
+Info:      logic  0.13  9.04 Source core.parser.ip_q[9]_TRELLIS_FF_Q_7_DI_LUT4_Z_B_LUT4_Z_C_LUT4_B_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_C0_LUT4_B_Z_PFUMX_ALUT_Z_PFUMX_Z_1_BLUT_LUT4_Z.OFX
+Info:    routing  0.64  9.67 Net core.parser.ip_q[8]_TRELLIS_FF_Q_6_DI_LUT4_Z_B_LUT4_Z_C_LUT4_D_Z_LUT4_Z_1_D_LUT4_B_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_L6MUX21_Z_SD_LUT4_C_Z_PFUMX_BLUT_Z[3] (86,15) -> (86,14)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  9.85 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.F
+Info:    routing  0.00  9.85 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT (86,14) -> (86,14)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.46-157.48
+Info:      logic  0.13  9.98 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  9.98 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1_L6MUX21_Z_D1 (86,14) -> (86,14)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.62-157.64
+Info:      logic  0.18  10.16 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.00  10.16 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1 (86,14) -> (86,14)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.70-157.72
+Info:      logic  0.18  10.34 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  1.14  11.48 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_A1 (86,14) -> (82,18)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB1.A
+Info:      logic  0.35  11.83 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  11.83 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_A1_CCU2C_S1_B1_CCU2C_S1_COUT (82,18) -> (83,18)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1_A1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  11.89 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1_A1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  11.89 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1_A1_CCU2C_S1_B1_CCU2C_S1$CCU2_FCI_INT (83,18) -> (83,18)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1_A1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  11.89 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1_A1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  11.89 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1_A1_CCU2C_S1_B1_CCU2C_S1_COUT (83,18) -> (83,18)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1_B1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.33  12.22 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1_B1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB0.F
+Info:    routing  0.82  13.03 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1_B1_CCU2C_S1_B1_CCU2C_S1_S0 (83,18) -> (83,20)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB0.B
+Info:      logic  0.35  13.39 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  13.39 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1_B1_CCU2C_S1$CCU2_FCI_INT (83,20) -> (83,20)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.29  13.68 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB1.F
+Info:    routing  0.85  14.53 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1_B1 (83,20) -> (82,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1$CCU2_COMB1.B
+Info:      logic  0.35  14.89 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  14.89 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_B1_CCU2C_S1_COUT (82,21) -> (82,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  14.94 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  14.94 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (82,21) -> (82,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  14.94 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  14.94 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT_CIN (82,21) -> (82,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  15.00 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  15.00 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT$CCU2_FCI_INT (82,21) -> (82,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  15.00 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  15.00 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_CIN (82,21) -> (83,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  15.06 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2$CCU2_COMB0.FCO
+Info:    routing  0.00  15.06 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2$CCU2_FCI_INT (83,21) -> (83,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2$CCU2_COMB1.FCI
+Info:      logic  0.00  15.06 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2$CCU2_COMB1.FCO
+Info:    routing  0.00  15.06 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_2_COUT (83,21) -> (83,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  15.11 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_1$CCU2_COMB0.FCO
+Info:    routing  0.00  15.11 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_1$CCU2_FCI_INT (83,21) -> (83,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_1$CCU2_COMB1.FCI
+Info:      logic  0.00  15.11 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_1$CCU2_COMB1.FCO
+Info:    routing  0.00  15.11 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_1_COUT (83,21) -> (83,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  15.17 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  15.17 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1$CCU2_FCI_INT (83,21) -> (83,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  15.17 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  15.17 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT (83,21) -> (83,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  15.23 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  15.23 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN$CCU2_FCI_INT (83,21) -> (83,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  15.23 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  15.23 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_COUT (83,21) -> (84,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  15.28 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  15.28 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1$CCU2_FCI_INT (84,21) -> (84,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  15.28 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  15.28 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S0_CCU2C_S1_COUT (84,21) -> (84,21)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_A0_CCU2C_S0$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.33  15.61 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_A0_CCU2C_S0$CCU2_COMB0.F
+Info:    routing  1.14  16.75 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_A0 (84,21) -> (89,24)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0$CCU2_COMB0.A
+Info:      logic  0.35  17.10 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0$CCU2_COMB0.FCO
+Info:    routing  0.00  17.10 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0$CCU2_FCI_INT (89,24) -> (89,24)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0$CCU2_COMB1.FCI
+Info:      logic  0.29  17.39 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0$CCU2_COMB1.F
+Info:    routing  0.55  17.94 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_Z_D_LUT4_A_Z_LUT4_D_Z_LUT4_Z_D_LUT4_Z_D_LUT4_D_Z_CCU2C_S0_COUT_LUT4_B_Z_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S0_S1[3] (89,24) -> (89,23)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  18.14 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.00  18.14 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_D1 (89,23) -> (89,23)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.70-157.72
+Info:      logic  0.18  18.32 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.68  18.99 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0_CCU2C_S1_S0_PFUMX_Z_ALUT_LUT4_Z_D_LUT4_Z_C_CCU2C_S0_S1_LUT4_C_Z_LUT4_Z_1_C_LUT4_C_Z_LUT4_Z_2_C_LUT4_D_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z_LUT4_D_1_Z_LUT4_Z_1_C_LUT4_Z_C_LUT4_Z_B_LUT4_B_1_Z_LUT4_Z_C_LUT4_B_Z_LUT4_C_Z_LUT4_B_Z_LUT4_D_Z[6] (89,23) -> (91,25)
+Info:                          Sink core.parser.structural_failed_q_LUT4_C_Z_LUT4_Z_B_LUT4_B_Z_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  19.19 Source core.parser.structural_failed_q_LUT4_C_Z_LUT4_Z_B_LUT4_B_Z_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  1.07  20.26 Net core.parser.structural_failed_q_LUT4_C_Z_LUT4_Z_B_LUT4_B_Z_LUT4_D_Z_PFUMX_BLUT_Z[2] (91,25) -> (83,32)
+Info:                          Sink core.parser.ingress.data_q.0.2_DO_2_LUT4_B_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  20.45 Source core.parser.ingress.data_q.0.2_DO_2_LUT4_B_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.00  20.45 Net core.parser.ingress.data_q.0.2_DO_2_LUT4_B_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_D1 (83,32) -> (83,32)
+Info:                          Sink core.parser.ingress.data_q.0.2_DO_2_LUT4_B_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.70-157.72
+Info:      logic  0.18  20.63 Source core.parser.ingress.data_q.0.2_DO_2_LUT4_B_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.77  21.41 Net core.parser.ip_q[13]_TRELLIS_FF_Q_2_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_C_LUT4_D_1_Z_LUT4_Z_3_C_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_BLUT_LUT4_Z_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z[4] (83,32) -> (82,29)
+Info:                          Sink core.parser.ingress.data_q.0.2_DO_2_LUT4_B_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_1_D1_PFUMX_Z_C0_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  21.60 Source core.parser.ingress.data_q.0.2_DO_2_LUT4_B_Z_LUT4_B_Z_LUT4_D_Z_L6MUX21_Z_1_D1_PFUMX_Z_C0_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.87  22.47 Net core.parser.ip_q[13]_TRELLIS_FF_Q_2_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_C_LUT4_D_1_Z_LUT4_Z_3_C_LUT4_B_Z_PFUMX_BLUT_Z_PFUMX_Z_1_BLUT_LUT4_Z_C_LUT4_D_Z_LUT4_Z_D_LUT4_C_Z[6] (82,29) -> (79,28)
+Info:                          Sink core.parser.ip_q[12]_TRELLIS_FF_Q_4_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_2.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  22.65 Source core.parser.ip_q[12]_TRELLIS_FF_Q_4_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_2.F
+Info:    routing  1.50  24.15 Net core.parser.ip_q[12]_TRELLIS_FF_Q_1_DI_LUT4_Z_B_LUT4_A_Z[5] (79,28) -> (90,19)
+Info:                          Sink core.parser.ip_q[12]_TRELLIS_FF_Q_5_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_3.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  24.33 Source core.parser.ip_q[12]_TRELLIS_FF_Q_5_DI_LUT4_Z_B_LUT4_A_Z_LUT4_Z_3.F
+Info:    routing  0.77  25.11 Net core.parser.ip_q[12]_TRELLIS_FF_Q_5_DI_LUT4_Z_B_LUT4_A_Z[5] (90,19) -> (86,17)
+Info:                          Sink core.parser.ip_q[8]_TRELLIS_FF_Q_3_DI_LUT4_Z_B_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_L6MUX21_D0_Z_L6MUX21_Z_3_D1_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  25.30 Source core.parser.ip_q[8]_TRELLIS_FF_Q_3_DI_LUT4_Z_B_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_L6MUX21_D0_Z_L6MUX21_Z_3_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.76  26.06 Net core.parser.ip_q[16]_TRELLIS_FF_Q_5_DI_LUT4_Z_B_LUT4_B_Z[3] (86,17) -> (86,24)
+Info:                          Sink core.parser.ip_q[0]_TRELLIS_FF_Q_1_DI_LUT4_Z_C_LUT4_D_Z_PFUMX_Z_C0_LUT4_D_Z_PFUMX_BLUT_Z_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  26.25 Source core.parser.ip_q[0]_TRELLIS_FF_Q_1_DI_LUT4_Z_C_LUT4_D_Z_PFUMX_Z_C0_LUT4_D_Z_PFUMX_BLUT_Z_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.28  26.53 Net core.parser.ip_q[0]_TRELLIS_FF_Q_1_DI_LUT4_Z_C_LUT4_D_Z_PFUMX_Z_C0_LUT4_D_Z_PFUMX_BLUT_Z[4] (86,24) -> (86,24)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_4_DI_LUT4_Z_B_LUT4_B_Z_LUT4_D_1_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_PFUMX_Z_1_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  26.72 Source core.parser.ip_q[17]_TRELLIS_FF_Q_4_DI_LUT4_Z_B_LUT4_B_Z_LUT4_D_1_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_PFUMX_Z_1_BLUT_LUT4_Z.OFX
+Info:    routing  0.88  27.60 Net core.parser.ip_q[17]_TRELLIS_FF_Q_4_DI_LUT4_Z_B_LUT4_B_Z_LUT4_D_1_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C[3] (86,24) -> (86,20)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_4_DI_LUT4_Z_B_LUT4_B_Z_LUT4_D_1_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  27.78 Source core.parser.ip_q[17]_TRELLIS_FF_Q_4_DI_LUT4_Z_B_LUT4_B_Z_LUT4_D_1_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z.F
+Info:    routing  1.00  28.78 Net core.parser.ip_q[17]_TRELLIS_FF_Q_4_DI_LUT4_Z_B_LUT4_B_Z_LUT4_D_1_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z_LUT4_Z_C_LUT4_D_Z[4] (86,20) -> (85,25)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_B0_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  28.97 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_B0_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  1.14  30.11 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_B0 (85,25) -> (81,29)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.B
+Info:      logic  0.35  30.47 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  30.47 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (81,29) -> (81,29)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.29  30.76 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.F
+Info:    routing  0.64  31.40 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1 (81,29) -> (81,30)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.B
+Info:      logic  0.35  31.75 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  31.75 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_CIN (81,30) -> (81,30)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:290.45-290.103
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.33  32.08 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT$CCU2_COMB0.F
+Info:    routing  1.01  33.09 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_S0 (81,30) -> (79,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_CIN_CCU2C_COUT$CCU2_COMB0.B
+Info:      logic  0.35  33.45 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  33.45 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_CIN_CCU2C_COUT$CCU2_FCI_INT (79,31) -> (79,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  33.45 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  33.45 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_CIN (79,31) -> (79,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  33.50 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB0.FCO
+Info:    routing  0.00  33.50 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_FCI_INT (79,31) -> (79,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB1.FCI
+Info:      logic  0.00  33.50 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB1.FCO
+Info:    routing  0.00  33.50 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_COUT (79,31) -> (79,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  33.56 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB0.FCO
+Info:    routing  0.00  33.56 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_FCI_INT (79,31) -> (79,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB1.FCI
+Info:      logic  0.00  33.56 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB1.FCO
+Info:    routing  0.00  33.56 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1_COUT (79,31) -> (80,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  33.62 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB0.FCO
+Info:    routing  0.00  33.62 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_FCI_INT (80,31) -> (80,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB1.FCI
+Info:      logic  0.00  33.62 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB1.FCO
+Info:    routing  0.00  33.62 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1_COUT (80,31) -> (80,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  33.67 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB0.FCO
+Info:    routing  0.00  33.67 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_FCI_INT (80,31) -> (80,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB1.FCI
+Info:      logic  0.00  33.67 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB1.FCO
+Info:    routing  0.00  33.67 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1_COUT (80,31) -> (80,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  33.73 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB0.FCO
+Info:    routing  0.00  33.73 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_FCI_INT (80,31) -> (80,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB1.FCI
+Info:      logic  0.00  33.73 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1$CCU2_COMB1.FCO
+Info:    routing  0.00  33.73 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1_COUT (80,31) -> (80,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  33.78 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  33.78 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (80,31) -> (80,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  33.78 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  33.78 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT_CIN (80,31) -> (81,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  33.84 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  33.84 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT$CCU2_FCI_INT (81,31) -> (81,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  33.84 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  33.84 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0_CIN (81,31) -> (81,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:291.45-291.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.33  34.17 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0_CCU2C_S0$CCU2_COMB0.F
+Info:    routing  0.62  34.78 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT_A0 (81,31) -> (82,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT$CCU2_COMB0.A
+Info:      logic  0.35  35.14 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  35.14 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT$CCU2_FCI_INT (82,31) -> (82,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  35.14 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  35.14 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_CIN (82,31) -> (82,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:292.45-292.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  35.19 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1$CCU2_COMB0.FCO
+Info:    routing  0.00  35.19 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1$CCU2_FCI_INT (82,31) -> (82,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1$CCU2_COMB1.FCI
+Info:      logic  0.00  35.19 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1$CCU2_COMB1.FCO
+Info:    routing  0.00  35.19 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_COUT (82,31) -> (82,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:292.45-292.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  35.25 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1$CCU2_COMB0.FCO
+Info:    routing  0.00  35.25 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1$CCU2_FCI_INT (82,31) -> (82,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1$CCU2_COMB1.FCI
+Info:      logic  0.00  35.25 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1$CCU2_COMB1.FCO
+Info:    routing  0.00  35.25 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_COUT_CCU2C_CIN_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_COUT (82,31) -> (83,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:292.45-292.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  35.31 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  35.31 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_B1_CCU2C_S1$CCU2_FCI_INT (83,31) -> (83,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  35.31 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  35.31 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_B1_CCU2C_S1_COUT (83,31) -> (83,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_B1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:292.45-292.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  35.36 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_B1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  35.36 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_B1_CCU2C_S1$CCU2_FCI_INT (83,31) -> (83,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_B1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  35.36 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_B1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  35.36 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_B1_CCU2C_S1_COUT (83,31) -> (83,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_1_B1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:292.45-292.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  35.42 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_1_B1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  35.42 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_1_B1_CCU2C_S1$CCU2_FCI_INT (83,31) -> (83,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_1_B1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  35.42 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_1_B1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  35.42 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_1_B1_CCU2C_S1_COUT (83,31) -> (83,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:292.45-292.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  35.47 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  35.47 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_B1_CCU2C_S1$CCU2_FCI_INT (83,31) -> (83,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  35.47 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_B1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  35.47 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_CCU2C_S1_B1_CCU2C_S1_COUT (83,31) -> (84,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:292.45-292.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.06  35.53 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  35.53 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0_CCU2C_S0_CIN_CCU2C_COUT$CCU2_FCI_INT (84,31) -> (84,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  35.53 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  35.53 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0_CCU2C_S0_CIN (84,31) -> (84,31)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0_CCU2C_S0$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_parser_top.sv:292.45-292.87
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.33  35.86 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0_CCU2C_S0$CCU2_COMB0.F
+Info:    routing  0.86  36.71 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0 (84,31) -> (82,30)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1$CCU2_COMB0.A
+Info:      logic  0.35  37.07 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  37.07 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1$CCU2_FCI_INT (82,30) -> (82,30)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.29  37.36 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1$CCU2_COMB1.F
+Info:    routing  0.68  38.04 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0[1] (82,30) -> (82,29)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_LUT4_Z.C
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  38.22 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_LUT4_Z.F
+Info:    routing  0.50  38.72 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1[5] (82,29) -> (83,29)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  38.91 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.54  39.45 Net core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S1_CCU2C_S1_COUT_CCU2C_CIN_S1[6] (83,29) -> (85,30)
+Info:                          Sink core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0_CCU2C_S0_CIN_CCU2C_COUT_S1_CCU2C_B1_S1_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  39.64 Source core.parser.ip_q[17]_TRELLIS_FF_Q_1_DI_LUT4_Z_A_LUT4_A_1_Z_LUT4_Z_D_LUT4_C_Z_LUT4_Z_D_LUT4_D_Z_PFUMX_BLUT_Z_L6MUX21_D0_Z_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_A1_S1_CCU2C_B1_S1_CCU2C_B1_S0_CCU2C_S1_A0_CCU2C_S0_CIN_CCU2C_COUT_S1_CCU2C_B1_S1_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.80  40.44 Net core.parser.ip_payload_remaining_q_TRELLIS_FF_Q_31_DI_LUT4_Z_C[5] (85,30) -> (94,30)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_COUT_CCU2C_CIN_S1_LUT4_C_Z_PFUMX_BLUT_Z_L6MUX21_Z_1_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  40.63 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_COUT_CCU2C_CIN_S1_LUT4_C_Z_PFUMX_BLUT_Z_L6MUX21_Z_1_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.96  41.59 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S0_LUT4_B_Z[5] (94,30) -> (94,36)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S0_LUT4_B_Z_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  41.78 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S0_LUT4_B_Z_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  0.00  41.78 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S0_LUT4_B_Z_L6MUX21_Z_D1 (94,36) -> (94,36)
+Info:                          Sink core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S0_LUT4_B_Z_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:141.38-141.40
+Info:      logic  0.18  41.96 Source core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S0_LUT4_B_Z_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.51  42.47 Net core.parser.msg_remaining_q_TRELLIS_FF_Q_15_DI_LUT4_Z_D_LUT4_Z_D_LUT4_Z_B_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S0_LUT4_B_Z[6] (94,36) -> (94,35)
+Info:                          Sink core.parser.ip_payload_remaining_q_TRELLIS_FF_Q_17_DI_LUT4_Z_D_LUT4_D_Z_L6MUX21_Z_5_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  42.67 Source core.parser.ip_payload_remaining_q_TRELLIS_FF_Q_17_DI_LUT4_Z_D_LUT4_D_Z_L6MUX21_Z_5_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.76  43.43 Net core.parser.ip_payload_remaining_q_TRELLIS_FF_Q_17_DI_LUT4_Z_D_LUT4_D_Z[5] (94,35) -> (94,28)
+Info:                          Sink core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_C0_L6MUX21_Z_3_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  43.62 Source core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_C0_L6MUX21_Z_3_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  0.00  43.62 Net core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_C0_L6MUX21_Z_3_D1 (94,28) -> (94,28)
+Info:                          Sink core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_C0_L6MUX21_Z_3_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.FXB
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:157.70-157.72
+Info:      logic  0.18  43.80 Source core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_C0_L6MUX21_Z_3_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  1.04  44.84 Net core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_C0[3] (94,28) -> (93,39)
+Info:                          Sink core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_ALUT_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  45.02 Source core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_ALUT_LUT4_Z.F
+Info:    routing  0.00  45.02 Net core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_ALUT (93,39) -> (93,39)
+Info:                          Sink core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:133.22-133.24
+Info:      logic  0.13  45.15 Source core.parser.state_q_TRELLIS_FF_Q_2_DI_LUT4_Z_D_LUT4_D_Z_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  1.03  46.18 Net core.parser.eth_index_q_TRELLIS_FF_Q_1_DI_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z_C[5] (93,39) -> (93,26)
+Info:                          Sink core.parser.ip_index_q_TRELLIS_FF_Q_2_DI_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.19  46.37 Source core.parser.ip_index_q_TRELLIS_FF_Q_2_DI_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z.OFX
+Info:    routing  1.14  47.51 Net core.parser.ip_index_q_TRELLIS_FF_Q_2_DI (93,26) -> (84,19)
+Info:                          Sink core.parser.ip_index_q_TRELLIS_FF_Q_2.M
+Info:      setup  0.00  47.51 Source core.parser.ip_index_q_TRELLIS_FF_Q_2.M
+Info: 15.32 ns logic, 32.19 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info:       type curr  total name
+Info:     source  0.00  0.00 Source rearm$tr_io.O
+Info:    routing  3.48  3.48 Net rearm$TRELLIS_IO_IN (0,38) -> (76,37)
+Info:                          Sink rst_LUT4_C.D
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_benchmark_top.sv:4.27-4.32
+Info:      logic  0.18  3.66 Source rst_LUT4_C.F
+Info:    routing  2.72  6.38 Net rst_LUT4_C_Z[1] (76,37) -> (53,45)
+Info:                          Sink core.book.state_q_LUT4_C.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  6.56 Source core.book.state_q_LUT4_C.F
+Info:    routing  1.16  7.71 Net core.book.state_q_LUT4_C_Z[2] (53,45) -> (45,47)
+Info:                          Sink core.book.state_q_LUT4_C_Z_LUT4_D_Z_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  7.89 Source core.book.state_q_LUT4_C_Z_LUT4_D_Z_LUT4_Z.F
+Info:    routing  1.79  9.69 Net core.book.state_q_LUT4_C_Z_LUT4_D_Z[1] (45,47) -> (55,43)
+Info:                          Sink core.book.order_valid_mem[8]_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z.B
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  9.87 Source core.book.order_valid_mem[8]_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z.F
+Info:    routing  2.56  12.42 Net core.book.order_valid_mem[8]_TRELLIS_FF_Q_CE_LUT4_Z_C[2] (55,43) -> (82,59)
+Info:                          Sink core.book.order_valid_mem[200]_TRELLIS_FF_Q_CE_LUT4_Z.C
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  12.60 Source core.book.order_valid_mem[200]_TRELLIS_FF_Q_CE_LUT4_Z.F
+Info:    routing  0.58  13.18 Net core.book.order_valid_mem[200]_TRELLIS_FF_Q_CE (82,59) -> (82,59)
+Info:                          Sink core.book.order_valid_mem[200]_TRELLIS_FF_Q.CE
+Info:      setup  0.00  13.18 Source core.book.order_valid_mem[200]_TRELLIS_FF_Q.CE
+Info: 0.90 ns logic, 12.28 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info:       type curr  total name
+Info:   clk-to-q  0.40  0.40 Source readout_word_q_TRELLIS_FF_Q_2.Q
+Info:    routing  0.73  1.12 Net readout_word_q[2] (99,59) -> (99,59)
+Info:                          Sink readout_action_q_LUT4_B_D_LUT4_Z.B
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_benchmark_top.sv:29.17-29.31
+Info:      logic  0.18  1.30 Source readout_action_q_LUT4_B_D_LUT4_Z.F
+Info:    routing  4.62  5.92 Net readout_action_q_LUT4_B_D[2] (99,59) -> (69,17)
+Info:                          Sink readout_data_LUT4_Z_8_D_LUT4_Z_2.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  6.10 Source readout_data_LUT4_Z_8_D_LUT4_Z_2.F
+Info:    routing  0.96  7.07 Net readout_data_LUT4_Z_8_D[2] (69,17) -> (66,17)
+Info:                          Sink readout_data_LUT4_Z_8.D
+Info:                          Defined in:
+Info:                               /Users/Dilan/eda/wire-to-decision/oss-cad-suite/libexec/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.18  7.25 Source readout_data_LUT4_Z_8.F
+Info:    routing  3.34  10.59 Net readout_data[8]$TRELLIS_IO_OUT (66,17) -> (0,17)
+Info:                          Sink readout_data[8]$tr_io.I
+Info:                          Defined in:
+Info:                               rtl/arch_b/wire_arch_b_benchmark_top.sv:10.25-10.37
+Info: 0.94 ns logic, 9.65 ns routing
+
+Warning: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 21.05 MHz (FAIL at 156.25 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 13.18 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 10.59 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 30 endpoint(s)
+Info:          + represents [1,30) endpoint(s)
+Info: [-41112, -38771) |+
+Info: [-38771, -36430) | 
+Info: [-36430, -34089) |*+
+Info: [-34089, -31748) |**+
+Info: [-31748, -29407) |*************+
+Info: [-29407, -27066) |**********************+
+Info: [-27066, -24725) |+
+Info: [-24725, -22384) | 
+Info: [-22384, -20043) |****+
+Info: [-20043, -17702) |**********+
+Info: [-17702, -15361) |****+
+Info: [-15361, -13020) |****+
+Info: [-13020, -10679) | 
+Info: [-10679,  -8338) | 
+Info: [ -8338,  -5997) | 
+Info: [ -5997,  -3656) |********+
+Info: [ -3656,  -1315) |*******************************************+
+Info: [ -1315,   1026) |**********************************+
+Info: [  1026,   3367) |************************************************************ 
+Info: [  3367,   5708) |***********************************************************+
+1 warning, 0 errors
+
+Info: Program finished normally.
+real 64.95
+user 69.35
+sys 0.67

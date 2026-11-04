@@ -1,0 +1,13 @@
+WIRE-028B final tool/configuration record
+Base branch/HEAD/origin: main / c7ccd8a8b628db56074bbc50a934210c3ee1ca00 / c7ccd8a8b628db56074bbc50a934210c3ee1ca00
+Gate-0 peeled commit: 06f5643a940ac2c6fcfab0e377169b48ce700107
+Yosys: 0.69+154, git 30d62572e-dirty; OSS CAD Suite 2026-09-27
+Verilator: 5.053 devel, rev v5.052-119-g014c9820d
+SBY: 0.69; Yices: 2.7.0
+nextpnr-ECP5: 0.11.1-34-gc4fbb55a
+Cocotb: 2.1.0.dev0+41564633
+Target: LFE5U-85F-8BG381C; --85k --package CABGA381 --speed 8; --freq 156.25; seeds 1, 7, 19, 42, 97; unconstrained I/O allowed; --timing-allow-fail
+Full synthesis: 45.79 s, 14,559 LUT4, 3,700 FF, 16 DP16KD, 16 DPR16X4.
+All final route seeds placed/routed rc=0. Fmax estimates 19.997–21.047 MHz; all miss the 156.25 MHz objective.
+Parser-only synthesis: 32.70 s, 9,431 LUT4, 1,539 FF, 16 DPR16X4.
+A/B conclusion: REJECT B for current project baseline; no timing closure or physical performance claim.

@@ -1,0 +1,30 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb_tools/makefiles/simulators/Makefile.verilator:68: Using MODULE is deprecated, please use COCOTB_TEST_MODULES instead.
+rm -f results.xml
+COCOTB_TEST_MODULES=test_arch_b_functional COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_b_functional_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793826208
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_arch_b_functional.shared_book_decision_matches_oracle (1/2)
+   580.00ns INFO     cocotb.regression                  test_arch_b_functional.shared_book_decision_matches_oracle passed
+   580.00ns INFO     cocotb.regression                  running test_arch_b_functional.b_parser_book_workloads_and_cycle_metrics (2/2)
+                                                            Compare bounded workloads with the oracle and count real beat/lane progress.
+  1181.00ns INFO     cocotb.wire_arch_b_functional_top  WIRE028B_FULL_METRIC workload=single_add_buy accepted_bytes=100 elapsed_cycles=58 bytes_per_cycle=1.7241 max_parser_bytes_per_cycle=2 event_handshakes=1 decisions=1 event_intervals=[] decision_intervals=[] ingress_stall_cycles=29 L1_first_ITCH_byte_to_event_cycles=[18] L2_final_ITCH_byte_to_decision_cycles=[6] L3_frame_to_decision_cycles=[57]
+  1951.00ns INFO     cocotb.wire_arch_b_functional_top  WIRE028B_FULL_METRIC workload=two_message accepted_bytes=133 elapsed_cycles=75 bytes_per_cycle=1.7733 max_parser_bytes_per_cycle=2 event_handshakes=2 decisions=1 event_intervals=[17] decision_intervals=[] ingress_stall_cycles=41 L1_first_ITCH_byte_to_event_cycles=[18, 16] L2_final_ITCH_byte_to_decision_cycles=[6] L3_frame_to_decision_cycles=[57]
+  5471.00ns INFO     cocotb.wire_arch_b_functional_top  WIRE028B_FULL_METRIC workload=stateful_A_F_E_C_X_U_D accepted_bytes=668 elapsed_cycles=350 bytes_per_cycle=1.9086 max_parser_bytes_per_cycle=2 event_handshakes=7 decisions=3 event_intervals=[53, 49, 51, 45, 51, 43] decision_intervals=[53, 198] ingress_stall_cycles=248 L1_first_ITCH_byte_to_event_cycles=[18, 20, 16, 18, 12, 18, 10] L2_final_ITCH_byte_to_decision_cycles=[6, 6, 8] L3_frame_to_decision_cycles=[57, 65, 67]
+  8111.00ns INFO     cocotb.wire_arch_b_functional_top  WIRE028B_FULL_METRIC workload=repeated_frames accepted_bytes=500 elapsed_cycles=262 bytes_per_cycle=1.9084 max_parser_bytes_per_cycle=2 event_handshakes=5 decisions=1 event_intervals=[51, 51, 51, 51] decision_intervals=[] ingress_stall_cycles=181 L1_first_ITCH_byte_to_event_cycles=[18, 18, 18, 18, 18] L2_final_ITCH_byte_to_decision_cycles=[6] L3_frame_to_decision_cycles=[63]
+  8111.00ns INFO     cocotb.regression                  test_arch_b_functional.b_parser_book_workloads_and_cycle_metrics passed
+  8111.00ns INFO     cocotb.regression                  **************************************************************************************************************************
+                                                        ** TEST                                                              STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************************************************
+                                                        ** test_arch_b_functional.shared_book_decision_matches_oracle         PASS         580.00           0.00     207727.46  **
+                                                        ** test_arch_b_functional.b_parser_book_workloads_and_cycle_metrics   PASS        7531.00           0.07     110546.77  **
+                                                        **************************************************************************************************************************
+                                                        ** TESTS=2 PASS=2 FAIL=0 SKIP=0                                                   8111.00           0.08     105021.08  **
+                                                        **************************************************************************************************************************
+- :0: Verilog $finish

@@ -1,0 +1,39 @@
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb_tools/makefiles/simulators/Makefile.verilator:68: Using MODULE is deprecated, please use COCOTB_TEST_MODULES instead.
+rm -f results.xml
+COCOTB_TEST_MODULES=test_arch_b_functional COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_b_functional_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793744970
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_arch_b_functional.shared_book_decision_matches_oracle (1/2)
+   580.00ns INFO     cocotb.regression                  test_arch_b_functional.shared_book_decision_matches_oracle passed
+   580.00ns INFO     cocotb.regression                  running test_arch_b_functional.b_parser_book_workloads_and_cycle_metrics (2/2)
+                                                            Compare bounded workloads with the oracle and count real beat/lane progress.
+  1171.00ns WARNING  ..book_workloads_and_cycle_metrics ('single_add_buy', [], [1161981756646125696])
+                                                        assert 0 == 1
+                                                         +  where 0 = len([])
+                                                         +  and   1 = len([56])
+                                                        Traceback (most recent call last):
+                                                          File "/Users/Dilan/Projects/wire-to-decision/tb/arch_b_functional/test_arch_b_functional.py", line 202, in b_parser_book_workloads_and_cycle_metrics
+                                                            assert len(l2)==len(got), (name, list(final_itch), [x.trigger_mold_sequence for x in expected])
+                                                        AssertionError: ('single_add_buy', [], [1161981756646125696])
+                                                        assert 0 == 1
+                                                         +  where 0 = len([])
+                                                         +  and   1 = len([56])
+  1171.00ns WARNING  cocotb.regression                  test_arch_b_functional.b_parser_book_workloads_and_cycle_metrics failed
+  1171.00ns INFO     cocotb.regression                  **************************************************************************************************************************
+                                                        ** TEST                                                              STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************************************************
+                                                        ** test_arch_b_functional.shared_book_decision_matches_oracle         PASS         580.00           0.00     241243.19  **
+                                                        ** test_arch_b_functional.b_parser_book_workloads_and_cycle_metrics   FAIL         591.00           0.00     141923.37  **
+                                                        **************************************************************************************************************************
+                                                        ** TESTS=2 PASS=1 FAIL=1 SKIP=0                                                   1171.00           0.02      76149.00  **
+                                                        **************************************************************************************************************************
+- :0: Verilog $finish
+make[1]: *** [results.xml] Error 1
+make: *** [sim] Error 2
