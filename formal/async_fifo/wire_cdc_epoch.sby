@@ -1,0 +1,15 @@
+[options]
+mode bmc
+depth 12
+multiclock on
+
+[engines]
+smtbmc yices
+
+[script]
+read -formal wire_arch_a_cdc_top.sv wire_cdc_epoch_formal.sv
+prep -top wire_cdc_epoch_formal
+
+[files]
+../../rtl/arch_a/wire_arch_a_cdc_top.sv
+wire_cdc_epoch_formal.sv

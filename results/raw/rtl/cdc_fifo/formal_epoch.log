@@ -1,0 +1,44 @@
+SBY 21:45:40 [wire_cdc_epoch] Removing directory '/Users/Dilan/Projects/wire-to-decision/formal/async_fifo/wire_cdc_epoch'.
+SBY 21:45:40 [wire_cdc_epoch] Copy '/Users/Dilan/Projects/wire-to-decision/formal/async_fifo/../../rtl/arch_a/wire_arch_a_cdc_top.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/async_fifo/wire_cdc_epoch/src/wire_arch_a_cdc_top.sv'.
+SBY 21:45:40 [wire_cdc_epoch] Copy '/Users/Dilan/Projects/wire-to-decision/formal/async_fifo/wire_cdc_epoch_formal.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/async_fifo/wire_cdc_epoch/src/wire_cdc_epoch_formal.sv'.
+SBY 21:45:40 [wire_cdc_epoch] engine_0: smtbmc yices
+SBY 21:45:40 [wire_cdc_epoch] base: starting process "cd wire_cdc_epoch/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 21:45:40 [wire_cdc_epoch] base: finished (returncode=0)
+SBY 21:45:40 [wire_cdc_epoch] prep: starting process "cd wire_cdc_epoch/model; yosys -ql design_prep.log design_prep.ys"
+SBY 21:45:40 [wire_cdc_epoch] prep: finished (returncode=0)
+SBY 21:45:40 [wire_cdc_epoch] smt2: starting process "cd wire_cdc_epoch/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 21:45:40 [wire_cdc_epoch] smt2: finished (returncode=0)
+SBY 21:45:40 [wire_cdc_epoch] engine_0: starting process "cd wire_cdc_epoch; yosys-smtbmc -s yices --presat --unroll --noprogress -t 12  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Solver: yices
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 21:45:40 [wire_cdc_epoch] engine_0: ##   0:00:00  Status: passed
+SBY 21:45:40 [wire_cdc_epoch] engine_0: finished (returncode=0)
+SBY 21:45:40 [wire_cdc_epoch] engine_0: Status returned by engine: pass
+SBY 21:45:40 [wire_cdc_epoch] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:45:40 [wire_cdc_epoch] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 21:45:40 [wire_cdc_epoch] summary: engine_0 (smtbmc yices) returned pass
+SBY 21:45:40 [wire_cdc_epoch] summary: engine_0 did not produce any traces
+SBY 21:45:40 [wire_cdc_epoch] DONE (PASS, rc=0)

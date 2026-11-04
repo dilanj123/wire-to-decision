@@ -2,7 +2,7 @@
 
 ## Status
 
-This plan defines future verification. No application tests, reference model, RTL simulation, formal application run, synthesis, or P&R has been executed. Every application requirement is `SPECIFIED / NOT YET VERIFIED`.
+This plan records verification targets and current evidence status. Completed results are indexed in docs/EVIDENCE_INDEX.md; remaining requirements are still prospective.
 
 ## Verification ownership
 
@@ -54,7 +54,7 @@ The ranges below enumerate every stable requirement identifier in `docs/REQUIREM
 | REQ-DEC-001..007 | decision | independent decision scoreboard and crossing sequences | decision evidence | SPECIFIED / NOT YET VERIFIED |
 | REQ-ERR-001..005 | error/recovery | malformed, discontinuity, profile-rejection, suffix, and re-arm tests | recovery evidence | SPECIFIED / NOT YET VERIFIED |
 | REQ-LAT-001..004 | simulation/implementation | cycle counters under canonical no-stall conditions; routed timing later | latency reports | SPECIFIED / NOT YET VERIFIED |
-| REQ-CDC-001..004 | CDC extension | async-clock simulation, formal/local checks, reset-domain tests | CDC evidence with limitations | SPECIFIED / NOT YET VERIFIED |
+| REQ-CDC-001..004 | CDC extension | async-clock simulation, formal/local checks, reset-domain tests | WIRE-029/EVID-029: FIFO + Architecture-A wrapper RTL-simulated; bounded local checks; physical CDC/RDC signoff remains open | CHECKED AT DOCUMENTED LOCAL SCOPE |
 | REQ-PPA-001..004 | synthesis/P&R/derived | Yosys, five fixed seeds, nextpnr, timing/resource extraction | raw reports and processed comparison | SPECIFIED / NOT YET VERIFIED |
 | REQ-SW-001..004 | reference/C++ verification | independent model tests, replay, checker comparison | model/checker evidence | SPECIFIED / NOT YET VERIFIED |
 | REQ-PROV-001..003 | review/process | provenance review, manifests, evidence-index review | process evidence | SPECIFIED / NOT YET VERIFIED |

@@ -6,6 +6,8 @@ Phase 4 — COMPLETE: focused single-clock functional regression, targeted forma
 
 Phase 5 — COMPLETE for Architecture-A implementation and bottleneck measurement (WIRE-026/WIRE-026A/WIRE-027). The full-capacity design places and routes on all five frozen seeds. The WIRE-027 write-plan experiment improves routed Fmax to 45.68–47.66 MHz, but all seeds still miss 156.25 MHz; timing closure is not achieved.
 
+CDC/RDC learning extension — WIRE-029 COMPLETE at the documented RTL-simulation and bounded-local-check scope. The original single-clock Architecture-A baseline is unchanged; commercial CDC/RDC signoff and physical Gray-bus skew remain unproven.
+
 Phase 1: COMPLETE — 71-test Python end-to-end oracle baseline
 
 Phase 2: COMPLETE — Architecture-A parser boundary through normalized events
@@ -159,6 +161,8 @@ WIRE-004 native Apple Silicon open-source toolchain qualification completed in c
 
 WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. WIRE-026/026A/027 produced full-capacity Architecture-A synthesis and five-seed route evidence; WIRE-028B produced matched Architecture-B synthesis and five-seed route evidence. A routes at 45.68–47.66 MHz; B routes at 19.997–21.047 MHz. Neither meets the objective. WIRE-025's 79-job formal campaign passed under its recorded bounded scopes; two historical monolithic jobs remain solver-bound. Cycle-based latency/throughput and routed implementation estimates exist, but physical operation, physical latency/throughput, CDC/RDC, and C++ integration remain unproven. See EVID-026/026A/027/028B.
 
+WIRE-029 updates CDC status: asynchronous FIFO and Architecture-A wrapper simulation, bounded local properties, and Yosys sanity passed. Commercial CDC/RDC signoff, physical Gray-bus skew, and operation on hardware remain unproven.
+
 ## Open bugs
 
 None recorded.
@@ -179,6 +183,7 @@ None recorded.
 - WIRE-D018 parser-wide fatal recovery, current-frame drain, event-boundary no-rollback, and explicit rearm are recorded in `docs/DECISIONS.md` and WIRE-022 evidence.
 - WIRE-D019 bounded-book atomic mutation commit and parser-fatal ordering are recorded in `docs/DECISIONS.md` and WIRE-023 evidence.
 - WIRE-D020 decision commit evaluation, configuration epochs, live enable, budget consumption, and pending-prefix/no-rollback semantics are recorded in `docs/DECISIONS.md` and WIRE-024 evidence.
+- WIRE-D021 asynchronous FIFO reset/epoch recovery is recorded in `docs/DECISIONS.md` and WIRE-029 evidence.
 
 ## Current bottleneck
 
@@ -186,4 +191,4 @@ WIRE-026A mapped the 512 × 2 store to 16 EBRs. WIRE-027's registered write-plan
 
 ## Next task
 
-WIRE-029 — Minimal CDC/RDC extension. The Architecture-B experiment is complete and rejected for the current baseline; Architecture A remains production. Do not infer timing closure or physical throughput from the current routed/cycle evidence.
+WIRE-030 — Independent C++ Checker and Final CV-Ready Portfolio Closeout. The Architecture-B experiment is complete and rejected for the current baseline; Architecture A remains production. WIRE-029 simulation/formal evidence is not physical CDC/RDC signoff.

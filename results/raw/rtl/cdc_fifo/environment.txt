@@ -1,0 +1,8 @@
+OSS CAD Suite: /Users/Dilan/eda/wire-to-decision/oss-cad-suite (2026-09-27)
+Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+SBY v0.69
+Yices 2.7.0
+Copyright SRI International.
+2.1.0.dev0+41564633
+Python 3.11.6

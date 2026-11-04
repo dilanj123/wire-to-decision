@@ -1,0 +1,15 @@
+[options]
+mode bmc
+depth 16
+multiclock on
+
+[engines]
+smtbmc yices
+
+[script]
+read -formal -D FORMAL wire_async_fifo.sv wire_async_fifo_formal.sv
+prep -top wire_async_fifo_formal
+
+[files]
+../../rtl/common/wire_async_fifo.sv
+wire_async_fifo_formal.sv

@@ -65,3 +65,7 @@ Assumptions must be explicit and minimal. Clock relationships, legal ready/valid
 ## Formal versus other evidence
 
 Formal evidence complements Python/reference-model, RTL simulation, synthesis, and P&R evidence. It does not replace protocol regression, does not prove unmodeled software behavior, and does not establish CDC/RDC signoff. Commercial CDC/RDC signoff is not claimed.
+
+## WIRE-029 asynchronous FIFO checks
+
+WIRE-029 adds SBY/Yices bounded checks for the 8-entry FIFO at depth 16 using multiclock mode with separate unconstrained wr_clk and rd_clk inputs. Both local resets are assumed common in the FIFO property job; it checks pointer/Gray correspondence, transfer-only pointer movement, one-bit Gray transitions, full/empty gating, and read-data stability during a read stall. A separate depth-12 epoch-helper job checks local readiness suppression across reset, local fault and incomplete release. Simulation covers one-sided reset propagation and explicit rearm. These checks do not prove metastability, physical Gray-bus skew, or the full two-clock composition.

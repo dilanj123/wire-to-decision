@@ -53,10 +53,10 @@ WIRE-028/028A/028B completed the controlled Architecture-B experiment. B passed 
 
 ## CDC gate
 
-- [ ] Independent RX and processing domains
-- [ ] Original async FIFO
-- [ ] Reset/epoch tests and local checks
-- [ ] CDC limitations documented
+- [x] Independent RX and processing domains — WIRE-029
+- [x] Original async FIFO — 8 × 73-bit, Gray-pointer implementation
+- [x] Reset/epoch tests and bounded local checks — EVID-029
+- [x] CDC limitations documented; commercial signoff and physical Gray-bus skew remain unproven
 
 ## C++/portfolio gate
 

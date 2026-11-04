@@ -219,5 +219,14 @@
 - Decision: Architecture B was authorized only for this controlled experiment. WIRE-028B retained direct 64-bit input but processes at most two consecutive byte lanes per cycle. The final parser and full 512×2 book/decision benchmark synthesized; all five frozen-target seeds placed and routed.
 - Measurement: Matched workloads showed B at 1.724–1.909 accepted bytes/cycle versus A at 0.862–0.958, with about half the simulated cycles. B uses 14,559 LUT4 versus A's 7,376 and routes at 19.997–21.047 MHz versus A's 45.68–47.66 MHz. Both miss 156.25 MHz. At each architecture's conservative minimum routed-frequency estimate, B's derived byte rate is lower than A's for the matched workloads. B's critical path is ingress beat selection into parser control/index logic; A's is the order-book path.
 - Decision: **REJECT B for the current project baseline.** The measured cycle reduction does not justify the added parser complexity and nearly doubled LUT4 cost given the lower routed frequency and derived end-to-end rate. Architecture A remains the production implementation. This is a bounded experiment result, not proof that all possible B architectures are inferior.
-- Consequences: No production B replacement is authorized. This decision does not close timing, physical throughput, pinout validation, CDC/RDC or hardware operation. WIRE-029 minimal CDC/RDC extension is next; it is not started here.
+- Consequences: No production B replacement is authorized. This decision does not close timing, physical throughput, pinout validation, CDC/RDC or hardware operation. WIRE-029 records the later limited CDC/RDC learning extension; it is not commercial or physical signoff.
 - Status: EXPERIMENT COMPLETE; B REJECTED FOR THIS BASELINE.
+
+## WIRE-D021 — Minimal asynchronous FIFO and CDC epoch recovery
+
+- Date: 2026-11-04
+- Source: WIRE-029 minimal CDC/RDC extension
+- Decision: The separate CDC wrapper uses an 8-entry, 73-bit project-original asynchronous FIFO. Each domain owns a binary pointer and Gray pointer; only Gray pointers cross through two synchronizer stages. RX and processing domains assert reset asynchronously and release locally through two stages.
+- Epoch recovery: A one-sided reset, parser fatal or book fatal takes the local epoch down. The peer learns through a synchronized epoch-up level; this is not instantaneous. The wrapper holds traffic until both domains are ready and a synchronized explicit low/high rearm handshake completes. That handshake resets both FIFO pointer domains and the Architecture-A parser/book/decision state. No multi-bit configuration is crossed.
+- Physical limitation: The implementation requires future Gray-bus skew/maximum-delay constraints to first-stage synchronizers. Simulation and bounded formal checks do not establish metastability resolution, routed bus skew, or commercial CDC/RDC signoff.
+- Status: ADOPTED FOR THE WIRE-029 LEARNING EXTENSION; Architecture A's single-clock baseline is unchanged.
