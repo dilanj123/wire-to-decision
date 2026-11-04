@@ -14,7 +14,7 @@ Actual simulation-cycle latency samples (min / median / nearest-rank p95 / max):
 
 These are simulation-cycle measurements. They are not physical FPGA latency. Median averages the middle pair for even sample counts; p95 uses nearest rank (`ceil(0.95 × n)`).
 
-Additional reruns: Python **71/71**, functional-top Cocotb **15/15**, decision-reference SBY/Yices **BMC depth 16 PASS**, and Verilator functional-top lint PASS. The clean-clone validation reran the documented Python, C++, RTL replay/C++ comparison, functional-top simulation, and bounded formal commands from a clean checkout.
+Additional reruns: Python **71/71**, functional-top Cocotb **15/15**, decision-reference SBY/Yices **BMC depth 16 PASS**, and Verilator functional-top lint PASS. A fresh clone at commit `ad801db3d1d5d23ce3cae44ead06ee35afb3ee9e` reran the documented Python, C++, RTL replay/C++ comparison, functional-top simulation, and bounded formal commands successfully; full output: `results/raw/cpp/clean_clone_validation.log`.
 
 Final implementation status remains as previously measured: Architecture A routes for five seeds at 45.68–47.66 MHz and misses 156.25 MHz; B was rejected on its measured resource/clock trade-off. Formal checks remain bounded/fixed/reduced where documented; historical solver-bound jobs remain unresolved. No physical FPGA operation, package pinout, physical I/O timing, physical latency, live market connectivity, or commercial CDC/RDC signoff is claimed. Phase 11 is optional.
 

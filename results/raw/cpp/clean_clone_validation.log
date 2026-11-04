@@ -1,0 +1,285 @@
+clone=/tmp/wire030-clean.0khQnl/repo
+ad801db3d1d5d23ce3cae44ead06ee35afb3ee9e
+WIRE_TO_DECISION_OSS_CAD_SUITE=/Users/Dilan/eda/wire-to-decision/oss-cad-suite
+WIRE_OSS_CAD_SUITE_ROOT=/Users/Dilan/eda/wire-to-decision/oss-cad-suite
+PATH=/Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin:/Users/Dilan/eda/wire-to-decision/oss-cad-suite/py3bin:/Library/Frameworks/Python.framework/Versions/3.14/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin:/Library/TeX/texbin:/opt/homebrew/bin:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.166.0-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0-macos/codex-arg0yioid4:/Users/Dilan/.codex/tmp/arg0-macos/codex-arg0Qt1lE7:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.165.0-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg0l2hXWx:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.162.1-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg0QjWoXo:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.162.0-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg0X1ipbT:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.161.0-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg0b5CnGL:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.160.1-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg0kMtW5h:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.160.0-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg0i0Bh03:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.159.3-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg0aGd79c:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.159.2-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg05GFiwV:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.159.1-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg046bmIA:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.159.0-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg0DfMaTO:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.158.0-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg0hP13wE:/Users/Dilan/.codex/packages/app-server-daemon/releases/0.157.1-aarch64-apple-darwin/codex-path:/Users/Dilan/.codex/tmp/arg0/codex-arg0qwvMih:/opt/homebrew/Caskroom/codex/0.157.1/codex-path:/Library/Frameworks/Python.framework/Versions/3.14/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/Users/Dilan/.docker/bin:/Users/Dilan/.docker/bin
+test_aggregate_range_guard (test_book.OrderBookTests.test_aggregate_range_guard) ... ok
+test_bounded_storage_hash_and_deterministic_ways (test_book.OrderBookTests.test_bounded_storage_hash_and_deterministic_ways) ... ok
+test_cancel_partial_full_over_and_unknown (test_book.OrderBookTests.test_cancel_partial_full_over_and_unknown) ... ok
+test_decoder_to_book_integration (test_book.OrderBookTests.test_decoder_to_book_integration) ... ok
+test_delete_buy_and_sell (test_book.OrderBookTests.test_delete_buy_and_sell) ... ok
+test_execute_partial_full_over_and_unknown (test_book.OrderBookTests.test_execute_partial_full_over_and_unknown) ... ok
+test_execute_with_price_does_not_change_resting_price (test_book.OrderBookTests.test_execute_with_price_does_not_change_resting_price) ... ok
+test_invalid_book_quarantine_and_reset (test_book.OrderBookTests.test_invalid_book_quarantine_and_reset) ... ok
+test_replace_same_set_and_different_set (test_book.OrderBookTests.test_replace_same_set_and_different_set) ... ok
+test_replace_unknown_conflict_and_destination_capacity (test_book.OrderBookTests.test_replace_unknown_conflict_and_destination_capacity) ... ok
+test_third_collision_and_duplicate_fail_closed_without_eviction (test_book.OrderBookTests.test_third_collision_and_duplicate_fail_closed_without_eviction) ... ok
+test_book_and_itch_to_decision_integration (test_decision.DecisionModelTests.test_book_and_itch_to_decision_integration) ... ok
+test_buy_crossing_boundaries_and_no_repeat (test_decision.DecisionModelTests.test_buy_crossing_boundaries_and_no_repeat) ... ok
+test_cross_back_and_recross_on_both_sides (test_decision.DecisionModelTests.test_cross_back_and_recross_on_both_sides) ... ok
+test_disable_and_zero_budget_still_advance_previous_imbalance (test_decision.DecisionModelTests.test_disable_and_zero_budget_still_advance_previous_imbalance) ... ok
+test_failed_nonmutating_and_invalid_status_do_not_advance (test_decision.DecisionModelTests.test_failed_nonmutating_and_invalid_status_do_not_advance) ... ok
+test_imbalance_extremes (test_decision.DecisionModelTests.test_imbalance_extremes) ... ok
+test_rearm_and_budget_invariant_stress (test_decision.DecisionModelTests.test_rearm_and_budget_invariant_stress) ... ok
+test_sell_crossing_boundaries_and_no_repeat (test_decision.DecisionModelTests.test_sell_crossing_boundaries_and_no_repeat) ... ok
+test_threshold_zero_uses_strict_previous_side (test_decision.DecisionModelTests.test_threshold_zero_uses_strict_previous_side) ... ok
+test_fixed_ipv4_checksum_vector (test_framing.ChecksumTests.test_fixed_ipv4_checksum_vector) ... ok
+test_end_of_session_requires_recovery (test_framing.FramingTests.test_end_of_session_requires_recovery) ... ok
+test_ethernet_and_ipv4_rejections (test_framing.FramingTests.test_ethernet_and_ipv4_rejections) ... ok
+test_ethernet_padding_after_ipv4_datagram_is_ignored (test_framing.FramingTests.test_ethernet_padding_after_ipv4_datagram_is_ignored) ... ok
+test_mold_prefix_is_retained_on_late_truncation (test_framing.FramingTests.test_mold_prefix_is_retained_on_late_truncation) ... ok
+test_mold_truncation_and_trailing_bytes (test_framing.FramingTests.test_mold_truncation_and_trailing_bytes) ... ok
+test_one_and_multi_message_progression (test_framing.FramingTests.test_one_and_multi_message_progression) ... ok
+test_sequence_regression_gap_and_heartbeat_error (test_framing.FramingTests.test_sequence_regression_gap_and_heartbeat_error) ... ok
+test_session_mismatch (test_framing.FramingTests.test_session_mismatch) ... ok
+test_udp_rejections (test_framing.FramingTests.test_udp_rejections) ... ok
+test_valid_heartbeat_does_not_advance (test_framing.FramingTests.test_valid_heartbeat_does_not_advance) ... ok
+test_fixed_vectors (test_hash.OrderSetIndexTests.test_fixed_vectors) ... ok
+test_output_is_nine_bits (test_hash.OrderSetIndexTests.test_output_is_nine_bits) ... ok
+test_rejects_out_of_range_values (test_hash.OrderSetIndexTests.test_rejects_out_of_range_values) ... ok
+test_a_and_f_use_distinct_source_types_with_equivalent_add_semantics (test_itch.ItchDecoderTests.test_a_and_f_use_distinct_source_types_with_equivalent_add_semantics) ... ok
+test_all_mutating_messages_map_to_authoritative_kinds (test_itch.ItchDecoderTests.test_all_mutating_messages_map_to_authoritative_kinds) ... ok
+test_e_c_distinction_does_not_use_execution_price_as_resting_price (test_itch.ItchDecoderTests.test_e_c_distinction_does_not_use_execution_price_as_resting_price) ... ok
+test_exact_lengths_are_required_for_every_supported_type (test_itch.ItchDecoderTests.test_exact_lengths_are_required_for_every_supported_type) ... ok
+test_framed_message_and_late_suffix_integration (test_itch.ItchDecoderTests.test_framed_message_and_late_suffix_integration) ... ok
+test_invalid_side_fails_closed (test_itch.ItchDecoderTests.test_invalid_side_fails_closed) ... ok
+test_p_is_known_non_mutating (test_itch.ItchDecoderTests.test_p_is_known_non_mutating) ... ok
+test_stock_locate_filtering (test_itch.ItchDecoderTests.test_stock_locate_filtering) ... ok
+test_symbol_check_modes (test_itch.ItchDecoderTests.test_symbol_check_modes) ... ok
+test_timestamp_and_numeric_boundaries (test_itch.ItchDecoderTests.test_timestamp_and_numeric_boundaries) ... ok
+test_u_old_new_fields_and_validity (test_itch.ItchDecoderTests.test_u_old_new_fields_and_validity) ... ok
+test_unknown_type_fails_closed (test_itch.ItchDecoderTests.test_unknown_type_fails_closed) ... ok
+test_complete_frame_reaches_decision_and_persists_state (test_oracle.OracleTests.test_complete_frame_reaches_decision_and_persists_state) ... ok
+test_duplicate_and_unknown_reference_fail_through_frames (test_oracle.OracleTests.test_duplicate_and_unknown_reference_fail_through_frames) ... ok
+test_end_of_session_quarantine_and_rearm (test_oracle.OracleTests.test_end_of_session_quarantine_and_rearm) ... ok
+test_heartbeat_and_p_are_noops_for_book_and_decision (test_oracle.OracleTests.test_heartbeat_and_p_are_noops_for_book_and_decision) ... ok
+test_late_malformed_suffix_commits_prefix_then_quarantines (test_oracle.OracleTests.test_late_malformed_suffix_commits_prefix_then_quarantines) ... ok
+test_multi_message_and_multi_frame_lifecycle (test_oracle.OracleTests.test_multi_message_and_multi_frame_lifecycle) ... ok
+test_other_locate_and_nonfatal_profile_filter_do_not_quarantine (test_oracle.OracleTests.test_other_locate_and_nonfatal_profile_filter_do_not_quarantine) ... ok
+test_rearm_clears_prefix_state_and_allows_normal_processing (test_oracle.OracleTests.test_rearm_clears_prefix_state_and_allows_normal_processing) ... ok
+test_sequence_failure_quarantines_and_rearm_accepts_new_state (test_oracle.OracleTests.test_sequence_failure_quarantines_and_rearm_accepts_new_state) ... ok
+test_unsupported_itch_quarantines (test_oracle.OracleTests.test_unsupported_itch_quarantines) ... ok
+test_decision_event (test_types.TypePrimitiveTests.test_decision_event) ... ok
+test_event_source_and_fields_are_checked (test_types.TypePrimitiveTests.test_event_source_and_fields_are_checked) ... ok
+test_event_validity_flags_are_exact (test_types.TypePrimitiveTests.test_event_validity_flags_are_exact) ... ok
+test_event_widths_and_negative_values (test_types.TypePrimitiveTests.test_event_widths_and_negative_values) ... ok
+test_invalid_side (test_types.TypePrimitiveTests.test_invalid_side) ... ok
+test_model_config (test_types.TypePrimitiveTests.test_model_config) ... ok
+test_model_config_ranges (test_types.TypePrimitiveTests.test_model_config_ranges) ... ok
+test_model_status (test_types.TypePrimitiveTests.test_model_status) ... ok
+test_order_entry (test_types.TypePrimitiveTests.test_order_entry) ... ok
+test_side_round_trip (test_types.TypePrimitiveTests.test_side_round_trip) ... ok
+test_source_message_types (test_types.TypePrimitiveTests.test_source_message_types) ... ok
+test_valid_add_events_use_new_reference (test_types.TypePrimitiveTests.test_valid_add_events_use_new_reference) ... ok
+test_valid_cancel_delete_replace_events (test_types.TypePrimitiveTests.test_valid_cancel_delete_replace_events) ... ok
+test_valid_execute_event (test_types.TypePrimitiveTests.test_valid_execute_event) ... ok
+test_valid_execute_with_price_event (test_types.TypePrimitiveTests.test_valid_execute_with_price_event) ... ok
+
+----------------------------------------------------------------------
+Ran 71 tests in 0.011s
+
+OK
+python3 -c 'from pathlib import Path; import shutil; shutil.rmtree("build", ignore_errors=True)'
+c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic main.cpp checker.cpp -o build/w2d_checker
+python3 tests/test_checker.py
+test_add_buy_sell_and_budget_exhaustion (__main__.CheckerTests.test_add_buy_sell_and_budget_exhaustion) ... ok
+test_bad_session_then_explicit_rearm (__main__.CheckerTests.test_bad_session_then_explicit_rearm) ... ok
+test_corrupt_actual_decision_is_detected (__main__.CheckerTests.test_corrupt_actual_decision_is_detected) ... ok
+test_duplicate_failure_quarantines_until_rearm (__main__.CheckerTests.test_duplicate_failure_quarantines_until_rearm) ... ok
+test_hash_vectors_and_full_set_collision (__main__.CheckerTests.test_hash_vectors_and_full_set_collision) ... ok
+test_live_enable_advances_imbalance_without_stale_decision (__main__.CheckerTests.test_live_enable_advances_imbalance_without_stale_decision) ... ok
+test_malformed_suffix_keeps_only_complete_prefix (__main__.CheckerTests.test_malformed_suffix_keeps_only_complete_prefix) ... ok
+test_mold_sequence_wrap (__main__.CheckerTests.test_mold_sequence_wrap) ... ok
+test_mpid_add_and_execute (__main__.CheckerTests.test_mpid_add_and_execute) ... ok
+test_p_other_locate_and_multi_message_sequence (__main__.CheckerTests.test_p_other_locate_and_multi_message_sequence) ... ok
+test_partial_execution_and_full_cancel (__main__.CheckerTests.test_partial_execution_and_full_cancel) ... ok
+test_python_oracle_additional_crosscheck (__main__.CheckerTests.test_python_oracle_additional_crosscheck) ... ok
+test_replace_and_delete (__main__.CheckerTests.test_replace_and_delete) ... ok
+test_sell_crossing (__main__.CheckerTests.test_sell_crossing) ... ok
+test_unsupported_itch_quarantines_until_rearm (__main__.CheckerTests.test_unsupported_itch_quarantines_until_rearm) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.243s
+
+OK
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+mkdir -p sim_build
+/Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/verilator -cc --exe -Mdir sim_build --top-module wire_arch_a_functional_top --language 1800-2012 --timescale 1ns/1ps --vpi --public-flat-rw --prefix Vtop -o Vtop -LDFLAGS "-Wl,-rpath,/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs -L/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs -lcocotbvpi_verilator"  /private/tmp/wire030-clean.0khQnl/repo/rtl/common/wire_ingress_buffer.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/common/wire_order_book.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/common/wire_decision_engine.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_gearbox_64to8.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_eth_parser.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_ipv4_parser.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_udp_parser.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_mold_header_seq.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_mold_message_framer.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_itch_decoder.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_arch_a_parser_top.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_arch_a_parser_book_top.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_arch_a_functional_top.sv /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/share/lib/verilator/verilator.cpp
+- V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+- Verilator: Built from 1.034 MB sources in 15 modules, into 1.205 MB in 7 C++ files needing 0.001 MB
+- Verilator: Walltime 0.108 s (elab=0.016, cvt=0.061, bld=0.000); cpu 0.085 s on 1 threads; allocated 25.484 MB
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C sim_build  -f Vtop.mk
+g++  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -Os  -c -o verilator.o /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/share/lib/verilator/verilator.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated.o /Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_dpi.o /Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/verilated_dpi.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_vpi.o /Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/verilated_vpi.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_threads.o /Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/verilated_threads.cpp
+python3 /Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vtop.cpp Vtop___024root__0.cpp Vtop__Dpi.cpp Vtop__ConstPool__0__Slow.cpp Vtop___024root__Slow.cpp Vtop___024root__0__Slow.cpp Vtop__Syms__Slow.cpp > Vtop__ALL.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o Vtop__ALL.o Vtop__ALL.cpp
+g++  -Wl,-U,__Z15vl_time_stamp64v,-U,__Z13sc_time_stampv,-U,_vlog_startup_routines   -rdynamic verilator.o verilated.o verilated_dpi.o verilated_vpi.o verilated_threads.o Vtop__ALL.a   -Wl,-rpath,/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs -L/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs -lcocotbvpi_verilator  -pthread -lpthread -ldl   -o Vtop
+rm Vtop__ALL.verilator_deplist.tmp
+rm -f results.xml
+COCOTB_TEST_MODULES=test_cpp_replay COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_a_functional_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793831008
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_cpp_replay.export_actual_functional_top_decisions (1/1)
+     0.00ns INFO     cocotb.wire_arch_a_functional_top  CPP_REPLAY source=/private/tmp/wire030-clean.0khQnl/repo/tools/cpp/replays/canonical.w2d frames=4
+  3680.00ns INFO     cocotb.wire_arch_a_functional_top  CPP_REPLAY_RESULT frames=4 beats=48 cycles=367 decisions=[{'cycle': 115, 'action': 'BUY', 'mold_sequence': 1161981756646125696, 'itch_timestamp': 1108152157441, 'imbalance': 10}, {'cycle': 218, 'action': 'SELL', 'mold_sequence': 1161981756646125697, 'itch_timestamp': 1108152157442, 'imbalance': -10}] latency=[{'cycle': 115, 'l1': 37, 'l2': 7, 'l3': 115}, {'cycle': 218, 'l1': 37, 'l2': 7, 'l3': 127}]
+  3680.00ns INFO     cocotb.regression                  test_cpp_replay.export_actual_functional_top_decisions passed
+  3680.00ns INFO     cocotb.regression                  ****************************************************************************************************************
+                                                        ** TEST                                                    STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ****************************************************************************************************************
+                                                        ** test_cpp_replay.export_actual_functional_top_decisions   PASS        3680.00           0.01     275660.15  **
+                                                        ****************************************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                                         3680.00           0.02     221818.79  **
+                                                        ****************************************************************************************************************
+- :0: Verilog $finish
+frames=4 messages=3 decisions=2 mismatches=0 replay=PASS latency_samples=2
+L1 cycles min/median/p95/max=37/37/37/37
+L2 cycles min/median/p95/max=7/7/7/7
+L3 cycles min/median/p95/max=115/121/127/127
+rm -f results.xml
+"/Applications/Xcode.app/Contents/Developer/usr/bin/make" -f Makefile results.xml
+mkdir -p sim_build
+/Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/verilator -cc --exe -Mdir sim_build --top-module wire_arch_a_functional_top --language 1800-2012 --timescale 1ns/1ps --vpi --public-flat-rw --prefix Vtop -o Vtop -LDFLAGS "-Wl,-rpath,/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs -L/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs -lcocotbvpi_verilator"  /private/tmp/wire030-clean.0khQnl/repo/rtl/common/wire_ingress_buffer.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/common/wire_order_book.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/common/wire_decision_engine.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_gearbox_64to8.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_eth_parser.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_ipv4_parser.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_udp_parser.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_mold_header_seq.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_mold_message_framer.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_itch_decoder.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_arch_a_parser_top.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_arch_a_parser_book_top.sv /private/tmp/wire030-clean.0khQnl/repo/rtl/arch_a/wire_arch_a_functional_top.sv /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/share/lib/verilator/verilator.cpp
+- V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+- Verilator: Built from 1.034 MB sources in 15 modules, into 1.205 MB in 7 C++ files needing 0.001 MB
+- Verilator: Walltime 0.271 s (elab=0.008, cvt=0.217, bld=0.000); cpu 0.132 s on 1 threads; allocated 23.750 MB
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C sim_build  -f Vtop.mk
+g++  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -Os  -c -o verilator.o /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/share/lib/verilator/verilator.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated.o /Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_dpi.o /Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/verilated_dpi.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_vpi.o /Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/verilated_vpi.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o verilated_threads.o /Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/verilated_threads.cpp
+python3 /Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vtop.cpp Vtop___024root__0.cpp Vtop__Dpi.cpp Vtop__ConstPool__0__Slow.cpp Vtop___024root__Slow.cpp Vtop___024root__0__Slow.cpp Vtop__Syms__Slow.cpp > Vtop__ALL.cpp
+g++ -Os  -I.  -MMD -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include -I/Users/Dilan/eda/wire-to-decision/oss-cad-suite/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -DVM_VPI=1 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments  -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare  -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension  -DVM_PREFIX_INCLUDE="<Vtop.h>" -DVM_PREFIX_INCLUDE_DPI="<Vtop__Dpi.h>"     -c -o Vtop__ALL.o Vtop__ALL.cpp
+g++  -Wl,-U,__Z15vl_time_stamp64v,-U,__Z13sc_time_stampv,-U,_vlog_startup_routines   -rdynamic verilator.o verilated.o verilated_dpi.o verilated_vpi.o verilated_threads.o Vtop__ALL.a   -Wl,-rpath,/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs -L/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs -lcocotbvpi_verilator  -pthread -lpthread -ldl   -o Vtop
+rm Vtop__ALL.verilator_deplist.tmp
+rm -f results.xml
+COCOTB_TEST_MODULES=test_functional_mvp COCOTB_TESTCASE= COCOTB_TEST_FILTER= COCOTB_TOPLEVEL=wire_arch_a_functional_top TOPLEVEL_LANG=verilog \
+         sim_build/Vtop     
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:217  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb/libs/libcocotb.so'
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:97   in initialize                      Using Python 3.11.6 interpreter at /Users/Dilan/eda/wire-to-decision/oss-cad-suite/bin/tabbypy3
+     0.00ns INFO     cocotb                             Running on Verilator version 5.053 devel
+     0.00ns INFO     cocotb                             Seeding Python random module with 1793831018
+     0.00ns INFO     cocotb                             Initialized cocotb v2.1.0.dev0+41564633 from /Users/Dilan/eda/wire-to-decision/oss-cad-suite/lib/python3.11/site-packages/cocotb-2.1.0.dev0+41564633-py3.11-darwin-aarch64.egg/cocotb
+     0.00ns INFO     cocotb                             Running tests
+     0.00ns INFO     cocotb.regression                  running test_functional_mvp.test_full_chain_buy_sell_and_oracle (1/15)
+  9720.00ns INFO     cocotb.regression                  test_functional_mvp.test_full_chain_buy_sell_and_oracle passed
+  9720.00ns INFO     cocotb.regression                  running test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat (2/15)
+ 43310.00ns INFO     cocotb.regression                  test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat passed
+ 43310.00ns INFO     cocotb.regression                  running test_functional_mvp.test_all_mutation_message_types_through_full_parser (3/15)
+ 49780.00ns INFO     cocotb.regression                  test_functional_mvp.test_all_mutation_message_types_through_full_parser passed
+ 49780.00ns INFO     cocotb.regression                  running test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion (4/15)
+ 83770.00ns INFO     cocotb.regression                  test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion passed
+ 83770.00ns INFO     cocotb.regression                  running test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm (5/15)
+122470.00ns INFO     cocotb.regression                  test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm passed
+122470.00ns INFO     cocotb.regression                  running test_functional_mvp.test_book_failure_produces_no_decision_and_rearm (6/15)
+137060.01ns INFO     cocotb.regression                  test_functional_mvp.test_book_failure_produces_no_decision_and_rearm passed
+137060.01ns INFO     cocotb.regression                  running test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state (7/15)
+142356.01ns INFO     cocotb.regression                  test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state passed
+142356.01ns INFO     cocotb.regression                  running test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence (8/15)
+147746.01ns INFO     cocotb.regression                  test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence passed
+147746.01ns INFO     cocotb.regression                  running test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery (9/15)
+153037.01ns INFO     cocotb.regression                  test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery passed
+153037.01ns INFO     cocotb.regression                  running test_functional_mvp.test_long_valid_multiframe_mutation_stream_against_oracle (10/15)
+186578.01ns INFO     cocotb.regression                  test_functional_mvp.test_long_valid_multiframe_mutation_stream_against_oracle passed
+186578.01ns INFO     cocotb.regression                  running test_functional_mvp.test_mixed_outer_mold_book_failures_and_rearm (11/15)
+264918.01ns INFO     cocotb.regression                  test_functional_mvp.test_mixed_outer_mold_book_failures_and_rearm passed
+264918.01ns INFO     cocotb.regression                  running test_functional_mvp.test_suffix_ordering_commit_before_and_fatal_before_commit (12/15)
+274998.01ns INFO     cocotb.regression                  test_functional_mvp.test_suffix_ordering_commit_before_and_fatal_before_commit passed
+274998.01ns INFO     cocotb.regression                  running test_functional_mvp.test_single_edge_rearm_discards_pending_decision_epoch (13/15)
+284738.01ns INFO     cocotb.regression                  test_functional_mvp.test_single_edge_rearm_discards_pending_decision_epoch passed
+284738.01ns INFO     cocotb.regression                  running test_functional_mvp.test_random_full_frame_seed_set (14/15)
+345118.01ns INFO     cocotb.regression                  test_functional_mvp.test_random_full_frame_seed_set passed
+345118.01ns INFO     cocotb.regression                  running test_functional_mvp.wire026_cycle_performance_workloads (15/15)
+                                                            Cycle counts from accepted byte/event handshakes; simulation only.
+346354.01ns WARNING  py.warnings                        /private/tmp/wire030-clean.0khQnl/repo/tb/functional_mvp/test_functional_mvp.py:148: DeprecationWarning: `int(handle)` casts have been deprecated. Use `int(handle.value)` instead.
+                                                          value = int(signal)
+346358.01ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=single_ADD_BUY bytes=100 cycles=116 L1=37 L2=[7] L3=[115] event_ii=[] decision_ii=[] bytes_per_cycle=0.862069 rx_stall_cycles=71 decisions=[(115, (0, 1161981756646125696, 1108152157441, 10))]
+347838.01ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=multi_message bytes=133 cycles=146 L1=37 L2=[7] L3=[115] event_ii=[35] decision_ii=[] bytes_per_cycle=0.910959 rx_stall_cycles=101 decisions=[(115, (0, 1161981756646125696, 1108152157442, 10))]
+354828.01ns INFO     cocotb.wire_arch_a_functional_top  WIRE026_METRIC workload=stateful_frames_A_F_E_C_X_U_D bytes=668 cycles=697 L1=37 L2=[7, 7, 9] L3=[115, 131, 131] event_ii=[107, 98, 103, 90, 102, 86] decision_ii=[107, 395] bytes_per_cycle=0.958393 rx_stall_cycles=583 decisions=[(115, (0, 1161981756646125696, 1108152157450, 10)), (222, (1, 1161981756646125697, 1108152157451, -10)), (617, (0, 1161981756646125701, 1108152157455, 15))]
+354828.01ns INFO     cocotb.regression                  test_functional_mvp.wire026_cycle_performance_workloads passed
+354828.01ns INFO     cocotb.regression                  *****************************************************************************************************************************************************
+                                                        ** TEST                                                                                         STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *****************************************************************************************************************************************************
+                                                        ** test_functional_mvp.test_full_chain_buy_sell_and_oracle                                       PASS        9720.00           0.03     280399.15  **
+                                                        ** test_functional_mvp.test_nonmutating_heartbeat_filter_and_no_repeat                           PASS       33590.00           0.11     300998.73  **
+                                                        ** test_functional_mvp.test_all_mutation_message_types_through_full_parser                       PASS        6470.00           0.02     263641.50  **
+                                                        ** test_functional_mvp.test_live_enable_no_stale_crossing_and_budget_exhaustion                  PASS       33990.00           0.11     306965.71  **
+                                                        ** test_functional_mvp.test_itch_semantic_failures_suppress_event_and_rearm                      PASS       38700.00           0.13     308185.13  **
+                                                        ** test_functional_mvp.test_book_failure_produces_no_decision_and_rearm                          PASS       14590.00           0.05     302307.49  **
+                                                        ** test_functional_mvp.test_late_mold_suffix_retains_prefix_decision_and_state                   PASS        5296.00           0.02     285173.69  **
+                                                        ** test_functional_mvp.test_structural_success_itch_failure_keeps_prefix_and_advances_sequence   PASS        5390.00           0.02     295926.42  **
+                                                        ** test_functional_mvp.test_stalled_prefix_decision_survives_later_itch_recovery                 PASS        5291.00           0.02     287212.68  **
+                                                        ** test_functional_mvp.test_long_valid_multiframe_mutation_stream_against_oracle                 PASS       33541.00           0.11     307506.50  **
+                                                        ** test_functional_mvp.test_mixed_outer_mold_book_failures_and_rearm                             PASS       78340.00           0.26     305274.95  **
+                                                        ** test_functional_mvp.test_suffix_ordering_commit_before_and_fatal_before_commit                PASS       10080.00           0.03     306326.60  **
+                                                        ** test_functional_mvp.test_single_edge_rearm_discards_pending_decision_epoch                    PASS        9740.00           0.03     300125.78  **
+                                                        ** test_functional_mvp.test_random_full_frame_seed_set                                           PASS       60380.00           0.21     284508.14  **
+                                                        ** test_functional_mvp.wire026_cycle_performance_workloads                                       PASS        9710.00           0.03     372256.22  **
+                                                        *****************************************************************************************************************************************************
+                                                        ** TESTS=15 PASS=15 FAIL=0 SKIP=0                                                                          354828.01           1.20     296757.60  **
+                                                        *****************************************************************************************************************************************************
+- :0: Verilog $finish
+SBY 22:23:39 [decision_reference] Removing directory '/private/tmp/wire030-clean.0khQnl/repo/formal/decision_engine/decision_reference'.
+SBY 22:23:39 [decision_reference] Copy '/private/tmp/wire030-clean.0khQnl/repo/formal/decision_engine/../../rtl/common/wire_decision_engine.sv' to '/private/tmp/wire030-clean.0khQnl/repo/formal/decision_engine/decision_reference/src/wire_decision_engine.sv'.
+SBY 22:23:39 [decision_reference] Copy '/private/tmp/wire030-clean.0khQnl/repo/formal/decision_engine/decision_reference.sv' to '/private/tmp/wire030-clean.0khQnl/repo/formal/decision_engine/decision_reference/src/decision_reference.sv'.
+SBY 22:23:39 [decision_reference] engine_0: smtbmc yices
+SBY 22:23:39 [decision_reference] base: starting process "cd decision_reference/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 22:23:39 [decision_reference] base: Warning: Wire decision_reference.\clk is used but has no driver.
+SBY 22:23:39 [decision_reference] base: finished (returncode=0)
+SBY 22:23:39 [decision_reference] prep: starting process "cd decision_reference/model; yosys -ql design_prep.log design_prep.ys"
+SBY 22:23:39 [decision_reference] prep: Warning: Wire decision_reference.\clk is used but has no driver.
+SBY 22:23:39 [decision_reference] prep: finished (returncode=0)
+SBY 22:23:39 [decision_reference] smt2: starting process "cd decision_reference/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 22:23:40 [decision_reference] smt2: finished (returncode=0)
+SBY 22:23:40 [decision_reference] engine_0: starting process "cd decision_reference; yosys-smtbmc -s yices --presat --unroll --noprogress -t 16  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Solver: yices
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 22:23:40 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 22:23:41 [decision_reference] engine_0: ##   0:00:01  Checking assumptions in step 6..
+SBY 22:23:41 [decision_reference] engine_0: ##   0:00:01  Checking assertions in step 6..
+SBY 22:23:41 [decision_reference] engine_0: ##   0:00:01  Checking assumptions in step 7..
+SBY 22:23:41 [decision_reference] engine_0: ##   0:00:01  Checking assertions in step 7..
+SBY 22:23:42 [decision_reference] engine_0: ##   0:00:02  Checking assumptions in step 8..
+SBY 22:23:42 [decision_reference] engine_0: ##   0:00:02  Checking assertions in step 8..
+SBY 22:23:43 [decision_reference] engine_0: ##   0:00:03  Checking assumptions in step 9..
+SBY 22:23:43 [decision_reference] engine_0: ##   0:00:03  Checking assertions in step 9..
+SBY 22:23:44 [decision_reference] engine_0: ##   0:00:04  Checking assumptions in step 10..
+SBY 22:23:44 [decision_reference] engine_0: ##   0:00:04  Checking assertions in step 10..
+SBY 22:23:45 [decision_reference] engine_0: ##   0:00:05  Checking assumptions in step 11..
+SBY 22:23:45 [decision_reference] engine_0: ##   0:00:05  Checking assertions in step 11..
+SBY 22:23:47 [decision_reference] engine_0: ##   0:00:07  Checking assumptions in step 12..
+SBY 22:23:47 [decision_reference] engine_0: ##   0:00:07  Checking assertions in step 12..
+SBY 22:23:48 [decision_reference] engine_0: ##   0:00:08  Checking assumptions in step 13..
+SBY 22:23:48 [decision_reference] engine_0: ##   0:00:08  Checking assertions in step 13..
+SBY 22:23:50 [decision_reference] engine_0: ##   0:00:10  Checking assumptions in step 14..
+SBY 22:23:50 [decision_reference] engine_0: ##   0:00:10  Checking assertions in step 14..
+SBY 22:23:52 [decision_reference] engine_0: ##   0:00:12  Checking assumptions in step 15..
+SBY 22:23:52 [decision_reference] engine_0: ##   0:00:12  Checking assertions in step 15..
+SBY 22:23:54 [decision_reference] engine_0: ##   0:00:14  Status: passed
+SBY 22:23:54 [decision_reference] engine_0: finished (returncode=0)
+SBY 22:23:54 [decision_reference] engine_0: Status returned by engine: pass
+SBY 22:23:54 [decision_reference] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:14 (14)
+SBY 22:23:54 [decision_reference] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:14 (14)
+SBY 22:23:54 [decision_reference] summary: engine_0 (smtbmc yices) returned pass
+SBY 22:23:54 [decision_reference] summary: engine_0 did not produce any traces
+SBY 22:23:54 [decision_reference] DONE (PASS, rc=0)
+CLEAN_CLONE_PASS

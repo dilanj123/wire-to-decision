@@ -24,7 +24,7 @@
 
 ## Reproducibility and final gate
 
-The README gives commands for Python, C++, actual RTL replay generation/comparison, a representative functional-top Cocotb run and a bounded formal job. Clean-clone validation is recorded in the processed report. The mandatory C++/portfolio checklist is closed by EVID-030. Phase 11 remains optional.
+The README gives commands for Python, C++, actual RTL replay generation/comparison, a representative functional-top Cocotb run and a bounded formal job. A fresh local clone at commit `ad801db3d1d5d23ce3cae44ead06ee35afb3ee9e` reran those commands successfully; its complete output is `results/raw/cpp/clean_clone_validation.log`. The mandatory C++/portfolio checklist is closed by EVID-030. Phase 11 remains optional.
 
 ## Limitations
 
