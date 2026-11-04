@@ -8,6 +8,8 @@ Phase 5 — COMPLETE for Architecture-A implementation and bottleneck measuremen
 
 CDC/RDC learning extension — WIRE-029 COMPLETE at the documented RTL-simulation and bounded-local-check scope. The original single-clock Architecture-A baseline is unchanged; commercial CDC/RDC signoff and physical Gray-bus skew remain unproven.
 
+Phase 10 — COMPLETE: independent C++20 packet replay checker, actual RTL decision-log comparison and portfolio evidence audit (WIRE-030/EVID-030). Phase 11 vendor-flow/physical FPGA extensions remain OPTIONAL.
+
 Phase 1: COMPLETE — 71-test Python end-to-end oracle baseline
 
 Phase 2: COMPLETE — Architecture-A parser boundary through normalized events
@@ -159,9 +161,11 @@ Application P&R and cycle-based latency/throughput evidence exist from WIRE-026/
 
 WIRE-004 native Apple Silicon open-source toolchain qualification completed in commit `89e2841` for the trivial smoke design. Canonical suite: OSS CAD Suite `2026-09-27`; details are in `results/processed/toolchain_smoke.md`. This is toolchain-smoke evidence only.
 
-WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. WIRE-026/026A/027 produced full-capacity Architecture-A synthesis and five-seed route evidence; WIRE-028B produced matched Architecture-B synthesis and five-seed route evidence. A routes at 45.68–47.66 MHz; B routes at 19.997–21.047 MHz. Neither meets the objective. WIRE-025's 79-job formal campaign passed under its recorded bounded scopes; two historical monolithic jobs remain solver-bound. Cycle-based latency/throughput and routed implementation estimates exist, but physical operation, physical latency/throughput, CDC/RDC, and C++ integration remain unproven. See EVID-026/026A/027/028B.
+WIRE-005 froze LFE5U-85F-8BG381C / `--85k --package CABGA381 --speed 8` with a 156.25 MHz / 6.4 ns timing objective. WIRE-026/026A/027 produced full-capacity Architecture-A synthesis and five-seed route evidence; WIRE-028B produced matched Architecture-B synthesis and five-seed route evidence. A routes at 45.68–47.66 MHz; B routes at 19.997–21.047 MHz. Neither meets the objective. WIRE-025's 79-job formal campaign passed under its recorded bounded scopes; two historical monolithic jobs remain solver-bound. Cycle-based latency/throughput and routed implementation estimates exist; physical operation, physical latency/throughput, physical CDC/RDC signoff and C++ integration with live networking remain outside the evidence. WIRE-030 adds an independent replay checker. See EVID-026/026A/027/028B/030.
 
 WIRE-029 updates CDC status: asynchronous FIFO and Architecture-A wrapper simulation, bounded local properties, and Yosys sanity passed. Commercial CDC/RDC signoff, physical Gray-bus skew, and operation on hardware remain unproven.
+
+WIRE-030 closes the independent software/portfolio gate: C++20 parses the canonical post-MAC replay, compares actual functional-top decisions and state, and summarizes RTL simulation-cycle latency. The canonical comparison is 4 frames / 3 Mold messages / 2 decisions / 0 mismatches; a corrupted actual RTL decision log is detected. Clean-clone commands and outputs are indexed by EVID-030.
 
 ## Open bugs
 
@@ -191,4 +195,4 @@ WIRE-026A mapped the 512 × 2 store to 16 EBRs. WIRE-027's registered write-plan
 
 ## Next task
 
-WIRE-030 — Independent C++ Checker and Final CV-Ready Portfolio Closeout. The Architecture-B experiment is complete and rejected for the current baseline; Architecture A remains production. WIRE-029 simulation/formal evidence is not physical CDC/RDC signoff.
+No further mandatory task is open. Phase 11 vendor-flow and physical FPGA extensions are OPTIONAL. Architecture A remains production; timing closure, physical operation, and commercial CDC/RDC signoff are not claimed.

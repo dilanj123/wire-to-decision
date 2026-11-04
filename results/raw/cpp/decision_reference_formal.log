@@ -1,0 +1,54 @@
+SBY 22:14:25 [decision_reference] Removing directory '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/decision_reference'.
+SBY 22:14:25 [decision_reference] Copy '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/../../rtl/common/wire_decision_engine.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/decision_reference/src/wire_decision_engine.sv'.
+SBY 22:14:25 [decision_reference] Copy '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/decision_reference.sv' to '/Users/Dilan/Projects/wire-to-decision/formal/decision_engine/decision_reference/src/decision_reference.sv'.
+SBY 22:14:25 [decision_reference] engine_0: smtbmc yices
+SBY 22:14:25 [decision_reference] base: starting process "cd decision_reference/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 22:14:25 [decision_reference] base: Warning: Wire decision_reference.\clk is used but has no driver.
+SBY 22:14:25 [decision_reference] base: finished (returncode=0)
+SBY 22:14:25 [decision_reference] prep: starting process "cd decision_reference/model; yosys -ql design_prep.log design_prep.ys"
+SBY 22:14:25 [decision_reference] prep: Warning: Wire decision_reference.\clk is used but has no driver.
+SBY 22:14:25 [decision_reference] prep: finished (returncode=0)
+SBY 22:14:25 [decision_reference] smt2: starting process "cd decision_reference/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 22:14:25 [decision_reference] smt2: finished (returncode=0)
+SBY 22:14:25 [decision_reference] engine_0: starting process "cd decision_reference; yosys-smtbmc -s yices --presat --unroll --noprogress -t 16  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 22:14:25 [decision_reference] engine_0: ##   0:00:00  Solver: yices
+SBY 22:14:25 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 22:14:25 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 22:14:25 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 22:14:25 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 22:14:25 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 22:14:25 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 22:14:25 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 22:14:25 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 22:14:26 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 22:14:26 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 22:14:26 [decision_reference] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 22:14:26 [decision_reference] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 22:14:26 [decision_reference] engine_0: ##   0:00:01  Checking assumptions in step 6..
+SBY 22:14:27 [decision_reference] engine_0: ##   0:00:01  Checking assertions in step 6..
+SBY 22:14:27 [decision_reference] engine_0: ##   0:00:01  Checking assumptions in step 7..
+SBY 22:14:27 [decision_reference] engine_0: ##   0:00:01  Checking assertions in step 7..
+SBY 22:14:28 [decision_reference] engine_0: ##   0:00:02  Checking assumptions in step 8..
+SBY 22:14:28 [decision_reference] engine_0: ##   0:00:02  Checking assertions in step 8..
+SBY 22:14:29 [decision_reference] engine_0: ##   0:00:03  Checking assumptions in step 9..
+SBY 22:14:29 [decision_reference] engine_0: ##   0:00:03  Checking assertions in step 9..
+SBY 22:14:30 [decision_reference] engine_0: ##   0:00:04  Checking assumptions in step 10..
+SBY 22:14:30 [decision_reference] engine_0: ##   0:00:04  Checking assertions in step 10..
+SBY 22:14:31 [decision_reference] engine_0: ##   0:00:05  Checking assumptions in step 11..
+SBY 22:14:31 [decision_reference] engine_0: ##   0:00:05  Checking assertions in step 11..
+SBY 22:14:33 [decision_reference] engine_0: ##   0:00:07  Checking assumptions in step 12..
+SBY 22:14:33 [decision_reference] engine_0: ##   0:00:07  Checking assertions in step 12..
+SBY 22:14:34 [decision_reference] engine_0: ##   0:00:08  Checking assumptions in step 13..
+SBY 22:14:34 [decision_reference] engine_0: ##   0:00:08  Checking assertions in step 13..
+SBY 22:14:36 [decision_reference] engine_0: ##   0:00:10  Checking assumptions in step 14..
+SBY 22:14:36 [decision_reference] engine_0: ##   0:00:10  Checking assertions in step 14..
+SBY 22:14:39 [decision_reference] engine_0: ##   0:00:13  Checking assumptions in step 15..
+SBY 22:14:39 [decision_reference] engine_0: ##   0:00:13  Checking assertions in step 15..
+SBY 22:14:40 [decision_reference] engine_0: ##   0:00:15  Status: passed
+SBY 22:14:40 [decision_reference] engine_0: finished (returncode=0)
+SBY 22:14:40 [decision_reference] engine_0: Status returned by engine: pass
+SBY 22:14:40 [decision_reference] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:15 (15)
+SBY 22:14:40 [decision_reference] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:15 (15)
+SBY 22:14:40 [decision_reference] summary: engine_0 (smtbmc yices) returned pass
+SBY 22:14:40 [decision_reference] summary: engine_0 did not produce any traces
+SBY 22:14:40 [decision_reference] DONE (PASS, rc=0)

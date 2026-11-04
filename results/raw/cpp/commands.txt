@@ -1,0 +1,32 @@
+Qualified toolchain:
+  source tools/env/setup_oss_cad_suite.sh
+
+C++ build + 15 hand-calculated/behavioral tests:
+  make -C tools/cpp clean test
+
+Actual RTL replay:
+  ln -s "$WIRE_TO_DECISION_OSS_CAD_SUITE/lib" tb/cpp_replay/lib
+  (cd tb/cpp_replay && make clean && make SIM=verilator)
+  unlink tb/cpp_replay/lib
+
+Compare expected packet replay with actual RTL output:
+  tools/cpp/build/w2d_checker compare tools/cpp/replays/canonical.w2d \
+    results/raw/cpp/rtl_decisions.log results/raw/cpp/summary.json
+
+Corrupted actual RTL log check: copy rtl_decisions.log, change the first BUY
+imbalance from 10 to 9, run the same compare command, and require exit status 1.
+
+Python:
+  PYTHONPATH=model/python python3 -m unittest discover -s model/python/tests -v
+
+Representative Architecture-A functional-top regression:
+  ln -s "$WIRE_TO_DECISION_OSS_CAD_SUITE/lib" tb/functional_mvp/lib
+  (cd tb/functional_mvp && make clean && make SIM=verilator)
+  unlink tb/functional_mvp/lib
+
+Representative bounded formal job:
+  (cd formal/decision_engine && sby -f decision_reference.sby)
+
+Functional-top lint:
+  verilator --lint-only --Wall --language 1800-2012 \
+    --top-module wire_arch_a_functional_top <functional-top RTL sources>

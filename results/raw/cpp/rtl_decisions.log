@@ -1,0 +1,6 @@
+WIRE_RTL_LOG_V1
+DECISION cycle=115 action=BUY mold_sequence=1161981756646125696 itch_timestamp=1108152157441 imbalance=10
+DECISION cycle=218 action=SELL mold_sequence=1161981756646125697 itch_timestamp=1108152157442 imbalance=-10
+LATENCY cycle=115 l1=37 l2=7 l3=115
+LATENCY cycle=218 l1=37 l2=7 l3=127
+STATE bid_total=10 ask_total=20 expected_sequence=1161981756646125699 quarantined=0

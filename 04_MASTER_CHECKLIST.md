@@ -60,7 +60,9 @@ WIRE-028/028A/028B completed the controlled Architecture-B experiment. B passed 
 
 ## C++/portfolio gate
 
-- [ ] Independent C++20 checker
-- [ ] Reproducible replay and mismatch evidence
-- [ ] Clean-clone validation
-- [ ] Final evidence package
+- [x] Independent C++20 checker — EVID-030
+- [x] Reproducible canonical replay, actual RTL comparison and corrupted-log detection
+- [x] Clean-clone validation of documented commands
+- [x] Final evidence package and requirement audit
+
+Mandatory portfolio gate: COMPLETE (WIRE-030/EVID-030). Phase 11 vendor-flow and physical FPGA extensions remain OPTIONAL.

@@ -1,0 +1,23 @@
+python3 -c 'from pathlib import Path; import shutil; shutil.rmtree("build", ignore_errors=True)'
+c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic main.cpp checker.cpp -o build/w2d_checker
+python3 tests/test_checker.py
+test_add_buy_sell_and_budget_exhaustion (__main__.CheckerTests.test_add_buy_sell_and_budget_exhaustion) ... ok
+test_bad_session_then_explicit_rearm (__main__.CheckerTests.test_bad_session_then_explicit_rearm) ... ok
+test_corrupt_actual_decision_is_detected (__main__.CheckerTests.test_corrupt_actual_decision_is_detected) ... ok
+test_duplicate_failure_quarantines_until_rearm (__main__.CheckerTests.test_duplicate_failure_quarantines_until_rearm) ... ok
+test_hash_vectors_and_full_set_collision (__main__.CheckerTests.test_hash_vectors_and_full_set_collision) ... ok
+test_live_enable_advances_imbalance_without_stale_decision (__main__.CheckerTests.test_live_enable_advances_imbalance_without_stale_decision) ... ok
+test_malformed_suffix_keeps_only_complete_prefix (__main__.CheckerTests.test_malformed_suffix_keeps_only_complete_prefix) ... ok
+test_mold_sequence_wrap (__main__.CheckerTests.test_mold_sequence_wrap) ... ok
+test_mpid_add_and_execute (__main__.CheckerTests.test_mpid_add_and_execute) ... ok
+test_p_other_locate_and_multi_message_sequence (__main__.CheckerTests.test_p_other_locate_and_multi_message_sequence) ... ok
+test_partial_execution_and_full_cancel (__main__.CheckerTests.test_partial_execution_and_full_cancel) ... ok
+test_python_oracle_additional_crosscheck (__main__.CheckerTests.test_python_oracle_additional_crosscheck) ... ok
+test_replace_and_delete (__main__.CheckerTests.test_replace_and_delete) ... ok
+test_sell_crossing (__main__.CheckerTests.test_sell_crossing) ... ok
+test_unsupported_itch_quarantines_until_rearm (__main__.CheckerTests.test_unsupported_itch_quarantines_until_rearm) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.353s
+
+OK

@@ -1,0 +1,14 @@
+{
+  "frames_checked": 4,
+  "messages_checked": 3,
+  "decisions_compared": 2,
+  "mismatches": 0,
+  "replay_pass": true,
+  "latency_sample_count": 2,
+  "latency_cycles": {
+    "L1": {"min":37,"median":37,"p95":37,"max":37},
+    "L2": {"min":7,"median":7,"p95":7,"max":7},
+    "L3": {"min":115,"median":121,"p95":127,"max":127}
+  },
+  "final_state": {"bid_total": 10, "ask_total": 20, "expected_sequence": 1161981756646125699, "quarantined": false}
+}

@@ -1,0 +1,4 @@
+frames=4 messages=3 decisions=2 mismatches=0 replay=PASS latency_samples=2
+L1 cycles min/median/p95/max=37/37/37/37
+L2 cycles min/median/p95/max=7/7/7/7
+L3 cycles min/median/p95/max=115/121/127/127

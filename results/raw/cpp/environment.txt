@@ -1,0 +1,15 @@
+Apple clang version 21.0.0 (clang-2100.1.1.101)
+Target: arm64-apple-darwin25.4.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+Python 3.11.6
+Verilator 5.053 devel rev v5.052-119-g014c9820d (mod)
+Yosys 0.69+154 (git sha1 30d62572e-dirty, Release, Clang /usr/local/osxcross/target/bin/aarch64-apple-darwin25.5-clang++ 21.1.8)
+SBY v0.69
+Yices 2.7.0
+Copyright SRI International.
+Linked with GMP 6.3.0
+Copyright Free Software Foundation, Inc.
+Build date: 2026-09-19
+Platform: arm-apple-darwin25.5.0 (release)
+Revision: 8a8af407a3f6c74bdfe2058e75331de948499d07

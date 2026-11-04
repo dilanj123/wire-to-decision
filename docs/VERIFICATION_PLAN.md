@@ -40,24 +40,27 @@ Use directed corner cases, constrained-random valid traffic, constrained-random 
 
 ## Traceability matrix
 
-The ranges below enumerate every stable requirement identifier in `docs/REQUIREMENTS.md`; each identifier in a range has the same planned verification level and status. No application requirement is currently verified.
+The ranges below enumerate every stable requirement identifier in `docs/REQUIREMENTS.md`; each identifier in a range has the same planned verification level and status. Current evidence is indexed below; claims remain limited to the tested stages, workloads, formal bounds and implementation scopes.
 
 | Requirement | Verification level | Planned method | Evidence target | Status |
 |---|---|---|---|---|
-| REQ-IF-001..005 | protocol/framing, RTL-simulated | Python model, directed/random ingress, ready/valid tests | processed simulation report and raw logs | SPECIFIED / NOT YET VERIFIED |
-| REQ-ETH-001..003 | protocol/framing | canonical frame vectors and parser scoreboard | model/RTL protocol evidence | SPECIFIED / NOT YET VERIFIED |
-| REQ-IP-001..007 | protocol/framing | valid/invalid header vectors, checksum and fragmentation cases | model/RTL protocol evidence | SPECIFIED / NOT YET VERIFIED |
-| REQ-UDP-001..004 | protocol/framing | length/port/checksum vectors, rejection-before-mutation checks | model/RTL protocol evidence | SPECIFIED / NOT YET VERIFIED |
-| REQ-MOLD-001..009 | protocol/framing, state/error | packet framing, sequence, heartbeat, EOS, malformed suffix tests | model/RTL Mold evidence | SPECIFIED / NOT YET VERIFIED |
-| REQ-ITCH-001..004 | ITCH/event | official-format directed vectors and event scoreboard | normalized-event evidence | SPECIFIED / NOT YET VERIFIED |
-| REQ-BOOK-001..008 | order-state | independent order scoreboard, directed and random state sequences | book/aggregate evidence | SPECIFIED / NOT YET VERIFIED |
-| REQ-DEC-001..007 | decision | independent decision scoreboard and crossing sequences | decision evidence | SPECIFIED / NOT YET VERIFIED |
-| REQ-ERR-001..005 | error/recovery | malformed, discontinuity, profile-rejection, suffix, and re-arm tests | recovery evidence | SPECIFIED / NOT YET VERIFIED |
-| REQ-LAT-001..004 | simulation/implementation | cycle counters under canonical no-stall conditions; routed timing later | latency reports | SPECIFIED / NOT YET VERIFIED |
+| REQ-IF-001..005 | protocol/framing, RTL-simulated | Python model, directed/random ingress, ready/valid tests | processed simulation report and raw logs | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
+| REQ-ETH-001..003 | protocol/framing | canonical frame vectors and parser scoreboard | model/RTL protocol evidence | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
+| REQ-IP-001..007 | protocol/framing | valid/invalid header vectors, checksum and fragmentation cases | model/RTL protocol evidence | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
+| REQ-UDP-001..004 | protocol/framing | length/port/checksum vectors, rejection-before-mutation checks | model/RTL protocol evidence | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
+| REQ-MOLD-001..009 | protocol/framing, state/error | packet framing, sequence, heartbeat, EOS, malformed suffix tests | model/RTL Mold evidence | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
+| REQ-ITCH-001..004 | ITCH/event | official-format directed vectors and event scoreboard | normalized-event evidence | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
+| REQ-BOOK-001..008 | order-state | independent order scoreboard, directed and random state sequences | book/aggregate evidence | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
+| REQ-DEC-001..007 | decision | independent decision scoreboard and crossing sequences | decision evidence | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
+| REQ-ERR-001..005 | error/recovery | malformed, discontinuity, profile-rejection, suffix, and re-arm tests | recovery evidence | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
+| REQ-LAT-001..004 | simulation/implementation | cycle counters under canonical no-stall conditions; routed timing later | latency reports | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
 | REQ-CDC-001..004 | CDC extension | async-clock simulation, formal/local checks, reset-domain tests | WIRE-029/EVID-029: FIFO + Architecture-A wrapper RTL-simulated; bounded local checks; physical CDC/RDC signoff remains open | CHECKED AT DOCUMENTED LOCAL SCOPE |
-| REQ-PPA-001..004 | synthesis/P&R/derived | Yosys, five fixed seeds, nextpnr, timing/resource extraction | raw reports and processed comparison | SPECIFIED / NOT YET VERIFIED |
-| REQ-SW-001..004 | reference/C++ verification | independent model tests, replay, checker comparison | model/checker evidence | SPECIFIED / NOT YET VERIFIED |
-| REQ-PROV-001..003 | review/process | provenance review, manifests, evidence-index review | process evidence | SPECIFIED / NOT YET VERIFIED |
+| REQ-PPA-001..004 | synthesis/P&R/derived | Yosys, five fixed seeds, nextpnr, timing/resource extraction | WIRE-026/026A/027/028B reports: five-seed routes completed; all miss 156.25 MHz; package pinout not validated | CHECKED AT RECORDED EXPERIMENT SCOPE; TIMING TARGET MISSED |
+| REQ-SW-001 | Python reference | independent protocol, state and decision model | EVID-013 and Python suite | CHECKED |
+| REQ-SW-002 | C++ checker | canonical replay, independent bounded store/decision, RTL-log comparison and latency summary | EVID-030 | CHECKED |
+| REQ-SW-003 | C++ checker | no Python runtime dependency in expected-value path | tools/cpp source and EVID-030 | CHECKED |
+| REQ-SW-004 | replay | synthetic canonical packets; live captures unnecessary | checked-in canonical replay and EVID-030 | CHECKED |
+| REQ-PROV-001..003 | review/process | provenance review, manifests, evidence-index review | process evidence | See EVIDENCE_INDEX.md; scope-specific evidence only, not blanket requirement closure |
 
 ## Implementation evidence plan
 

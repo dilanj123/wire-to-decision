@@ -1,0 +1,7 @@
+intentionally corrupted actual RTL log; expected checker exit=1
+MISMATCH: decision[0] frame=0 expected={BUY,seq=1161981756646125696,ts=1108152157441,imb=10} actual={BUY,seq=1161981756646125696,ts=1108152157441,imb=9}
+frames=4 messages=3 decisions=2 mismatches=1 replay=FAIL latency_samples=2
+L1 cycles min/median/p95/max=37/37/37/37
+L2 cycles min/median/p95/max=7/7/7/7
+L3 cycles min/median/p95/max=115/121/127/127
+checker_exit=1
