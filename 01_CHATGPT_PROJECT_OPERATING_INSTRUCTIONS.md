@@ -24,6 +24,8 @@ Reload the full master plan only when changing specifications, resolving a confl
 
 Work only inside the active task's allowed files. Use the task's known-good starting commit, acceptance criteria, evidence requirements, and stop conditions. Do not broaden a task because an adjacent improvement is attractive. Do not implement Architecture B before explicit authorization from measured Architecture-A evidence.
 
+For future architecture experiments, use the completed WIRE-028 disposition in `docs/MICROARCHITECTURE.md` and the policy in `AGENTS.md`. Do not treat a historical plan phase as automatic authorization to repeat the A/B experiment or implement another architecture.
+
 ## Evidence rules
 
 Never claim `PASS`, zero mismatches, formal proof, synthesis success, timing closure, Fmax, latency, throughput, or resource figures without corresponding tool evidence. A requested timing constraint is not a timing result. A bounded local proof is not a whole-design proof. Use exact commands, versions, commits, seeds, assumptions, and limitations.
