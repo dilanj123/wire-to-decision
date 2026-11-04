@@ -44,6 +44,12 @@ Implementation must remain inside the active:
 tasks/WIRE-xxx.md
 ```
 
+## Architecture experiment status
+
+- WIRE-028/028A/028B completed the controlled parser comparison. Architecture B was rejected for the selected baseline; Architecture A remains selected.
+- A new parser alternative (including Architecture C) is optional, not a mandatory follow-on. Do not reopen the completed comparison without new measured evidence, a falsifiable hypothesis, and a separately authorised narrow task.
+- Use ordinary regression, bounded formal checks, timing analysis, and benchmarks in proportion to the change. The original 156.25 MHz objective remains unmet; A's measured advantage over B is not timing closure.
+
 ## Original project work
 
 The following are expected to remain original project work unless explicitly changed by authoritative documentation:

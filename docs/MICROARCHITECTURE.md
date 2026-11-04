@@ -146,7 +146,7 @@ common ingress |               |
                                 --> identical book/decision
 ```
 
-Parser B is not authorized. It is only a possible native-64-bit parser experiment if Architecture-A evidence identifies parser serialization/alignment as the relevant bottleneck after full regression, target synthesis/P&R, timing/resource/latency/throughput measurement. The project must then choose `BUILD B`, `MODIFY HYPOTHESIS`, or `REJECT B`. If book/hash/decision logic is the bottleneck, B shall not be built merely because it was imagined.
+Before WIRE-028, Parser B was unauthorized unless Architecture-A evidence identified parser serialization/alignment as a relevant bottleneck after regression, target synthesis/P&R, and timing/resource/latency/throughput measurement. That experiment required a `BUILD B`, `MODIFY HYPOTHESIS`, or `REJECT B` decision; it did not authorize B production use.
 
 **Post-WIRE-028 disposition:** The preceding paragraph records the pre-experiment authorization rule. WIRE-028/028A/028B subsequently completed the controlled parser comparison and rejected B for this baseline; Architecture A remains selected. This completed experiment does not require repetition. Future alternatives, including Architecture C or a renewed A/B study, are optional and require a new measured bottleneck, falsifiable hypothesis, explicit engineering justification, and separately authorized task. The frozen 156.25 MHz timing objective remains unmet by both routed designs.
 
